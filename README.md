@@ -1,6 +1,6 @@
 # PlantBaby Tracker
+The app's purpose is to stand as a catalogging journal for plant collecting!
 
-Foobar is a Python library for dealing with word pluralization.
 
 ## Concepts Covered
 Concepts covered in this project include: 
