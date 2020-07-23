@@ -33,6 +33,6 @@ Through the sorting of this (User1)’s library, a certain management will be re
 
 
 [ERD](https://dbdiagram.io/d/5f10aa9c74ca2227330d73d9) \
-[WIREFRAME] (https://sketchboard.me/NCaP3yBDuIVO#/) 
-[Proposal Doc](https://docs.google.com/document/d/12pWGNbbZ4iovB2qUAddoCqLFQkvDiqJBfv6uNWdrMg0/edit#heading=h.jlakfp7agir2) \
+[WIREFRAME] (https://sketchboard.me/NCaP3yBDuIVO#/) \
+[Proposal Doc] (https://docs.google.com/document/d/12pWGNbbZ4iovB2qUAddoCqLFQkvDiqJBfv6uNWdrMg0/edit#heading=h.jlakfp7agir2) 
 
