@@ -1,40 +1,61 @@
 import React from "react";
 //import PlantCardBack from "./plantJournal/PlantJournalCard"
 import "./PlantCard.css"
-import { Container } from 'react-bootstrap';
+//import { Container } from 'react-bootstrap';
 
 
-const PlantCard = () => {
+const PlantCard = (props) => {
+  //makes sure that userid is an integer
+/*    const currentUser = parseInt(sessionStorage.getItem("activeUser"))
+        if (props.plant.userId === currentUser)  
+ */
+
+
+/* // Get all the `.card` elements
+let card = document.getElementsByClassName('card');
+
+// Loop through all the card elements
+Array.from(card).forEach((card) => {
+
+   // Track the clicks on the card element
+   card.addEventListener('click', () => {
+
+    // Toggle the `flippedstate` CSS class
+    card.classList.toggle('flip-card-inner');
+    console.log("Card clicked!");
+  });
+});
+ */
   return (
-
     <>
-
+<div className="flip=cards-insert">
 <div className="flip-card">
   <div className="flip-card-inner">
     <div className="flip-card-front">
-       {/* <picture src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-sQ07TYg3ma4%2FUsREyy8h2xI%2FAAAAAAAAAFc%2FWXZw3up8Zh0%2Fs1600%2Fartshare_ru-plants-5.png&f=1&nofb=1" alt="Avatar" className= "img__planttest"> </picture> */}
+       
 <div className="plantcard-names__Container">
-      <div className="plantcard-vernacular-name__Container">Plant vernacularName</div>
-      <div className="plantcard-nick-name__Container">Plant nickName</div>
+      <div className="plantcard-vernacular-name__Container">{props.plant.vernacularName}</div>
+      <div className="plantcard-nick-name__Container">{props.plant.nickName}</div>
        </div>
        <div className="plantcard-logo-variable__Container">
        <div className="plantcard-logo"></div>
       <div className="plantcard-variable-list__Container">
             <ol> Plant Specs. </ol>
-              <li> Dang Age of plant</li>
-             <li> Dang time Stamp</li>
+              <li> Age of plant: {props.plant.age}</li>
+             <li>Created on {props.plant.entryDate} </li>
              <li> Dang colorTag</li>
-             <li> Dang Sunlight</li>
-             <li> Dang Water</li>
-             <li> Dang Mood</li>    
+             <li>Sunlight Level: {props.plant.sunlightId}</li>
+             <li>Water level: {props.plant.waterId}</li>
+             <li>Mood of your plant: {props.plant.moodId}</li>    
       </div>
       </div> 
       <div className="plantcard-image__Container">
-     <div className="plantcard__image-window__Container">
+     <div className="plantcard__image-window__Container"> CAROUSEL INSERT
      {/* This is where the cloudinary Window "scroll" series will go */} 
     </div>
     </div>
-    <button type="submit">Add Image</button>
+    <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button>
+                {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
     
     </div>
 
@@ -59,6 +80,7 @@ const PlantCard = () => {
       <p>We love Plants...</p>
       </div>
    
+</div>
 </div>
 </div>
 </>

@@ -1,0 +1,72 @@
+
+.theAppUnderBanner{
+        background-color: transparent;
+        border: 20px solid #0e0a0a;
+        width: 1900px;
+        height: 800px;
+        perspective: 1000px;
+        
+         
+}
+
+.undertheBannerMiddle{
+    border: 1px solid #B22222;
+    border-radius: 1px;
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: space-around;
+    flex-wrap: nowrap;
+    padding: 5px 5px;
+
+  }
+  .undertheBannerMiddle-Left__Container{
+    border: 1px solid #2254b2;
+    border-radius: 1px;
+    order: -1;
+    flex:20%;
+    border-radius: 1px;
+    padding: 1px 1px;
+
+  
+  }
+  .undertheBannerMiddle-Center__Container{
+    border: 1px solid #2254b2;
+    border-radius: 1px;
+    order:1;
+    
+    border-radius: 1px;
+    padding: 1px 1px;
+  
+    
+  
+  }
+  .undertheBannerMiddle-Right__Container{
+    border: 1px solid #2254b2;
+    border-radius: 1px;
+    order:3;
+    flex:20%;
+    border-radius: 1px;
+    padding: 1px 1px;
+    
+  }
+ /*  .plantCards-Center__Container{
+    border: 1px solid #2eb222;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: space-around;
+    flex-wrap:nowrap;
+    
+    padding: 1px 1px;
+  }
+  .flipCard-generator{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: space-around;
+    flex-wrap:nowrap;
+    padding: 1px 1px;
+  }
+   */

@@ -22,5 +22,19 @@
       "img": "https://avatars2.githubusercontent.com/u/59340165?s=460&u=46057543931e845b54dbf360a89f24b5755cf93d&v=4",
       "id": 3
     }
+  ],
+  "plants": [
+    {
+      "userId": "",
+      "id": "",
+      "nickName": "",
+      "vernacularName": "",
+      "entryDate": "",
+      "age": "",
+      "moodId": "",
+      "sunlightId": "",
+      "waterId": "",
+      "isDead": ""
+    }
   ]
 }

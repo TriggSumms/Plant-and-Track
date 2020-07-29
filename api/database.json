@@ -28,5 +28,43 @@
       "img": "",
       "id": 4
     }
+  ],
+  "plants": [
+    {
+      "userId": 1,
+      "id": 1,
+      "nickName": "yeyeye",
+      "vernacularName": "alright",
+      "entryDate": "",
+      "age": "111",
+      "moodId": "",
+      "sunlightId": "",
+      "waterId": "",
+      "isDead": ""
+    },
+    {
+      "userId": 4,
+      "id": 2,
+      "nickName": "yeyye",
+      "vernacularName": "alright",
+      "entryDate": "",
+      "age": "1111",
+      "moodId": "",
+      "sunlightId": "",
+      "waterId": "",
+      "isDead": ""
+    },
+    {
+      "userId": 4,
+      "id": 3,
+      "nickName": "egggggg",
+      "vernacularName": "d",
+      "entryDate": "7/28/20, 3:07:56 PM",
+      "age": "d",
+      "moodId": "",
+      "sunlightId": "",
+      "waterId": "",
+      "isDead": ""
+    }
   ]
 }
