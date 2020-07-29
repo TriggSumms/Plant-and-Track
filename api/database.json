@@ -31,18 +31,6 @@
   ],
   "plants": [
     {
-      "userId": 1,
-      "id": 1,
-      "nickName": "yeyeye",
-      "vernacularName": "alright",
-      "entryDate": "",
-      "age": "111",
-      "moodId": "",
-      "sunlightId": "",
-      "waterId": "",
-      "isDead": ""
-    },
-    {
       "userId": 4,
       "id": 2,
       "nickName": "yeyye",
@@ -65,6 +53,88 @@
       "sunlightId": "",
       "waterId": "",
       "isDead": ""
+    },
+    {
+      "userId": 4,
+      "id": 4,
+      "nickName": "egggggg",
+      "vernacularName": "yeha stems",
+      "entryDate": "7/29/20, 8:14:35 AM",
+      "age": "ii",
+      "moodId": "",
+      "sunlightId": "",
+      "waterId": "",
+      "isDead": ""
+    },
+    {
+      "userId": 4,
+      "id": 5,
+      "nickName": "alright",
+      "vernacularName": "yeeha",
+      "entryDate": "7/29/20, 11:19:22 AM",
+      "age": "cowpoke",
+      "moodId": "",
+      "sunlightId": "",
+      "waterId": "",
+      "isDead": ""
+    }
+  ],
+  "sunlightLevels": [
+    {
+      "id": 1,
+      "sunlightId": 1,
+      "level": "Low-Light"
+    },
+    {
+      "id": 2,
+      "sunlightId": 2,
+      "level": "Medium-Light"
+    },
+    {
+      "id": 3,
+      "sunlightId": 3,
+      "level": "Low-Light"
+    },
+    {
+      "id": 4,
+      "sunlightId": 4,
+      "level": "Low-Light"
+    }
+  ],
+  "waterLevels": [
+    {
+      "id": 1,
+      "waterId": 1,
+      "level": "Low Water"
+    },
+    {
+      "id": 2,
+      "sunlightId": 2,
+      "level": "Medium-Water"
+    },
+    {
+      "id": 3,
+      "sunlightId": 3,
+      "level": "High Water"
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "moodId": 1,
+      "level": "Healthy as Hell"
+    },
+    {
+      "id": 2,
+      "moodId": 2,
+      "level": "Droop boi"
+    },
+    {
+      "id": 3,
+      "moodId": 3,
+      "level": "Almost Dead"
     }
   ]
+
+  
 }

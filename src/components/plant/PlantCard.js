@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 //import PlantCardBack from "./plantJournal/PlantJournalCard"
 import "./PlantCard.css"
 //import { Container } from 'react-bootstrap';
@@ -28,7 +29,7 @@ Array.from(card).forEach((card) => {
  */
   return (
     <>
-<div className="flip=cards-insert">
+<div className="flipCard-generator">
 <div className="flip-card">
   <div className="flip-card-inner">
     <div className="flip-card-front">
@@ -43,7 +44,7 @@ Array.from(card).forEach((card) => {
             <ol> Plant Specs. </ol>
               <li> Age of plant: {props.plant.age}</li>
              <li>Created on {props.plant.entryDate} </li>
-             <li> Dang colorTag</li>
+             {/* <li> Dang colorTag</li> */}
              <li>Sunlight Level: {props.plant.sunlightId}</li>
              <li>Water level: {props.plant.waterId}</li>
              <li>Mood of your plant: {props.plant.moodId}</li>    
@@ -54,7 +55,8 @@ Array.from(card).forEach((card) => {
      {/* This is where the cloudinary Window "scroll" series will go */} 
     </div>
     </div>
-    <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button>
+    <Link to={`/plants/${props.plant.id}`}><button>Lets take a closer look!</button></Link>
+    {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
                 {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
     
     </div>

@@ -1,14 +1,32 @@
 import React from "react";
-//import PlantCard from "../plant/PlantCard"
+import PlantList from "../plant/PlantList"
 import "./Home.css";
 
 
 const Home = props => {
-  
+
   return (
     <>
-    
- {/*   
+      <body>
+        <header></header>
+        <div id="main">
+          <article>
+            <div className="plantCards-Center__Container">
+              <div className="flipCard-generator">
+                <PlantList />
+              </div>
+            </div>
+          </article>
+          <nava></nava>
+          <aside></aside>
+        </div>
+        <footer></footer>
+      </body>
+
+
+
+
+      {/*   
     <div className="theAppUnderBanner">
     
       <div className="undertheBannerMiddle">
@@ -21,7 +39,7 @@ const Home = props => {
               <div className="col-lg-4 mb-4 grid-margin">
                 <div className="card h-100">
                  <div className="flip=cards-insert"> */}
-{/* <PlantCard /> */}
+      {/* <PlantCard /> */}
 
       {/*            </div>
                 </div>

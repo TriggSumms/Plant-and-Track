@@ -5,6 +5,7 @@ import Login from "./auth/Login";
 import Register from "./auth/Register"
 import PlantList from "./plant/PlantList";
 import PlantForm from "./plant/PlantForm";
+import PlantDetail from "./plant/PlantDetail";
 //import UserList from "./auth/UserList"
 //import UserEditForm from "./auth/UserEditForm"
 
@@ -52,6 +53,16 @@ const ApplicationViews = (props) => {
             return <Redirect to="/login" />
           }
         }} />
+        <Route exact path="/plants/:plantId(\d+)" render={(props) => {
+                if (hasUser) {
+                    return <PlantDetail
+                        plantId={parseInt(props.match.params.plantId)}
+                        {...props} />
+                } else {
+                    return <Redirect to="/login" />
+
+                }
+            }} />
       <Route
         path="/plants/new"
         render={(props) => {

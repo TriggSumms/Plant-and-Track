@@ -34,16 +34,6 @@ const PlantBaby = () => {
       <NavBar hasUser={hasUser} clearUser={clearUser} />
 
       <ApplicationViews hasUser={hasUser} setUser={setUser} />
-      <body>
-        <header></header>
-        <div id="main">
-          <article></article>
-          <nav></nav>
-          <aside></aside>
-        </div>
-        <footer></footer>
-      </body>
-
 
 
     </>

@@ -41,8 +41,9 @@ const PlantList = (props) => {
               <div className="col-lg-4 mb-4 grid-margin">
                 <div className="card h-100">
                  <div className="flip=cards-insert"></div>
-       
-        <button type="button" className="btn" 
+   */} 
+
+        <button type="button" className="waves-effect waves-light btn" 
         onClick={() => { props.history.push("/plants/new") }}>
           New Plant Baby ?
         </button>
@@ -55,13 +56,8 @@ const PlantList = (props) => {
             deletePlant={deletePlant}
             {...props}
           />)}
-      </div>*/}
-{/*  </div></div></div>
-        </div>
-              </div>
-            </div>
-          </div>
- */}
+      </div>
+{/*  </div></div></div></div></div></div></div>*/}
     </>
   );
 };
