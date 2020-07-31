@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
-import './PlantForm.css'
+//import './PlantForm.css'
+import { Form } from 'react-bootstrap';
 import './css-java-extension/materialize.css';
 import './css-java-extension/materialize.min.css';
 //import './css-java-extension/materialize.js';
 //import './css-java-extension/materialize.min.js';
+
 
 
 
@@ -17,7 +19,11 @@ let timeStamp = new Intl.DateTimeFormat("en", {
 });
 
 const PlantForm = props => {
-    const [plant, setPlant] = useState({ userId: 0, id: "", nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: "", sunlightId: "", waterId: "", isDead: "" });
+    const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: true });
+    const [moods, setMoods] = useState([]);
+    const [sunlightLevels, setSunlightLevels] = useState([]);
+    const [waterLevels, setWaterLevels] = useState([]);
+    //const [isDeads, setisDeads] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     //Tracks entries into text boxes
@@ -26,6 +32,38 @@ const PlantForm = props => {
         stateToChange[evt.target.id] = evt.target.value;
         setPlant(stateToChange);
     };
+    //DROPDOWN API CALLS
+
+
+
+    const getMoods = () => {
+        return PlantManager.getAll("moods").then(moodsfromAPI => {
+            setMoods(moodsfromAPI)
+        })
+    };
+
+    const getSunlightLevels = () => {
+        return PlantManager.getAll("sunlightLevels").then(sunlightLevelsfromAPI => {
+            setSunlightLevels(sunlightLevelsfromAPI)
+        })
+    };
+    const getWaterLevels = () => {
+        return PlantManager.getAll("waterLevels").then(waterLevelsfromAPI => {
+            setWaterLevels(waterLevelsfromAPI)
+        })
+    };
+
+
+    //END DROPDOWN CALLS
+
+
+    useEffect(() => {
+        getMoods();
+        getSunlightLevels();
+        getWaterLevels();
+    }, []);
+
+
 
 
     const currentUserId = sessionStorage.getItem("activeUser")
@@ -35,23 +73,19 @@ const PlantForm = props => {
 
     const constructNewPlant = evt => {
         evt.preventDefault();
-        if (plant.nickName === "" || plant.vernacularName === "" || plant.age === "" )
+        if (plant.nickName === "" || plant.vernacularName === "" || plant.age === "")
     /* || plant.sunlightId === "" || plant.waterId === "" ||plant.isDead === "" */ {
-            window.alert("Please fill out all the entry requirements....otherwise your plant wont survive the season!");
+            window.alert("Please fill out all the entry requirements....otherwise your plant won't survive the season!");
         } else {
             setIsLoading(true);
             // Create the article and redirect user to article list
             PlantManager.post(plant)
-                .then(() => PlantManager.getAll())
-            // props.history.push("/home"));
+                //.then(() => PlantManager.getAll(plants))
+                .then(() => props.history.push("/home"));
         }
     };
-/*     var instance = M.FormSelect.getInstance(elem);
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('select');
-        var instances = M.FormSelect.init(elems, options);
-      });
-       */
+
+
 
     return (
         <>
@@ -86,27 +120,53 @@ const PlantForm = props => {
                                 </div>
 
 
-                                <div className="row">
-            <div className="input-field col s12">Select your plants most recent mood:
-                                    <select multiple  id="moodId" required
-                                        onChange={handleFieldChange}  >
-                                        <option value="" disabled selected>Choose the plants current Mood(s)!</option>
-                                        <option value="Healthy as Hell" >Healthy as Hell</option>
-                                        <option value="Doin alright" >Doin Alright</option>
-                                        <option value="On its way to heaven" >On its way to heaven</option>
-                                    </select>
-                                    <label for="moodId"> </label>
+
+                                <div className="">
+                                    <Form.Group className="" controlId="moodId">
+                                        <Form.Label>Plant Mood:</Form.Label>
+                                        {/* name="selectMulti" id="" multiple> */}
+                                        <Form.Control as="select" className="moodForm"
+                                            value={parseInt(plant.moodId)} id="moodId" required
+                                            onChange={handleFieldChange}  >
+                                            {moods.map(mood =>
+                                                <option key={mood.id} value={mood.id}>{mood.level}</option>)}
+                                        </Form.Control>
+                                    </Form.Group>
                                 </div>
+                                <div className="">
+                                    <Form.Group className="" controlId="sunlightLevelId">
+                                        <Form.Label>Sunlight Level:</Form.Label>
+                                        <Form.Control as="select" className="sunlightLevelForm"
+                                            value={parseInt(plant.sunlightLevelId)} id="sunlightLevelId" required
+                                            onChange={handleFieldChange}  >
+                                            {sunlightLevels.map(sunlightLevel =>
+                                                <option key={sunlightLevel.id} value={sunlightLevel.id}>{sunlightLevel.level}</option>)}
+                                        </Form.Control>
+                                    </Form.Group>
                                 </div>
-                                <div class="input-field col s12">
-    <select>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-    <label>Materialize Select</label>
-  </div>
+                                <div className="">
+                                    <Form.Group className="" controlId="waterLevelId">
+                                        <Form.Label>Water Level:</Form.Label>
+                                        <Form.Control as="select" className="waterLevelForm"
+                                            value={parseInt(plant.waterLevelId)} id="waterLevelId" required
+                                            onChange={handleFieldChange}  >
+                                            {waterLevels.map(waterLevel =>
+                                                <option key={waterLevel.id} value={waterLevel.id}>{waterLevel.level}</option>)}
+                                        </Form.Control>
+                                    </Form.Group>
+                                </div>
+
+                                <div className="">
+                                    <Form.Group className="" controlId="isDead">
+                                        <Form.Label>Ready for the Plant Graveyeard:</Form.Label>
+                                        <Form.Control as="select" className=""
+                                            value={parseInt(plant.isDead)} id="isDead" required
+                                            onChange={handleFieldChange}  >
+                                            <option value="true" >Ready</option>
+                                            <option value="false" >This Plant is Thriving, get outta here GrimPlantKeeper!</option>
+                                        </Form.Control>
+                                    </Form.Group>
+                                </div>
 
 
                                 <div className="alignRight">
@@ -123,7 +183,6 @@ const PlantForm = props => {
                     </div>
                 </div>
             </div>
-
         </>
     );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import PlantList from "../plant/PlantList"
+//import PlantList from "../plant/PlantList"
 import "./Home.css";
 
 
@@ -13,7 +13,7 @@ const Home = props => {
           <article>
             <div className="plantCards-Center__Container">
               <div className="flipCard-generator">
-                <PlantList />
+                {/* <PlantList /> */}
               </div>
             </div>
           </article>
