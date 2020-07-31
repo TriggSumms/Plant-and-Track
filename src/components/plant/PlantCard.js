@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import PlantCardBack from "./plantJournal/PlantJournalCard"
+import PlantJournalCard from "./PlantJournalCard"
+
 import "./PlantCard.css"
 //import { Container } from 'react-bootstrap';
 
@@ -43,36 +44,29 @@ const PlantCard = (props) => {
               <Link to={`/plants/${props.plant.id}`}><button>Lets take a closer look!</button></Link>
               {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
               {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
-
-            </div>
-
-
-
-
-
-
-            {/* <PlantCardBack /> */}
+           
+</div>
+            <div className="flip-card-back">
+{/* <PlantJournalCard /> */}
+<div className="flipCard-generator">
+        <div className="flip-card">
+          <div className="flip-card-inner">
 
             <div className="flip-card-back">
               <div className="plantcard-journal-title__Container">
-                <h1>Your Plants Journal Entries</h1>
+                {/* <h1>Journal Entries for {props.plant.nickName}</h1> */}
               </div>
               <div className="plantcard-journal-entries__Container">
-                <div className="plantcard-journal-entry__Container">Journal Entry: (1)....</div>
+   {/* <div className="plantcard-journal-entry__Container">{props.plant.journal.entryDate} {props.plant.journal.journalEntry}</div>  */}
                 <button type="submit">Details</button>
               </div>
-
-
-              {/*       <div>Journal Entry: (2)....</div>
-      <button type="submit">Details</button>
-      <div>Journal Entry: (3)....</div>
-     <button type="submit">Details</button>
-      <div>Journal Entry: (4)....</div>
-      <button type="submit">Details</button> */}
-
               <p>We love Plants...</p>
             </div>
 
+          </div>
+        </div>
+      </div>
+            </div>
           </div>
         </div>
       </div>

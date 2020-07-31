@@ -3,50 +3,45 @@ import PlantManager from '../../modules/PlantManager';
 //import './AnimalDetail.css'
 
 
+//Method for Creating Time Stamp in readeable form(mdn docs)...
 let timeStamp = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
   dateStyle: "short"
 });
+
 //User clicks details button thus rendering the animals info
 const PlantDetail = props => {
-  const [plant, setPlant] = useState({});
-  const [plants, setPlants] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  //Is loading is used to make sure the component is in a state (not loaded?)
+  const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: true });
+  // const [plants, setPlants] = useState([]);
+  const [mood, setMood] = useState({ level: "" });
+  const [sunlightLevel, setSunlightLevel] = useState({ level: "" });
+  const [waterLevel, setWaterLevel] = useState({ level: "" });
 
-  const withDetails = () => {
-    PlantManager.getWithDetails().then(plantsfromAPI => {
-      setPlants(plantsfromAPI)
-    });
+  const [isLoading, setIsLoading] = useState(true);
+  console.log("yee", plant)
+
+
+//Important Lesson learned below: if your gonna set the state.....dont pinpoint the property inside the "expandedPlant"
+//...it turns out that React cant pinpoint cause your nesting too deep. Rather pass the object and then set directions in the return.
+
+  const expandedPlant = () => {
+    PlantManager.getWithSingleDetails(props.plantId)
+    .then(plant => {
+      console.log("yeettttt2", plant)
+      setPlant(plant)
+      setMood(plant.mood)
+      setSunlightLevel(plant.sunlightLevel)
+      setWaterLevel(plant.waterLevel)
+    }
+    )
   }
 
+
   useEffect(() => {
-    withDetails();
-  }, []);
-  useEffect(() => {
-
-    //get(id) from Manager and hang on to the data; put it into state
-    PlantManager.get(props.plantId)
-      .then(plant => {
-        setPlant({
-          id: props.match.params.plantId,
-          nickName: plant.nickName,
-          vernacularName: plant.vernacularName,
-          age: plant.age,
-          entryDate: plant.entryDate,
-          //moodId: plant.moodId,
-          //sunlightId: props.match.params.plant,
-          // waterId: plant.waterId,
-          // isDead: plant.isDead
-
-
-        })
-        setIsLoading(false);
-      });
+    expandedPlant()
+    setIsLoading(false);
 
   }, [props.plantId]);
-
-
 
 
   const handleDelete = () => {
@@ -56,20 +51,12 @@ const PlantDetail = props => {
     );
   };
 
-  /*~~~~~~>Trying to create a process to attach edit button to just the details section...
-     const handleEdit = () => {
-      //invoke the edit and update function .
-      setIsLoading(true);
-      Manager.updateAnimal(props.animalId).then(() =>
-      props.history.push(`/animals/${props.animal.id}/edit`)
-      );
-    }; 
-  */
-
 
   return (
 
     <>
+
+
 
       <div className="flipCard-generator">
         <div className="flip-card">
@@ -88,10 +75,10 @@ const PlantDetail = props => {
                   <li>Created on {plant.entryDate} </li>
                   {/* <li> Dang colorTag</li> */}
 
-                  {/*   <li>Sunlight Level: {props.plant.sunlightLevel.level} </li>
-            <li>Water Level: {plant.waterLevel.level} </li>
-             <li>Mood of your plant: {plant.mood.level} </li>
-             <li>Is your Plant DEAD: {props.plant.isDead}</li>       */}
+                  <li>Sunlight Level: {sunlightLevel.level} </li>
+                  <li>Water Level: {waterLevel.level} </li>
+                  <li>Mood of your plant: {mood.level} </li>
+                  {/*       <li>Is your Plant DEAD: {props.plant.isDead}</li>      */}
                 </div>
               </div>
               <div className="plantcard-image__Container">
@@ -99,8 +86,8 @@ const PlantDetail = props => {
      {/* This is where the cloudinary Window "scroll" series will go */}
                 </div>
               </div>
-              <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button>
-              <button className="danger" type="button" onClick={() => props.history.push(`/plants/${props.plant.id}/edit`)}>Edit</button>
+              <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(plant.id)}>Delete</button>
+              <button className="danger" type="button" onClick={() => props.history.push(`/plants/${plant.id}/edit`)}>Edit</button>
 
 
             </div>
@@ -128,6 +115,7 @@ const PlantDetail = props => {
           </div>
         </div>
       </div>
+
     </>
 
   )

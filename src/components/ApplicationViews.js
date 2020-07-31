@@ -7,6 +7,7 @@ import PlantList from "./plant/PlantList";
 import PlantForm from "./plant/PlantForm";
 import PlantDetail from "./plant/PlantDetail";
 import PlantEditForm from "./plant/PlantEditForm";
+import PlantJournalForm from "./plant/PlantJournalForm"
 //import UserList from "./auth/UserList"
 //import UserEditForm from "./auth/UserEditForm"
 
@@ -57,11 +58,11 @@ const ApplicationViews = (props) => {
         <Route exact path="/plants/:plantId(\d+)" render={(props) => {
                 if (hasUser) {
                     return <PlantDetail
-                        plantId={parseInt(props.match.params.plantId)
+                        plantId={parseInt(props.match.params.plantId) }
   /*                         ,moodId={parseInt(props.match.params.moodId),
                             sunlightLevelId={parseInt(props.match.params.sunlightLevelId),
                               waterLevelId={parseInt(props.match.params.waterLevelId) */
-                              }
+                             
                         {...props} />
                 } else {
                     return <Redirect to="/login" />
@@ -86,6 +87,14 @@ const ApplicationViews = (props) => {
         }} /> 
       {/*Plant Routes End  */}
 
+
+
+      
+      <Route
+        path="/journals/new"
+        render={(props) => {
+          return <PlantJournalForm {...props} />
+        }} />
 
     </React.Fragment>
   );

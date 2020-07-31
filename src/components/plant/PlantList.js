@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import PlantCard from './PlantCard';
+//import PlantJournalCard from "./PlantJournalCard"
 import PlantManager from '../../modules/PlantManager';
+import "./PlantCard.css"
 
 
 const PlantList = (props) => {
   // The initial state is an empty array
   const [plants, setPlants] = useState([]);
-
+  //const [journals, setJournals] = useState([]);
   /*  const getPlants = () => {
     // After the data comes back from the API, we
     //  use the setplants function to update state
@@ -22,6 +24,13 @@ const PlantList = (props) => {
       setPlants(plantsfromAPI)
     });
   }
+/* 
+  const withJournalDetails = () => {
+    PlantManager.getWithJournalDetails().then(plantsfromAPI => {
+      setPlants(plantsfromAPI)
+    });
+  } */
+  
 
   // from the API on the component's first render
 
@@ -30,9 +39,25 @@ const PlantList = (props) => {
       .then(() => PlantManager.getAll("plants").then(setPlants))
     //.then(getPlants);
   };
+
+
+/*   const deleteTheJournal = (id) => {
+    PlantManager.deleteJournal(id)
+      .then(() => PlantManager.getAll("journals").then(setJournals))
+    //.then(getPlants);
+  }; */
+
+
+
   useEffect(() => {
     withDetails();
+   // withJournalDetails();
   }, []);
+
+
+
+
+
 
 
   // Mapping through 
@@ -52,7 +77,15 @@ const PlantList = (props) => {
             plant={plant}
             deletePlant={deletePlant}
             {...props}
-          />)}
+         /> )}
+ {/*          {journals.map(journal =>
+            <PlantJournalCard
+            key={journal.id}
+            journal={journal}
+            deleteTheJournal={deleteTheJournal}
+            {...props}
+          />)} */}
+          
       </div>
 
     </>
