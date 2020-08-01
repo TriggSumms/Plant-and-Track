@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { Nav, Navbar, NavDropdown, Form, FormControl, Button, Table } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import Jumbotron from "./Jumbotron";
 
@@ -39,7 +39,7 @@ const NavBar = props => {
                     <Nav className="ml-auto">
                         <Nav.Item>
                             <Nav.Link>
-                                {props.hasUser ? <Link to="/">Home (PLANT PROFILE)</Link> : null}
+                                {props.hasUser ? <Link to="/home">Home (PLANT PROFILE)</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>

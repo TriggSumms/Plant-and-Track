@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
  */
 
 
-const userName = ""
-const password = ""
+const user = "";
+const password = "";
 const Login = props => {
   const [credentials, setCredentials] = useState([]);
 

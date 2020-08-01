@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './PlantBaby.css';
 //import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
+//import { Container } from 'react-bootstrap';
 import NavBar from './nav/NavBar';
-import PlantCard from "./plant/PlantCard"
+//import PlantCard from "./plant/PlantCard"
 import ApplicationViews from "./ApplicationViews"
 //import Jumbotron from "./nav/Jumbotron";
-
+//import Home from "./home/Home"
 
 
 const PlantBaby = () => {
@@ -29,26 +29,16 @@ const PlantBaby = () => {
   }
   return (
     <>
-      <div className="App">
-        <header>
-          <NavBar hasUser={hasUser} clearUser={clearUser} />
-        </header>
-        <ApplicationViews hasUser={hasUser} setUser={setUser} />
 
-        {/* Card Container lies below... */}
-        <Container>
-          <div className="container">
-            <div className="row mt-5">
-              <div className="col-lg-4 mb-4 grid-margin">
-                <div className="card h-100">
-                  <PlantCard />
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
+
+      <NavBar hasUser={hasUser} clearUser={clearUser} />
+
+      <ApplicationViews hasUser={hasUser} setUser={setUser} />
+
+
     </>
   );
 }
 export default PlantBaby;
+
+
