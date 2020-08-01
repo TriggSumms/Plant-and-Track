@@ -28,12 +28,12 @@ const PlantCard = (props) => {
                   <ol> Plant Specs. </ol>
                   <li> Age of plant: {props.plant.age}</li>
                   <li>Created on {props.plant.entryDate} </li>
-                  {/* <li> Dang colorTag</li> */}
-
                   <li>Sunlight Level: {props.plant.sunlightLevel.level} </li>
                   <li>Water Level: {props.plant.waterLevel.level} </li>
                   <li>Mood of your plant: {props.plant.mood.level} </li>
-                  {/*  <li>Is your Plant DEAD: {props.plant.isDead}</li>    */}
+                  <li>Is your Plant DEAD: {props.plant.isDead}</li>
+                   <Link to={`/plants/${props.plant.id}`}><button>Lets take a closer look!</button></Link>
+                 
                 </div>
               </div>
               <div className="plantcard-image__Container">
@@ -41,7 +41,7 @@ const PlantCard = (props) => {
      {/* This is where the cloudinary Window "scroll" series will go */}
                 </div>
               </div>
-              <Link to={`/plants/${props.plant.id}`}><button>Lets take a closer look!</button></Link>
+              
               {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
               {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
            

@@ -44,13 +44,15 @@ const PlantDetail = props => {
   }, [props.plantId]);
 
 
+
+
   const handleDelete = () => {
+    //invoke the delete function  and re-direct to the  list.
     setIsLoading(true);
-    PlantManager.delete(props.plantId).then(() =>
-      props.history.push("/plants")
+    PlantManager.deletePlant(props.plantId).then(() =>
+      props.history.push("/home")
     );
   };
-
 
   return (
 
@@ -86,7 +88,7 @@ const PlantDetail = props => {
      {/* This is where the cloudinary Window "scroll" series will go */}
                 </div>
               </div>
-              <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(plant.id)}>Delete</button>
+              <button type="submit">Add Image</button><button type="button" disabled={isLoading} onClick={handleDelete}>DELETE</button>
               <button className="danger" type="button" onClick={() => props.history.push(`/plants/${plant.id}/edit`)}>Edit</button>
 
 

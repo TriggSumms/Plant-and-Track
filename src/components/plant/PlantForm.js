@@ -34,6 +34,11 @@ const PlantForm = props => {
     };
     //DROPDOWN API CALLS
 
+/* const getIsDeads = () =>{
+    return PlantManager.getPlant()(deadfromAPI => {
+        setisDeads(deadfromAPI)
+    })
+}; */
 
 
     const getMoods = () => {
@@ -61,6 +66,7 @@ const PlantForm = props => {
         getMoods();
         getSunlightLevels();
         getWaterLevels();
+        //getIsDeads()
     }, []);
 
 
@@ -162,8 +168,10 @@ const PlantForm = props => {
                                         <Form.Control as="select" className=""
                                             value={parseInt(plant.isDead)} id="isDead" required
                                             onChange={handleFieldChange}  >
-                                            <option value="true" >Ready</option>
-                                            <option value="false" >This Plant is Thriving, get outta here GrimPlantKeeper!</option>
+       {/*                                      {isDeads.map(isDead =>
+                                                <option key={plant.isDead} value={plant.isDead}></option>)} */}
+                                             <option value = {true} >Ready</option>
+                                            <option value = {false} >This Plant is Thriving, get outta here GrimPlantKeeper!</option> 
                                         </Form.Control>
                                     </Form.Group>
                                 </div>

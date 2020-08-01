@@ -55,14 +55,10 @@ const ApplicationViews = (props) => {
             return <Redirect to="/login" />
           }
         }} />
-        <Route exact path="/plants/:plantId(\d+)" render={(props) => {
+        <Route path="/plants/:plantId(\d+)" render={(props) => {
                 if (hasUser) {
                     return <PlantDetail
-                        plantId={parseInt(props.match.params.plantId) }
-  /*                         ,moodId={parseInt(props.match.params.moodId),
-                            sunlightLevelId={parseInt(props.match.params.sunlightLevelId),
-                              waterLevelId={parseInt(props.match.params.waterLevelId) */
-                             
+                        plantId={parseInt(props.match.params.plantId) }          
                         {...props} />
                 } else {
                     return <Redirect to="/login" />
@@ -75,6 +71,7 @@ const ApplicationViews = (props) => {
           return <PlantForm {...props} />
         }} />
       <Route
+      exact
         path="/plants/:plantId(\d+)/edit"
         render={props => {
           if (hasUser) {

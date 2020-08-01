@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react"
 import PlantManager from "../../modules/PlantManager"
-
+import { Form } from 'react-bootstrap';
+import './css-java-extension/materialize.css';
+import './css-java-extension/materialize.min.css';
 
 const PlantEditForm = props => {
-    const [plant, setPlant] = useState({ nickName: "", vernacularName: "", age: "", /* moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: true  */ });
+    const [plant, setPlant] = useState({userId: 0, nickName: "", vernacularName: "", entryDate: "", age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: true  });
     const [isLoading, setIsLoading] = useState(false);
+    const [moods, setMoods] = useState([]);
+    const [sunlightLevels, setSunlightLevels] = useState([]);
+    const [waterLevels, setWaterLevels] = useState([]);
+
+
+
 
     const handleFieldChange = evt => {
         const stateToChange = { ...plant };
@@ -12,42 +20,67 @@ const PlantEditForm = props => {
         setPlant(stateToChange);
     };
 
+    const getMoods = () => {
+        return PlantManager.getAll("moods").then(moodsfromAPI => {
+            setMoods(moodsfromAPI)
+        })
+    };
+    const getSunlightLevels = () => {
+        return PlantManager.getAll("sunlightLevels").then(sunlightLevelsfromAPI => {
+            setSunlightLevels(sunlightLevelsfromAPI)
+        })
+    };
+    const getWaterLevels = () => {
+        return PlantManager.getAll("waterLevels").then(waterLevelsfromAPI => {
+            setWaterLevels(waterLevelsfromAPI)
+        })
+    };
+
+
+
+
+
     const updateExistingPlant = evt => {
         //Stops the pg from loading on every click...
         evt.preventDefault()
         setIsLoading(true);
 
+      //Created an easy tag to post to the return edit card.... for showing chats when they are edited     
+      const MessageChanged = "(~Edited Since~)"   
+
         // This is an edit, so we need the id
         const editedPlant = {
+            userId: plant.userId,
             id: props.match.params.plantId,
             nickName: plant.nickName,
             vernacularName: plant.vernacularName,
+            entryDate: plant.entryDate + MessageChanged,
             age: plant.age,
-            /*  moodId: 0,
-             sunlightLevelId: 0,
-             waterLevelId: 0,
-             isDead: true */
+            moodId: plant.moodId,
+            sunlightLevelId: plant.sunlightLevelId,
+            waterLevelId: plant.waterLevelId,
+            isDead: true  
 
         };
 
         PlantManager.update(editedPlant)
             .then(() => props.history.push("/home"))
     }
-    /*     //Edited this process to pull and tie Employees with Animals...and a select drop down
+    
         useEffect(() => {
-            Manager.getAnimal(props.match.params.animalId)
-                .then(animal => {
-                    Manager.getEmployeeAll().then(employees => {
-                        setEmployees(employees)
-                        setAnimal(animal);
+            PlantManager.getPlant(props.match.params.plantId)
+                .then(plant => {
+                   
+                        setPlant(plant);
+                        getMoods();
+                        getSunlightLevels();
+                        getWaterLevels();
                         setIsLoading(false);
-                    })
-    
-    
+
                 });
-        }, [props.match.params.animalId]);
+        }, [props.match.params.plantId]);
         //Filling the dependency array allows the change made to rerender the Animal
-     */
+    
 
     return (
 
@@ -57,6 +90,15 @@ const PlantEditForm = props => {
                     <div className="card-panel transparent">
                         <div className="row">
                             <form className="col s12">
+                            <div className="formgrid">
+                            <input
+                            type="hidden"
+                            required
+                            className="form-control"
+                            onChange={handleFieldChange}
+                            id="userId"
+                            value={plant.userId}
+                        />
                                 <div className="row">
                                     <div className="input-field col s6">
                                         Vernacular Name:
@@ -81,7 +123,7 @@ const PlantEditForm = props => {
                                         </div>
                                     </div>
                                 </div>
-                                {/* 
+                                
 
 
                                 <div className="">
@@ -92,7 +134,7 @@ const PlantEditForm = props => {
                                             value={parseInt(plant.moodId)} id="moodId" required
                                             onChange={handleFieldChange}  >
                                             {moods.map(mood =>
-                                                <option key={mood.id} value={mood.id}>{mood.level}</option>)}
+                                                <option key={mood.id} value={mood.id}>{mood.level}</option>)} 
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
@@ -100,7 +142,7 @@ const PlantEditForm = props => {
                                     <Form.Group className="" controlId="sunlightLevelId">
                                         <Form.Label>Sunlight Level:</Form.Label>
                                         <Form.Control as="select" className="sunlightLevelForm"
-                                            value={parseInt(plant.sunlightLevelId)} id="sunlightLevelId" required
+                                            value={parseInt(plant.sunlightLevelId)} id="sunlightLevelId"   required
                                             onChange={handleFieldChange}  >
                                             {sunlightLevels.map(sunlightLevel =>
                                                 <option key={sunlightLevel.id} value={sunlightLevel.id}>{sunlightLevel.level}</option>)}
@@ -111,7 +153,7 @@ const PlantEditForm = props => {
                                     <Form.Group className="" controlId="waterLevelId">
                                         <Form.Label>Water Level:</Form.Label>
                                         <Form.Control as="select" className="waterLevelForm"
-                                            value={parseInt(plant.waterLevelId)} id="waterLevelId" required
+                                            value={parseInt(plant.waterLevelId)} id="waterLevelId"  required
                                             onChange={handleFieldChange}  >
                                             {waterLevels.map(waterLevel =>
                                                 <option key={waterLevel.id} value={waterLevel.id}>{waterLevel.level}</option>)}
@@ -129,9 +171,9 @@ const PlantEditForm = props => {
                                              <option value= "false" >This Plant is Thriving, get outta here GrimPlantKeeper!</option>
                                         </Form.Control>
                                     </Form.Group>
-                                </div>
- */}
-
+                                </div>  
+ 
+                        </div>
                                 <div className="alignRight">
                                     <button
                                         className="waves-effect waves-light btn"
