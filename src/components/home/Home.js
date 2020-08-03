@@ -12,7 +12,7 @@ const Home = props => {
         <div id="main">
           <article>
             <div className="plantCards-Center__Container">
-              <div className="flipCard-generator">
+               <div className="flipCard-generator">
                 {/* <PlantList /> */}
               </div>
             </div>

@@ -52,7 +52,7 @@
       "moodId": 0,
       "sunlightLevelId": 0,
       "waterLevelId": 0,
-      "isDead": true
+      "isDead": "false"
     },
     {
       "userId": 4,
@@ -64,7 +64,7 @@
       "moodId": "1",
       "sunlightLevelId": 0,
       "waterLevelId": 0,
-      "isDead": true
+      "isDead": "false"
     },
     {
       "userId": 4,
@@ -73,6 +73,18 @@
       "vernacularName": "sssss",
       "entryDate": "8/1/20, 9:46:22 AM",
       "age": "alright",
+      "moodId": 0,
+      "sunlightLevelId": 0,
+      "waterLevelId": 0,
+      "isDead": "true"
+    },
+    {
+      "userId": 4,
+      "id": 19,
+      "nickName": "kkkk",
+      "vernacularName": "yeeha",
+      "entryDate": "8/3/20, 2:17:20 PM",
+      "age": "i",
       "moodId": 0,
       "sunlightLevelId": 0,
       "waterLevelId": 0,
@@ -126,19 +138,41 @@
       "id": 1,
       "plantId": 9,
       "entryDate": "7/30/20, 2:27:53 PM",
-      "journalEntry": "Cowpoke Teddy, ",
-      "journalTitle": "YES SIR",
-      "userId": 4,
-      "picture": "plantboi.jpg"
+      "journalEntry": "Cowpoke Teddy ",
+      "journalTitle": "TITLE BOI1",
+      "userId": 4
     },
     {
       "id": 2,
       "plantId": 9,
       "entryDate": "7/30/20, 2:29:53 PM",
       "journalEntry": "yeyeyetyeyeyeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrr",
-      "journalTitle": "YES SIR",
-      "userId": 4,
-      "picture": "plantboi.jpg"
+      "journalTitle": "TITLEBOI2",
+      "userId": 4
+    },
+    {
+      "id": 3,
+      "plantId": 17,
+      "entryDate": "7/30/20, 2:29:52 PM",
+      "journalEntry": "yeyeyetyeyeyeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrr",
+      "journalTitle": "TITLEBOI3",
+      "userId": 4
+    },
+    {
+      "id": 4,
+      "plantId": 17,
+      "entryDate": "8/3/20, 2:17:42 PM",
+      "journalEntry": "yes sir",
+      "journalTitle": "alright",
+      "userId": 4
+    },
+    {
+      "id": 5,
+      "plantId": 9,
+      "entryDate": "8/3/20, 2:35:13 PM",
+      "journalEntry": "ddd",
+      "journalTitle": "dd",
+      "userId": 4
     }
   ]
 }

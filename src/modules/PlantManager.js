@@ -2,12 +2,12 @@
 const remoteURL = "http://localhost:5005"
 
 export default {
-//Joint Fetch Call
-   getAll(str) {
+    //Joint Fetch Call
+    getAll(str) {
         return fetch(`${remoteURL}/${str}`).then(result => result.json())
     },
 
-//PLANT FETCH CALLS START
+    //PLANT FETCH CALLS START
     getPlant(id) {
         return fetch(`${remoteURL}/plants/${id}`).then(result => result.json())
     },
@@ -34,10 +34,10 @@ export default {
             body: JSON.stringify(editedPlant)
         }).then(data => data.json());
     },
-//END PLANT FETCH
+    //END PLANT FETCH
 
-//Fetch calls to bind tables
- 
+    //Fetch calls to bind tables
+
     getWithDetails() {
         return fetch(`http://localhost:5005/plants/?_expand=mood&_expand=waterLevel&_expand=sunlightLevel`)
             .then(result => result.json())
@@ -48,12 +48,31 @@ export default {
         return fetch(`http://localhost:5005/plants/${id}/?_expand=mood&_expand=waterLevel&_expand=sunlightLevel`)
             .then(result => result.json())
     },
-    
-    // getWithJournalDetails() {
-    //     return fetch(`http://localhost:5005/plants/${id}/?_expand=mood&_expand=waterLevel&_expand=sunlightLevel`)
-    //         .then(result => result.json())
-    // },
 
+    /*      getWithJournalDetails() {
+             return fetch(`http://localhost:5005/journals/${id}`)
+                .then(result => result.json())
+         }, */
+
+    getWithAllDetails(id) {
+        return fetch(`http://localhost:5005/plants/${id}/?_expand=mood&_expand=waterLevel&_expand=sunlightLevel&_expand=journal`)
+            .then(result => result.json())
+    },
+
+    getWithJournal() {
+        return fetch(`http://localhost:5005/journals/?_expand=plant`)
+            .then(result => result.json())
+    },
+    getWithSpecificPlants(id) {
+        return fetch(`http://localhost:5005/journals/${id}/?_expand=plant`)
+            .then(result => result.json())
+    },
+
+    
+    getWithSpecificJournals(id) {
+        return fetch(`http://localhost:5005/journals?plantId=${id}&_expand=plant`)
+            .then(result => result.json())
+    },
 
 
     //Journal Fetch CAlls:
@@ -74,12 +93,21 @@ export default {
             },
             body: JSON.stringify(newJournalEntry)
         }).then(data => data.json())
+    },
+    update(editedJournal) {
+        return fetch(`${remoteURL}/journals/${editedJournal.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedJournal)
+        }).then(data => data.json());
     }
-//End Journal Fetch Calls
+    //End Journal Fetch Calls
 
 
 
-  
+
 
 
 

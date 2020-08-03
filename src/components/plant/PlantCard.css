@@ -145,4 +145,48 @@
     height: 150px;
     flex-wrap:nowrap;
     padding: 1px 1px;
+    overflow:auto;
+
+
 }
+
+
+
+.journalCardDate{
+  font-size: 10px;
+}
+
+
+.JournalCardsReact{
+  max-width: 100%;
+  max-height: 20px;
+  color: red;
+  
+}
+
+
+
+.descriptionContainer{
+   display: flex;
+  flex-direction: center;
+  justify-content: center; 
+ 
+ 
+}
+.journalDescriptionCard{
+  width: 50%;
+  height: 150px;
+  padding: 1px 1px;
+  
+
+}
+
+
+
+.extraPaddingJournalEdit{
+
+ padding-top: 75px;
+ margin-top: 50px;
+}
+
+

@@ -8,6 +8,9 @@ import PlantForm from "./plant/PlantForm";
 import PlantDetail from "./plant/PlantDetail";
 import PlantEditForm from "./plant/PlantEditForm";
 import PlantJournalForm from "./plant/PlantJournalForm"
+//import PlantJournalList from "./plant/PlantJournalList"
+import PlantJournalDetail from "./plant/PlantJournalDetail"
+import PlantJournalEditForm from "./plant/PlantJournalEditForm"
 //import UserList from "./auth/UserList"
 //import UserEditForm from "./auth/UserEditForm"
 
@@ -42,24 +45,32 @@ const ApplicationViews = (props) => {
       {/* <Route path="/home"render={props => {return <UserList {...props} />}} /> */}
       {/* <Route path="/users/:userId(\d+)/edit"render={props => {if (hasUser) {return <UserEditForm {...props} />} else {return <Redirect to="/home" />} }} /> */}
       {/*END USER INFO  */}
-      {/*Plant Routes START  */}
 
+
+      {/*Plant LIST Routes START  */}
       <Route
         exact
         path="/home"
         render={props => {
           if (hasUser) {
-            return <PlantList {...props} />;//Home here is a placeholder value. 
-            //You would need to inserts and import articles once built
+            return <PlantList {...props}/>  ;//Home here is a placeholder value. 
+            
           } else {
             return <Redirect to="/login" />
           }
         }} />
+        
+
+
+{/*Plant LIST Routes END */}
+
+{/*Plant Routes START  */}
         <Route path="/plants/:plantId(\d+)" render={(props) => {
                 if (hasUser) {
                     return <PlantDetail
                         plantId={parseInt(props.match.params.plantId) }          
-                        {...props} />
+                        {...props} /> 
+
                 } else {
                     return <Redirect to="/login" />
 
@@ -86,12 +97,44 @@ const ApplicationViews = (props) => {
 
 
 
+{/*Journal Routes START  */}
       
       <Route
         path="/journals/new"
         render={(props) => {
           return <PlantJournalForm {...props} />
         }} />
+
+      
+       <Route path="/journals/:journalId(\d+)" render={(props) => {
+                if (hasUser) {
+                    return <PlantJournalDetail
+                        journalId={parseInt(props.match.params.journalId) }          
+                        {...props} /> 
+
+                } else {
+                    return <Redirect to="/login" />
+
+                }
+       }} />
+      <Route
+      exact
+        path="/journals/:journalId(\d+)/edit"
+        render={props => {
+          if (hasUser) {
+            return <PlantJournalEditForm {...props}
+            />
+          }
+          else {
+            return <Redirect to="/home" />
+          }
+        }} /> 
+
+
+
+
+
+
 
     </React.Fragment>
   );

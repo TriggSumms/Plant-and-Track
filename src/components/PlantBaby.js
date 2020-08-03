@@ -6,7 +6,7 @@ import NavBar from './nav/NavBar';
 //import PlantCard from "./plant/PlantCard"
 import ApplicationViews from "./ApplicationViews"
 //import Jumbotron from "./nav/Jumbotron";
-//import Home from "./home/Home"
+
 
 
 const PlantBaby = () => {
