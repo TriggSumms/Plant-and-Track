@@ -56,36 +56,24 @@
     },
     {
       "userId": 4,
-      "id": 15,
-      "nickName": "i",
-      "vernacularName": "m",
-      "entryDate": "7/31/20, 8:54:11 PM(~Edited~)(~Edited Since~)",
-      "age": "u",
-      "moodId": 0,
-      "sunlightLevelId": 0,
-      "waterLevelId": 0,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 16,
-      "nickName": "WIN",
-      "vernacularName": "Win",
-      "entryDate": "7/31/20, 10:08:19 PM",
-      "age": "d",
-      "moodId": "2",
-      "sunlightLevelId": "1",
-      "waterLevelId": "1",
-      "isDead": "false"
-    },
-    {
-      "userId": 4,
       "id": 17,
       "nickName": "w",
       "vernacularName": "iboi",
       "entryDate": "7/31/20, 10:26:40 PM",
       "age": "w",
       "moodId": "1",
+      "sunlightLevelId": 0,
+      "waterLevelId": 0,
+      "isDead": true
+    },
+    {
+      "userId": 4,
+      "id": 18,
+      "nickName": "ggg",
+      "vernacularName": "sssss",
+      "entryDate": "8/1/20, 9:46:22 AM",
+      "age": "alright",
+      "moodId": 0,
       "sunlightLevelId": 0,
       "waterLevelId": 0,
       "isDead": true
@@ -136,9 +124,21 @@
   "journals": [
     {
       "id": 1,
-      "plantId": 14,
+      "plantId": 9,
       "entryDate": "7/30/20, 2:27:53 PM",
-      "journalEntry": "yeyeyetyeyeye"
+      "journalEntry": "Cowpoke Teddy, ",
+      "journalTitle": "YES SIR",
+      "userId": 4,
+      "picture": "plantboi.jpg"
+    },
+    {
+      "id": 2,
+      "plantId": 9,
+      "entryDate": "7/30/20, 2:29:53 PM",
+      "journalEntry": "yeyeyetyeyeyeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrr",
+      "journalTitle": "YES SIR",
+      "userId": 4,
+      "picture": "plantboi.jpg"
     }
   ]
 }
