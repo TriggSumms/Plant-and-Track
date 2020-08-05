@@ -102,15 +102,22 @@ export default {
             },
             body: JSON.stringify(editedJournal)
         }).then(data => data.json());
-    }
+    },
     //End Journal Fetch Calls
+ 
 
+    //Graveyard CAlls
+    
+/*     GraveYardRoute(editedPlant){
+        return fetch (`${remoteURL}/journals/${editedPlant.id}`, {
+            method:"PATCH",
+             headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                isDead: true 
+            })
+        }) .then(resp => resp.json());
+    }*/
+} 
 
-
-
-
-
-
-
-
-}   

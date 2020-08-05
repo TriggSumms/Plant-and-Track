@@ -19,8 +19,8 @@ let timeStamp = new Intl.DateTimeFormat("en", {
 });
 
 const PlantJournalForm = props => {
-    const [journal, setJournal] = useState({  id: 0, plantId: 0, entryDate: timeStamp.format(Date.now()), journalEntry: "", journalTitle: "" });
-
+    const [journal, setJournal] = useState({ plantId: props.plantId, entryDate: timeStamp.format(Date.now()), journalEntry: "", journalTitle: ""});
+    const [plants, setPlants] = useState([])
     const [isLoading, setIsLoading] = useState(false);
 
     //Tracks entries into text boxes
@@ -36,18 +36,23 @@ const PlantJournalForm = props => {
 
 
 
-
     const currentUserId = sessionStorage.getItem("activeUser")
     journal.userId = parseInt(currentUserId)
-    journal.plantId = parseInt(props.plant)
+
+
+   
+
+ // plant.id   = journal.plantId
 
 
     const constructNewJournalEntry = evt => {
         evt.preventDefault();
-        if (journal.journalEntry === "" || journal.JournalTitle === "") {
+        if (journal.journalEntry === "" || journal.journalTitle === "") {
             window.alert("Please fill out all the entry requirements....");
         } else {
             setIsLoading(true);
+           journal.plantId = parseInt(journal.plantId)
+           
             // Create the article and redirect user to article list
             PlantManager.postJournal(journal)
                 //.then(() => PlantManager.getAll(plants))
@@ -55,7 +60,16 @@ const PlantJournalForm = props => {
         }
     };
 
+ const getPlants = () => {
+        return PlantManager.getAll("plants").then(plantsFromAPI => {
+            setPlants(plantsFromAPI)
+          });
+        }
+
+
+        
     useEffect(() => {
+getPlants()
 
     }, []);
 
@@ -68,6 +82,14 @@ const PlantJournalForm = props => {
                     <div className="card-panel transparent">
                         <div className="row">
                             <form className="col s12">
+                            <input
+                            type="hidden"
+                            required
+                            className="form-control"
+                            onChange={handleFieldChange}
+                            id='plantId'
+                            value={plants.plantId}
+                        />
 
                                 <div className="input-field col s5">
                                     Title of the Entry:
@@ -80,7 +102,7 @@ const PlantJournalForm = props => {
                 <input placeholder="Talk about the status of your plant, your plans for next season, repotting methods, etc:" id="journalEntry" className="materialize-textarea" required
                                         onChange={handleFieldChange} className="validate"></input>
                                     <label for="journalEntry"></label>
-                                    <div className="">
+                                    <div >
                                         <button
                                             className="waves-effect waves-light btn"
                                             type="button"

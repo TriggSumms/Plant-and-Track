@@ -8,8 +8,8 @@ import PlantForm from "./plant/PlantForm";
 import PlantDetail from "./plant/PlantDetail";
 import PlantEditForm from "./plant/PlantEditForm";
 import PlantJournalForm from "./plant/PlantJournalForm"
-//import PlantJournalList from "./plant/PlantJournalList"
 import PlantJournalDetail from "./plant/PlantJournalDetail"
+import PlantGraveYardList from "./plant/PlantGraveYardList"
 import PlantJournalEditForm from "./plant/PlantJournalEditForm"
 //import UserList from "./auth/UserList"
 //import UserEditForm from "./auth/UserEditForm"
@@ -53,36 +53,53 @@ const ApplicationViews = (props) => {
         path="/home"
         render={props => {
           if (hasUser) {
-            return <PlantList {...props}/>  ;//Home here is a placeholder value. 
-            
+            return <PlantList {...props} />;//Home here is a placeholder value. 
+
           } else {
             return <Redirect to="/login" />
           }
         }} />
-        
 
 
-{/*Plant LIST Routes END */}
 
-{/*Plant Routes START  */}
-        <Route path="/plants/:plantId(\d+)" render={(props) => {
-                if (hasUser) {
-                    return <PlantDetail
-                        plantId={parseInt(props.match.params.plantId) }          
-                        {...props} /> 
+      {/*Plant LIST Routes END */}
+    <Route
+        exact
+        path="/DeadPlants"
+        render={props => {
+          if (hasUser) {
+                return <PlantGraveYardList
+                plantId={parseInt(props.match.params.plantId)}
+                 {...props} />
+              } else {
+                return <Redirect to="/login" />
+                    }
+                }}
+            />  
 
-                } else {
-                    return <Redirect to="/login" />
 
-                }
-       }} />
-      <Route
+      {/*Plant Routes START  */}
+
+       <Route
         path="/plants/new"
         render={(props) => {
           return <PlantForm {...props} />
-        }} />
+        }} />  
+
+        <Route path="/plants/:plantId(\d+)" render={(props) => {
+        if (hasUser) {
+          return <PlantDetail
+            plantId={parseInt(props.match.params.plantId)}
+            {...props} />
+
+        } else {
+          return <Redirect to="/login" />
+
+        }
+      }} />
+
       <Route
-      exact
+        exact
         path="/plants/:plantId(\d+)/edit"
         render={props => {
           if (hasUser) {
@@ -92,33 +109,37 @@ const ApplicationViews = (props) => {
           else {
             return <Redirect to="/home" />
           }
-        }} /> 
+        }} />
       {/*Plant Routes End  */}
 
 
 
-{/*Journal Routes START  */}
-      
-      <Route
-        path="/journals/new"
+      {/*Journal Routes START  */}
+          
+
+
+       <Route path="/plants/:plantId(\d+)/newjournal"
+
         render={(props) => {
-          return <PlantJournalForm {...props} />
-        }} />
+          return <PlantJournalForm
+          plantId={parseInt(props.match.params.plantId)}
+            {...props} />
+        }} /> 
 
-      
-       <Route path="/journals/:journalId(\d+)" render={(props) => {
-                if (hasUser) {
-                    return <PlantJournalDetail
-                        journalId={parseInt(props.match.params.journalId) }          
-                        {...props} /> 
 
-                } else {
-                    return <Redirect to="/login" />
+      <Route path="/journals/:journalId(\d+)" render={(props) => {
+        if (hasUser) {
+          return <PlantJournalDetail
+            journalId={parseInt(props.match.params.journalId)}
+            {...props} />
 
-                }
-       }} />
+        } else {
+          return <Redirect to="/login" />
+
+        }
+      }} />
       <Route
-      exact
+        exact
         path="/journals/:journalId(\d+)/edit"
         render={props => {
           if (hasUser) {
@@ -128,7 +149,7 @@ const ApplicationViews = (props) => {
           else {
             return <Redirect to="/home" />
           }
-        }} /> 
+        }} />
 
 
 

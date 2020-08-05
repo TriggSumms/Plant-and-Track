@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import PlantManager from "../../modules/PlantManager"
-import { Form } from 'react-bootstrap';
-import './css-java-extension/materialize.css';
-import './css-java-extension/materialize.min.css';
+import {Form} from "react-bootstrap";
+//import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const PlantEditForm = props => {
     const [plant, setPlant] = useState({userId: 0, nickName: "", vernacularName: "", entryDate: "", age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: true  });
@@ -59,7 +59,7 @@ const PlantEditForm = props => {
             moodId: plant.moodId,
             sunlightLevelId: plant.sunlightLevelId,
             waterLevelId: plant.waterLevelId,
-            isDead: true  
+            isDead: false  
 
         };
 
@@ -126,8 +126,8 @@ const PlantEditForm = props => {
                                 
 
 
-                                <div className="">
-                                    <Form.Group className="" controlId="moodId">
+                                <div className="kk">
+                                    <Form.Group controlId="moodId">
                                         <Form.Label>Plant Mood:</Form.Label>
                                        
                                         <Form.Control as="select" className="moodForm"
@@ -138,8 +138,8 @@ const PlantEditForm = props => {
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
-                                <div className="">
-                                    <Form.Group className="" controlId="sunlightLevelId">
+                                <div className="kk">
+                                    <Form.Group  controlId="sunlightLevelId">
                                         <Form.Label>Sunlight Level:</Form.Label>
                                         <Form.Control as="select" className="sunlightLevelForm"
                                             value={parseInt(plant.sunlightLevelId)} id="sunlightLevelId"   required
@@ -149,8 +149,8 @@ const PlantEditForm = props => {
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
-                                <div className="">
-                                    <Form.Group className="" controlId="waterLevelId">
+                                <div className="kk">
+                                    <Form.Group  controlId="waterLevelId">
                                         <Form.Label>Water Level:</Form.Label>
                                         <Form.Control as="select" className="waterLevelForm"
                                             value={parseInt(plant.waterLevelId)} id="waterLevelId"  required
@@ -160,9 +160,9 @@ const PlantEditForm = props => {
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
-
-                                <div className="">
-                                    <Form.Group className="" controlId="isDead">
+{/* 
+                                <div className="kk">
+                                    <Form.Group controlId="isDead">
                                         <Form.Label>Ready for the Plant Graveyeard:</Form.Label>
                                         <Form.Control as="select" className=""
                                             value={parseInt(plant.isDead)} id="isDead" required
@@ -171,7 +171,7 @@ const PlantEditForm = props => {
                                              <option value= "false" >This Plant is Thriving, get outta here GrimPlantKeeper!</option>
                                         </Form.Control>
                                     </Form.Group>
-                                </div>  
+                                </div> */}  
  
                         </div>
                                 <div className="alignRight">

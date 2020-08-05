@@ -40,7 +40,7 @@
       "moodId": 2,
       "sunlightLevelId": 2,
       "waterLevelId": 1,
-      "isDead": "false"
+      "isDead": false
     },
     {
       "userId": 4,
@@ -52,7 +52,7 @@
       "moodId": 0,
       "sunlightLevelId": 0,
       "waterLevelId": 0,
-      "isDead": "false"
+      "isDead": false
     },
     {
       "userId": 4,
@@ -64,7 +64,7 @@
       "moodId": "1",
       "sunlightLevelId": 0,
       "waterLevelId": 0,
-      "isDead": "false"
+      "isDead": false
     },
     {
       "userId": 4,
@@ -76,7 +76,7 @@
       "moodId": 0,
       "sunlightLevelId": 0,
       "waterLevelId": 0,
-      "isDead": "true"
+      "isDead": true
     },
     {
       "userId": 4,
@@ -88,7 +88,31 @@
       "moodId": 0,
       "sunlightLevelId": 0,
       "waterLevelId": 0,
+      "isDead": false
+    },
+    {
+      "userId": 4,
+      "id": 20,
+      "nickName": "k",
+      "vernacularName": "k",
+      "entryDate": "8/4/20, 8:47:45 AM",
+      "age": "jjjj",
+      "moodId": "1",
+      "sunlightLevelId": 0,
+      "waterLevelId": 0,
       "isDead": true
+    },
+    {
+      "userId": 4,
+      "id": 21,
+      "nickName": "egggggghead",
+      "vernacularName": "Alright babes",
+      "entryDate": "8/4/20, 8:35:11 PM",
+      "age": "5555",
+      "moodId": "2",
+      "sunlightLevelId": "2",
+      "waterLevelId": "1",
+      "isDead": false
     }
   ],
   "sunlightLevels": [
@@ -138,7 +162,7 @@
       "id": 1,
       "plantId": 9,
       "entryDate": "7/30/20, 2:27:53 PM",
-      "journalEntry": "Cowpoke Teddy ",
+      "journalEntry": "Cowpoke Teddysssss ",
       "journalTitle": "TITLE BOI1",
       "userId": 4
     },
@@ -173,6 +197,38 @@
       "journalEntry": "ddd",
       "journalTitle": "dd",
       "userId": 4
+    },
+    {
+      "id": 15,
+      "plantId": 9,
+      "entryDate": "8/4/20, 1:31:42 PM",
+      "journalEntry": "jjjj",
+      "journalTitle": "bingleboi3000",
+      "userId": 4
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/4/20, 2:41:23 PM",
+      "journalEntry": "jjjjyoyoyoy",
+      "journalTitle": "bingleboi3000",
+      "userId": 4,
+      "id": 20
+    },
+    {
+      "plantId": 14,
+      "entryDate": "8/4/20, 3:08:38 PM",
+      "journalEntry": "Im just having one of em days",
+      "journalTitle": "YES SIR hello plant 4",
+      "userId": 4,
+      "id": 21
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/4/20, 3:41:09 PM",
+      "journalEntry": "rrrrr",
+      "journalTitle": "gggg",
+      "userId": 4,
+      "id": 22
     }
   ]
 }

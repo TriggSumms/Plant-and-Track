@@ -16,11 +16,11 @@ const PlantJournalCard = (props) => {
 
                 {/*START OF WHATS BEING SENT TO PLANT CARD  */}
                 <div className="plantcard-journal-entry__Container">
-                  <div class="card horizontal">
+                  <div className="card horizontal">
                     <div className="col s12 ">
                       <div className="card #c5e1a5 light-green lighten-3">
                     <div className="card-content black-text">
-                      <h7><p className="journalCardDate" >{props.journalEntry.entryDate}</p>{props.journalEntry.journalTitle}<button className="danger" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}>Details</button></h7>      
+                      <h6><p className="journalCardDate" >{props.journalEntry.entryDate}</p>{props.journalEntry.journalTitle}<button className="danger" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}>Details</button></h6>      
                       
                           <p className="truncate"  >{props.journalEntry.journalEntry}</p>
                          

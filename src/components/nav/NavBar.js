@@ -44,7 +44,7 @@ const NavBar = props => {
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link>
-                                {props.hasUser ? <Link to="/contact">~Plant Graveyard~</Link> : null}
+                                {props.hasUser ? <Link to="/DeadPlants">~Plant Graveyard~</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
                         {props.hasUser ? <NavDropdown title="Additional Resources" id="basic-nav-dropdown">
