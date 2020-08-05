@@ -13,9 +13,9 @@ let timeStamp = new Intl.DateTimeFormat("en", {
 const PlantDetail = props => {
   const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
   const [journals, setJournals] = useState([]);
-  const [mood, setMood] = useState({ level: "" });
-  const [sunlightLevel, setSunlightLevel] = useState({ level: "" });
-  const [waterLevel, setWaterLevel] = useState({ level: "" });
+  const [mood, setMood] = useState({ level: 0 });
+  const [sunlightLevel, setSunlightLevel] = useState({ level: 0 });
+  const [waterLevel, setWaterLevel] = useState({ level: 0 });
 
   const [isLoading, setIsLoading] = useState(true);
   console.log("yee", plant)
@@ -35,6 +35,9 @@ const PlantDetail = props => {
       }
       )
   }
+
+
+  
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(plant.id)
       .then(APIres => {
@@ -43,6 +46,9 @@ const PlantDetail = props => {
       }
       )
   }
+
+
+
 
   useEffect(() => {
     expandedPlant()
