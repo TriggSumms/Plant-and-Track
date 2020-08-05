@@ -40,113 +40,195 @@
       "moodId": 2,
       "sunlightLevelId": 2,
       "waterLevelId": 1,
-      "isDead": "false"
-    },
-    {
-      "userId": 4,
-      "id": 11,
-      "nickName": "cd",
-      "vernacularName": "dc",
-      "entryDate": "7/30/20, 1:58:30 PM",
-      "age": "cd",
-      "moodId": "2",
-      "sunlightLevelId": "3",
-      "waterLevelId": "3",
-      "isDead": "false"
-    },
-    {
-      "userId": 4,
-      "id": 12,
-      "nickName": "xxxx",
-      "vernacularName": "xxx",
-      "entryDate": "7/30/20, 2:27:53 PM",
-      "age": "xx",
-      "moodId": "2",
-      "sunlightLevelId": "2",
-      "waterLevelId": "3",
-      "isDead": "false"
-    },
-    {
-      "userId": 4,
-      "id": 13,
-      "nickName": "j",
-      "vernacularName": "j",
-      "entryDate": "7/30/20, 7:34:25 PM",
-      "age": "n",
-      "moodId": "2",
-      "sunlightLevelId": "1",
-      "waterLevelId": "3",
-      "isDead": "false"
+      "isDead": false
     },
     {
       "userId": 4,
       "id": 14,
       "nickName": "4",
       "vernacularName": "d",
-      "entryDate": "7/30/20, 8:38:08 PM",
+      "entryDate": "7/30/20, 8:38:08 PM(~Edited Since~)",
       "age": "4",
+      "moodId": 0,
+      "sunlightLevelId": 0,
+      "waterLevelId": 0,
+      "isDead": false
+    },
+    {
+      "userId": 4,
+      "id": 17,
+      "nickName": "w",
+      "vernacularName": "iboi",
+      "entryDate": "7/31/20, 10:26:40 PM",
+      "age": "w",
+      "moodId": "1",
+      "sunlightLevelId": 0,
+      "waterLevelId": 0,
+      "isDead": false
+    },
+    {
+      "userId": 4,
+      "id": 18,
+      "nickName": "ggg",
+      "vernacularName": "sssss",
+      "entryDate": "8/1/20, 9:46:22 AM",
+      "age": "alright",
+      "moodId": 0,
+      "sunlightLevelId": 0,
+      "waterLevelId": 0,
+      "isDead": true
+    },
+    {
+      "userId": 4,
+      "id": 19,
+      "nickName": "kkkk",
+      "vernacularName": "yeeha",
+      "entryDate": "8/3/20, 2:17:20 PM",
+      "age": "i",
+      "moodId": 0,
+      "sunlightLevelId": 0,
+      "waterLevelId": 0,
+      "isDead": false
+    },
+    {
+      "userId": 4,
+      "id": 20,
+      "nickName": "k",
+      "vernacularName": "k",
+      "entryDate": "8/4/20, 8:47:45 AM",
+      "age": "jjjj",
+      "moodId": "1",
+      "sunlightLevelId": 0,
+      "waterLevelId": 0,
+      "isDead": true
+    },
+    {
+      "userId": 4,
+      "id": 21,
+      "nickName": "egggggghead",
+      "vernacularName": "Alright babes",
+      "entryDate": "8/4/20, 8:35:11 PM",
+      "age": "5555",
       "moodId": "2",
       "sunlightLevelId": "2",
-      "waterLevelId": "2",
-      "isDead": "false"
+      "waterLevelId": "1",
+      "isDead": false
     }
   ],
   "sunlightLevels": [
     {
-      "id": 1,
+      "id": 0,
       "level": "Low-Light"
     },
     {
-      "id": 2,
+      "id": 1,
       "level": "Medium-Light"
     },
     {
-      "id": 3,
-      "level": "Low-Light"
+      "id": 2,
+      "level": "High-Light"
     }
   ],
   "waterLevels": [
     {
-      "id": 1,
+      "id": 0,
       "level": "Low Water"
     },
     {
-      "id": 2,
+      "id": 1,
       "level": "Medium-Water"
     },
     {
-      "id": 3,
+      "id": 2,
       "level": "High-Water"
     }
   ],
   "moods": [
     {
-      "id": 1,
+      "id": 0,
       "level": "Healthy as Hell"
     },
     {
-      "id": 2,
+      "id": 1,
       "level": "Droop boi"
     },
     {
-      "id": 3,
+      "id": 2,
       "level": "Almost Dead"
     }
   ],
   "journals": [
     {
       "id": 1,
-      "plantId": 14,
+      "plantId": 9,
       "entryDate": "7/30/20, 2:27:53 PM",
-      "journalEntry": "yeyeyetyeyeye"
+      "journalEntry": "Cowpoke Teddysssss ",
+      "journalTitle": "TITLE BOI1",
+      "userId": 4
     },
     {
-      "plantId": 0,
       "id": 2,
-      "nickName": "",
-      "entryDate": "7/31/20, 8:53:57 AM",
-      "journalEntry": "rruruurururuurururur",
+      "plantId": 9,
+      "entryDate": "7/30/20, 2:29:53 PM",
+      "journalEntry": "yeyeyetyeyeyeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrr",
+      "journalTitle": "TITLEBOI2",
       "userId": 4
+    },
+    {
+      "id": 3,
+      "plantId": 17,
+      "entryDate": "7/30/20, 2:29:52 PM",
+      "journalEntry": "yeyeyetyeyeyeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrr",
+      "journalTitle": "TITLEBOI3",
+      "userId": 4
+    },
+    {
+      "id": 4,
+      "plantId": 17,
+      "entryDate": "8/3/20, 2:17:42 PM",
+      "journalEntry": "yes sir",
+      "journalTitle": "alright",
+      "userId": 4
+    },
+    {
+      "id": 5,
+      "plantId": 9,
+      "entryDate": "8/3/20, 2:35:13 PM",
+      "journalEntry": "ddd",
+      "journalTitle": "dd",
+      "userId": 4
+    },
+    {
+      "id": 15,
+      "plantId": 9,
+      "entryDate": "8/4/20, 1:31:42 PM",
+      "journalEntry": "jjjj",
+      "journalTitle": "bingleboi3000",
+      "userId": 4
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/4/20, 2:41:23 PM",
+      "journalEntry": "jjjjyoyoyoy",
+      "journalTitle": "bingleboi3000",
+      "userId": 4,
+      "id": 20
+    },
+    {
+      "plantId": 14,
+      "entryDate": "8/4/20, 3:08:38 PM",
+      "journalEntry": "Im just having one of em days",
+      "journalTitle": "YES SIR hello plant 4",
+      "userId": 4,
+      "id": 21
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/4/20, 3:41:09 PM",
+      "journalEntry": "rrrrr",
+      "journalTitle": "gggg",
+      "userId": 4,
+      "id": 22
     }
   ]
 }

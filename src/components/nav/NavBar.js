@@ -44,7 +44,7 @@ const NavBar = props => {
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link>
-                                {props.hasUser ? <Link to="/contact">~Plant Graveyard~</Link> : null}
+                                {props.hasUser ? <Link to="/DeadPlants">~Plant Graveyard~</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
                         {props.hasUser ? <NavDropdown title="Additional Resources" id="basic-nav-dropdown">
@@ -55,10 +55,10 @@ const NavBar = props => {
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown> : null}
 {/* SEARCH BAR FORM PLACEMENT */}
-                        {props.hasUser ? <Form inline>
+                        {/* {props.hasUser ? <Form inline>
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                             <Button variant="outline-success">Search</Button>
-                        </Form> : null}
+                        </Form> : null} */}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

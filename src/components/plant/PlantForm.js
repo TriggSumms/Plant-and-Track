@@ -19,7 +19,7 @@ let timeStamp = new Intl.DateTimeFormat("en", {
 });
 
 const PlantForm = props => {
-    const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: true });
+    const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
     const [moods, setMoods] = useState([]);
     const [sunlightLevels, setSunlightLevels] = useState([]);
     const [waterLevels, setWaterLevels] = useState([]);
@@ -32,6 +32,9 @@ const PlantForm = props => {
         stateToChange[evt.target.id] = evt.target.value;
         setPlant(stateToChange);
     };
+
+
+    
     //DROPDOWN API CALLS
 
 
@@ -61,6 +64,7 @@ const PlantForm = props => {
         getMoods();
         getSunlightLevels();
         getWaterLevels();
+        //getIsDeads()
     }, []);
 
 
@@ -156,17 +160,7 @@ const PlantForm = props => {
                                     </Form.Group>
                                 </div>
 
-                                <div className="">
-                                    <Form.Group className="" controlId="isDead">
-                                        <Form.Label>Ready for the Plant Graveyeard:</Form.Label>
-                                        <Form.Control as="select" className=""
-                                            value={parseInt(plant.isDead)} id="isDead" required
-                                            onChange={handleFieldChange}  >
-                                            <option value="true" >Ready</option>
-                                            <option value="false" >This Plant is Thriving, get outta here GrimPlantKeeper!</option>
-                                        </Form.Control>
-                                    </Form.Group>
-                                </div>
+  
 
 
                                 <div className="alignRight">

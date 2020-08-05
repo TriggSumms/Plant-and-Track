@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './PlantBaby.css';
-//import 'bootstrap/dist/css/bootstrap.min.css';
+
 //import { Container } from 'react-bootstrap';
 import NavBar from './nav/NavBar';
 //import PlantCard from "./plant/PlantCard"
 import ApplicationViews from "./ApplicationViews"
 //import Jumbotron from "./nav/Jumbotron";
-//import Home from "./home/Home"
+
 
 
 const PlantBaby = () => {
