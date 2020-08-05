@@ -37,7 +37,7 @@ const PlantDetail = props => {
   }
 
 
-  
+
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(plant.id)
       .then(APIres => {
@@ -61,7 +61,7 @@ const PlantDetail = props => {
   const handleDelete = () => {
     setIsLoading(true);
     PlantManager.delete(plant.id).then(() =>
-      props.history.push("/plants")
+      props.history.push("/home")
     );
   };
 

@@ -28,21 +28,12 @@ const deletePlant = (id) => {
     
   };
 
-
-
-
   useEffect(() => {
     withDetails();
 
   }, []);
 
 
-
-
-
-
-
-  
 
   // Mapping through 
   return (

@@ -11,27 +11,59 @@ import "./PlantCard.css"
 const PlantCard = (props) => {
 
   const [journals, setJournals] = useState([]);
-  //const [plant, setPlant] = useState([])
+  const [plant, setPlant] = useState({userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead  });
   //console.log("plantListplant", plant)
+  const [isDead, setIsDead] = useState({isDead: props.isDead})
   const [isLoading, setIsLoading] = useState(true);
   console.log("plantListJournals", journals)
 
 
 
 
+  const handleFieldChange = evt => {
+    const stateToChange = { ...plant };
+    stateToChange[evt.target.id] = evt.target.value;
+    setPlant(stateToChange);
+};
+
+
+
+const updatePlanttoGraveyard = evt => {
+ console.log("brendatest", evt)
+  //evt.preventDefault()
+  setIsLoading(true);
+
+//Created a way to change the plant through updateing the plant object....this way a button toggles the cards view between dead/alive    
+//const MessageChanged = "(DEAD PLANT)"
+/* plant.moodId = parseInt( plant.moodId)
+plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
+plant.waterLevelId = parseInt(plant.waterLevelId) */
+  
+let isDead = isDead.isDead ? false: true
+
   const graveYardPlant = {
-    userId: props.plant.userId,
-    id: props.plant.id,
-    // id: plant.id = parseInt(plant.id),
-    nickName: props.plant.nickName,
-    vernacularName: props.plant.vernacularName,
-    //entryDate: props.plant.timeStamp.format(Date.now()),
-    age: props.plant.age,
-    moodId: props.plant.mood.level,
-    sunlightLevelId: props.plant.sunlightLevel.level,
-    waterLevelId: props.plant.waterLevel.level, 
-    isDead: true
-  } 
+      userId: props.plant.userId,
+      id: props.plant.id,
+      nickName: props.plant.nickName,
+      vernacularName: props.plant.vernacularName,
+      entryDate: props.plant.entryDate ,
+      //entryDate: props.plant.timeStamp.format(Date.now())
+      age: props.plant.age,
+      moodId: props.plant.mood.level,
+      sunlightLevelId: props.plant.sunlightLevelId,
+      waterLevelId: props.plant.waterLevel.level, 
+      isDead: isDead
+  };
+console.log("graveyardclickTEST", graveYardPlant)
+  PlantManager.updatePlant(graveYardPlant)
+      .then(() => props.history.push("/home"))
+}
+
+
+
+
+
+//This is the function responsible for bringing in the journal entries for the mapped PLANTJOURNALCARD
 
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(props.plant.id)
@@ -41,13 +73,7 @@ const PlantCard = (props) => {
       }
       )
   }
-
-
-
-  /*   const handleFieldChange = () => {
-      PlantManager.GraveYardRoute(props.plant.id)
-        .then(() => props.getAll("plants"))
-    } */
+//END JOURNAL FUNCTION
 
 
 
@@ -58,14 +84,13 @@ const PlantCard = (props) => {
     setIsLoading(false);
 
   }, [props.plantId]);
-  //Maybe change PlantId too plant.id
+  
 
 
 
 
   return (
     <>
-      {/* {props.plant.isDead ? false : */}
 
       <div className="flipCard-generator">
         <div className="flip-card">
@@ -83,16 +108,20 @@ const PlantCard = (props) => {
                     <li>Created on {props.plant.entryDate} </li>
                     <li>Sunlight Level: {props.plant.sunlightLevel.level} </li>
                     <li>Water Level: {props.plant.waterLevel.level} </li>
-                    <li>Mood of your plant: {props.plant.mood.level} </li>  
-                  <form action="#">
+                    <li>Mood of your plant: {props.plant.mood.level} </li>
+                   
+
+                   <form >
                       <p>
-                        <label for="checkbox">
-                           <input type="checkbox" id="checkbox" name="IsDead" value={props.plant.isDead} checked={props.isChecked}  onChange={() => props.updateForGarbagePlant(graveYardPlant)} /> 
+                        <label htmlFor="checkbox">
+                           <input type="checkbox" id={props.plant.id} name="isDead" checked={isDead.isDead}  onChange={updatePlanttoGraveyard} /> 
                           <span>Is the Plant Dead: {props.plant.isDead ? 'true' : 'false'}</span>
                         </label>
                       </p>
                     </form>
-                  
+                   
+
+
                     {/*            
                     <label htmlFor="IsDead"> Is the Plant Dead: {props.plant.isDead ? 'true' : 'false'} </label>
                     <input type="checkbox" id= "isDead" name="IsDead" value={props.plant.idDead} onChange={() => props.updateForGarbagePlant(graveYardPlant)}></input>

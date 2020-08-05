@@ -161,18 +161,6 @@ const PlantEditForm = props => {
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
-{/* 
-                                <div className="kk">
-                                    <Form.Group controlId="isDead">
-                                        <Form.Label>Ready for the Plant Graveyeard:</Form.Label>
-                                        <Form.Control as="select" className=""
-                                            value={parseInt(plant.isDead)} id="isDead" required
-                                            onChange={handleFieldChange}  >
-                                            <option value= "true" >Ready</option>
-                                             <option value= "false" >This Plant is Thriving, get outta here GrimPlantKeeper!</option>
-                                        </Form.Control>
-                                    </Form.Group>
-                                </div> */}  
  
                         </div>
                                 <div className="alignRight">
