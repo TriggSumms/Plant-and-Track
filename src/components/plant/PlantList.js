@@ -12,6 +12,17 @@ import "./PlantCard.css"
 const PlantList = (props) => {
   // The initial state is an empty array
   const [plants, setPlants] = useState([]);
+  const [search, setSearch] = useState("");
+ const [filteredPlants, setFilteredPlants] = useState([])
+
+
+
+
+
+
+
+
+
 
 
 
@@ -28,10 +39,29 @@ const deletePlant = (id) => {
     
   };
 
+
+
   useEffect(() => {
     withDetails();
-
   }, []);
+
+
+
+
+  useEffect(() => {
+    setFilteredPlants(
+      plants.filter(plant =>
+        plant.nickName.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  }, [search, plants]);
+
+/* 
+  if (loading) {
+    return <p>Loading countries...</p>;
+  } */
+
+
 
 
 
@@ -45,11 +75,17 @@ const deletePlant = (id) => {
         New Plant Baby ?
         </button>
 
-  
+  <div>   
+    <input
+        type="text"
+        placeholder="Search Em Plants by their God given Name"
+        onChange={evt => setSearch(evt.target.value)}
+      />
+      </div>
         
         <div className="flip-card-front">
           <div className="flipCard-generator">
-            {plants.map(plant =>
+            {filteredPlants.map(plant =>
             plant.isDead ? null: //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
             //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
               <PlantCard
