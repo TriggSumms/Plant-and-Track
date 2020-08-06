@@ -7,6 +7,10 @@ export default {
         return fetch(`${remoteURL}/${str}`).then(result => result.json())
     },
 
+
+
+
+
     //PLANT FETCH CALLS START
     getPlant(id) {
         return fetch(`${remoteURL}/plants/${id}`).then(result => result.json())
@@ -25,7 +29,7 @@ export default {
             body: JSON.stringify(newPlant)
         }).then(data => data.json())
     },
-    update(editedPlant) {
+    updatePlant(editedPlant) {
         return fetch(`${remoteURL}/plants/${editedPlant.id}`, {
             method: "PUT",
             headers: {
@@ -35,6 +39,12 @@ export default {
         }).then(data => data.json());
     },
     //END PLANT FETCH
+
+
+
+
+
+
 
     //Fetch calls to bind tables
 
@@ -75,6 +85,12 @@ export default {
     },
 
 
+
+
+
+
+
+
     //Journal Fetch CAlls:
     getJournal(id) {
         return fetch(`${remoteURL}/journals/${id}`).then(result => result.json())
@@ -106,6 +122,12 @@ export default {
     //End Journal Fetch Calls
  
 
+
+
+
+
+
+    
     //Graveyard CAlls
     
 /*     GraveYardRoute(editedPlant){

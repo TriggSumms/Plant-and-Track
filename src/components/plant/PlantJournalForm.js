@@ -95,7 +95,7 @@ getPlants()
                                     Title of the Entry:
                 <input placeholder="Give your Journal entry a memorable title..." id="journalTitle" type="text" data-length="10" required
                                         onChange={handleFieldChange} className="validate"></input>
-                                    <label for="journalEntry"></label>
+                                    <label for="journalTitle"></label>
                                 </div>
                                 <div className="input-field col s8">
                                     Plant Journal Entry:

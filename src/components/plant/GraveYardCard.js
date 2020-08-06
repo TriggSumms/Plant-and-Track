@@ -8,7 +8,7 @@ import PlantJournalCard from "./PlantJournalCard"
 import "./PlantCard.css"
 
 
-const PlantCard = (props) => {
+const GraveYardCard = (props) => {
 
   const [journals, setJournals] = useState([]);
   const [plant, setPlant] = useState({userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead  });
@@ -27,10 +27,6 @@ const PlantCard = (props) => {
 };
 
 
-let timeStamp = new Intl.DateTimeFormat("en", {
-  timeStyle: "medium",
-  dateStyle: "short"
-});
 
 const updatePlanttoGraveyard = evt => {
  console.log("brendatest", evt)
@@ -43,7 +39,7 @@ const updatePlanttoGraveyard = evt => {
 plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
 plant.waterLevelId = parseInt(plant.waterLevelId) */
   
-let isDeadz = isDead.isDead ? false: true
+let isDeadz = isDead.isDead ? true: false
 
   const graveYardPlant = {
       userId: props.plant.userId,
@@ -51,7 +47,7 @@ let isDeadz = isDead.isDead ? false: true
       nickName: props.plant.nickName,
       vernacularName: props.plant.vernacularName,
       entryDate: props.plant.entryDate ,
-      entryDate: timeStamp.format(Date.now()),
+      //entryDate: props.plant.timeStamp.format(Date.now())
       age: props.plant.age,
       moodId: props.plant.moodId,
       sunlightLevelId: props.plant.sunlightLevelId,
@@ -107,16 +103,16 @@ console.log("graveyardclickTEST", graveYardPlant)
               <div className="plantcard-logo-variable__Container">
                 <div className="plantcard-logo"></div>
                 <div className="plantcard-variable-list__Container">
-                  <ol> Plant Specs.
+                  <ol> Plant Specs. BABICAKES
                   <li> Age of plant: {props.plant.age}</li>
-                    <li>Created on {props.plant.entryDate} </li>
+                    <li>Departed: {props.plant.entryDate} </li>
                     <li>Sunlight Level: {props.plant.sunlightLevel.level} </li>
                     <li>Water Level: {props.plant.waterLevel.level} </li>
                     <li>Mood of your plant: {props.plant.mood.level} </li>
                   
  
                     <div className="btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-sm active"> <input type="checkbox"  id={props.plant.id} checked={isDead.isDead}  onChange={updatePlanttoGraveyard}  /> Plant DEAD!</label>
+  <label class="btn btn-sm active"> <input type="checkbox"  id={props.plant.id} checked={isDead.isDead}  onChange={updatePlanttoGraveyard}  /> Oh Shit it's Alive!</label>
                   </div>
 
                   {/*  <form>
@@ -136,7 +132,7 @@ console.log("graveyardclickTEST", graveYardPlant)
                      {/* <input type="checkbox" className="form-control" id="checkbox" checked={props.plant.isDead} value={props.plant.idDead} onChange={handleFieldChange} />
         */}
 
-                    <Link to={`/plants/${props.plant.id}`}><button>Lets take a closer look!</button></Link>
+                    {/* <Link to={`/plants/${props.plant.id}`}><button>Lets take a closer look!</button></Link> */}
                   </ol>
                 </div>
               </div>
@@ -161,7 +157,7 @@ console.log("graveyardclickTEST", graveYardPlant)
 
                         {/* <button type="button" className="waves-effect waves-light btn" onClick={() => { props.history.push("/journals/new/") }}> New Journal Entry ?</button> */}
                         {/* <Link to={`/journals/${props.plant.id}/new/`}><button>NEW PLANT BABY</button></Link> */}
-                          YEAH SON...<button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> New Journal Entry ?</button>
+                          {/* YEAH SON...<button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> New Journal Entry ?</button> */}
                         <div className="plantcard-journal-entry__Container">
                           <div>
                             {journals.map(journal =>
@@ -186,4 +182,4 @@ console.log("graveyardclickTEST", graveYardPlant)
   )
 }
 
-export default PlantCard;
+export default GraveYardCard;

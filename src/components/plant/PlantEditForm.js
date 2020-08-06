@@ -5,7 +5,7 @@ import {Form} from "react-bootstrap";
 
 
 const PlantEditForm = props => {
-    const [plant, setPlant] = useState({userId: 0, nickName: "", vernacularName: "", entryDate: "", age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: true  });
+    const [plant, setPlant] = useState({userId: 0, nickName: "", vernacularName: "", entryDate: "", age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false  });
     const [isLoading, setIsLoading] = useState(false);
     const [moods, setMoods] = useState([]);
     const [sunlightLevels, setSunlightLevels] = useState([]);
@@ -46,15 +46,17 @@ const PlantEditForm = props => {
         setIsLoading(true);
 
       //Created an easy tag to post to the return edit card.... for showing chats when they are edited     
-      const MessageChanged = "(~Edited Since~)"   
-
+      const MessageChanged = "(~Edited Since~)"
+      plant.moodId = parseInt( plant.moodId)
+      plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
+      plant.waterLevelId = parseInt(plant.waterLevelId)
         // This is an edit, so we need the id
         const editedPlant = {
             userId: plant.userId,
             id: props.match.params.plantId,
             nickName: plant.nickName,
             vernacularName: plant.vernacularName,
-            entryDate: plant.entryDate + MessageChanged,
+            entryDate: plant.entryDate ,
             age: plant.age,
             moodId: plant.moodId,
             sunlightLevelId: plant.sunlightLevelId,
@@ -62,8 +64,7 @@ const PlantEditForm = props => {
             isDead: false  
 
         };
-
-        PlantManager.update(editedPlant)
+        PlantManager.updatePlant(editedPlant)
             .then(() => props.history.push("/home"))
     }
     
@@ -134,7 +135,7 @@ const PlantEditForm = props => {
                                             value={parseInt(plant.moodId)} id="moodId" required
                                             onChange={handleFieldChange}  >
                                             {moods.map(mood =>
-                                                <option key={mood.id} value={mood.id}>{mood.level}</option>)} 
+                                                <option key={mood.id} value={parseInt(mood.id)}>{mood.level}</option>)} 
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
@@ -145,7 +146,7 @@ const PlantEditForm = props => {
                                             value={parseInt(plant.sunlightLevelId)} id="sunlightLevelId"   required
                                             onChange={handleFieldChange}  >
                                             {sunlightLevels.map(sunlightLevel =>
-                                                <option key={sunlightLevel.id} value={sunlightLevel.id}>{sunlightLevel.level}</option>)}
+                                                <option key={sunlightLevel.id} value={parseInt(sunlightLevel.id)}>{sunlightLevel.level}</option>)}
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
@@ -156,22 +157,10 @@ const PlantEditForm = props => {
                                             value={parseInt(plant.waterLevelId)} id="waterLevelId"  required
                                             onChange={handleFieldChange}  >
                                             {waterLevels.map(waterLevel =>
-                                                <option key={waterLevel.id} value={waterLevel.id}>{waterLevel.level}</option>)}
+                                                <option key={waterLevel.id} value={parseInt(waterLevel.id)}>{waterLevel.level}</option>)}
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
-{/* 
-                                <div className="kk">
-                                    <Form.Group controlId="isDead">
-                                        <Form.Label>Ready for the Plant Graveyeard:</Form.Label>
-                                        <Form.Control as="select" className=""
-                                            value={parseInt(plant.isDead)} id="isDead" required
-                                            onChange={handleFieldChange}  >
-                                            <option value= "true" >Ready</option>
-                                             <option value= "false" >This Plant is Thriving, get outta here GrimPlantKeeper!</option>
-                                        </Form.Control>
-                                    </Form.Group>
-                                </div> */}  
  
                         </div>
                                 <div className="alignRight">

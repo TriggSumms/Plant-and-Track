@@ -12,7 +12,6 @@ import "./PlantCard.css"
 const PlantList = (props) => {
   // The initial state is an empty array
   const [plants, setPlants] = useState([]);
-  //const [journals, setJournals] = useState([]);
 
 
 
@@ -22,40 +21,17 @@ const PlantList = (props) => {
       setPlants(plantsfromAPI)
     });
   }
-/* 
-  const getPlants = () => {
-    return PlantManager.getAll("plants").then(plantsFromAPI => {
-      setPlants(plantsFromAPI)
-    });
-  } */
-
-  
-  const updateForGarbagePlant = garbagePlant => {
-   console.log("GarbageplantBEFORE", garbagePlant) 
-   PlantManager.update(garbagePlant)
-    //.then(() => getPlants());
-    console.log("GarbageplantAFTER", garbagePlant)
-};
-  
-
- 
-
-
-
-
-  useEffect(() => {
-    withDetails();
-    //getPlants()
-    //withJournalDetails();
-  }, []);
-
 
 const deletePlant = (id) => {
     PlantManager.delete(id)
       .then(() => PlantManager.getAll("plants").then(setPlants))
-    //.then(getPlants);
+    
   };
 
+  useEffect(() => {
+    withDetails();
+
+  }, []);
 
 
 
@@ -69,23 +45,25 @@ const deletePlant = (id) => {
         New Plant Baby ?
         </button>
 
-  {plants.isDead ? true:
-
+  
+        
         <div className="flip-card-front">
           <div className="flipCard-generator">
             {plants.map(plant =>
+            plant.isDead ? null: //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
+            //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
               <PlantCard
                 key={plant.id}
                 plant={plant}
                 deletePlant={deletePlant}
-              // plant={plant.isDead ? true : false }
-                updateForGarbagePlant = {updateForGarbagePlant}
-                {...props}
+                //updateForGarbagePlant={updateForGarbagePlant}
+                //isChecked={isChecked}
+                {...props} 
               />)}
-              
+        
           </div>
         </div>
-    }
+
     </>
 
   );
@@ -97,27 +75,4 @@ export default PlantList;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    // const withJournalDetails = () => {
-  //   PlantManager.getWithJournalDetails().then(plantsfromAPI => {
-  //     setPlants(plantsfromAPI)
-  //   });
-  // } 
-
-  /*  const deleteTheJournal = (id) => {
-      PlantManager.deleteJournal(id)
-        .then(() => PlantManager.getAll("journals").then(setJournals))
-      //.then(getPlants);
-    };  
-   */
 

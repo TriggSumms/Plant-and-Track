@@ -83,6 +83,10 @@ const PlantForm = props => {
         } else {
             setIsLoading(true);
             // Create the article and redirect user to article list
+           
+           plant.moodId = parseInt(plant.moodId)
+            plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
+            plant.waterLevelId = parseInt(plant.waterLevelId)
             PlantManager.post(plant)
                 //.then(() => PlantManager.getAll(plants))
                 .then(() => props.history.push("/home"));
