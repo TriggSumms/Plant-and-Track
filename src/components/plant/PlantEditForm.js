@@ -56,7 +56,7 @@ const PlantEditForm = props => {
             id: props.match.params.plantId,
             nickName: plant.nickName,
             vernacularName: plant.vernacularName,
-            entryDate: plant.entryDate + MessageChanged,
+            entryDate: plant.entryDate ,
             age: plant.age,
             moodId: plant.moodId,
             sunlightLevelId: plant.sunlightLevelId,

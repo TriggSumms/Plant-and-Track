@@ -35,6 +35,7 @@
       "id": 9,
       "nickName": "BIGWIZZ",
       "vernacularName": "j",
+      "entryDate": "7/30/20, 8:45:08 PM",
       "age": "hu",
       "moodId": 1,
       "sunlightLevelId": 1,
@@ -46,7 +47,7 @@
       "id": 14,
       "nickName": "4",
       "vernacularName": "d",
-      "entryDate": "7/30/20, 8:38:08 PM(~Edited Since~)",
+      "entryDate": "7/30/20, 8:38:08 PM",
       "age": "4",
       "moodId": 1,
       "sunlightLevelId": 2,
@@ -63,18 +64,6 @@
       "moodId": 1,
       "sunlightLevelId": 1,
       "waterLevelId": 1,
-      "isDead": false
-    },
-    {
-      "userId": 4,
-      "id": 18,
-      "nickName": "gggbabi",
-      "vernacularName": "sssss",
-      "entryDate": "8/1/20, 9:46:22 AM(~Edited Since~)(~Edited Since~)(~Edited Since~)",
-      "age": "alright",
-      "moodId": 1,
-      "sunlightLevelId": 1,
-      "waterLevelId": 1,
       "isDead": true
     },
     {
@@ -82,19 +71,19 @@
       "id": 19,
       "nickName": "kkkk",
       "vernacularName": "yeeha",
-      "entryDate": "8/3/20, 2:17:20 PM(~Edited Since~)(~Edited Since~)",
+      "entryDate": "8/3/20, 2:17:20 PM(~Edited Since~)",
       "age": "i",
       "moodId": 1,
       "sunlightLevelId": 3,
       "waterLevelId": 1,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 4,
       "id": 20,
       "nickName": "xx",
       "vernacularName": "xxx",
-      "entryDate": "8/5/20, 11:49:03 AM",
+      "entryDate": "8/5/20, 8:55:11 PM",
       "age": "xxx",
       "moodId": 1,
       "sunlightLevelId": 1,
@@ -120,9 +109,9 @@
       "vernacularName": "TEST",
       "entryDate": "8/5/20, 2:53:36 PM(~Edited Since~)",
       "age": "3",
-      "moodId": 3,
+      "moodId": 1,
       "sunlightLevelId": 3,
-      "waterLevelId": 3,
+      "waterLevelId": 2,
       "isDead": false
     }
   ],

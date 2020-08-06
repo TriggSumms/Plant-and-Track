@@ -50,8 +50,8 @@ const deletePlant = (id) => {
         <div className="flip-card-front">
           <div className="flipCard-generator">
             {plants.map(plant =>
-            //plant.isDead ? null:
-            // !plant.isDead ? null:
+            plant.isDead ? null: //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
+            //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
               <PlantCard
                 key={plant.id}
                 plant={plant}

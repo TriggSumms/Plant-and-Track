@@ -7,7 +7,7 @@ const Home = props => {
 
   return (
     <>
-      
+{/*       
         <header></header>
         <div id="main">
           <article>
@@ -22,7 +22,7 @@ const Home = props => {
         </div>
         <footer></footer>
       
-
+ */}
 
 
 
