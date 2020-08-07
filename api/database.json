@@ -27,6 +27,34 @@
       "user": "Test",
       "img": "",
       "id": 4
+    },
+    {
+      "email": "stsumms@gmail.com",
+      "password": "hello",
+      "user": "YUS",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "id": 5
+    },
+    {
+      "email": "",
+      "password": "",
+      "user": "",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "id": 6
+    },
+    {
+      "email": "stsumms@gmail.com",
+      "password": "hello",
+      "user": "",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "id": 7
+    },
+    {
+      "email": "stsumms@gmail.com",
+      "password": "hello",
+      "user": "hello",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "id": 8
     }
   ],
   "plants": [
@@ -34,9 +62,9 @@
       "userId": 4,
       "id": 9,
       "nickName": "BIGWIZZ",
-      "vernacularName": "j",
+      "vernacularName": "Gray alder",
       "entryDate": "7/30/20, 8:45:08 PM",
-      "age": "hu",
+      "age": "5inchs tall, 4m",
       "moodId": 1,
       "sunlightLevelId": 1,
       "waterLevelId": 2,
@@ -45,21 +73,21 @@
     {
       "userId": 4,
       "id": 14,
-      "nickName": "4",
-      "vernacularName": "d",
-      "entryDate": "7/30/20, 8:38:08 PM",
+      "nickName": "Lil Babi genius",
+      "vernacularName": "Bolean birch",
+      "entryDate": "8/6/20, 10:33:18 AM",
       "age": "4",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 1,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 4,
       "id": 17,
       "nickName": "w",
       "vernacularName": "iboi",
-      "entryDate": "7/31/20, 10:26:40 PM(~Edited Since~)",
+      "entryDate": "8/6/20, 11:31:52 AM",
       "age": "wb",
       "moodId": 1,
       "sunlightLevelId": 1,
@@ -69,92 +97,140 @@
     {
       "userId": 4,
       "id": 19,
-      "nickName": "kkkk",
-      "vernacularName": "yeeha",
-      "entryDate": "8/3/20, 2:17:20 PM(~Edited Since~)",
+      "nickName": "little Tango",
+      "vernacularName": "Butterfly flower",
+      "entryDate": "8/6/20, 4:31:16 PM",
       "age": "i",
       "moodId": 1,
       "sunlightLevelId": 3,
+      "waterLevelId": 1,
+      "isDead": false
+    },
+    {
+      "userId": 4,
+      "id": 20,
+      "nickName": "Beany babi",
+      "vernacularName": "Coffee plant",
+      "entryDate": "8/6/20, 5:59:50 PM",
+      "age": "xxx",
+      "moodId": 1,
+      "sunlightLevelId": 1,
       "waterLevelId": 1,
       "isDead": true
     },
     {
       "userId": 4,
-      "id": 20,
-      "nickName": "xx",
-      "vernacularName": "xxx",
-      "entryDate": "8/5/20, 8:55:11 PM",
-      "age": "xxx",
+      "id": 22,
+      "nickName": "Richards III",
+      "vernacularName": "Orange coneflower",
+      "entryDate": "8/6/20, 3:34:56 PM",
+      "age": "3",
       "moodId": 1,
-      "sunlightLevelId": 1,
-      "waterLevelId": 1,
+      "sunlightLevelId": 3,
+      "waterLevelId": 2,
+      "isDead": true
+    },
+    {
+      "userId": 4,
+      "id": 23,
+      "nickName": "",
+      "vernacularName": "cccc",
+      "entryDate": "8/6/20, 8:10:45 AM",
+      "age": "alright Now",
+      "moodId": 2,
+      "sunlightLevelId": 3,
+      "waterLevelId": 2,
       "isDead": false
     },
     {
       "userId": 4,
-      "id": 21,
-      "nickName": "kkkkk",
-      "vernacularName": "kkk",
-      "entryDate": "8/5/20, 11:56:30 AM",
-      "age": "jjjj",
+      "id": 24,
+      "nickName": "teddys bowl",
+      "vernacularName": "Creeping yellowcress",
+      "entryDate": "8/6/20, 5:59:19 PM",
+      "age": "ccc",
+      "moodId": 2,
+      "sunlightLevelId": 2,
+      "waterLevelId": 2,
+      "isDead": false
+    },
+    {
+      "userId": 4,
+      "id": 26,
+      "nickName": "j",
+      "vernacularName": "k",
+      "entryDate": "8/6/20, 7:56:36 PM",
+      "age": "i",
       "moodId": 1,
+      "sunlightLevelId": 2,
+      "waterLevelId": 2,
+      "isDead": false
+    },
+    {
+      "userId": 4,
+      "id": 27,
+      "nickName": "sss",
+      "vernacularName": "yeeha",
+      "entryDate": "8/6/20, 7:56:31 PM",
+      "age": "d",
+      "moodId": 2,
       "sunlightLevelId": 2,
       "waterLevelId": 1,
       "isDead": false
     },
     {
-      "userId": 4,
-      "id": 22,
-      "nickName": "TEST",
-      "vernacularName": "TEST",
-      "entryDate": "8/5/20, 2:53:36 PM(~Edited Since~)",
-      "age": "3",
+      "userId": 2,
+      "id": 28,
+      "nickName": "d",
+      "vernacularName": "d",
+      "entryDate": "8/6/20, 7:56:34 PM",
+      "age": "cowpoke",
       "moodId": 1,
-      "sunlightLevelId": 3,
+      "sunlightLevelId": 2,
       "waterLevelId": 2,
-      "isDead": false
+      "isDead": true
     }
   ],
   "sunlightLevels": [
     {
       "id": 1,
-      "level": "Low-Light"
+      "level": "⛅"
     },
     {
       "id": 2,
-      "level": "Medium-Light"
+      "level": "🌤️"
     },
     {
       "id": 3,
-      "level": "High-Light"
+      "level": "☀️"
     }
   ],
   "waterLevels": [
     {
       "id": 1,
-      "level": "Low Water"
+      "level": "💧"
     },
     {
       "id": 2,
-      "level": "Medium-Water"
+      "level": "💦"
     },
     {
       "id": 3,
-      "level": "High-Water"
+      "level": "🌊"
     }
   ],
   "moods": [
     {
       "id": 1,
-      "level": "Healthy as Hell"
+      "level": "#Perfect babi 4 life-🌹"
     },
     {
       "id": 2,
-      "level": "Droop boi"
+      "level": "#Doin' Alright-🌻"
     },
     {
       "id": 3,
-      "level": "Almost Dead"
+      "level": "#Hard Day-🥀"
     }
   ],
   "journals": [
@@ -162,73 +238,73 @@
       "id": 1,
       "plantId": 9,
       "entryDate": "7/30/20, 2:27:53 PM",
-      "journalEntry": "Cowpoke Teddysssss ",
-      "journalTitle": "TITLE BOI1",
+      "journalEntry": "Ah, Moon—and Star!You are very far—But were no oneFarther than you Do you think I’d sto For a Firmament— Or a Cubit—or so? ",
+      "journalTitle": "Plants and Stars?",
       "userId": 4
     },
     {
+      "userId": 4,
+      "plantId": 19,
       "id": 2,
-      "plantId": 9,
-      "entryDate": "7/30/20, 2:29:53 PM",
-      "journalEntry": "yeyeyetyeyeyeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrr",
-      "journalTitle": "TITLEBOI2",
-      "userId": 4
+      "entryDate": "undefined(~Edited Since~)",
+      "journalEntry": "There is no light in earth or heaven But the cold light of stars; And the first watch of night is given To the red planet Mars.yus",
+      "journalTitle": "Dreamy Journal Poem"
     },
     {
       "id": 3,
       "plantId": 17,
       "entryDate": "7/30/20, 2:29:52 PM",
-      "journalEntry": "yeyeyetyeyeyeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerrrr",
-      "journalTitle": "TITLEBOI3",
+      "journalEntry": "Stevie Wonder didn’t just write a song about plants, he recorded an entire album. 1979’s Stevie Wonder’s Journey Through “The Secret Life of Plants” was recorded  for a documentary of the same name that featured time-lapse footage of plants growing. As the first full studio release since Wonder’s highly successful album, Songs in the Key of Life, the collection of plant-themed tracks perplexed many music critics at the time of its release. In retrospective, Wonder should be commended for his beautiful and brave musical exploration of our green friends.",
+      "journalTitle": "The Secret Life of Plants – Stevie Wonder",
       "userId": 4
     },
     {
       "id": 4,
       "plantId": 17,
       "entryDate": "8/3/20, 2:17:42 PM",
-      "journalEntry": "yes sir",
-      "journalTitle": "alright",
+      "journalEntry": "This plant hates me...",
+      "journalTitle": "alright little bad boi",
       "userId": 4
     },
     {
       "id": 5,
-      "plantId": 9,
+      "plantId": 20,
       "entryDate": "8/3/20, 2:35:13 PM",
-      "journalEntry": "ddd",
-      "journalTitle": "dd",
+      "journalEntry": "this plant didnt come with instructions",
+      "journalTitle": "Time to dance",
       "userId": 4
     },
     {
       "id": 15,
       "plantId": 9,
       "entryDate": "8/4/20, 1:31:42 PM",
-      "journalEntry": "jjjj",
+      "journalEntry": "Trying to come up with an interesting journal entry but im comin in blank",
       "journalTitle": "bingleboi3000",
       "userId": 4
     },
     {
-      "plantId": 9,
+      "plantId": 23,
       "entryDate": "8/4/20, 2:41:23 PM",
-      "journalEntry": "jjjjyoyoyoy",
-      "journalTitle": "bingleboi3000",
+      "journalEntry": "love these little guys",
+      "journalTitle": "time to Disco with my plants",
       "userId": 4,
       "id": 20
     },
     {
-      "plantId": 14,
-      "entryDate": "8/4/20, 3:08:38 PM",
-      "journalEntry": "Im just having one of em days",
-      "journalTitle": "YES SIR hello plant 4",
+      "plantId": 9,
+      "entryDate": "8/6/20, 3:42:18 PM",
+      "journalEntry": "your Great",
+      "journalTitle": "Hello",
       "userId": 4,
       "id": 21
     },
     {
-      "plantId": 9,
-      "entryDate": "8/4/20, 3:41:09 PM",
-      "journalEntry": "rrrrr",
-      "journalTitle": "gggg",
+      "plantId": 19,
+      "entryDate": "8/6/20, 4:30:00 PM",
+      "journalEntry": "ddd",
+      "journalTitle": "bingleboi3000",
       "userId": 4,
-      "id": 22
+      "id": 23
     }
   ]
 }

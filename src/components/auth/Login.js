@@ -73,10 +73,16 @@ const Login = props => {
               required="" />
             <label htmlFor="inputPassword">Password</label>
           </div>
+          <div>
           <button type="submit">Sign in</button>
+          </div>
+
+
           <div className="register">New user? &nbsp;
       <Link to="/register"> Register a new account </Link>
       </div>
+
+
         </fieldset>
       </form>
 

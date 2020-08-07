@@ -39,12 +39,12 @@ const NavBar = props => {
                     <Nav className="ml-auto">
                         <Nav.Item>
                             <Nav.Link>
-                                {props.hasUser ? <Link to="/home">Home (PLANT PROFILE)</Link> : null}
+                                {props.hasUser ? <Link to="/home">Plant Keepers HOME)</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link>
-                                {props.hasUser ? <Link to="/DeadPlants">~Plant Graveyard~</Link> : null}
+                                {props.hasUser ? <Link to="/DeadPlants">Plant Graveyard</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
                         {props.hasUser ? <NavDropdown title="Additional Resources" id="basic-nav-dropdown">

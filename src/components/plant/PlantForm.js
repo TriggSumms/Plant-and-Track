@@ -23,7 +23,6 @@ const PlantForm = props => {
     const [moods, setMoods] = useState([]);
     const [sunlightLevels, setSunlightLevels] = useState([]);
     const [waterLevels, setWaterLevels] = useState([]);
-    //const [isDeads, setisDeads] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     //Tracks entries into text boxes
@@ -34,7 +33,7 @@ const PlantForm = props => {
     };
 
 
-    
+
     //DROPDOWN API CALLS
 
 
@@ -64,7 +63,7 @@ const PlantForm = props => {
         getMoods();
         getSunlightLevels();
         getWaterLevels();
-        //getIsDeads()
+
     }, []);
 
 
@@ -77,15 +76,15 @@ const PlantForm = props => {
 
     const constructNewPlant = evt => {
         evt.preventDefault();
-        if (plant.nickName === "" || plant.vernacularName === "" || plant.age === "")
-    /* || plant.sunlightId === "" || plant.waterId === "" ||plant.isDead === "" */ {
+        if (plant.nickName === "" || plant.vernacularName === "" || plant.age === "" || plant.sunlightLevelId === 0 || plant.waterLevelId === 0 || plant.moodId === 0)
+    /*  */ {
             window.alert("Please fill out all the entry requirements....otherwise your plant won't survive the season!");
         } else {
             setIsLoading(true);
             // Create the article and redirect user to article list
-           
-           plant.moodId = parseInt(plant.moodId)
-            plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
+
+            plant.moodId = parseInt(plant.moodId)
+            plant.sunlightLevelId = parseInt(plant.sunlightLevelId)
             plant.waterLevelId = parseInt(plant.waterLevelId)
             PlantManager.post(plant)
                 //.then(() => PlantManager.getAll(plants))
@@ -130,41 +129,44 @@ const PlantForm = props => {
 
 
                                 <div className="">
-                                    <Form.Group className="" controlId="moodId">
+                                    <Form.Group className="" >
                                         <Form.Label>Plant Mood:</Form.Label>
                                         {/* name="selectMulti" id="" multiple> */}
-                                        <Form.Control as="select" className="moodForm"
+                                        <Form.Control as="select" className="moodForm" controlId="moodId"
                                             value={parseInt(plant.moodId)} id="moodId" required
                                             onChange={handleFieldChange}  >
+                                            <option>Hows ya Babi's Mood</option>
                                             {moods.map(mood =>
                                                 <option key={mood.id} value={mood.id}>{mood.level}</option>)}
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
                                 <div className="">
-                                    <Form.Group className="" controlId="sunlightLevelId">
+                                    <Form.Group className="" >
                                         <Form.Label>Sunlight Level:</Form.Label>
-                                        <Form.Control as="select" className="sunlightLevelForm"
+                                        <Form.Control as="select" className="sunlightLevelForm" controlId="sunlightLevelId"
                                             value={parseInt(plant.sunlightLevelId)} id="sunlightLevelId" required
                                             onChange={handleFieldChange}  >
+                                            <option>Hows ya Babi current Sun Levels</option>
                                             {sunlightLevels.map(sunlightLevel =>
                                                 <option key={sunlightLevel.id} value={sunlightLevel.id}>{sunlightLevel.level}</option>)}
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
                                 <div className="">
-                                    <Form.Group className="" controlId="waterLevelId">
+                                    <Form.Group className="" >
                                         <Form.Label>Water Level:</Form.Label>
-                                        <Form.Control as="select" className="waterLevelForm"
+                                        <Form.Control as="select" className="waterLevelForm" controlId="waterLevelId"
                                             value={parseInt(plant.waterLevelId)} id="waterLevelId" required
                                             onChange={handleFieldChange}  >
+                                            <option>Babi Thirsty?</option>
                                             {waterLevels.map(waterLevel =>
                                                 <option key={waterLevel.id} value={waterLevel.id}>{waterLevel.level}</option>)}
                                         </Form.Control>
                                     </Form.Group>
                                 </div>
 
-  
+
 
 
                                 <div className="alignRight">

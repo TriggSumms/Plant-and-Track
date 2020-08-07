@@ -20,16 +20,16 @@ const PlantDetail = props => {
   console.log("yeejournals", journal)
 
 
-//Important Lesson learned below: if your gonna set the state.....dont pinpoint the property inside the "expandedPlant"
-//...it turns out that React cant pinpoint cause your nesting too deep. Rather pass the object and then set directions in the return.
+  //Important Lesson learned below: if your gonna set the state.....dont pinpoint the property inside the "expandedPlant"
+  //...it turns out that React cant pinpoint cause your nesting too deep. Rather pass the object and then set directions in the return.
 
   const expandedJournal = () => {
     PlantManager.getWithSpecificPlants(props.journalId)
-    .then(journal => {
-      console.log("yeettttt2", journal)
-      setJournal(journal)
-    }
-    )
+      .then(journal => {
+        console.log("yeettttt2", journal)
+        setJournal(journal)
+      }
+      )
   }
 
 
@@ -51,38 +51,38 @@ const PlantDetail = props => {
   };
 
 
-//Currently the CSS lies in plantCard.css...(will need to remove)
+  //Currently the CSS lies in plantCard.css...(will need to remove)
 
   return (
 
     <>
-    <div className="descriptionContainer">
-   <CardDeck className= "journalDescriptionCard">
-  <Card border="primary" style={{ width: '20%' }}>
-    {/* <Card.Img variant="top" src="plantboi.jpg" /> */}
-    <Card.Body>
-      <Card.Title>{journal.journalTitle} </Card.Title>
-      <h8>created preciscely... <small>{journal.entryDate}</small></h8>
-      <br />
-      <Card.Text>
-      <br />
-        <p>{journal.journalEntry}</p> 
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted"> <p><button className="waves-effect waves-light btn" type="button" disabled={isLoading} onClick={handleDelete}>DELETE</button>
-    <button className="waves-effect waves-light btn" type="button" onClick={() => props.history.push(`/journals/${journal.id}/edit`)}>Edit</button></p>
-    </small>
-    </Card.Footer>
-  </Card>
-  <br />
-</CardDeck>     
- </div>
-   
+      <div className="descriptionContainer">
+        <CardDeck className="journalDescriptionCard">
+          <Card border="primary" style={{ width: '20%' }}>
+            {/* <Card.Img variant="top" src="plantboi.jpg" /> */}
+            <Card.Body>
+              <Card.Title>{journal.journalTitle} </Card.Title>
+              <h8>created preciscely... <small>{journal.entryDate}</small></h8>
+              <br />
+              <Card.Text>
+                <br />
+                <p>{journal.journalEntry}</p>
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted"> <p><button className="waves-effect waves-light btn" type="button" disabled={isLoading} onClick={handleDelete}>DELETE</button>
+                <button className="waves-effect waves-light btn" type="button" onClick={() => props.history.push(`/journals/${journal.id}/edit`)}>Edit</button></p>
+              </small>
+            </Card.Footer>
+          </Card>
+          <br />
+        </CardDeck>
+      </div>
 
-    
 
- 
+
+
+
 
     </>
 
