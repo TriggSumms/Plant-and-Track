@@ -1,5 +1,5 @@
-//import React from "react";
-import { Link } from "react-router-dom";
+
+//import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
 //import PlantList from "./PlantList"
@@ -17,14 +17,6 @@ const GraveYardCard = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   //console.log("plantListJournals", journals)
 
-
-
-
-  const handleFieldChange = evt => {
-    const stateToChange = { ...plant };
-    stateToChange[evt.target.id] = evt.target.value;
-    setPlant(stateToChange);
-  };
 
 
 
@@ -81,7 +73,6 @@ const GraveYardCard = (props) => {
 
     expandedPlantandJournal()
     setIsLoading(false);
-
   }, [props.plantId]);
 
 
@@ -100,19 +91,20 @@ const GraveYardCard = (props) => {
                 <div className="plantcard-nick-name__Container">{props.plant.nickName}</div>
               </div>
               <div className="plantcard-logo-variable__Container">
-                <div className="plantcard-logo"><div className="btn-group-toggle" data-toggle="buttons">
-                  <label class="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /> <img src="https://img.icons8.com/color/25/000000/plant-under-sun.png"/></label>
-                </div>
-                </div>
+              <div className="plantcard-logo">
+                  <div className="text" data-toggle="buttons">
+                    <label className="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/plasticine/50/000000/undo.png" alt="button-generic"/></label>
+                  </div>
+                  </div>
                 <div className="plantcard-variable-list__Container">
-                  <ol> Plant Specs.
-                  <ul> Age of plant: {props.plant.age}</ul>
-                    <ul>Created on {props.plant.entryDate} </ul>
-                    <ul>Sunlight Level: {props.plant.sunlightLevel.level} </ul>
-                    <ul>Water Level: {props.plant.waterLevel.level} </ul>
-                    <ul>Mood of your plant: {props.plant.mood.level} </ul>
+                  <ol className="VariableEntry"> Plant Specs. </ol>
+                  <div className="TitleVariable">Age of your plant:<p className="VariableEntry1"> {props.plant.age}</p></div>
+                  <div className="TitleVariable"> Created on: <p className="VariableEntry2"> {props.plant.entryDate} </p></div>
+                  <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {props.plant.sunlightLevel.level}</p> </div>
+                  <div className="TitleVariable">Water Level Req. : <p className="VariableEntry1">{props.plant.waterLevel.level} </p></div>
+                  <div className="TitleVariable">Mood of your plant this Week?:<p className="VariableEntry3"> {props.plant.mood.level}</p> </div>
 
-
+                  
 
                     {/*  <form>
                     <p>
@@ -132,7 +124,7 @@ const GraveYardCard = (props) => {
         */}
 
                     {/* <Link to={`/plants/${props.plant.id}`}><button>Lets take a closer look!</button></Link> */}
-                  </ol>
+                  
                 </div>
               </div>
               <div className="plantcard-image__Container">

@@ -55,13 +55,19 @@ const PlantList = (props) => {
         New Plant Baby ?
         </button>
 
-      <div>
+      
+        
         <input
           type="text"
-          placeholder="Search Em Plants by their God given Name"
+          placeholder= "Search via NickName"
           onChange={evt => setSearch(evt.target.value)}
         />
-      </div>
+      
+
+      <div id="content">
+  <input type="text" name="input" className="input" id="search-input" onChange={evt => setSearch(evt.target.value)} />
+  <button type="reset" class="search" id="search-btn"></button>
+</div>
 
       <div className="flip-card-front">
         <div className="flipCard-generator">

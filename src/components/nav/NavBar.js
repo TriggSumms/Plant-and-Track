@@ -26,12 +26,12 @@ const NavBar = props => {
     return (
 
         <Styles>
-            {/* Bringing in my Jumbotron = Webpage Banner */}
+{/* Bringing in my Jumbotron = Webpage Banner */}
             <Jumbotron />
-            {/* lg needs adjustment */}
+{/* lg needs adjustment */}
             <Navbar expand="lg">
                 <Navbar.Brand href="/">PLANTBaby Tracker</Navbar.Brand>
-                {/*LOGIN LOGOUT METHODS  */}
+{/*LOGIN LOGOUT METHODS  */}
                 {props.hasUser ? <span className="" onClick={handleLogout}> Logout </span> :
                     <Link className="" to="/login">Login</Link>}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -39,12 +39,12 @@ const NavBar = props => {
                     <Nav className="ml-auto">
                         <Nav.Item>
                             <Nav.Link>
-                                {props.hasUser ? <Link to="/home">Home (PLANT PROFILE)</Link> : null}
+                                {props.hasUser ? <Link to="/home">Plant Keepers HOME)</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link>
-                                {props.hasUser ? <Link to="/DeadPlants">~Plant Graveyard~</Link> : null}
+                                {props.hasUser ? <Link to="/DeadPlants">Plant Graveyard</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
                         {props.hasUser ? <NavDropdown title="Additional Resources" id="basic-nav-dropdown">
@@ -54,7 +54,7 @@ const NavBar = props => {
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown> : null}
-                        {/* SEARCH BAR FORM PLACEMENT */}
+{/* SEARCH BAR FORM PLACEMENT */}
                         {/* {props.hasUser ? <Form inline>
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                             <Button variant="outline-success">Search</Button>

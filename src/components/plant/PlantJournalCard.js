@@ -26,18 +26,30 @@ const PlantJournalCard = (props) => {
 
                            */}
 
-      <div className="plantcard-journal-entryContainer">
+      {/*      <div className="plantcard-journal-entryContainer">
         <h2 className="journalCardDate"><strong>{props.journalEntry.journalTitle}</strong></h2>
         <div>{props.journalEntry.entryDate}<button className="message__buttons" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}>Details</button></div>
         <h4 className="truncate" >{props.journalEntry.journalEntry} </h4>
-      </div>
+      </div> */}
 
-      {/*     </div>
+
+      <div className="container-s">
+        
+          <p className="messageTitle"><span className="messageDate">{props.journalEntry.journalTitle}</span> {props.journalEntry.entryDate}</p>
+        <h4 className="truncate" > {props.journalEntry.journalEntry} </h4>
+        <button className="message__buttons" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}><img src="https://img.icons8.com/plasticine/30/000000/view-details.png"/></button>
+        </div>
+
+
+
+
+
+          {/*     </div>
                       </div>
                     </div>
                   </div>
                 </div> */}
-      {/*END OF WHATS BEING SENT TO PLANT CARD  */}
+          {/*END OF WHATS BEING SENT TO PLANT CARD  */}
 
     </>
 

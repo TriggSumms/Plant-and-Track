@@ -34,6 +34,27 @@
       "user": "YUS",
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
       "id": 5
+    },
+    {
+      "email": "",
+      "password": "",
+      "user": "",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "id": 6
+    },
+    {
+      "email": "stsumms@gmail.com",
+      "password": "hello",
+      "user": "",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "id": 7
+    },
+    {
+      "email": "stsumms@gmail.com",
+      "password": "hello",
+      "user": "hello",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "id": 8
     }
   ],
   "plants": [
@@ -43,7 +64,7 @@
       "nickName": "BIGWIZZ",
       "vernacularName": "Gray alder",
       "entryDate": "7/30/20, 8:45:08 PM",
-      "age": "5inchs tall, 4months",
+      "age": "5inchs tall, 4m",
       "moodId": 1,
       "sunlightLevelId": 1,
       "waterLevelId": 2,
@@ -138,12 +159,36 @@
       "id": 26,
       "nickName": "j",
       "vernacularName": "k",
-      "entryDate": "8/6/20, 3:35:03 PM",
+      "entryDate": "8/6/20, 7:56:36 PM",
       "age": "i",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
       "isDead": false
+    },
+    {
+      "userId": 4,
+      "id": 27,
+      "nickName": "sss",
+      "vernacularName": "yeeha",
+      "entryDate": "8/6/20, 7:56:31 PM",
+      "age": "d",
+      "moodId": 2,
+      "sunlightLevelId": 2,
+      "waterLevelId": 1,
+      "isDead": false
+    },
+    {
+      "userId": 2,
+      "id": 28,
+      "nickName": "d",
+      "vernacularName": "d",
+      "entryDate": "8/6/20, 7:56:34 PM",
+      "age": "cowpoke",
+      "moodId": 1,
+      "sunlightLevelId": 2,
+      "waterLevelId": 2,
+      "isDead": true
     }
   ],
   "sunlightLevels": [
@@ -177,15 +222,15 @@
   "moods": [
     {
       "id": 1,
-      "level": "🌹-#Perfect babi 4 life"
+      "level": "#Perfect babi 4 life-🌹"
     },
     {
       "id": 2,
-      "level": "🌻-#Doin' Alright"
+      "level": "#Doin' Alright-🌻"
     },
     {
       "id": 3,
-      "level": "🥀-#Hard Day"
+      "level": "#Hard Day-🥀"
     }
   ],
   "journals": [
@@ -198,12 +243,12 @@
       "userId": 4
     },
     {
-      "id": 2,
+      "userId": 4,
       "plantId": 19,
-      "entryDate": "7/30/20, 2:29:53 PM",
-      "journalEntry": "There is no light in earth or heaven But the cold light of stars; And the first watch of night is given To the red planet Mars.",
-      "journalTitle": "Dreamy Journal Poem",
-      "userId": 4
+      "id": 2,
+      "entryDate": "undefined(~Edited Since~)",
+      "journalEntry": "There is no light in earth or heaven But the cold light of stars; And the first watch of night is given To the red planet Mars.yus",
+      "journalTitle": "Dreamy Journal Poem"
     },
     {
       "id": 3,
@@ -252,14 +297,6 @@
       "journalTitle": "Hello",
       "userId": 4,
       "id": 21
-    },
-    {
-      "plantId": 24,
-      "entryDate": "8/6/20, 3:43:17 PM",
-      "journalEntry": "d",
-      "journalTitle": "d",
-      "userId": 4,
-      "id": 22
     },
     {
       "plantId": 19,

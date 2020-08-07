@@ -108,18 +108,18 @@ const PlantCard = (props) => {
               </div>
               <div className="plantcard-logo-variable__Container">
                 <div className="plantcard-logo">
-                  <div className="btn-group-toggle" data-toggle="buttons">
-                    <label className="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/color/32/000000/skull.png"/></label>
+                  <div className="text-white" data-toggle="buttons">
+                    <label className="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/color/32/000000/skull.png" alt="button-generic"/></label>
                   </div>
-                  <Link to={`/plants/${props.plant.id}`}><button><img src="https://img.icons8.com/windows/32/000000/view-file.png"/></button></Link>
+                  <Link to={`/plants/${props.plant.id}`}><button class="PlantCardFrontButton"><img src="https://img.icons8.com/plasticine/32/000000/view-details.png" alt="button-generic"/></button></Link>
                   </div>
                 <div className="plantcard-variable-list__Container">
-                  <ol> Plant Specs. </ol>
-                  <li> Age of plant: {props.plant.age}</li>
-                  <li>Created on {props.plant.entryDate} </li>
-                  <li>Sunlight Level: {props.plant.sunlightLevel.level} </li>
-                  <li>Water Level: {props.plant.waterLevel.level} </li>
-                  <li>Mood of your plant: {props.plant.mood.level} </li>
+                  <ol className="VariableEntry"> Plant Specs. </ol>
+                  <div className="TitleVariable">Age of your plant:<p className="VariableEntry1"> {props.plant.age}</p></div>
+                  <div className="TitleVariable"> Created on: <p className="VariableEntry2"> {props.plant.entryDate} </p></div>
+                  <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {props.plant.sunlightLevel.level}</p> </div>
+                  <div className="TitleVariable">Water Level Req. : <p className="VariableEntry1">{props.plant.waterLevel.level} </p></div>
+                  <div className="TitleVariable">Mood of your plant this Week?:<p className="VariableEntry3"> {props.plant.mood.level}</p> </div>
 
                   
 
@@ -140,15 +140,16 @@ const PlantCard = (props) => {
                   <div className="flip-card-inner">
                     <div className="flip-card-back">
                       <div className="plantcard-journal-title__Container">
-                        <h1>Journal Entries for {props.plant.nickName}</h1>
+                       Journal Entries for: <p className="plantCardBackName"> {props.plant.nickName}</p>
                       </div>
                       <div className="plantcard-journal-entries__Container">
 
                         {/* <button type="button" className="waves-effect waves-light btn" onClick={() => { props.history.push("/journals/new/") }}> New Journal Entry ?</button> */}
                         {/* <Link to={`/journals/${props.plant.id}/new/`}><button>NEW PLANT BABY</button></Link> */}
-                        <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> New Journal Entry ?</button>
+                        
                         <div className="plantcard-journal-entry__Container">
                           <div>
+                            
                             {journals.map(journal =>
                               <PlantJournalCard
                                 key={journal.id}
@@ -156,8 +157,10 @@ const PlantCard = (props) => {
                                 {...props}
                               />)}
                           </div>
+                          
                         </div>
-                      </div><p>We love Plants...</p></div>
+                      </div>
+                      <p className="messageDate"></p><button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic"/></button></div>
                   </div>
                 </div>
               </div>
