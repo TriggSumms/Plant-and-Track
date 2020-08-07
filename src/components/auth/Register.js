@@ -62,7 +62,7 @@ const handleRegister = evt => {
               required="" />
             
 <label htmlFor="inputUserName">Create Your User Name</label>
-            <input onChange={handleFieldChange} type="userNames"
+            <input onChange={handleFieldChange} type="userName"
               id="user"
               placeholder="User Name"
               required="" />

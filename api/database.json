@@ -135,12 +135,12 @@
       "id": 23,
       "nickName": "",
       "vernacularName": "cccc",
-      "entryDate": "8/6/20, 8:10:45 AM",
+      "entryDate": "8/7/20, 8:46:21 AM",
       "age": "alright Now",
       "moodId": 2,
       "sunlightLevelId": 3,
       "waterLevelId": 2,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 4,
@@ -159,12 +159,12 @@
       "id": 26,
       "nickName": "j",
       "vernacularName": "k",
-      "entryDate": "8/6/20, 7:56:36 PM",
+      "entryDate": "8/7/20, 8:46:25 AM",
       "age": "i",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 4,
@@ -189,6 +189,18 @@
       "sunlightLevelId": 2,
       "waterLevelId": 2,
       "isDead": true
+    },
+    {
+      "userId": 4,
+      "id": 29,
+      "nickName": "dd",
+      "vernacularName": "dd",
+      "entryDate": "8/7/20, 8:42:55 AM",
+      "age": "dd",
+      "moodId": 1,
+      "sunlightLevelId": 1,
+      "waterLevelId": 1,
+      "isDead": false
     }
   ],
   "sunlightLevels": [
