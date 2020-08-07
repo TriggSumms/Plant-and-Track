@@ -4,11 +4,12 @@ import React, { useState, useEffect } from 'react';
 //import PlantList from "../plant/PlantList"
 import "./Home.css";
 import PlantList from "../plant/PlantList";
+import PlantGraveYardList from '../plant/PlantGraveYardList';
 //import PlantCard from "../plant/PlantCard"
 //import PlantManager from '../../modules/PlantManager';
 
 
-const Home = props => {
+const GraveYard = props => {
 
 /*   const [search, setSearch] = useState("");
   const [filteredPlants, setFilteredPlants] = useState([])
@@ -57,16 +58,9 @@ const Home = props => {
         <div id="main">
           <article>
 
-        <button type="button" className="waves-effect waves-light btn"
-        onClick={() => { props.history.push("/plants/new") }}>
-        New Plant Baby ?
-        </button>
-
-
-      
-
+    
             <div className="plantCards-Center__Container">
-               <PlantList 
+               <PlantGraveYardList 
                {...props}
                />
               
@@ -115,4 +109,4 @@ const Home = props => {
   )
 };
 
-export default Home;
+export default GraveYard;

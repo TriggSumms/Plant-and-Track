@@ -14,8 +14,9 @@
    }
    #main > nava, 
    #main > aside {
-     flex: 0 0 15vw;
-     background: beige;
+     flex: 0 0 10vw;
+     background:  rgb(200, 213, 185);
+     opacity: 25%;
    }
    #main > nava {
      order: -1;
@@ -25,6 +26,9 @@
    }
    header, footer {
      background: yellowgreen;
+     background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fst3.depositphotos.com%2F4162521%2F18146%2Fi%2F1600%2Fdepositphotos_181466142-stock-photo-watercolor-seamless-pattern-green-leaves.jpg&f=1&nofb=1);
+     background: cover;
+     opacity: 75%;
      height: 15vh;
    }
 
@@ -92,8 +96,9 @@
     width: 1300px;
     padding: 50px 50px;
     margin: 25px 25px;
-    overflow: auto;
-
+    overflow-x: auto; /* Hide horizontal scrollbar */
+    overflow-y: none; 
+    text-align:center;
   }
 
   .plantCardSeperation{
@@ -101,3 +106,4 @@
      justify-content: space-around;
      flex-direction: row;
   }
+  

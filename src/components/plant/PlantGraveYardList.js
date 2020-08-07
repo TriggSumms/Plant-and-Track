@@ -37,8 +37,18 @@ const PlantGraveYardList = (props) => {
   return (
     <>
 
-      <div className="flip-card-front">
-        <div className="flipCard-generator">
+{/* <div className="ButtonandSearchList">
+  <fieldset>
+<input
+        type="text"
+        placeholder="Search via NickName"
+        onChange={evt => setSearch(evt.target.value)}
+      />
+     </fieldset> 
+      </div> */}
+
+      <div className="plantCardSeperation">
+
           {plants.map(plant =>
             //plant.isDead ? null: //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
             !plant.isDead ? null :  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
@@ -48,7 +58,7 @@ const PlantGraveYardList = (props) => {
                 {...props}
               />)}
 
-        </div>
+     
       </div>
 
     </>

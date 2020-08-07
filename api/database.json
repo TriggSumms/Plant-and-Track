@@ -34,39 +34,18 @@
       "user": "YUS",
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
       "id": 5
-    },
-    {
-      "email": "",
-      "password": "",
-      "user": "",
-      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
-      "id": 6
-    },
-    {
-      "email": "stsumms@gmail.com",
-      "password": "hello",
-      "user": "",
-      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
-      "id": 7
-    },
-    {
-      "email": "stsumms@gmail.com",
-      "password": "hello",
-      "user": "hello",
-      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
-      "id": 8
     }
   ],
   "plants": [
     {
       "userId": 4,
       "id": 9,
-      "nickName": "BIGWIZZ",
+      "nickName": "BIGWIZZI",
       "vernacularName": "Gray alder",
       "entryDate": "7/30/20, 8:45:08 PM",
       "age": "5inchs tall, 4m",
       "moodId": 1,
-      "sunlightLevelId": 1,
+      "sunlightLevelId": 2,
       "waterLevelId": 2,
       "isDead": false
     },
@@ -92,19 +71,19 @@
       "moodId": 1,
       "sunlightLevelId": 1,
       "waterLevelId": 1,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
       "id": 19,
       "nickName": "little Tango",
       "vernacularName": "Butterfly flower",
-      "entryDate": "8/6/20, 4:31:16 PM",
+      "entryDate": "8/7/20, 9:54:25 AM",
       "age": "i",
       "moodId": 1,
       "sunlightLevelId": 3,
       "waterLevelId": 1,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 4,
@@ -120,34 +99,10 @@
     },
     {
       "userId": 4,
-      "id": 22,
-      "nickName": "Richards III",
-      "vernacularName": "Orange coneflower",
-      "entryDate": "8/6/20, 3:34:56 PM",
-      "age": "3",
-      "moodId": 1,
-      "sunlightLevelId": 3,
-      "waterLevelId": 2,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 23,
-      "nickName": "",
-      "vernacularName": "cccc",
-      "entryDate": "8/7/20, 8:46:21 AM",
-      "age": "alright Now",
-      "moodId": 2,
-      "sunlightLevelId": 3,
-      "waterLevelId": 2,
-      "isDead": true
-    },
-    {
-      "userId": 4,
       "id": 24,
       "nickName": "teddys bowl",
       "vernacularName": "Creeping yellowcress",
-      "entryDate": "8/6/20, 5:59:19 PM",
+      "entryDate": "8/7/20, 9:54:27 AM",
       "age": "ccc",
       "moodId": 2,
       "sunlightLevelId": 2,
@@ -156,51 +111,15 @@
     },
     {
       "userId": 4,
-      "id": 26,
-      "nickName": "j",
-      "vernacularName": "k",
-      "entryDate": "8/7/20, 8:46:25 AM",
-      "age": "i",
+      "id": 30,
+      "nickName": "Lil sucker",
+      "vernacularName": "Daisy",
+      "entryDate": "8/7/20, 2:31:30 PM",
+      "age": "3years",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
       "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 27,
-      "nickName": "sss",
-      "vernacularName": "yeeha",
-      "entryDate": "8/6/20, 7:56:31 PM",
-      "age": "d",
-      "moodId": 2,
-      "sunlightLevelId": 2,
-      "waterLevelId": 1,
-      "isDead": false
-    },
-    {
-      "userId": 2,
-      "id": 28,
-      "nickName": "d",
-      "vernacularName": "d",
-      "entryDate": "8/6/20, 7:56:34 PM",
-      "age": "cowpoke",
-      "moodId": 1,
-      "sunlightLevelId": 2,
-      "waterLevelId": 2,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 29,
-      "nickName": "dd",
-      "vernacularName": "dd",
-      "entryDate": "8/7/20, 8:42:55 AM",
-      "age": "dd",
-      "moodId": 1,
-      "sunlightLevelId": 1,
-      "waterLevelId": 1,
-      "isDead": false
     }
   ],
   "sunlightLevels": [
@@ -295,20 +214,12 @@
       "userId": 4
     },
     {
-      "plantId": 23,
-      "entryDate": "8/4/20, 2:41:23 PM",
-      "journalEntry": "love these little guys",
-      "journalTitle": "time to Disco with my plants",
       "userId": 4,
-      "id": 20
-    },
-    {
       "plantId": 9,
-      "entryDate": "8/6/20, 3:42:18 PM",
+      "id": 21,
+      "entryDate": "undefined(~Edited Since~)",
       "journalEntry": "your Great",
-      "journalTitle": "Hello",
-      "userId": 4,
-      "id": 21
+      "journalTitle": "Hello"
     },
     {
       "plantId": 19,
@@ -317,6 +228,38 @@
       "journalTitle": "bingleboi3000",
       "userId": 4,
       "id": 23
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/7/20, 10:15:06 AM",
+      "journalEntry": "dddd",
+      "journalTitle": "yus now",
+      "userId": 4,
+      "id": 24
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/7/20, 10:17:13 AM",
+      "journalEntry": "kkkk",
+      "journalTitle": "okay",
+      "userId": 4,
+      "id": 25
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/7/20, 10:17:34 AM",
+      "journalEntry": "pk",
+      "journalTitle": "bingleboi3000",
+      "userId": 4,
+      "id": 26
+    },
+    {
+      "plantId": 17,
+      "entryDate": "8/7/20, 10:29:29 AM",
+      "journalEntry": "f",
+      "journalTitle": "f",
+      "userId": 4,
+      "id": 27
     }
   ]
 }

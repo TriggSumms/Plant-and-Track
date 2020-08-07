@@ -1,6 +1,7 @@
 import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
+import GraveYard from "./home/GraveYard"
 import Login from "./auth/Login";
 import Register from "./auth/Register"
 import PlantList from "./plant/PlantList";
@@ -31,7 +32,6 @@ const ApplicationViews = (props) => {
           return <Home {...props} />;
         }} />
 
-
       {/* LOGIN ROUTE */}
       {/* //pass the `setUser` function to Login component. */}
       <Route path="/login" render={props => {
@@ -50,7 +50,7 @@ const ApplicationViews = (props) => {
       {/*Plant LIST Routes START  */}
       <Route
         exact
-        path="/home"
+        path="/plantListz"
         render={props => {
           if (hasUser) {
             return <PlantList {...props} />;//Home here is a placeholder value. 
@@ -66,6 +66,13 @@ const ApplicationViews = (props) => {
       <Route
         exact
         path="/DeadPlants"
+        render={(props) => {
+          return <GraveYard {...props} />;
+        }} />
+
+      <Route
+        
+        path="/DeadPlantListz"
         render={props => {
           if (hasUser) {
             return <PlantGraveYardList
