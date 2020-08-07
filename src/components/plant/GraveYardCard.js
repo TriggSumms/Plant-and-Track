@@ -11,11 +11,11 @@ import "./PlantCard.css"
 const GraveYardCard = (props) => {
 
   const [journals, setJournals] = useState([]);
-  const [plant, setPlant] = useState({userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead  });
+  const [plant, setPlant] = useState({ userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead });
   //console.log("plantListplant", plant)
-  const [isDead, setIsDead] = useState({isDead: props.isDead})
+  const [isDead, setIsDead] = useState({ isDead: props.isDead })
   const [isLoading, setIsLoading] = useState(true);
-  console.log("plantListJournals", journals)
+  //console.log("plantListJournals", journals)
 
 
 
@@ -24,46 +24,45 @@ const GraveYardCard = (props) => {
     const stateToChange = { ...plant };
     stateToChange[evt.target.id] = evt.target.value;
     setPlant(stateToChange);
-};
+  };
 
 
 
-const updatePlanttoGraveyard = evt => {
- console.log("brendatest", evt)
-  //evt.preventDefault()
-  setIsLoading(true);
+  const updatePlanttoGraveyard = evt => {
+    console.log("brendatest", evt)
+    setIsLoading(true);
 
-//Created a way to change the plant through updateing the plant object....this way a button toggles the cards view between dead/alive    
-//const MessageChanged = "(DEAD PLANT)"
-/* plant.moodId = parseInt( plant.moodId)
-plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
-plant.waterLevelId = parseInt(plant.waterLevelId) */
-  
-let isDeadz = isDead.isDead ? true: false
+    //Created a way to change the plant through updateing the plant object....this way a button toggles the cards view between dead/alive    
+    //const MessageChanged = "(DEAD PLANT)"
+    /* plant.moodId = parseInt( plant.moodId)
+    plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
+    plant.waterLevelId = parseInt(plant.waterLevelId) */
 
-  const graveYardPlant = {
+    let isDeadz = isDead.isDead ? true : false
+
+    const graveYardPlant = {
       userId: props.plant.userId,
       id: props.plant.id,
       nickName: props.plant.nickName,
       vernacularName: props.plant.vernacularName,
-      entryDate: props.plant.entryDate ,
+      entryDate: props.plant.entryDate,
       //entryDate: props.plant.timeStamp.format(Date.now())
       age: props.plant.age,
       moodId: props.plant.moodId,
       sunlightLevelId: props.plant.sunlightLevelId,
-      waterLevelId: props.plant.waterLevelId, 
+      waterLevelId: props.plant.waterLevelId,
       isDead: isDeadz
-  };
-console.log("graveyardclickTEST", graveYardPlant)
-  PlantManager.updatePlant(graveYardPlant)
+    };
+    console.log("graveyardclickTEST", graveYardPlant)
+    PlantManager.updatePlant(graveYardPlant)
       .then(() => props.history.push("/home"))
-}
+  }
 
 
 
 
 
-//This is the function responsible for bringing in the journal entries for the mapped PLANTJOURNALCARD
+  //This is the function responsible for bringing in the journal entries for the mapped PLANTJOURNALCARD
 
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(props.plant.id)
@@ -73,7 +72,7 @@ console.log("graveyardclickTEST", graveYardPlant)
       }
       )
   }
-//END JOURNAL FUNCTION
+  //END JOURNAL FUNCTION
 
 
 
@@ -84,7 +83,7 @@ console.log("graveyardclickTEST", graveYardPlant)
     setIsLoading(false);
 
   }, [props.plantId]);
-  
+
 
 
 
@@ -101,21 +100,21 @@ console.log("graveyardclickTEST", graveYardPlant)
                 <div className="plantcard-nick-name__Container">{props.plant.nickName}</div>
               </div>
               <div className="plantcard-logo-variable__Container">
-                <div className="plantcard-logo"></div>
+                <div className="plantcard-logo"><div className="btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /> <img src="https://img.icons8.com/color/25/000000/plant-under-sun.png"/></label>
+                </div>
+                </div>
                 <div className="plantcard-variable-list__Container">
-                  <ol> Plant Specs. BABICAKES
-                  <li> Age of plant: {props.plant.age}</li>
-                    <li>Departed: {props.plant.entryDate} </li>
-                    <li>Sunlight Level: {props.plant.sunlightLevel.level} </li>
-                    <li>Water Level: {props.plant.waterLevel.level} </li>
-                    <li>Mood of your plant: {props.plant.mood.level} </li>
-                  
- 
-                    <div className="btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-sm active"> <input type="checkbox"  id={props.plant.id} checked={isDead.isDead}  onChange={updatePlanttoGraveyard}  /> Oh Shit it's Alive!</label>
-                  </div>
+                  <ol> Plant Specs.
+                  <ul> Age of plant: {props.plant.age}</ul>
+                    <ul>Created on {props.plant.entryDate} </ul>
+                    <ul>Sunlight Level: {props.plant.sunlightLevel.level} </ul>
+                    <ul>Water Level: {props.plant.waterLevel.level} </ul>
+                    <ul>Mood of your plant: {props.plant.mood.level} </ul>
 
-                  {/*  <form>
+
+
+                    {/*  <form>
                     <p>
                         <label htmlFor="checkbox">
                            <input type="checkbox" id={props.plant.id} name="isDead" checked={isDead.isDead}  onChange={updatePlanttoGraveyard} /> 
@@ -123,7 +122,7 @@ console.log("graveyardclickTEST", graveYardPlant)
                         </label>
                       </p>
                     </form> */}
-                   
+
 
 
                     {/*            
@@ -157,7 +156,7 @@ console.log("graveyardclickTEST", graveYardPlant)
 
                         {/* <button type="button" className="waves-effect waves-light btn" onClick={() => { props.history.push("/journals/new/") }}> New Journal Entry ?</button> */}
                         {/* <Link to={`/journals/${props.plant.id}/new/`}><button>NEW PLANT BABY</button></Link> */}
-                          {/* YEAH SON...<button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> New Journal Entry ?</button> */}
+                        {/* YEAH SON...<button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> New Journal Entry ?</button> */}
                         <div className="plantcard-journal-entry__Container">
                           <div>
                             {journals.map(journal =>

@@ -13,18 +13,7 @@ const PlantList = (props) => {
   // The initial state is an empty array
   const [plants, setPlants] = useState([]);
   const [search, setSearch] = useState("");
- const [filteredPlants, setFilteredPlants] = useState([])
-
-
-
-
-
-
-
-
-
-
-
+  const [filteredPlants, setFilteredPlants] = useState([])
 
 
   const withDetails = () => {
@@ -33,10 +22,10 @@ const PlantList = (props) => {
     });
   }
 
-const deletePlant = (id) => {
+  const deletePlant = (id) => {
     PlantManager.delete(id)
       .then(() => PlantManager.getAll("plants").then(setPlants))
-    
+
   };
 
 
@@ -56,15 +45,6 @@ const deletePlant = (id) => {
     );
   }, [search, plants]);
 
-/* 
-  if (loading) {
-    return <p>Loading countries...</p>;
-  } */
-
-
-
-
-
   // Mapping through 
   return (
     <>
@@ -75,30 +55,30 @@ const deletePlant = (id) => {
         New Plant Baby ?
         </button>
 
-  <div>   
-    <input
-        type="text"
-        placeholder="Search Em Plants by their God given Name"
-        onChange={evt => setSearch(evt.target.value)}
-      />
+      <div>
+        <input
+          type="text"
+          placeholder="Search Em Plants by their God given Name"
+          onChange={evt => setSearch(evt.target.value)}
+        />
       </div>
-        
-        <div className="flip-card-front">
-          <div className="flipCard-generator">
-            {filteredPlants.map(plant =>
-            plant.isDead ? null: //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
-            //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
+
+      <div className="flip-card-front">
+        <div className="flipCard-generator">
+          {filteredPlants.map(plant =>
+            plant.isDead ? null : //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
+              //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
               <PlantCard
                 key={plant.id}
                 plant={plant}
                 deletePlant={deletePlant}
                 //updateForGarbagePlant={updateForGarbagePlant}
                 //isChecked={isChecked}
-                {...props} 
+                {...props}
               />)}
-        
-          </div>
+
         </div>
+      </div>
 
     </>
 

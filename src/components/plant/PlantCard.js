@@ -11,73 +11,75 @@ import "./PlantCard.css"
 const PlantCard = (props) => {
 
   const [journals, setJournals] = useState([]);
-  const [plant, setPlant] = useState({userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead  });
+  const [plant, setPlant] = useState({ userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead });
   //console.log("plantListplant", plant)
-  const [isDead, setIsDead] = useState({isDead: props.isDead})
+  const [isDead, setIsDead] = useState({ isDead: props.isDead })
   const [isLoading, setIsLoading] = useState(true);
   console.log("plantListJournals", journals)
 
 
 
 
-  const handleFieldChange = evt => {
-    const stateToChange = { ...plant };
-    stateToChange[evt.target.id] = evt.target.value;
-    setPlant(stateToChange);
-};
+  /*   const handleFieldChange = evt => {
+      const stateToChange = { ...plant };
+      stateToChange[evt.target.id] = evt.target.value;
+      setPlant(stateToChange);
+    }; */
 
 
-let timeStamp = new Intl.DateTimeFormat("en", {
-  timeStyle: "medium",
-  dateStyle: "short"
-});
+  let timeStamp = new Intl.DateTimeFormat("en", {
+    timeStyle: "medium",
+    dateStyle: "short"
+  });
 
-const updatePlanttoGraveyard = evt => {
- console.log("brendatest", evt)
-  //evt.preventDefault()
-  setIsLoading(true);
+  const updatePlanttoGraveyard = evt => {
+    console.log("brendatest", evt)
+    //evt.preventDefault()
+    setIsLoading(true);
 
-//Created a way to change the plant through updateing the plant object....this way a button toggles the cards view between dead/alive    
-//const MessageChanged = "(DEAD PLANT)"
-/* plant.moodId = parseInt( plant.moodId)
-plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
-plant.waterLevelId = parseInt(plant.waterLevelId) */
-  
-let isDeadz = isDead.isDead ? false: true
+    //Created a way to change the plant through updateing the plant object....this way a button toggles the cards view between dead/alive    
+    //const MessageChanged = "(DEAD PLANT)"
+    /* plant.moodId = parseInt( plant.moodId)
+    plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
+    plant.waterLevelId = parseInt(plant.waterLevelId) */
 
-  const graveYardPlant = {
+    let isDeadz = isDead.isDead ? false : true
+
+    const graveYardPlant = {
       userId: props.plant.userId,
       id: props.plant.id,
       nickName: props.plant.nickName,
       vernacularName: props.plant.vernacularName,
-      entryDate: props.plant.entryDate ,
+      entryDate: props.plant.entryDate,
       entryDate: timeStamp.format(Date.now()),
       age: props.plant.age,
       moodId: props.plant.moodId,
       sunlightLevelId: props.plant.sunlightLevelId,
-      waterLevelId: props.plant.waterLevelId, 
+      waterLevelId: props.plant.waterLevelId,
       isDead: isDeadz
-  };
-console.log("graveyardclickTEST", graveYardPlant)
-  PlantManager.updatePlant(graveYardPlant)
+    };
+    console.log("graveyardclickTEST", graveYardPlant)
+    PlantManager.updatePlant(graveYardPlant)
       .then(() => props.history.push("/home"))
-}
+    window.location.reload(false);
+  }
 
 
 
 
 
-//This is the function responsible for bringing in the journal entries for the mapped PLANTJOURNALCARD
+  //This is the function responsible for bringing in the journal entries for the mapped PLANTJOURNALCARD
 
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(props.plant.id)
       .then(APIres => {
         console.log("plantCARdGETWITHs2", APIres)
         setJournals(APIres)
+
       }
       )
   }
-//END JOURNAL FUNCTION
+  //END JOURNAL FUNCTION
 
 
 
@@ -88,7 +90,7 @@ console.log("graveyardclickTEST", graveYardPlant)
     setIsLoading(false);
 
   }, [props.plantId]);
-  
+
 
 
 
@@ -105,39 +107,22 @@ console.log("graveyardclickTEST", graveYardPlant)
                 <div className="plantcard-nick-name__Container">{props.plant.nickName}</div>
               </div>
               <div className="plantcard-logo-variable__Container">
-                <div className="plantcard-logo"></div>
-                <div className="plantcard-variable-list__Container">
-                  <ol> Plant Specs.
-                  <li> Age of plant: {props.plant.age}</li>
-                    <li>Created on {props.plant.entryDate} </li>
-                    <li>Sunlight Level: {props.plant.sunlightLevel.level} </li>
-                    <li>Water Level: {props.plant.waterLevel.level} </li>
-                    <li>Mood of your plant: {props.plant.mood.level} </li>
-                  
- 
-                    <div className="btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-sm active"> <input type="checkbox"  id={props.plant.id} checked={isDead.isDead}  onChange={updatePlanttoGraveyard}  /> Plant DEAD!</label>
+                <div className="plantcard-logo">
+                  <div className="btn-group-toggle" data-toggle="buttons">
+                    <label className="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/color/32/000000/skull.png"/></label>
                   </div>
+                  <Link to={`/plants/${props.plant.id}`}><button><img src="https://img.icons8.com/windows/32/000000/view-file.png"/></button></Link>
+                  </div>
+                <div className="plantcard-variable-list__Container">
+                  <ol> Plant Specs. </ol>
+                  <li> Age of plant: {props.plant.age}</li>
+                  <li>Created on {props.plant.entryDate} </li>
+                  <li>Sunlight Level: {props.plant.sunlightLevel.level} </li>
+                  <li>Water Level: {props.plant.waterLevel.level} </li>
+                  <li>Mood of your plant: {props.plant.mood.level} </li>
 
-                  {/*  <form>
-                    <p>
-                        <label htmlFor="checkbox">
-                           <input type="checkbox" id={props.plant.id} name="isDead" checked={isDead.isDead}  onChange={updatePlanttoGraveyard} /> 
-                          <span>Is the Plant Dead: {props.plant.isDead ? 'true' : 'false'}</span>
-                        </label>
-                      </p>
-                    </form> */}
-                   
+                  
 
-
-                    {/*            
-                    <label htmlFor="IsDead"> Is the Plant Dead: {props.plant.isDead ? 'true' : 'false'} </label>
-                    <input type="checkbox" id= "isDead" name="IsDead" value={props.plant.idDead} onChange={() => props.updateForGarbagePlant(graveYardPlant)}></input>
-                     {/* <input type="checkbox" className="form-control" id="checkbox" checked={props.plant.isDead} value={props.plant.idDead} onChange={handleFieldChange} />
-        */}
-
-                    <Link to={`/plants/${props.plant.id}`}><button>Lets take a closer look!</button></Link>
-                  </ol>
                 </div>
               </div>
               <div className="plantcard-image__Container">
@@ -161,7 +146,7 @@ console.log("graveyardclickTEST", graveYardPlant)
 
                         {/* <button type="button" className="waves-effect waves-light btn" onClick={() => { props.history.push("/journals/new/") }}> New Journal Entry ?</button> */}
                         {/* <Link to={`/journals/${props.plant.id}/new/`}><button>NEW PLANT BABY</button></Link> */}
-                          YEAH SON...<button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> New Journal Entry ?</button>
+                        <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> New Journal Entry ?</button>
                         <div className="plantcard-journal-entry__Container">
                           <div>
                             {journals.map(journal =>

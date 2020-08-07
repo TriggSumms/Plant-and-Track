@@ -9,7 +9,7 @@ import './css-java-extension/materialize.min.css';
 let timeStamp = new Intl.DateTimeFormat("en", {
     timeStyle: "medium",
     dateStyle: "short"
-  });
+});
 
 
 const PlantJournalEditForm = props => {
@@ -65,46 +65,46 @@ const PlantJournalEditForm = props => {
     return (
 
         <>
-<div className="extraPaddingJournalEdit">
-                            <form className="col s12">
-                                <div className="formgrid">
-                                    <input
-                                        type="hidden"
-                                        required
-                                        className="form-control"
-                                        onChange={handleFieldChange}
-                                        id="userId"
-                                        value={journal.userId}
-                                    />
+            <div className="extraPaddingJournalEdit">
+                <form className="col s12">
+                    <div className="formgrid">
+                        <input
+                            type="hidden"
+                            required
+                            className="form-control"
+                            onChange={handleFieldChange}
+                            id="userId"
+                            value={journal.userId}
+                        />
 
 
-                                    <div className="input-field col s5">
-                                        Title of the Entry:
+                        <div className="input-field col s5">
+                            Title of the Entry:
                         <input placeholder="Give your Journal entry a memorable title..." id="journalTitle" type="text" data-length="10" required
-                                            onChange={handleFieldChange} className="validate" value={journal.journalTitle}></input>
-                                        <label for="journalEntry"></label>
-                                    </div>
-                                    <div className="input-field col s8">
-                                        Plant Journal Entry:
+                                onChange={handleFieldChange} className="validate" value={journal.journalTitle}></input>
+                            <label for="journalEntry"></label>
+                        </div>
+                        <div className="input-field col s8">
+                            Plant Journal Entry:
                         <input placeholder="Talk about the status of your plant, your plans for next season, repotting methods, etc:" id="journalEntry" className="materialize-textarea" required
-                                            onChange={handleFieldChange} className="validate" value={journal.journalEntry}></input>
-                                        <label for="journalEntry"></label>
-                                    </div>
-                                    <div className="alignRight">
-                                        <button
-                                            className="waves-effect waves-light btn"
-                                            type="button"
-                                            disabled={isLoading}
-                                            onClick={updateExistingJournal}
-                                        >Submit Changes</button>
-                                    </div></div>
-                             </form>
+                                onChange={handleFieldChange} className="validate" value={journal.journalEntry}></input>
+                            <label for="journalEntry"></label>
+                        </div>
+                        <div className="alignRight">
+                            <button
+                                className="waves-effect waves-light btn"
+                                type="button"
+                                disabled={isLoading}
+                                onClick={updateExistingJournal}
+                            >Submit Changes</button>
+                        </div></div>
+                </form>
 
-                             </div>
+            </div>
 
 
 
-                    
+
 
 
 

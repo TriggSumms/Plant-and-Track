@@ -63,30 +63,30 @@ const ApplicationViews = (props) => {
 
 
       {/*Plant LIST Routes END */}
-    <Route
+      <Route
         exact
         path="/DeadPlants"
         render={props => {
           if (hasUser) {
-                return <PlantGraveYardList
-                plantId={parseInt(props.match.params.plantId)}
-                 {...props} />
-              } else {
-                return <Redirect to="/login" />
-                    }
-                }}
-            />  
+            return <PlantGraveYardList
+              plantId={parseInt(props.match.params.plantId)}
+              {...props} />
+          } else {
+            return <Redirect to="/login" />
+          }
+        }}
+      />
 
 
       {/*Plant Routes START  */}
 
-       <Route
+      <Route
         path="/plants/new"
         render={(props) => {
           return <PlantForm {...props} />
-        }} />  
+        }} />
 
-        <Route path="/plants/:plantId(\d+)" render={(props) => {
+      <Route path="/plants/:plantId(\d+)" render={(props) => {
         if (hasUser) {
           return <PlantDetail
             plantId={parseInt(props.match.params.plantId)}
@@ -115,16 +115,16 @@ const ApplicationViews = (props) => {
 
 
       {/*Journal Routes START  */}
-          
 
 
-       <Route path="/plants/:plantId(\d+)/newjournal"
+
+      <Route path="/plants/:plantId(\d+)/newjournal"
 
         render={(props) => {
           return <PlantJournalForm
-          plantId={parseInt(props.match.params.plantId)}
+            plantId={parseInt(props.match.params.plantId)}
             {...props} />
-        }} /> 
+        }} />
 
 
       <Route path="/journals/:journalId(\d+)" render={(props) => {

@@ -10,8 +10,7 @@ import "./PlantCard.css"
 const PlantGraveYardList = (props) => {
 
   const [plants, setPlants] = useState([]);
-  //const [journals, setJournals] = useState([]);
-  //const [isLoading, setIsLoading] = useState(true);
+
 
 
 
@@ -26,40 +25,31 @@ const PlantGraveYardList = (props) => {
 
 
   useEffect(() => {
-    //getPlants()
-
     withDetails()
-    //expandedPlantandJournal()
-    //setIsLoading(false);
-
   }, []);
 
- 
 
 
 
- 
+
+
   // Mapping through 
   return (
     <>
 
-        <div className="flip-card-front">
-          <div className="flipCard-generator">
-            {plants.map(plant =>
-          //plant.isDead ? null: //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
-         !plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
+      <div className="flip-card-front">
+        <div className="flipCard-generator">
+          {plants.map(plant =>
+            //plant.isDead ? null: //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
+            !plant.isDead ? null :  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
               <GraveYardCard
                 key={plant.id}
                 plant={plant}
-                //deletePlant={deletePlant}
-              
-               // updateForGarbagePlant={updateForGarbagePlant}
-                //isChecked={isChecked}
-                {...props} 
+                {...props}
               />)}
-        
-          </div>
+
         </div>
+      </div>
 
     </>
 
