@@ -62,23 +62,6 @@
 
 
 
-/* Beginning of Variable list Targetting */
-ul, .ok{
-  text-align: left;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.Plant_Variable_ALIVE{
-  display: flex;
-  text-align: center;
-  
-}
-
-
 
 
 
@@ -475,9 +458,31 @@ text-shadow: 0 0 1px  rgba(166, 253, 66, 0.493);
 }
 
 
+/*  */
+.plantCardSeperation{
+  margin-top: 200px;
+  margin-right: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: start;
+  float:center;
+  position:center;
+  align-self: center;
+ }
 
+ .ButtonandSearchList{
+  display: flex;
+  width: 300%;
+  justify-content: space-evenly;
+  margin-right: 2px;
+  padding-left: 10px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  
+ }
 
-
+/*  */
 
 
 

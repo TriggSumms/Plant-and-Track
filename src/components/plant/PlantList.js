@@ -49,42 +49,31 @@ const PlantList = (props) => {
   return (
     <>
 
-
-      <button type="button" className="waves-effect waves-light btn"
-        onClick={() => { props.history.push("/plants/new") }}>
-        New Plant Baby ?
-        </button>
-
-      
-        
-        <input
-          type="text"
-          placeholder= "Search via NickName"
-          onChange={evt => setSearch(evt.target.value)}
-        />
-      
-
-      <div id="content">
-  <input type="text" name="input" className="input" id="search-input" onChange={evt => setSearch(evt.target.value)} />
-  <button type="reset" class="search" id="search-btn"></button>
-</div>
-
-      <div className="flip-card-front">
-        <div className="flipCard-generator">
-          {filteredPlants.map(plant =>
-            plant.isDead ? null : //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
-              //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
-              <PlantCard
-                key={plant.id}
-                plant={plant}
-                deletePlant={deletePlant}
-                //updateForGarbagePlant={updateForGarbagePlant}
-                //isChecked={isChecked}
-                {...props}
-              />)}
-
-        </div>
+<div className="ButtonandSearchList">
+  <fieldset>
+<input
+        type="text"
+        placeholder="Search via NickName"
+        onChange={evt => setSearch(evt.target.value)}
+      />
+     </fieldset> 
       </div>
+
+      <div className="plantCardSeperation">
+        {filteredPlants.map(plant =>
+          plant.isDead ? null : //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
+            //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
+            <PlantCard
+              key={plant.id}
+              plant={plant}
+              deletePlant={deletePlant}
+              //updateForGarbagePlant={updateForGarbagePlant}
+              //isChecked={isChecked}
+              {...props}
+            />)}
+      </div>
+
+
 
     </>
 

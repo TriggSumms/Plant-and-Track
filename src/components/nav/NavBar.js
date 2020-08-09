@@ -39,7 +39,7 @@ const NavBar = props => {
                     <Nav className="ml-auto">
                         <Nav.Item>
                             <Nav.Link>
-                                {props.hasUser ? <Link to="/home">Plant Keepers HOME)</Link> : null}
+                                {props.hasUser ? <Link to="/home">Plant Keepers HOME</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
