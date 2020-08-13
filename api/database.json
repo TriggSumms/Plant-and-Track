@@ -120,6 +120,18 @@
       "sunlightLevelId": 2,
       "waterLevelId": 2,
       "isDead": true
+    },
+    {
+      "userId": 3,
+      "id": 31,
+      "nickName": "k",
+      "vernacularName": "m",
+      "entryDate": "8/13/20, 3:22:54 PM",
+      "age": "k",
+      "moodId": 1,
+      "sunlightLevelId": 1,
+      "waterLevelId": 3,
+      "isDead": false
     }
   ],
   "sunlightLevels": [

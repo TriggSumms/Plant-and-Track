@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 //import PlantList from "../plant/PlantList"
 import "./Home.css";
-import PlantList from "../plant/PlantList";
+//import PlantList from "../plant/PlantList";
 import PlantGraveYardList from '../plant/PlantGraveYardList';
 //import PlantCard from "../plant/PlantCard"
 //import PlantManager from '../../modules/PlantManager';
@@ -71,40 +71,6 @@ const GraveYard = props => {
         </div>
         <footer></footer>
       
-
-
-
-
-      {/*   
-    <div className="theAppUnderBanner">
-    
-      <div className="undertheBannerMiddle">
-  <div className="undertheBannerMiddle-Left__Container"></div>
-  <div className="undertheBannerMiddle-Center__Container">
-    <div className="plantCards-Center__Container">       
-  
-           <div className="container">
-            <div className="row mt-5">
-              <div className="col-lg-4 mb-4 grid-margin">
-                <div className="card h-100">
-                 <div className="flip=cards-insert"> */}
-      {/* <PlantCard /> */}
-
-      {/*            </div>
-                </div>
-              </div>
-            </div> 
-          </div>
-        
-      </div>
-      </div>
-  </div>
-  <div className="undertheBannerMiddle-Right__Container"></div>
-  
-  
-  
-  </div>
- */}
     </>
   )
 };

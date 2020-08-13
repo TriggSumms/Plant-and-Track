@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import PlantManager from '../../modules/PlantManager';
-//import './AnimalDetail.css'
+
 import PlantJournalCard from "./PlantJournalCard"
 
 
@@ -98,10 +98,11 @@ const PlantDetail = props => {
 
 
 
+
   return (
 
     <>
-
+{/* <div class="zoom"></div> */}
       <div className="flipCard-generator">
         <div className="flip-card">
           <div className="flip-card-inner">
@@ -173,7 +174,7 @@ const PlantDetail = props => {
           </div>
         </div>
       </div>
-
+      
     </>
 
   )

@@ -16,7 +16,7 @@
    #main > aside {
      flex: 0 0 10vw;
      background:  rgb(200, 213, 185);
-     opacity: 25%;
+     opacity: 100%;
    }
    #main > nava {
      order: -1;

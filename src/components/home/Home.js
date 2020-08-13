@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 //import PlantList from "../plant/PlantList"
 import "./Home.css";
+import UserList from '../auth/UserList';
 import PlantList from "../plant/PlantList";
 //import PlantCard from "../plant/PlantCard"
 //import PlantManager from '../../modules/PlantManager';
@@ -57,10 +58,7 @@ const Home = props => {
         <div id="main">
           <article>
 
-        <button type="button" className="waves-effect waves-light btn"
-        onClick={() => { props.history.push("/plants/new") }}>
-        New Plant Baby ?
-        </button>
+
 
 
       
@@ -72,45 +70,15 @@ const Home = props => {
               
             </div>
           </article>
-          <nava></nava>
+          <nava>
+            <UserList 
+            {...props} />
+            
+          </nava>
           <aside></aside>
         </div>
         <footer></footer>
-      
 
-
-
-
-      {/*   
-    <div className="theAppUnderBanner">
-    
-      <div className="undertheBannerMiddle">
-  <div className="undertheBannerMiddle-Left__Container"></div>
-  <div className="undertheBannerMiddle-Center__Container">
-    <div className="plantCards-Center__Container">       
-  
-           <div className="container">
-            <div className="row mt-5">
-              <div className="col-lg-4 mb-4 grid-margin">
-                <div className="card h-100">
-                 <div className="flip=cards-insert"> */}
-      {/* <PlantCard /> */}
-
-      {/*            </div>
-                </div>
-              </div>
-            </div> 
-          </div>
-        
-      </div>
-      </div>
-  </div>
-  <div className="undertheBannerMiddle-Right__Container"></div>
-  
-  
-  
-  </div>
- */}
     </>
   )
 };

@@ -16,6 +16,11 @@ const PlantGraveYardList = (props) => {
 
   const withDetails = () => {
     PlantManager.getWithDetails("plants").then(plantsfromAPI => {
+      plantsfromAPI.sort((x, y) => {
+        let a = new Date(x.entryDate),
+            b = new Date(y.entryDate);
+        return b - a;
+    });
       setPlants(plantsfromAPI)
     });
   }

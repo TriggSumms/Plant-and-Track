@@ -58,7 +58,7 @@ const PlantCard = (props) => {
       waterLevelId: props.plant.waterLevelId,
       isDead: isDeadz
     };
-    console.log("graveyardclickTEST", graveYardPlant)
+    // console.log("graveyardclickTEST", graveYardPlant)
     PlantManager.updatePlant(graveYardPlant)
       .then(() => props.history.push("/home"))
     window.location.reload(false);
@@ -73,7 +73,11 @@ const PlantCard = (props) => {
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(props.plant.id)
       .then(APIres => {
-        console.log("plantCARdGETWITHs2", APIres)
+        APIres.sort((x, y) => {
+          let a = new Date(x.entryDate),
+              b = new Date(y.entryDate);
+          return b - a;
+      });
         setJournals(APIres)
 
       }
@@ -93,7 +97,10 @@ const PlantCard = (props) => {
 
 
 
+  const currentUser = parseInt(sessionStorage.getItem("activeUser"))
 
+  if (props.plant.userId === currentUser) 
+  {
 
   return (
     <>
@@ -172,6 +179,8 @@ const PlantCard = (props) => {
     </>
 
   )
+}
+else return null
 }
 
 export default PlantCard;

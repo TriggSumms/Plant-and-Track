@@ -1,9 +1,9 @@
-  
+
 import React, { useState, useEffect } from 'react';
-import UserCard from './UserCard';
+import JumboUserCard from './JumboUserCard';
 import UserManager from '../../modules/UserManager';
 
-const UserList = (props) => {
+const JumboUserList = (props) => {
   // The initial state is an empty array
   const [user, setUser] = useState([]);
   const id = sessionStorage.getItem("activeUser")
@@ -23,7 +23,7 @@ const UserList = (props) => {
   // Finally we use map() to "loop over" the users array to show a list of animal cards
   return (
       <div>
-      <UserCard 
+      <JumboUserCard 
       key={user.id}
       user={user}
       name={user.name}
@@ -34,4 +34,4 @@ const UserList = (props) => {
    
   );
 };
-export default UserList;
+export default JumboUserList;

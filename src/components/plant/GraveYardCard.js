@@ -78,7 +78,10 @@ const GraveYardCard = (props) => {
 
 
 
+  const currentUser = parseInt(sessionStorage.getItem("activeUser"))
 
+  if (props.plant.userId === currentUser) 
+  {
   return (
     <>
 
@@ -171,6 +174,8 @@ const GraveYardCard = (props) => {
     </>
 
   )
+}
+else return null
 }
 
 export default GraveYardCard;

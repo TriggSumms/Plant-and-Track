@@ -4,6 +4,8 @@ import Home from "./home/Home";
 import GraveYard from "./home/GraveYard"
 import Login from "./auth/Login";
 import Register from "./auth/Register"
+import UserList from "./auth/UserList"
+import UserEditForm from "./auth/UserEditForm"
 import PlantList from "./plant/PlantList";
 import PlantForm from "./plant/PlantForm";
 import PlantDetail from "./plant/PlantDetail";
@@ -41,6 +43,23 @@ const ApplicationViews = (props) => {
         return <Register setUser={setUser} {...props} />
       }} />
 
+<Route 
+      path="/userListz"
+      render={props => {
+        return <UserList {...props} />
+      }} />
+
+       <Route
+        path="/users/:userId(\d+)/edit"
+        render={props => {
+          if (hasUser) {
+            return <UserEditForm {...props} />
+          } else {
+            return <Redirect to="/home" />
+          }
+        }} />
+
+        
       {/*USER INFO   */}
       {/* <Route path="/home"render={props => {return <UserList {...props} />}} /> */}
       {/* <Route path="/users/:userId(\d+)/edit"render={props => {if (hasUser) {return <UserEditForm {...props} />} else {return <Redirect to="/home" />} }} /> */}
