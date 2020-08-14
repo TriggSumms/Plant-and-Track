@@ -96,6 +96,10 @@ const PlantCard = (props) => {
   }, [props.plantId]);
 
 
+  const currentUser = parseInt(sessionStorage.getItem("activeUser"))
+
+  if (props.plant.userId === currentUser) {
+
 
   return (
  
@@ -178,6 +182,8 @@ const PlantCard = (props) => {
   
 
   )
+}
+else return null
 }
 
 export default PlantCard;

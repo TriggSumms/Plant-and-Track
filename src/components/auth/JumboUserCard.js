@@ -3,9 +3,9 @@ import React from "react";
 
 const JumboUserCard = props => {
 
-    const currentUser = parseInt(sessionStorage.getItem("activeUser"))
+ /*      const currentUser = parseInt(sessionStorage.getItem("activeUser"))
 
-    if (props.user.userId === currentUser) {
+  if (props.user.userId === currentUser) { */
 
 
         return (
@@ -16,8 +16,8 @@ const JumboUserCard = props => {
             </div>
 
         );
-    }
-    else return null
+ /*    }
+    else return null */
 }
 
 export default JumboUserCard;
