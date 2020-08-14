@@ -38,9 +38,9 @@ const UserCard = props => {
 			<p className="labelz">Dead Plants</p>
 		</div>
 </div>
-<div id="buttonz">
-<button onClick={() => props.history.push(`/users/${props.user.id}/edit`)} >Edit your Card</button>
-		<button id="msgz" onClick={() => { props.history.push("/plants/new") }}> New Plant? </button>
+<div ClassName="buttonz">
+<button className="buttonz" onClick={() => props.history.push(`/users/${props.user.id}/edit`)} >Edit your Card</button>
+		<button  className="buttonz" onClick={() => { props.history.push("/plants/new") }}> New Plant? </button>
 	</div>
 </div>
 

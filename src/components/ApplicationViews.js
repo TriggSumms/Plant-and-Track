@@ -2,8 +2,9 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
 import GraveYard from "./home/GraveYard"
-import Login from "./auth/Login";
-import Register from "./auth/Register"
+import Login from "./auth/Login.jsx";
+//import { Register } from "./auth/Register"
+import { CustomLogin } from "./auth/CustomLogin.jsx"
 import UserList from "./auth/UserList"
 import UserEditForm from "./auth/UserEditForm"
 import PlantList from "./plant/PlantList";
@@ -37,11 +38,14 @@ const ApplicationViews = (props) => {
       {/* LOGIN ROUTE */}
       {/* //pass the `setUser` function to Login component. */}
       <Route path="/login" render={props => {
+        return <CustomLogin setUser={setUser} {...props} />
+      }} />
+{/*       <Route path="/login" render={props => {
         return <Login setUser={setUser} {...props} />
       }} />
       <Route path="/register" render={props => {
         return <Register setUser={setUser} {...props} />
-      }} />
+      }} /> */}
 
 <Route 
       path="/userListz"

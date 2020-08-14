@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './PlantBaby.css';
 
 //import { Container } from 'react-bootstrap';
-import NavBar from './nav/NavBar';
+import NavBar from './components/nav/NavBar';
 //import PlantCard from "./plant/PlantCard"
-import ApplicationViews from "./ApplicationViews"
+import ApplicationViews from "./components/ApplicationViews"
 //import Jumbotron from "./nav/Jumbotron";
 
 

@@ -96,39 +96,38 @@
     color: white;
 }
 
-#buttonz {
+.buttonz {
 	display: flex;
 	margin: 0 auto;
-	justify-content: center;
-	width: 280px;
+    justify-content: center;
+    justify-content: space-evenly;
+	width: 100px;
 }
 
-#buttonz {
-	display: block;
-	position: center;
+.buttonz {
+	display: inline-flex;
+    position: center;
+    
 	padding: 10px 0;
-	width: 130px;
-	margin: 30px 0;
+	width: 125px;
+    margin: 10px 0;
+    height: 50px;
 	border-radius: 25px;
 	border: none;
-	font-size: 20px;
+	font-size: 15px;
 	letter-spacing: 0.2px;
 	font-weight: 500;
 	/* background-color: #E6EBEE; */
-	color: #E6EBEE;
+	color: #316788;
 }
 
-#buttonz:focus {
+.buttonz:focus {
 	display: none;
 }
 
-#buttonz:hover {
+.buttonz:hover {
 	transform: scale(1.03);
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 }
 
-#msgz{
-	background-color: #E6EBEE;
-	color: #393B45;
-}

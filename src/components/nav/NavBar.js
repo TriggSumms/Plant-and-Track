@@ -32,8 +32,8 @@ const NavBar = props => {
             <Navbar expand="lg">
                 <Navbar.Brand href="/">PLANTBaby Tracker</Navbar.Brand>
 {/*LOGIN LOGOUT METHODS  */}
-                {props.hasUser ? <span className="" onClick={handleLogout}> Logout </span> :
-                    <Link className="" to="/login">Login</Link>}
+                        {props.hasUser ? <span className="h" onClick={handleLogout}> Logout </span> :
+                    <Link className="h" to="/login">Login</Link>}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
