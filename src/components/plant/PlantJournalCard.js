@@ -2,7 +2,7 @@
 //import { Link } from "react-router-dom";
 import React from 'react';
 //import "./PlantCard.css"
-import "./PlantCard.css"
+import "./PlantCard.scss"
 
 
 const PlantJournalCard = (props) => {

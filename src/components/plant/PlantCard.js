@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
 //import PlantList from "./PlantList"
 import PlantJournalCard from "./PlantJournalCard"
-
-import "./PlantCard.css"
+import ReactCardFlip from 'react-card-flip';
+import "./PlantCard.scss"
 
 
 const PlantCard = (props) => {
@@ -16,7 +16,11 @@ const PlantCard = (props) => {
   const [isDead, setIsDead] = useState({ isDead: props.isDead })
   const [isLoading, setIsLoading] = useState(true);
   console.log("plantListJournals", journals)
+  const [isFlipped, setIsFlipped] = useState(false);
 
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  };
 
 
 
@@ -58,7 +62,7 @@ const PlantCard = (props) => {
       waterLevelId: props.plant.waterLevelId,
       isDead: isDeadz
     };
-    // console.log("graveyardclickTEST", graveYardPlant)
+    console.log("graveyardclickTEST", graveYardPlant)
     PlantManager.updatePlant(graveYardPlant)
       .then(() => props.history.push("/home"))
     window.location.reload(false);
@@ -73,11 +77,7 @@ const PlantCard = (props) => {
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(props.plant.id)
       .then(APIres => {
-        APIres.sort((x, y) => {
-          let a = new Date(x.entryDate),
-              b = new Date(y.entryDate);
-          return b - a;
-      });
+        console.log("plantCARdGETWITHs2", APIres)
         setJournals(APIres)
 
       }
@@ -97,18 +97,12 @@ const PlantCard = (props) => {
 
 
 
-  const currentUser = parseInt(sessionStorage.getItem("activeUser"))
-
-  if (props.plant.userId === currentUser) 
-  {
-
   return (
-    <>
+ 
 
-      <div className="flipCard-generator">
-        <div className="flip-card">
-          <div className="flip-card-inner">
-            <div className="flip-card-front">
+    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+          
+            <div className="flip-card-front" key="front">
               <div className="plantcard-names__Container">
                 <div className="plantcard-vernacular-name__Container">{props.plant.vernacularName}</div>
                 <div className="plantcard-nick-name__Container">{props.plant.nickName}</div>
@@ -133,15 +127,17 @@ const PlantCard = (props) => {
                 </div>
               </div>
               <div className="plantcard-image__Container">
-                <div className="plantcard__image-window__Container"> CAROUSEL INSERT
+                <div className="plantcard__image-window__Container"> CAROUSEL INSERT 
+              <button onClick={handleClick}><img src="https://img.icons8.com/cute-clipart/40/000000/right-down2.png"/></button>
      {/* This is where the cloudinary Window "scroll" series will go */}
                 </div>
               </div>
+              
               {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
               {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
             </div>
 
-            <div className="flip-card-back">
+            <div className="flip-card-back" key="back">
               <div className="flipCard-generator">
                 <div className="flip-card">
                   <div className="flip-card-inner">
@@ -167,20 +163,21 @@ const PlantCard = (props) => {
                           
                         </div>
                       </div>
+                     <button onClick={handleClick}><img src="https://img.icons8.com/cute-clipart/40/000000/right-down2.png"/></button>
                       <p className="messageDate"></p><button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic"/></button></div>
                   </div>
+                  
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+         
+      
 
-    </>
+        </ReactCardFlip>
+
+  
 
   )
-}
-else return null
 }
 
 export default PlantCard;

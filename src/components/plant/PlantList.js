@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PlantCard from './PlantCard';
 //import PlantJournalCard from "./PlantJournalCard"
 import PlantManager from '../../modules/PlantManager';
-import "./PlantCard.css"
+import "./PlantCard.scss"
 
 
 

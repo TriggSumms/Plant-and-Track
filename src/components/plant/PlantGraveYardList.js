@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 //import PlantCard from './PlantCard';
 import GraveYardCard from './GraveYardCard'
 import PlantManager from '../../modules/PlantManager';
-import "./PlantCard.css"
+import "./PlantCard.scss"
 
 
 

@@ -5,7 +5,7 @@ import PlantManager from '../../modules/PlantManager';
 //import PlantList from "./PlantList"
 import PlantJournalCard from "./PlantJournalCard"
 
-import "./PlantCard.css"
+import "./PlantCard.scss"
 
 
 const GraveYardCard = (props) => {

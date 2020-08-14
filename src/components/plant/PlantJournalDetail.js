@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
 import { CardDeck, Card } from 'react-bootstrap';
 //import {CardDeck, Card} from 'react-bootstrap/CardDeck'
-import "./PlantCard.css"
+import "./PlantCard.scss"
 
 //Method for Creating Time Stamp in readeable form(mdn docs)...
 let timeStamp = new Intl.DateTimeFormat("en", {
