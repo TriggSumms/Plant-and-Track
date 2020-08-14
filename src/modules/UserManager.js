@@ -29,5 +29,10 @@ export default {
         })
         
 
+    },
+    
+    getTheCount(id) {
+		return fetch(`${remoteURL}/plants/?userId=${id}&_expand=user`).then(result => result.json())
 	}
+
 };

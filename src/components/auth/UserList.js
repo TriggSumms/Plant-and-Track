@@ -6,6 +6,7 @@ import UserManager from '../../modules/UserManager';
 const UserList = (props) => {
   // The initial state is an empty array
   const [user, setUser] = useState([]);
+  
   const id = sessionStorage.getItem("activeUser")
   const getUser = (id) => {
     // After the data comes back from the API, we
@@ -15,9 +16,15 @@ const UserList = (props) => {
     });
   };
 
+
+
+
+
+
   // got the users from the API on the component's first render
   useEffect(() => {
     getUser(id);
+   
   }, []);
 
   // Finally we use map() to "loop over" the users array to show a list of animal cards

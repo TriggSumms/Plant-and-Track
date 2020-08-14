@@ -6,6 +6,8 @@ import PlantManager from '../../modules/PlantManager';
 import PlantJournalCard from "./PlantJournalCard"
 import ReactCardFlip from 'react-card-flip';
 import "./PlantCard.scss"
+import UserManager from "../../modules/UserManager";
+import PlantList from "./PlantList";
 
 
 const PlantCard = (props) => {
@@ -72,6 +74,7 @@ const PlantCard = (props) => {
 
 
 
+
   //This is the function responsible for bringing in the journal entries for the mapped PLANTJOURNALCARD
 
   const expandedPlantandJournal = () => {
@@ -84,6 +87,14 @@ const PlantCard = (props) => {
       )
   }
   //END JOURNAL FUNCTION
+
+
+
+
+
+
+
+
 
 
 
