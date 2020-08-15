@@ -1,3 +1,7 @@
+
+
+/*SCROLL BAR START TARGETTING*/
+
 /* SCROLL width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -15,20 +19,21 @@
   border-radius: 20px;
 }
 
+/*SCROLL BAR END TARGETTING*/
 
-   .plantCards-Center__Container{
-    
-    background:(0,0,0,0.6);
-    display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  height: 550px;
-  width: 1200px;
-  overflow-y: auto;
 
-  
 
-  }
+
+
+
+
+
+
+
+
+
+/*This is the main CSS for the CARDS*/
+
 
 .cardz{
   width: 32%;
@@ -54,7 +59,6 @@
   0 100px 80px rgba(0, 0, 0, 0.12)
 ;
 border-radius: 5px 5px 5px 5px;
- 
 }
 
 .flip-card-back {
@@ -71,39 +75,45 @@ border-radius: 5px 5px 5px 5px;
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12)
 ;
-
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.notonthehighstreet.com%2Ffs%2F84%2F82%2Fc128-352b-4463-a6a7-7c3b1a5b0880%2Foriginal_tropical-hothouse-botanical-print-fabric.jpg&f=1&nofb=1);
   padding-top: 10px;
 }
 
-
+   .plantCards-Center__Container{
+  background:(0,0,0,0.6);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 550px;
+  width: 1200px;
+  overflow-y: auto;
+  }
 
 .centeringdetailsCARD{
 margin-left:750px;
 margin-top:75px;
-
   align-content: center;
   justify-content: space-evenly; 
   align-items: center;
-  text-align: center;
-  
+  text-align: center; 
   transition: transform 2.0s;  /*Animation */ 
 }
 .centeringdetailsCARD:hover {
   transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
-/* WAY TO ZOOM INTO CARD */
-/* .zoom {
-  padding: 50px;
-  background-color: green;
-  transition: transform .2s; 
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
 
-.zoom:hover {
-  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+/*END OF MAIN TARGETS*/
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -441,8 +451,14 @@ font-family: 'Josefin Sans', sans-serif;
 
 
 
-/* Journal CARD MESSAGE */
-/* Style the container with a rounded border, grey background and some padding and margin */
+
+
+
+
+
+
+/* START Journal CARD MESSAGE */
+
 .container-s {
   border: 2px solid rgb(186, 207, 185);
   background-color:rgb(218, 215, 205);
@@ -599,29 +615,7 @@ padding: 10px, 10px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* END OF JOURNAL CARD */
 
 
 
@@ -847,7 +841,7 @@ border-radius: 5px 5px 5px 5px;
 
 
 
-
+/*HERE LIES THE END OF GRAVEYARD CSS */
 
 
 

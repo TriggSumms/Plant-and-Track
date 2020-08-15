@@ -70,18 +70,6 @@
     },
     {
       "userId": 4,
-      "id": 17,
-      "nickName": "w",
-      "vernacularName": "iboi",
-      "entryDate": "8/14/20, 5:00:31 PM",
-      "age": "wb",
-      "moodId": 1,
-      "sunlightLevelId": 1,
-      "waterLevelId": 1,
-      "isDead": false
-    },
-    {
-      "userId": 4,
       "id": 19,
       "nickName": "little Tango",
       "vernacularName": "Butterfly flower",
@@ -225,22 +213,6 @@
       "journalTitle": "Dreamy Journal Poem"
     },
     {
-      "id": 3,
-      "plantId": 17,
-      "entryDate": "7/30/20, 2:29:52 PM",
-      "journalEntry": "Stevie Wonder didn’t just write a song about plants, he recorded an entire album. 1979’s Stevie Wonder’s Journey Through “The Secret Life of Plants” was recorded  for a documentary of the same name that featured time-lapse footage of plants growing. As the first full studio release since Wonder’s highly successful album, Songs in the Key of Life, the collection of plant-themed tracks perplexed many music critics at the time of its release. In retrospective, Wonder should be commended for his beautiful and brave musical exploration of our green friends.",
-      "journalTitle": "The Secret Life of Plants – Stevie Wonder",
-      "userId": 4
-    },
-    {
-      "id": 4,
-      "plantId": 17,
-      "entryDate": "8/3/20, 2:17:42 PM",
-      "journalEntry": "This plant hates me...",
-      "journalTitle": "alright little bad boi",
-      "userId": 4
-    },
-    {
       "id": 5,
       "plantId": 20,
       "entryDate": "8/3/20, 2:35:13 PM",
@@ -295,30 +267,6 @@
       "journalTitle": "bingleboi3000",
       "userId": 4,
       "id": 26
-    },
-    {
-      "plantId": 17,
-      "entryDate": "8/7/20, 10:29:29 AM",
-      "journalEntry": "f",
-      "journalTitle": "f",
-      "userId": 4,
-      "id": 27
-    },
-    {
-      "plantId": 17,
-      "entryDate": "8/14/20, 2:52:54 PM",
-      "journalEntry": "d",
-      "journalTitle": "YES SIR",
-      "userId": 4,
-      "id": 28
-    },
-    {
-      "plantId": 24,
-      "entryDate": "8/14/20, 2:54:05 PM",
-      "journalEntry": "e",
-      "journalTitle": "okay",
-      "userId": 4,
-      "id": 29
     },
     {
       "plantId": 9,

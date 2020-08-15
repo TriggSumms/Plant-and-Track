@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
 import { CardDeck, Card } from 'react-bootstrap';
-//import {CardDeck, Card} from 'react-bootstrap/CardDeck'
-//import "./PlantCard.scss"
+
 
 //Method for Creating Time Stamp in readeable form(mdn docs)...
 let timeStamp = new Intl.DateTimeFormat("en", {
@@ -10,14 +9,11 @@ let timeStamp = new Intl.DateTimeFormat("en", {
   dateStyle: "short"
 });
 
-//User clicks details button thus rendering the animals info
+
 const PlantDetail = props => {
   const [journal, setJournal] = useState({ plantId: 0, id: 0, entryDate: timeStamp.format(Date.now()), journalEntry: "", journalTitle: "" });
-  // const [plants, setPlants] = useState([]);
-
-
   const [isLoading, setIsLoading] = useState(true);
-  console.log("yeejournals", journal)
+  //console.log("yeejournals", journal)
 
 
   //Important Lesson learned below: if your gonna set the state.....dont pinpoint the property inside the "expandedPlant"
@@ -26,7 +22,7 @@ const PlantDetail = props => {
   const expandedJournal = () => {
     PlantManager.getWithSpecificPlants(props.journalId)
       .then(journal => {
-        console.log("yeettttt2", journal)
+        //console.log("yeettttt2", journal)
         setJournal(journal)
       }
       )
@@ -36,7 +32,6 @@ const PlantDetail = props => {
   useEffect(() => {
     expandedJournal()
     setIsLoading(false);
-
   }, [props.journalId]);
 
 
@@ -51,7 +46,7 @@ const PlantDetail = props => {
   };
 
 
-  //Currently the CSS lies in plantCard.css...(will need to remove)
+  //Currently the CSS lies in plantCard.css...
 
   return (
 
@@ -78,17 +73,11 @@ const PlantDetail = props => {
           <br />
         </CardDeck>
       </div>
-
-
-
-
-
-
     </>
+
 
   )
 }
-
 
 export default PlantDetail;
 

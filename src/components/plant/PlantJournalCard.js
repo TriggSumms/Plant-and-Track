@@ -8,12 +8,11 @@ import { Toast } from 'react-bootstrap';
 
 const PlantJournalCard = (props) => {
 
+
+
   return (
 
-
-
-
-    <>
+  <>
 
       {/*START OF WHATS BEING SENT TO PLANT CARD  */}
       {/*    <div className="plantcard-journal-entry__Container">
@@ -41,7 +40,7 @@ const PlantJournalCard = (props) => {
         <button className="message__buttons" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}><img src="https://img.icons8.com/plasticine/30/000000/view-details.png"/></button>
         </div>
  */}
- 
+
  <Toast>
     <Toast.Header>
       <strong className="mr-auto" closeButton="false" >{props.journalEntry.journalTitle}</strong>

@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import "./UserCard.css"
 import UserManager from '../../modules/UserManager';
 
+
+
+
+
 const UserCard = props => {
 	const [liveCountz, setLiveCountz] = useState([])
 	const [deadCountz, setDeadCountz] = useState([])
@@ -9,32 +13,29 @@ const UserCard = props => {
 	console.log("TEST6", deadCountz)
 	const id = sessionStorage.getItem("activeUser")
 
-	const gettheLiveCounts = () => {
-		
-		UserManager.getTheCount(id)
 
+	const gettheLiveCounts = () => {
+		UserManager.getTheCount(id)
 			.then(countFromAPI => {
-				const LiveCount= countFromAPI.filter(officialCountAPI => {
+				const LiveCount = countFromAPI.filter(officialCountAPI => {
 					if (officialCountAPI.isDead === false) {
-						return officialCountAPI	
+						return officialCountAPI
 					}
 				})
 				setLiveCountz(LiveCount)
-				
 			})
 	}
-	const gettheDeadCounts = () => {
-		
-		UserManager.getTheCount(id)
 
+
+	const gettheDeadCounts = () => {
+		UserManager.getTheCount(id)
 			.then(countFromAPI => {
-				const DeadCount= countFromAPI.filter(officialCountAPI => {
+				const DeadCount = countFromAPI.filter(officialCountAPI => {
 					if (officialCountAPI.isDead === true) {
-						return officialCountAPI	
+						return officialCountAPI
 					}
 				})
 				setDeadCountz(DeadCount)
-				
 			})
 	}
 
@@ -44,14 +45,13 @@ const UserCard = props => {
 	useEffect(() => {
 		gettheLiveCounts();
 		gettheDeadCounts();
-	  }, []);
+	}, []);
 
 
 
 
 	return (
 		<>
-
 
 			<div id="cardz">
 				<h1 className="h1z">{props.user.user}</h1>
@@ -63,7 +63,7 @@ const UserCard = props => {
 				</div>
 				<div id="statz">
 					<div className="colz">
-	<p className="statz">{liveCountz.length}</p>
+						<p className="statz">{liveCountz.length}</p>
 						<p className="labelz">Live Plants</p>
 					</div>
 					<div className="colz">
@@ -76,11 +76,6 @@ const UserCard = props => {
 					<button className="buttonz2" onClick={() => { props.history.push("/plants/new") }}> New Plant? </button>
 				</div>
 			</div>
-
-
-
-
-
 
 		</>
 

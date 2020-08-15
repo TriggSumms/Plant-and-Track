@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import PlantManager from "../../modules/PlantManager"
 import { Form } from "react-bootstrap";
-//import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const PlantEditForm = props => {
@@ -19,7 +19,6 @@ const PlantEditForm = props => {
         stateToChange[evt.target.id] = evt.target.value;
         setPlant(stateToChange);
     };
-
     const getMoods = () => {
         return PlantManager.getAll("moods").then(moodsfromAPI => {
             setMoods(moodsfromAPI)
@@ -41,7 +40,6 @@ const PlantEditForm = props => {
 
 
     const updateExistingPlant = evt => {
-        //Stops the pg from loading on every click...
         evt.preventDefault()
         setIsLoading(true);
 
@@ -73,13 +71,11 @@ const PlantEditForm = props => {
     useEffect(() => {
         PlantManager.getPlant(props.match.params.plantId)
             .then(plant => {
-
                 setPlant(plant);
                 getMoods();
                 getSunlightLevels();
                 getWaterLevels();
                 setIsLoading(false);
-
             });
     }, [props.match.params.plantId]);
     //Filling the dependency array allows the change made to rerender the Animal
@@ -88,6 +84,7 @@ const PlantEditForm = props => {
     return (
 
         <>
+{/* FORMS SECTION CREATED USING MATERILIZE */}
             <div className="row">
                 <div className="col s12 m5">
                     <div className="card-panel transparent">
@@ -126,9 +123,8 @@ const PlantEditForm = props => {
                                             </div>
                                         </div>
                                     </div>
-
-
-
+{/* MATERILIZE FORM END */}
+{/* DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
                                     <div className="kk">
                                         <Form.Group controlId="moodId">
                                             <Form.Label>Plant Mood:</Form.Label>
@@ -173,12 +169,14 @@ const PlantEditForm = props => {
                                         onClick={updateExistingPlant}
                                     >Submit</button>
                                 </div>
+                                
                             </form>
 
                         </div>
                     </div>
                 </div>
             </div>
+{/* END DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
         </>
     );
 }

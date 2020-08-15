@@ -17,8 +17,6 @@ export default {
             body: JSON.stringify(editedUser)
         }).then(data => data.json());
     },
-
-
     createUser(newUser) {
 		return fetch(`${remoteURL}/users`, {
 			method: "POST",
@@ -27,8 +25,6 @@ export default {
 			},
 			body: JSON.stringify(newUser)
         })
-        
-
     },
     
     getTheCount(id) {

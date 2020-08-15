@@ -1,22 +1,20 @@
-
 import React, { useState, useEffect } from 'react';
-
-//import PlantList from "../plant/PlantList"
 import "./Home.css";
 import "./SearchBar.css"
 import UserList from '../auth/UserList';
-//import PlantList from "../plant/PlantList";
 import PlantGraveYardList from '../plant/PlantGraveYardList';
 //import PlantCard from "../plant/PlantCard"
 //import PlantManager from '../../modules/PlantManager';
 
 
+
+
 const GraveYard = props => {
-
-  const [search, setSearch] = useState();
-  const [filteredPlants, setFilteredPlants] = useState([])
-  const [plants, setPlants] = useState([]);
-
+  /* 
+    const [search, setSearch] = useState();
+    const [filteredPlants, setFilteredPlants] = useState([])
+    const [plants, setPlants] = useState([]);
+   */
 
 
 
@@ -27,8 +25,7 @@ const GraveYard = props => {
       <header></header>
       <div id="main">
         <article>
-
-{/* 
+          {/* 
           <fieldset>
             <input
               type="text"
@@ -39,17 +36,11 @@ const GraveYard = props => {
 
 
 
-          
-            <PlantGraveYardList
-              {...props}
-            />
 
-         
+          <PlantGraveYardList {...props} />
         </article>
         <nava>
-          <UserList
-            {...props} />
-
+          <UserList {...props} />
         </nava>
         <aside></aside>
       </div>

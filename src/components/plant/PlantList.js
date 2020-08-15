@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PlantCard from './PlantCard';
-//import PlantJournalCard from "./PlantJournalCard"
 import PlantManager from '../../modules/PlantManager';
 import "./PlantCard.css"
 
 
 
-
-
-
 const PlantList = (props) => {
-  // The initial state is an empty array
   const [plants, setPlants] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredPlants, setFilteredPlants] = useState([])
@@ -20,17 +15,17 @@ const PlantList = (props) => {
     PlantManager.getWithDetails("plants").then(plantsfromAPI => {
       plantsfromAPI.sort((x, y) => {
         let a = new Date(x.entryDate),
-            b = new Date(y.entryDate);
-        return b- a;
-    });
+          b = new Date(y.entryDate);
+        return b - a;
+      });
       setPlants(plantsfromAPI)
     });
   }
 
+
   const deletePlant = (id) => {
     PlantManager.delete(id)
       .then(() => PlantManager.getAll("plants").then(setPlants))
-
   };
 
 
@@ -38,8 +33,6 @@ const PlantList = (props) => {
   useEffect(() => {
     withDetails();
   }, []);
-
-
 
 
   useEffect(() => {
@@ -50,11 +43,13 @@ const PlantList = (props) => {
     );
   }, [search, plants]);
 
-  // Mapping through 
+
+
+
   return (
     <>
 
-{/* <div className="ButtonandSearchList">
+      {/* <div className="ButtonandSearchList">
   <fieldset>
 <input
         type="text"
@@ -64,10 +59,10 @@ const PlantList = (props) => {
      </fieldset> 
       </div> */}
 
-<div className= "plantCards-Center__Container">
+      <div className="plantCards-Center__Container">
         {filteredPlants.map(plant =>
           plant.isDead ? null : //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
-           //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
+            //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
             <PlantCard
               key={plant.id}
               plant={plant}
@@ -81,10 +76,7 @@ const PlantList = (props) => {
             />)}
       </div>
 
-
-
     </>
-
   );
 };
 export default PlantList;

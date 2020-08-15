@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
-//import './PlantForm.css'
-//import { Form } from 'react-bootstrap';
-//import './css-java-extension/materialize.css';
-//import './css-java-extension/materialize.min.css';
-//import './css-java-extension/materialize.js';
-//import './css-java-extension/materialize.min.js';
-
-
-
 
 
 
@@ -24,54 +15,48 @@ const PlantJournalForm = props => {
     const [isLoading, setIsLoading] = useState(false);
 
     //Tracks entries into text boxes
-    const handleFieldChange = evt => {
+const handleFieldChange = evt => {
         const stateToChange = { ...journal };
         stateToChange[evt.target.id] = evt.target.value;
         setJournal(stateToChange);
     };
 
-    //const plantId = {plantId: props.match.params.plant.id}
+   
 
 
-
-
-
-    const currentUserId = sessionStorage.getItem("activeUser")
+const currentUserId = sessionStorage.getItem("activeUser")
     journal.userId = parseInt(currentUserId)
 
 
 
 
-    // plant.id   = journal.plantId
-
-
-    const constructNewJournalEntry = evt => {
+const constructNewJournalEntry = evt => {
         evt.preventDefault();
         if (journal.journalEntry === "" || journal.journalTitle === "") {
             window.alert("Please fill out all the entry requirements....");
         } else {
             setIsLoading(true);
             journal.plantId = parseInt(journal.plantId)
-
-            // Create the article and redirect user to article list
             PlantManager.postJournal(journal)
                 //.then(() => PlantManager.getAll(plants))
                 .then(() => props.history.push("/home"));
         }
     };
 
-    const getPlants = () => {
+
+const getPlants = () => {
         return PlantManager.getAll("plants").then(plantsFromAPI => {
             setPlants(plantsFromAPI)
         });
     }
 
-
-
     useEffect(() => {
         getPlants()
-
     }, []);
+
+
+
+
 
 
     return (
@@ -111,11 +96,7 @@ const PlantJournalForm = props => {
                                         >Submit</button>
                                     </div>
                                 </div>
-
-
                             </form>
-
-
                         </div>
                     </div>
                 </div>

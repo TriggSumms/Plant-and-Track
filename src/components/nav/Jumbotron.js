@@ -36,7 +36,7 @@ export const Jumbotron = () => (
       <div className="overlay"></div>
       <Container>
         <h1><JumboUserList /></h1>
-       
+
       </Container>
     </Jumbo>
   </Styles>

@@ -1,7 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-
-//import PlantList from "../plant/PlantList"
 import "./Home.css";
 import "./SearchBar.css"
 import UserList from '../auth/UserList';
@@ -28,33 +26,33 @@ const Home = props => {
         <article>
 
 
-        {/*   <fieldset>
+
+          {/*   <fieldset>
             <input
               type="text"
               placeholder="Search via NickName"
               onChange={evt => setSearch(evt.target.value)}
             />
           </fieldset> */}
-<div class="flexbox">
-  <div class="search">
+          <div class="flexbox">
+            <div class="search">
+              <div>
+                <input type="text" placeholder="Search . . ." required />
+              </div>
+            </div>
+          </div>
 
-    <div>
-      <input type="text" placeholder="Search . . ." required />
-    </div>
-  </div>
-</div>
 
-     <div>
+
+          <div>
             <PlantList
               {...props}
             />
-</div>
-         
+          </div>
         </article>
         <nava>
           <UserList
             {...props} />
-
         </nava>
         <aside></aside>
       </div>

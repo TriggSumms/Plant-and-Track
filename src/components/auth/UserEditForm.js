@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react"
 import UserManager from "../../modules/UserManager"
 
+
+
+
+
+
+
 const UserEditForm = props => {
-    const [user, setUser] = useState({ user: "", userId: 0, img: "" , email: "", password: "" });
+    const [user, setUser] = useState({ user: "", userId: 0, img: "", email: "", password: "" });
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = evt => {
@@ -12,24 +18,21 @@ const UserEditForm = props => {
     };
 
 
-    
-
-
     const updateUser = evt => {
         evt.preventDefault()
         setIsLoading(true);
 
-    // This is an edit, so we need the id
-    const editedUser = {
-       userId: user.userId,
-        id: props.match.params.userId,
-        user: user.user,
-        img: user.img,
-        email: user.email
-        
-    };
-    UserManager.updateSpecificUser(editedUser)
-        .then(() => props.history.push("/home"))
+        // This is an edit, so we need the id
+        const editedUser = {
+            userId: user.userId,
+            id: props.match.params.userId,
+            user: user.user,
+            img: user.img,
+            email: user.email
+
+        };
+        UserManager.updateSpecificUser(editedUser)
+            .then(() => props.history.push("/home"))
     }
 
 
@@ -67,7 +70,7 @@ const UserEditForm = props => {
                             id="user"
                             value={user.user}
                         />
-                        
+
                         <label htmlFor="name">Enter new Email Address: </label>
                         <input
                             type="text"
@@ -86,7 +89,7 @@ const UserEditForm = props => {
                             id="password"
                             value={user.password}
                         />
-        {/*                 
+                        {/*                 
                         <label htmlFor="profilePicture">Profile Picture</label>
                         <input
                             type="image"
@@ -96,7 +99,7 @@ const UserEditForm = props => {
                             id="img"
                             value={user.img}
                         /> */}
-                        
+
 
                     </div>
                     <div className="alignRight">

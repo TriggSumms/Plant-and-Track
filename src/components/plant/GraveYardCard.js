@@ -1,8 +1,6 @@
-
 //import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
-//import PlantList from "./PlantList"
 import PlantJournalCard from "./PlantJournalCard"
 import ReactCardFlip from 'react-card-flip';
 
@@ -34,12 +32,6 @@ const GraveYardCard = (props) => {
     console.log("brendatest", evt)
     setIsLoading(true);
 
-    //Created a way to change the plant through updateing the plant object....this way a button toggles the cards view between dead/alive    
-    //const MessageChanged = "(DEAD PLANT)"
-    /* plant.moodId = parseInt( plant.moodId)
-    plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
-    plant.waterLevelId = parseInt(plant.waterLevelId) */
-
     let isDeadz = isDead.isDead ? true : false
 
     const graveYardPlant = {
@@ -47,8 +39,7 @@ const GraveYardCard = (props) => {
       id: props.plant.id,
       nickName: props.plant.nickName,
       vernacularName: props.plant.vernacularName,
-       entryDate: timeStamp.format(Date.now()),
-      //entryDate: props.plant.timeStamp.format(Date.now())
+      entryDate: timeStamp.format(Date.now()),
       age: props.plant.age,
       moodId: props.plant.moodId,
       sunlightLevelId: props.plant.sunlightLevelId,
@@ -93,7 +84,9 @@ const GraveYardCard = (props) => {
   if (props.plant.userId === currentUser) 
   {
   return (
-    <div className="cardz">
+
+
+<div className="cardz">
 <ReactCardFlip cardZIndex= {1} className="ReactCardzFlip" isFlipped={isFlipped} flipDirection="horizontal">
 
             <div className="DEAD-flip-card-front" key="front">
@@ -106,7 +99,7 @@ const GraveYardCard = (props) => {
                   <div className="text" data-toggle="buttons">
                     <label className="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/plasticine/40/000000/plant-under-sun.png" alt="button-generic"/></label>
                   </div>
-                  </div>
+              </div>
                 <div className="DEAD-plantcard-variable-list__Container">
                   <h1 className="VariableEntryTitle"> Plant Specs. </h1>
                   <div className="TitleVariable">Age of your plant:<p className="VariableEntry1"> {props.plant.age}</p></div>
@@ -114,28 +107,7 @@ const GraveYardCard = (props) => {
                   <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {props.plant.sunlightLevel.level}</p> </div>
                   <div className="TitleVariable">Water Level Req. : <p className="VariableEntry1">{props.plant.waterLevel.level} </p></div>
                   <div className="TitleVariable">Mood of your plant this Week?:<p className="VariableEntry3"> Dang..... GraveYard'd!</p> </div>
-
-                  
-
-                    {/*  <form>
-                    <p>
-                        <label htmlFor="checkbox">
-                           <input type="checkbox" id={props.plant.id} name="isDead" checked={isDead.isDead}  onChange={updatePlanttoGraveyard} /> 
-                          <span>Is the Plant Dead: {props.plant.isDead ? 'true' : 'false'}</span>
-                        </label>
-                      </p>
-                    </form> */}
-
-
-
-                    {/*            
-                    <label htmlFor="IsDead"> Is the Plant Dead: {props.plant.isDead ? 'true' : 'false'} </label>
-                    <input type="checkbox" id= "isDead" name="IsDead" value={props.plant.idDead} onChange={() => props.updateForGarbagePlant(graveYardPlant)}></input>
-                     {/* <input type="checkbox" className="form-control" id="checkbox" checked={props.plant.isDead} value={props.plant.idDead} onChange={handleFieldChange} />
-        */}
-
                     {/* <Link to={`/plants/${props.plant.id}`}><button>Lets take a closer look!</button></Link> */}
-                  
                 </div>
               </div>
               <div className="DEAD-plantcard-image__Container">
@@ -155,11 +127,10 @@ const GraveYardCard = (props) => {
                       Journal Entries: <p className="plantCardBackName"> {props.plant.nickName}</p> 
                       </div>
                       <div className="DEAD-plantcard-journal-entries__Container">
-
-                        {/* <button type="button" className="waves-effect waves-light btn" onClick={() => { props.history.push("/journals/new/") }}> New Journal Entry ?</button> */}
                         {/* <Link to={`/journals/${props.plant.id}/new/`}><button>NEW PLANT BABY</button></Link> */}
                         {/* YEAH SON...<button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> New Journal Entry ?</button> */}
                         <div className="plantcard-journal-entry__Container">
+                          
                           <div>
                             {journals.map(journal =>
                               <PlantJournalCard
@@ -168,16 +139,17 @@ const GraveYardCard = (props) => {
                                 {...props}
                               />)}
                           </div>
+                          
                         </div>
                       </div>
                       <div className="plantCard-journal-button-Container">
                      <button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png"/></button>
                      </div>
-                      </div>
-                 
-              
+                      </div>           
  </ReactCardFlip>
  </div>
+
+
   )
 }
 else return null

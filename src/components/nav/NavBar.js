@@ -26,13 +26,13 @@ const NavBar = props => {
     return (
 
         <Styles>
-{/* Bringing in my Jumbotron = Webpage Banner */}
+            {/* Bringing in my Jumbotron = Webpage Banner */}
             <Jumbotron />
-{/* lg needs adjustment */}
+            {/* lg needs adjustment */}
             <Navbar expand="lg">
                 <Navbar.Brand href="/">PLANTBaby Tracker</Navbar.Brand>
-{/*LOGIN LOGOUT METHODS  */}
-                        {props.hasUser ? <span className="h" onClick={handleLogout}> Logout </span> :
+                {/*LOGIN LOGOUT METHODS  */}
+                {props.hasUser ? <span className="h" onClick={handleLogout}> Logout </span> :
                     <Link className="h" to="/login">Login</Link>}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -54,7 +54,7 @@ const NavBar = props => {
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown> : null}
-{/* SEARCH BAR FORM PLACEMENT */}
+                        {/* SEARCH BAR FORM PLACEMENT */}
                         {/* {props.hasUser ? <Form inline>
                             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                             <Button variant="outline-success">Search</Button>

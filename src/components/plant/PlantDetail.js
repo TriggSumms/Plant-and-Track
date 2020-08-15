@@ -1,5 +1,4 @@
-//import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
 import ReactCardFlip from 'react-card-flip';
@@ -24,9 +23,8 @@ const PlantDetail = props => {
   const [sunlightLevel, setSunlightLevel] = useState({ level: 0 });
   const [waterLevel, setWaterLevel] = useState({ level: 0 });
   const [isDead, setIsDead] = useState({ isDead: props.isDead })
-
   const [isLoading, setIsLoading] = useState(true);
-  console.log("yee", plant)
+  //console.log("yee", plant)
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = () => {
@@ -57,11 +55,9 @@ const PlantDetail = props => {
       .then(APIres => {
         console.log("plantjourn", APIres)
         setJournals(APIres)
-
       }
       )
   }
-
 
 
 
@@ -69,12 +65,6 @@ const PlantDetail = props => {
     // console.log("brendatest", evt)
     evt.preventDefault()
     setIsLoading(true);
-
-    //Created a way to change the plant through updateing the plant object....this way a button toggles the cards view between dead/alive    
-    //const MessageChanged = "(DEAD PLANT)"
-    /* plant.moodId = parseInt( plant.moodId)
-    plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
-    plant.waterLevelId = parseInt(plant.waterLevelId) */
 
     let isDeadz = isDead.isDead ? false : true
 
@@ -91,7 +81,7 @@ const PlantDetail = props => {
       waterLevelId: plant.waterLevelId,
       isDead: isDeadz
     };
-    console.log("graveyardclickTEST", graveYardPlant)
+    //console.log("graveyardclickTEST", graveYardPlant)
     PlantManager.updatePlant(graveYardPlant)
       .then(() => props.history.push("/home"))
     //window.location.reload(false);
@@ -114,14 +104,13 @@ const PlantDetail = props => {
   };
 
 
-  const currentUser = parseInt(sessionStorage.getItem("activeUser"))
 
+  const currentUser = parseInt(sessionStorage.getItem("activeUser"))
   if (plant.userId === currentUser) {
 
     return (
 
       <>
-        {/* <div class="zoom"></div> */}
         <div className="centeringdetailsCARD">
           <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
 
@@ -138,7 +127,6 @@ const PlantDetail = props => {
                     </div>
                     <button className="danger" type="button" onClick={() => props.history.push(`/plants/${plant.id}/edit`)}><img src="https://img.icons8.com/plasticine/32/000000/edit.png" alt="button-generic" /></button>
                     <button type="submit"><img src="https://img.icons8.com/plasticine/32/000000/image-file.png" alt="button-generic" /></button><button className="" type="button" onClick={() => handleDelete(plant.id)}><img src="https://img.icons8.com/plasticine/32/000000/delete-forever.png" alt="button-generic" /></button>
-
                   </div>
                   <div className="plantcard-variable-list__Container">
                     <ol className="VariableEntry"> Plant Specs. </ol>
@@ -147,11 +135,6 @@ const PlantDetail = props => {
                     <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {sunlightLevel.level}</p> </div>
                     <div className="TitleVariable">Water Level Req. : <p className="VariableEntry1">{waterLevel.level} </p></div>
                     <div className="TitleVariable">Mood of your plant this Week?:<p className="VariableEntry3"> {mood.level}</p> </div>
-
-
-
-
-
                   </div>
                 </div>
                 <div className="plantcard-image__Container">
@@ -161,33 +144,28 @@ const PlantDetail = props => {
                 <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button></div>
                 {/* This is where the cloudinary Window "scroll" series will go */}
 
-
-
               </div>
             </div>
-            {/* <PlantCardBack /> */}
 
+            {/* <PlantCardBack /> */}
             <div className="flip-card-back" key="back">
               <div className="plantcard-journal-title__Container">
                 Journal Entries: <p className="plantCardBackName"> {plant.nickName}</p>
               </div>
-
               <div className="plantcard-journal-entry__Container">
+
                 <div>
                   {journals.map(journal =>
                     <PlantJournalCard
                       key={journal.id}
                       journalEntry={journal}
-                      // deleteTheJournal={deleteTheJournal}
                       {...props}
                     />)}
                 </div>
 
-
               </div>
               <div className="plantCard-journal-button-Container">
                 <button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button>
-
               </div>
             </div>
           </ReactCardFlip>
@@ -198,5 +176,6 @@ const PlantDetail = props => {
   }
   else return null
 }
+
 
 export default PlantDetail;
