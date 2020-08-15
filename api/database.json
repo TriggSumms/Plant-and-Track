@@ -49,31 +49,31 @@
       "id": 9,
       "nickName": "BIGWIZZI",
       "vernacularName": "Gray alder",
-      "entryDate": "7/30/20, 8:45:08 PM",
-      "age": "5inchs tall, 4m",
+      "entryDate": "8/15/20, 2:59:27 AM",
+      "age": "5inchs tall",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 4,
       "id": 14,
       "nickName": "Lil Babi genius",
       "vernacularName": "Bolean birch",
-      "entryDate": "8/6/20, 10:33:18 AM",
+      "entryDate": "8/14/20, 8:09:42 PM",
       "age": "4",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 1,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
       "id": 17,
       "nickName": "w",
       "vernacularName": "iboi",
-      "entryDate": "8/6/20, 11:31:52 AM",
+      "entryDate": "8/14/20, 5:00:31 PM",
       "age": "wb",
       "moodId": 1,
       "sunlightLevelId": 1,
@@ -85,19 +85,19 @@
       "id": 19,
       "nickName": "little Tango",
       "vernacularName": "Butterfly flower",
-      "entryDate": "8/7/20, 9:54:25 AM",
+      "entryDate": "8/15/20, 3:03:39 AM",
       "age": "i",
       "moodId": 1,
       "sunlightLevelId": 3,
       "waterLevelId": 1,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
       "id": 20,
       "nickName": "Beany babi",
       "vernacularName": "Coffee plant",
-      "entryDate": "8/6/20, 5:59:50 PM",
+      "entryDate": "8/15/20, 2:24:52 AM",
       "age": "xxx",
       "moodId": 1,
       "sunlightLevelId": 1,
@@ -108,9 +108,9 @@
       "userId": 4,
       "id": 24,
       "nickName": "teddys bowl",
-      "vernacularName": "Creeping yellowcress",
-      "entryDate": "8/7/20, 9:54:27 AM",
-      "age": "ccc",
+      "vernacularName": "Creeping yellowcrs",
+      "entryDate": "8/15/20, 2:24:45 AM",
+      "age": "cccf",
       "moodId": 2,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
@@ -121,7 +121,7 @@
       "id": 30,
       "nickName": "Lil sucker",
       "vernacularName": "Daisy",
-      "entryDate": "8/7/20, 2:31:30 PM",
+      "entryDate": "8/14/20, 8:09:53 PM",
       "age": "3years",
       "moodId": 1,
       "sunlightLevelId": 2,
@@ -143,60 +143,24 @@
     {
       "userId": 4,
       "id": 32,
-      "nickName": "dccddc",
-      "vernacularName": "xsdss",
-      "entryDate": "8/14/20, 12:45:44 PM",
-      "age": "dccddc",
-      "moodId": 2,
+      "nickName": "ddd",
+      "vernacularName": "ddd",
+      "entryDate": "8/14/20, 11:30:58 PM",
+      "age": "2",
+      "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 4,
       "id": 33,
-      "nickName": "dssdsd",
-      "vernacularName": "ssdsd",
-      "entryDate": "8/14/20, 12:46:19 PM",
-      "age": "sdds",
+      "nickName": "k",
+      "vernacularName": "yeeha",
+      "entryDate": "8/15/20, 3:26:13 AM",
+      "age": "k",
       "moodId": 1,
-      "sunlightLevelId": 2,
-      "waterLevelId": 2,
-      "isDead": false
-    },
-    {
-      "userId": 4,
-      "id": 34,
-      "nickName": "xxxx",
-      "vernacularName": "xxx",
-      "entryDate": "8/14/20, 1:04:10 PM",
-      "age": "xxx",
-      "moodId": 2,
-      "sunlightLevelId": 2,
-      "waterLevelId": 2,
-      "isDead": false
-    },
-    {
-      "userId": 4,
-      "id": 35,
-      "nickName": "cedcd",
-      "vernacularName": "weded",
-      "entryDate": "8/14/20, 1:04:31 PM",
-      "age": "cddccd",
-      "moodId": 2,
-      "sunlightLevelId": 2,
-      "waterLevelId": 2,
-      "isDead": false
-    },
-    {
-      "userId": 4,
-      "id": 36,
-      "nickName": "fvfvvff",
-      "vernacularName": "dfvvf",
-      "entryDate": "8/14/20, 1:05:12 PM",
-      "age": "vfvfv",
-      "moodId": 3,
-      "sunlightLevelId": 3,
+      "sunlightLevelId": 1,
       "waterLevelId": 1,
       "isDead": false
     }
@@ -339,6 +303,30 @@
       "journalTitle": "f",
       "userId": 4,
       "id": 27
+    },
+    {
+      "plantId": 17,
+      "entryDate": "8/14/20, 2:52:54 PM",
+      "journalEntry": "d",
+      "journalTitle": "YES SIR",
+      "userId": 4,
+      "id": 28
+    },
+    {
+      "plantId": 24,
+      "entryDate": "8/14/20, 2:54:05 PM",
+      "journalEntry": "e",
+      "journalTitle": "okay",
+      "userId": 4,
+      "id": 29
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/14/20, 4:03:02 PM",
+      "journalEntry": "o",
+      "journalTitle": "o",
+      "userId": 4,
+      "id": 30
     }
   ]
 }

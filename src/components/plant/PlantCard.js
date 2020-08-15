@@ -5,7 +5,7 @@ import PlantManager from '../../modules/PlantManager';
 //import PlantList from "./PlantList"
 import PlantJournalCard from "./PlantJournalCard"
 import ReactCardFlip from 'react-card-flip';
-import "./PlantCard.scss"
+import "./PlantCard.css"
 import UserManager from "../../modules/UserManager";
 import PlantList from "./PlantList";
 
@@ -90,15 +90,6 @@ const PlantCard = (props) => {
 
 
 
-
-
-
-
-
-
-
-
-
   useEffect(() => {
 
     expandedPlantandJournal()
@@ -114,8 +105,8 @@ const PlantCard = (props) => {
 
   return (
  
-
-    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+<div className="cardz">
+    <ReactCardFlip cardZIndex= {1} className="ReactCardzFlip" isFlipped={isFlipped} flipDirection="horizontal">
           
             <div className="flip-card-front" key="front">
               <div className="plantcard-names__Container">
@@ -125,12 +116,12 @@ const PlantCard = (props) => {
               <div className="plantcard-logo-variable__Container">
                 <div className="plantcard-logo">
                   <div className="text-white" data-toggle="buttons">
-                    <label className="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/color/32/000000/skull.png" alt="button-generic"/></label>
+                    <label className="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img className="PlantCardFrontButton" src="https://img.icons8.com/plasticine/32/000000/headstone.png" alt="button-generic"/></label>
                   </div>
-                  <Link to={`/plants/${props.plant.id}`}><button class="PlantCardFrontButton"><img src="https://img.icons8.com/plasticine/32/000000/view-details.png" alt="button-generic"/></button></Link>
+                  <Link to={`/plants/${props.plant.id}`}><button className="PlantCardFrontButton"><img className="PlantCardFrontButton"src="https://img.icons8.com/plasticine/32/000000/view-details.png" alt="button-generic"/></button></Link>
                   </div>
                 <div className="plantcard-variable-list__Container">
-                  <ol className="VariableEntry"> Plant Specs. </ol>
+                  <h1 className="VariableEntryTitle"> Plant Specs. </h1>
                   <div className="TitleVariable">Age of your plant:<p className="VariableEntry1"> {props.plant.age}</p></div>
                   <div className="TitleVariable"> Created on: <p className="VariableEntry2"> {props.plant.entryDate} </p></div>
                   <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {props.plant.sunlightLevel.level}</p> </div>
@@ -143,22 +134,21 @@ const PlantCard = (props) => {
               </div>
               <div className="plantcard-image__Container">
                 <div className="plantcard__image-window__Container"> CAROUSEL INSERT 
-              <button onClick={handleClick}><img src="https://img.icons8.com/cute-clipart/40/000000/right-down2.png"/></button>
+             
      {/* This is where the cloudinary Window "scroll" series will go */}
                 </div>
-              </div>
+              </div> 
+              <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png"/></button></div>
               
               {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
               {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
             </div>
-
+  
+ 
             <div className="flip-card-back" key="back">
-              <div className="flipCard-generator">
-                <div className="flip-card">
-                  <div className="flip-card-inner">
-                    <div className="flip-card-back">
+                    
                       <div className="plantcard-journal-title__Container">
-                       Journal Entries for: <p className="plantCardBackName"> {props.plant.nickName}</p>
+                      Journal Entries: <p className="plantCardBackName"> {props.plant.nickName}</p> 
                       </div>
                       <div className="plantcard-journal-entries__Container">
 
@@ -178,18 +168,19 @@ const PlantCard = (props) => {
                           
                         </div>
                       </div>
-                     <button onClick={handleClick}><img src="https://img.icons8.com/cute-clipart/40/000000/right-down2.png"/></button>
-                      <p className="messageDate"></p><button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic"/></button></div>
-                  </div>
+
+                      <div className="plantCard-journal-button-Container">
+                     <button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png"/></button>
+                      <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic"/></button>
+                     </div>
+                      </div>
+                
                   
-                </div>
-              </div>
-            </div>
+        
+     
          
-      
-
         </ReactCardFlip>
-
+        </div>
   
 
   )

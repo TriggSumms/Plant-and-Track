@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PlantCard from './PlantCard';
 //import PlantJournalCard from "./PlantJournalCard"
 import PlantManager from '../../modules/PlantManager';
-import "./PlantCard.scss"
+import "./PlantCard.css"
 
 
 
@@ -54,7 +54,7 @@ const PlantList = (props) => {
   return (
     <>
 
-<div className="ButtonandSearchList">
+{/* <div className="ButtonandSearchList">
   <fieldset>
 <input
         type="text"
@@ -62,16 +62,19 @@ const PlantList = (props) => {
         onChange={evt => setSearch(evt.target.value)}
       />
      </fieldset> 
-      </div>
+      </div> */}
 
-      <div className="plantCardSeperation">
+<div className= "plantCards-Center__Container">
         {filteredPlants.map(plant =>
           plant.isDead ? null : //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
-            //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
+           //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
             <PlantCard
               key={plant.id}
               plant={plant}
               deletePlant={deletePlant}
+              search={search}
+              plants={plants}
+              setFilteredPlants={setFilteredPlants}
               //updateForGarbagePlant={updateForGarbagePlant}
               //isChecked={isChecked}
               {...props}

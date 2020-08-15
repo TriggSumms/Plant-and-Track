@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
+//import React from "react";
 import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
-
+import ReactCardFlip from 'react-card-flip';
 import PlantJournalCard from "./PlantJournalCard"
+//import "./PlantDetails.css"
+
+
+
 
 
 //Method for Creating Time Stamp in readeable form(mdn docs)...
@@ -22,6 +27,13 @@ const PlantDetail = props => {
 
   const [isLoading, setIsLoading] = useState(true);
   console.log("yee", plant)
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+
 
 
   //Important Lesson learned below: if your gonna set the state.....dont pinpoint the property inside the "expandedPlant"
@@ -38,30 +50,19 @@ const PlantDetail = props => {
       }
       )
   }
+
+
   const expandedPlantandJournal = () => {
-    PlantManager.getWithSpecificJournals(plant.id)
+    PlantManager.getWithSpecificJournals(props.plantId)
       .then(APIres => {
-        //console.log("plantCARdGETWITHs2", APIres)
+        console.log("plantjourn", APIres)
         setJournals(APIres)
+
       }
       )
   }
 
 
-  useEffect(() => {
-    expandedPlant()
-    expandedPlantandJournal()
-    setIsLoading(false);
-
-  }, [props.plantId]);
-
-
-  const handleDelete = () => {
-    setIsLoading(true);
-    PlantManager.deletePlant(plant.id).then(() =>
-      props.history.push("/home")
-    );
-  };
 
 
   const updatePlanttoGraveyard = evt => {
@@ -97,88 +98,105 @@ const PlantDetail = props => {
   }
 
 
+  useEffect(() => {
+    expandedPlant()
+    expandedPlantandJournal()
+    setIsLoading(false);
+
+  }, [props.plantId]);
 
 
-  return (
+  const handleDelete = () => {
+    setIsLoading(true);
+    PlantManager.deletePlant(plant.id).then(() =>
+      props.history.push("/home")
+    );
+  };
 
-    <>
-{/* <div class="zoom"></div> */}
-      <div className="flipCard-generator">
-        <div className="flip-card">
-          <div className="flip-card-inner">
-            <div className="flip-card-front">
-              <div className="plantcard-names__Container">
-                <div className="plantcard-vernacular-name__Container">{plant.vernacularName}</div>
-                <div className="plantcard-nick-name__Container">{plant.nickName}</div>
-              </div>
-              <div className="plantcard-logo-variable__Container">
-                <div className="plantcard-logo">
-                <div className="text-white" data-toggle="buttons">
-                    <label className="btn btn-sm active"> <input type="checkbox" id={plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/color/32/000000/skull.png" alt="button-generic"/></label>
+
+  const currentUser = parseInt(sessionStorage.getItem("activeUser"))
+
+  if (plant.userId === currentUser) {
+
+    return (
+
+      <>
+        {/* <div class="zoom"></div> */}
+        <div className="centeringdetailsCARD">
+          <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+
+            <div className="flip-card-front" key="front">
+              <div className="flip-card-front">
+                <div className="plantcard-names__Container">
+                  <div className="plantcard-vernacular-name__Container">{plant.vernacularName}</div>
+                  <div className="plantcard-nick-name__Container">{plant.nickName}</div>
+                </div>
+                <div className="plantcard-logo-variable__Container">
+                  <div className="plantcard-logo">
+                    <div className="text-white" data-toggle="buttons">
+                      <label className="btn btn-sm active"> <input type="checkbox" id={plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/plasticine/32/000000/headstone.png" alt="button-generic" /></label>
+                    </div>
+                    <button className="danger" type="button" onClick={() => props.history.push(`/plants/${plant.id}/edit`)}><img src="https://img.icons8.com/plasticine/32/000000/edit.png" alt="button-generic" /></button>
+                    <button type="submit"><img src="https://img.icons8.com/plasticine/32/000000/image-file.png" alt="button-generic" /></button><button className="" type="button" onClick={() => handleDelete(plant.id)}><img src="https://img.icons8.com/plasticine/32/000000/delete-forever.png" alt="button-generic" /></button>
+
                   </div>
-                   <button className="danger" type="button" onClick={() => props.history.push(`/plants/${plant.id}/edit`)}><img src="https://img.icons8.com/plasticine/32/000000/edit.png" alt="button-generic" /></button>
-                   <button type="submit"><img src="https://img.icons8.com/plasticine/32/000000/image-file.png"  alt="button-generic"/></button><button className="" type="button" onClick={() => handleDelete(plant.id)}><img src="https://img.icons8.com/plasticine/32/000000/delete-forever.png"  alt="button-generic"/></button>
-                  
+                  <div className="plantcard-variable-list__Container">
+                    <ol className="VariableEntry"> Plant Specs. </ol>
+                    <div className="TitleVariable">Age of your plant:<p className="VariableEntry1"> {plant.age}</p></div>
+                    <div className="TitleVariable"> Created on: <p className="VariableEntry2"> {plant.entryDate} </p></div>
+                    <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {sunlightLevel.level}</p> </div>
+                    <div className="TitleVariable">Water Level Req. : <p className="VariableEntry1">{waterLevel.level} </p></div>
+                    <div className="TitleVariable">Mood of your plant this Week?:<p className="VariableEntry3"> {mood.level}</p> </div>
+
+
+
+
+
+                  </div>
                 </div>
-                <div className="plantcard-variable-list__Container">
-                  <ol className="VariableEntry"> Plant Specs. </ol>
-                  <div className="TitleVariable">Age of your plant:<p className="VariableEntry1"> {plant.age}</p></div>
-                  <div className="TitleVariable"> Created on: <p className="VariableEntry2"> {plant.entryDate} </p></div>
-                  <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {sunlightLevel.level}</p> </div>
-                  <div className="TitleVariable">Water Level Req. : <p className="VariableEntry1">{waterLevel.level} </p></div>
-                  <div className="TitleVariable">Mood of your plant this Week?:<p className="VariableEntry3"> {mood.level}</p> </div>
-
-
-
-
-                 
+                <div className="plantcard-image__Container">
+                  <div className="plantcard__image-window__Container"> CAROUSEL INSERT
+                 </div>
                 </div>
+                <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button></div>
+                {/* This is where the cloudinary Window "scroll" series will go */}
+
+
+
               </div>
-              <div className="plantcard-image__Container">
-                <div className="plantcard__image-window__Container"> CAROUSEL INSERT
-     {/* This is where the cloudinary Window "scroll" series will go */}
-                </div>
-              </div>
-
-
             </div>
             {/* <PlantCardBack /> */}
-            <div className="flip-card-back">
-              <div className="flipCard-generator">
-                <div className="flip-card">
-                  <div className="flip-card-inner">
-                    <div className="flip-card-back">
-                      <div className="plantcard-journal-title__Container">
-                        <h1>Journal Entries for:<p className="plantCardBackName">{plant.nickName}</p></h1>
-                      </div>
-                      <div className="plantcard-journal-entries__Container">
-                        <div className="plantcard-journal-entry__Container">
-                          <div>
-                            {journals.map(journal =>
-                              <PlantJournalCard
-                                key={journal.id}
-                                journalEntry={journal}
-                                // deleteTheJournal={deleteTheJournal}
-                                {...props}
-                              />)}
-                          </div>
-                        </div>
-                      </div>
-                      <p className="messageDate"></p><button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png"  alt="button-generic"/></button>
-                      </div>
-                  </div>
+
+            <div className="flip-card-back" key="back">
+              <div className="plantcard-journal-title__Container">
+                Journal Entries: <p className="plantCardBackName"> {plant.nickName}</p>
+              </div>
+
+              <div className="plantcard-journal-entry__Container">
+                <div>
+                  {journals.map(journal =>
+                    <PlantJournalCard
+                      key={journal.id}
+                      journalEntry={journal}
+                      // deleteTheJournal={deleteTheJournal}
+                      {...props}
+                    />)}
                 </div>
+
+
+              </div>
+              <div className="plantCard-journal-button-Container">
+                <button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button>
+
               </div>
             </div>
-
-          </div>
+          </ReactCardFlip>
         </div>
-      </div>
-      
-    </>
+      </>
 
-  )
+    )
+  }
+  else return null
 }
-
 
 export default PlantDetail;

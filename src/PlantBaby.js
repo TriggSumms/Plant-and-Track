@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './PlantBaby.css';
+//import './PlantBaby.css';
 
 //import { Container } from 'react-bootstrap';
 import NavBar from './components/nav/NavBar';

@@ -3,7 +3,7 @@ import PlantManager from "../../modules/PlantManager"
 //import { Form } from 'react-bootstrap';
 import './css-java-extension/materialize.css';
 import './css-java-extension/materialize.min.css';
-
+import "./PlantForm.css"
 
 
 let timeStamp = new Intl.DateTimeFormat("en", {

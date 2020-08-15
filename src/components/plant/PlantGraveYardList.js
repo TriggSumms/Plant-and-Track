@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 //import PlantCard from './PlantCard';
 import GraveYardCard from './GraveYardCard'
 import PlantManager from '../../modules/PlantManager';
-import "./PlantCard.scss"
+//import "./PlantCard.scss"
 
 
 
@@ -52,7 +52,7 @@ const PlantGraveYardList = (props) => {
      </fieldset> 
       </div> */}
 
-      <div className="plantCardSeperation">
+<div className= "plantCards-Center__Container">
 
           {plants.map(plant =>
             //plant.isDead ? null: //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE

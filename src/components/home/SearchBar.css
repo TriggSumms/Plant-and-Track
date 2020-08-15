@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+* {
+  font-family: Roboto, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.search {
+  margin: 20px;
+  color: #52796F;
+}
+
+.search > h3 {
+  font-weight: normal;
+  color: #52796F;
+}
+
+.search > h1,
+.search > h3 {
+  color: #52796F;
+  margin-bottom: 15px;
+  text-shadow: 0 1px #52796F;
+}
+
+.search > div {
+  display: inline-block;
+  position: relative;
+  filter: drop-shadow(0 1px #52796F);
+}
+
+.search > div:after {
+  content: "";
+  color: #52796F;
+  background: #52796F;
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top: 40px;
+  right: 2px;
+  transform: rotate(135deg);
+}
+
+.search > div > input {
+  color: #52796F;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px #52796F;
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+  color: #52796F;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+  
+  opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+  width: 150px;
+  color: #52796F;
+}

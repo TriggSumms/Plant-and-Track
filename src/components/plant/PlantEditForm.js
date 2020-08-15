@@ -65,7 +65,9 @@ const PlantEditForm = props => {
 
         };
         PlantManager.updatePlant(editedPlant)
-            .then(() => props.history.push("/home"))
+        .then(() => props.history.go(-1))
+        .then(()=> props.history.go(false))
+           //.then(() => window.location.reload(false))
     }
 
     useEffect(() => {

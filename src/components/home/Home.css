@@ -2,12 +2,19 @@
   * {
     box-sizing: border-box; 
    }
+ 
    body {
      margin: 0;
    }
    #main {
      display: flex;
      min-height: calc(80vh - 10vh);
+     background-color: rgb(161, 163, 161);;
+     opacity: 100%;
+     background-image: url(https://www.pngmart.com/files/3/Mist-PNG-Transparent-Image.png);
+     background-position: stretch;
+
+  
    }
    #main > article {
      flex: 1;
@@ -15,8 +22,11 @@
    #main > nava, 
    #main > aside {
      flex: 0 0 10vw;
-     background:  rgb(200, 213, 185);
+     background: transparent;
      opacity: 100%;
+     background-image: url();
+     
+     opacity: 90%;
    }
    #main > nava {
      order: -1;
@@ -26,9 +36,9 @@
    }
    header, footer {
      background: yellowgreen;
-     background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fst3.depositphotos.com%2F4162521%2F18146%2Fi%2F1600%2Fdepositphotos_181466142-stock-photo-watercolor-seamless-pattern-green-leaves.jpg&f=1&nofb=1);
+     background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.LB3EOKh9dzp3Smqd6feQOAHaCO%26pid%3DApi&f=1);
      background: cover;
-     opacity: 75%;
+     opacity: 90%;
      height: 15vh;
    }
 
@@ -87,23 +97,5 @@
     
   } */
  /*  */
-   .plantCards-Center__Container{
-    border: 1px solid #2eb222;
-    border-radius: 1px;
-    display: flex;
-    
-    height: 550px;
-    width: 1300px;
-    padding: 50px 50px;
-    margin: 25px 25px;
-    overflow-x: auto; /* Hide horizontal scrollbar */
-    overflow-y: none; 
-    text-align:center;
-  }
 
-  .plantCardSeperation{
-   margin-top: 300px;
-     justify-content: space-around;
-     flex-direction: row;
-  }
   

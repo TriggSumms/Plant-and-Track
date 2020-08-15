@@ -1,8 +1,9 @@
 //import React from "react";
 //import { Link } from "react-router-dom";
 import React from 'react';
+import { Toast } from 'react-bootstrap';
 //import "./PlantCard.css"
-import "./PlantCard.scss"
+
 
 
 const PlantJournalCard = (props) => {
@@ -33,13 +34,27 @@ const PlantJournalCard = (props) => {
       </div> */}
 
 
-      <div className="container-s">
+{/*       <div className="container-s">
         
           <p className="messageTitle"><span className="messageDate">{props.journalEntry.journalTitle}</span> {props.journalEntry.entryDate}</p>
         <h4 className="truncate" > {props.journalEntry.journalEntry} </h4>
         <button className="message__buttons" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}><img src="https://img.icons8.com/plasticine/30/000000/view-details.png"/></button>
         </div>
-
+ */}
+ 
+ <Toast>
+    <Toast.Header>
+      <strong className="mr-auto" closeButton="false" >{props.journalEntry.journalTitle}</strong>
+      <button className="buttonboi" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}>
+        <img src="https://img.icons8.com/plasticine/15/000000/view-details.png" className=""/>
+      </button>
+      
+      <small>{props.journalEntry.entryDate}</small>
+    </Toast.Header>
+    <Toast.Body>
+      {props.journalEntry.journalEntry}
+    </Toast.Body>
+  </Toast>
 
 
 

@@ -7,6 +7,7 @@ fieldset {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     background: aliceblue;
+    
 }
 
 fieldset input, fieldset button, fieldset select{
@@ -15,6 +16,7 @@ fieldset input, fieldset button, fieldset select{
     margin: .2em 0;
     outline: none;
     box-shadow: none;
+    
     
 }
 
@@ -61,3 +63,5 @@ fieldset input, fieldset button, fieldset select {
 fieldset .alignRight {
     text-align: right;
 }
+
+
