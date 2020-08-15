@@ -6,10 +6,12 @@ import ReactCardFlip from 'react-card-flip';
 import "./PlantCard.css"
 import UserManager from "../../modules/UserManager";
 import PlantList from "./PlantList";
+import CloudFiles from '../../modules/CloudinaryWidget';
+
+
 
 
 const PlantCard = (props) => {
-
   const [journals, setJournals] = useState([]);
   const [plant, setPlant] = useState({ userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead });
   //console.log("plantListplant", plant)
@@ -18,9 +20,11 @@ const PlantCard = (props) => {
   //console.log("plantListJournals", journals)
   const [isFlipped, setIsFlipped] = useState(false);
 
+  //Click Event for flip of the card
   const handleClick = () => {
     setIsFlipped(!isFlipped);
   };
+
 
 
 
@@ -28,6 +32,7 @@ const PlantCard = (props) => {
     timeStyle: "medium",
     dateStyle: "short"
   });
+
 
   const updatePlanttoGraveyard = evt => {
     console.log("brendatest", evt)
@@ -122,10 +127,14 @@ const PlantCard = (props) => {
             <div className="plantcard-image__Container">
               <div className="plantcard__image-window__Container"> CAROUSEL INSERT
      {/* This is where the cloudinary Window "scroll" series will go */}
+     <CloudFiles {...props} />
+                   {props.plant.plantUrl} 
               </div>
             </div>
             <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button></div>
-
+          
+                  {/* This is where the cloudinary Window "scroll" series will go */}
+                
             {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
             {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
           </div>
