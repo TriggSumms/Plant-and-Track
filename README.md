@@ -1,4 +1,4 @@
-# PlantBaby Tracker
+# Plant Tracker
 The app's purpose is to stand as a catalogging journal for plant collecting and will aid forgetfull plant owners all over the world! 
 
 
