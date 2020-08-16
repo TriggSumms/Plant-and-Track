@@ -9,13 +9,14 @@
    #main {
      display: flex;
      min-height: calc(80vh - 10vh);
-     background-color: rgb(173, 173, 173, 0.50);
+     background: rgb(173, 173, 173, 0.50);
      opacity: 100%;
      background-image: url(https://www.pngitem.com/pimgs/m/102-1026439_green-leaves-png-free-image-transparent-background-leaves.png);
      background-position: stretch;
 
   
    }
+   
    #main > article {
      flex: 1;
    }

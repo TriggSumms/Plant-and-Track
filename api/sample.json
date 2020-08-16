@@ -5,6 +5,7 @@
       "email": "joe@joe.com",
       "password": "test",
       "img": "https://avatars1.githubusercontent.com/u/65562846?s=460&u=4ee0dafd8c420d9d30e0160faf91fb135a81e570&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 1
     },
     {
@@ -12,6 +13,7 @@
       "email": "test@test.com",
       "password": "test",
       "img": "https://avatars1.githubusercontent.com/u/65351448?s=460&u=e4fd4abf5f5a81d0d62c128cd907a4b14d6a4670&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 2
     },
     {
@@ -19,6 +21,7 @@
       "email": "testing@testing.com",
       "password": "test",
       "img": "https://avatars2.githubusercontent.com/u/59340165?s=460&u=46057543931e845b54dbf360a89f24b5755cf93d&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 3
     },
     {
@@ -26,6 +29,7 @@
       "password": "yee",
       "user": "Test",
       "img": "",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 4
     },
     {
@@ -33,7 +37,32 @@
       "password": "hello",
       "user": "YUS",
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 5
+    },
+    {
+      "email": "stsumms@gmail.com",
+      "password": "ok",
+      "user": "Testboi",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "user": "Testboi56sss",
+      "password": "ddz",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "email": "yuh@gmail.com",
+      "bio": "YUH boi yuh"
+    },
+    {
+      "email": "allison.williams1@cushwake.com",
+      "password": "MintJ27*",
+      "user": "Adub127",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": ":)))))))))) I love plants!",
+      "id": 8
     }
   ],
   "plants": [
@@ -42,34 +71,22 @@
       "id": 9,
       "nickName": "BIGWIZZI",
       "vernacularName": "Gray alder",
-      "entryDate": "7/30/20, 8:45:08 PM",
-      "age": "5inchs tall, 4m",
+      "entryDate": "8/15/20, 2:59:27 AM",
+      "age": "5inchs tall",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 4,
       "id": 14,
       "nickName": "Lil Babi genius",
       "vernacularName": "Bolean birch",
-      "entryDate": "8/6/20, 10:33:18 AM",
+      "entryDate": "8/14/20, 8:09:42 PM",
       "age": "4",
       "moodId": 1,
       "sunlightLevelId": 2,
-      "waterLevelId": 1,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 17,
-      "nickName": "w",
-      "vernacularName": "iboi",
-      "entryDate": "8/6/20, 11:31:52 AM",
-      "age": "wb",
-      "moodId": 1,
-      "sunlightLevelId": 1,
       "waterLevelId": 1,
       "isDead": false
     },
@@ -78,95 +95,119 @@
       "id": 19,
       "nickName": "little Tango",
       "vernacularName": "Butterfly flower",
-      "entryDate": "8/7/20, 9:54:25 AM",
+      "entryDate": "8/15/20, 3:03:39 AM",
       "age": "i",
       "moodId": 1,
       "sunlightLevelId": 3,
       "waterLevelId": 1,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
       "id": 20,
       "nickName": "Beany babi",
       "vernacularName": "Coffee plant",
-      "entryDate": "8/6/20, 5:59:50 PM",
+      "entryDate": "8/15/20, 3:46:17 PM",
       "age": "xxx",
       "moodId": 1,
       "sunlightLevelId": 1,
       "waterLevelId": 1,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 22,
-      "nickName": "Richards III",
-      "vernacularName": "Orange coneflower",
-      "entryDate": "8/6/20, 3:34:56 PM",
-      "age": "3",
-      "moodId": 1,
-      "sunlightLevelId": 3,
-      "waterLevelId": 2,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 23,
-      "nickName": "",
-      "vernacularName": "cccc",
-      "entryDate": "8/7/20, 8:46:21 AM",
-      "age": "alright Now",
-      "moodId": 2,
-      "sunlightLevelId": 3,
-      "waterLevelId": 2,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
       "id": 24,
       "nickName": "teddys bowl",
-      "vernacularName": "Creeping yellowcress",
-      "entryDate": "8/7/20, 9:54:27 AM",
-      "age": "ccc",
+      "vernacularName": "Creeping yellowcrs",
+      "entryDate": "8/15/20, 2:24:45 AM",
+      "age": "cccf",
       "moodId": 2,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
-      "id": 26,
-      "nickName": "j",
-      "vernacularName": "k",
-      "entryDate": "8/7/20, 8:46:25 AM",
-      "age": "i",
+      "id": 30,
+      "nickName": "Lil sucker",
+      "vernacularName": "Daisy",
+      "entryDate": "8/14/20, 8:09:53 PM",
+      "age": "3years",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
       "isDead": true
     },
     {
-      "userId": 2,
-      "id": 28,
-      "nickName": "d",
-      "vernacularName": "d",
-      "entryDate": "8/6/20, 7:56:34 PM",
-      "age": "cowpoke",
+      "userId": 3,
+      "id": 31,
+      "nickName": "k",
+      "vernacularName": "m",
+      "entryDate": "8/13/20, 10:11:07 PM",
+      "age": "k",
       "moodId": 1,
-      "sunlightLevelId": 2,
-      "waterLevelId": 2,
+      "sunlightLevelId": 1,
+      "waterLevelId": 3,
       "isDead": true
     },
     {
       "userId": 4,
-      "id": 29,
-      "nickName": "dd",
-      "vernacularName": "BIG BOI",
-      "entryDate": "8/7/20, 8:42:55 AM",
-      "age": "dd",
+      "id": 32,
+      "nickName": "ddd",
+      "vernacularName": "ddd",
+      "entryDate": "8/15/20, 5:41:10 PM",
+      "age": "2",
+      "moodId": 1,
+      "sunlightLevelId": 2,
+      "waterLevelId": 2,
+      "isDead": false
+    },
+    {
+      "userId": 4,
+      "id": 33,
+      "nickName": "k",
+      "vernacularName": "yeeha",
+      "entryDate": "8/15/20, 3:26:13 AM",
+      "age": "k",
       "moodId": 1,
       "sunlightLevelId": 1,
       "waterLevelId": 1,
+      "isDead": false
+    },
+    {
+      "userId": 7,
+      "id": 34,
+      "nickName": "d",
+      "vernacularName": "yeeha",
+      "entryDate": "8/15/20, 4:08:33 PM",
+      "age": "dd",
+      "moodId": 1,
+      "sunlightLevelId": 2,
+      "waterLevelId": 2,
+      "isDead": false
+    },
+    {
+      "userId": 8,
+      "id": 35,
+      "nickName": "Passion Flower",
+      "vernacularName": "Pasiflora",
+      "entryDate": "8/15/20, 9:57:25 PM",
+      "age": "2 months old",
+      "moodId": 2,
+      "sunlightLevelId": 3,
+      "waterLevelId": 3,
+      "isDead": false
+    },
+    {
+      "userId": 8,
+      "id": 36,
+      "nickName": "b",
+      "vernacularName": "gggyg",
+      "entryDate": "8/15/20, 10:02:20 PM",
+      "age": "gg",
+      "moodId": 2,
+      "sunlightLevelId": 2,
+      "waterLevelId": 3,
       "isDead": false
     }
   ],
@@ -230,22 +271,6 @@
       "journalTitle": "Dreamy Journal Poem"
     },
     {
-      "id": 3,
-      "plantId": 17,
-      "entryDate": "7/30/20, 2:29:52 PM",
-      "journalEntry": "Stevie Wonder didn’t just write a song about plants, he recorded an entire album. 1979’s Stevie Wonder’s Journey Through “The Secret Life of Plants” was recorded  for a documentary of the same name that featured time-lapse footage of plants growing. As the first full studio release since Wonder’s highly successful album, Songs in the Key of Life, the collection of plant-themed tracks perplexed many music critics at the time of its release. In retrospective, Wonder should be commended for his beautiful and brave musical exploration of our green friends.",
-      "journalTitle": "The Secret Life of Plants – Stevie Wonder",
-      "userId": 4
-    },
-    {
-      "id": 4,
-      "plantId": 17,
-      "entryDate": "8/3/20, 2:17:42 PM",
-      "journalEntry": "This plant hates me...",
-      "journalTitle": "alright little bad boi",
-      "userId": 4
-    },
-    {
       "id": 5,
       "plantId": 20,
       "entryDate": "8/3/20, 2:35:13 PM",
@@ -260,14 +285,6 @@
       "journalEntry": "Trying to come up with an interesting journal entry but im comin in blank",
       "journalTitle": "bingleboi3000",
       "userId": 4
-    },
-    {
-      "userId": 4,
-      "plantId": 23,
-      "id": 20,
-      "entryDate": "undefined(~Edited Since~)",
-      "journalEntry": "love these little guys",
-      "journalTitle": "time to Disco with my plantsi"
     },
     {
       "userId": 4,
@@ -310,12 +327,20 @@
       "id": 26
     },
     {
-      "plantId": 17,
-      "entryDate": "8/7/20, 10:29:29 AM",
-      "journalEntry": "f",
-      "journalTitle": "f",
+      "plantId": 9,
+      "entryDate": "8/14/20, 4:03:02 PM",
+      "journalEntry": "o",
+      "journalTitle": "o",
       "userId": 4,
-      "id": 27
+      "id": 30
+    },
+    {
+      "plantId": 35,
+      "entryDate": "8/15/20, 10:00:34 PM",
+      "journalEntry": "ggggg",
+      "journalTitle": "gggg",
+      "userId": 8,
+      "id": 31
     }
   ]
 }

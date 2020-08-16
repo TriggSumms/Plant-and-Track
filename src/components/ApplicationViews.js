@@ -4,6 +4,7 @@ import Home from "./home/Home";
 import GraveYard from "./home/GraveYard"
 //import Login from "./auth/Login.jsx";
 //import { Register } from "./auth/Register"
+
 import { CustomLogin } from "./auth/CustomLogin.jsx"
 import UserList from "./auth/UserList"
 import UserEditForm from "./auth/UserEditForm"
@@ -15,6 +16,7 @@ import PlantJournalForm from "./plant/PlantJournalForm"
 import PlantJournalDetail from "./plant/PlantJournalDetail"
 import PlantGraveYardList from "./plant/PlantGraveYardList"
 import PlantJournalEditForm from "./plant/PlantJournalEditForm"
+import ImageForm from "./plant/ImageForm"
 //import UserList from "./auth/UserList"
 //import UserEditForm from "./auth/UserEditForm"
 
@@ -86,6 +88,27 @@ const ApplicationViews = (props) => {
           }
         }}
       />
+
+
+
+
+
+
+
+<Route path="/plants/:plantId(\d+)/newimage"
+
+render={(props) => {
+  return <ImageForm
+    plantId={parseInt(props.match.params.plantId)}
+    {...props} />
+}} />
+
+
+
+
+
+
+
 
 
       {/*Plant Routes START  ************************************************************************************************************************/}

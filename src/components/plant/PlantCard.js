@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
+import UserManager from "../../modules/UserManager";
+import ImageManager from "../../modules/ImageManager";
 import PlantJournalCard from "./PlantJournalCard"
+import ImageCard from "./ImageCard"
 import ReactCardFlip from 'react-card-flip';
 import "./PlantCard.css"
-import UserManager from "../../modules/UserManager";
 import PlantList from "./PlantList";
-import CloudFiles from '../../modules/CloudinaryWidget';
+//import CloudFiles from '../../modules/CloudinaryWidget';
 
 
 
@@ -15,6 +17,7 @@ import CloudFiles from '../../modules/CloudinaryWidget';
 
 const PlantCard = (props) => {
   const [journals, setJournals] = useState([]);
+  const [images, setImages] = useState([])
   const [plant, setPlant] = useState({ userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead });
   //console.log("plantListplant", plant)
   const [isDead, setIsDead] = useState({ isDead: props.isDead })
@@ -43,10 +46,6 @@ const PlantCard = (props) => {
 
     //Created a way to change the plant through updateing the plant object....this way a button toggles the cards view between dead/alive    
     //const MessageChanged = "(DEAD PLANT)"
-    /* plant.moodId = parseInt( plant.moodId)
-    plant.sunlightLevelId = parseInt( plant.sunlightLevelId)
-    plant.waterLevelId = parseInt(plant.waterLevelId) */
-
     let isDeadz = isDead.isDead ? false : true
 
     const graveYardPlant = {
@@ -87,10 +86,33 @@ const PlantCard = (props) => {
   //END JOURNAL FUNCTION
 
 
+  const expandedPlantandImage = () => {
+    ImageManager.getWithSpecificImages(props.plant.id)
+      .then(APIres => {
+        console.log("images", APIres)
+        setImages(APIres)
+      }
+      )
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   useEffect(() => {
     expandedPlantandJournal()
+    expandedPlantandImage()
     setIsLoading(false);
-
   }, [props.plantId]);
 
 
@@ -127,17 +149,25 @@ const PlantCard = (props) => {
               </div>
             </div>
             <div className="plantcard-image__Container">
-              <div className="plantcard__image-window__Container"> CAROUSEL INSERT
+              <div className="plantcard__image-window__Container">
      {/* This is where the cloudinary Window "scroll" series will go */}
-     <CloudFiles {...props} />
-                   {props.plant.plantUrl} 
-                   
+     <div>
+                  {images.map(image =>
+                    <ImageCard
+                      key={image.id}
+                      imageEntry={image}
+                      {...props}
+                    />)}
+                </div>
+{/*                 <CloudFiles {...props} />
+                {props.plant.plantUrl} */}
+
               </div>
             </div>
             <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button></div>
-          
-                  {/* This is where the cloudinary Window "scroll" series will go */}
-                
+            <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newimage`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic" /></button>
+            {/* This is where the cloudinary Window "scroll" series will go */}
+
             {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
             {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
           </div>

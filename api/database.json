@@ -71,12 +71,12 @@
       "id": 9,
       "nickName": "BIGWIZZI",
       "vernacularName": "Gray alder",
-      "entryDate": "8/15/20, 2:59:27 AM",
+      "entryDate": "8/16/20, 1:04:58 PM",
       "age": "5inchs tall",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
@@ -263,14 +263,6 @@
       "userId": 4
     },
     {
-      "userId": 4,
-      "plantId": 19,
-      "id": 2,
-      "entryDate": "undefined(~Edited Since~)",
-      "journalEntry": "There is no light in earth or heaven But the cold light of stars; And the first watch of night is given To the red planet Mars.yus",
-      "journalTitle": "Dreamy Journal Poem"
-    },
-    {
       "id": 5,
       "plantId": 20,
       "entryDate": "8/3/20, 2:35:13 PM",
@@ -341,6 +333,48 @@
       "journalTitle": "gggg",
       "userId": 8,
       "id": 31
+    }
+  ],
+  "images": [
+    {
+      "plantId": 9,
+      "entryDate": "8/16/20, 12:51:32 PM",
+      "imageTitle": "ddd",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597600328/CapstoneSumms/ixnu8n0uvpxphrwlheru.jpg",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/16/20, 12:51:32 PM",
+      "imageTitle": "ddd",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597600328/CapstoneSumms/ixnu8n0uvpxphrwlheru.jpg",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/16/20, 2:29:35 PM",
+      "imageTitle": "yus boi3",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597606194/CapstoneSumms/jxymgrk5gwztqya7pkpz.jpg",
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "plantId": 32,
+      "entryDate": "8/16/20, 2:30:02 PM",
+      "imageTitle": "yus boi3",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597606210/CapstoneSumms/emdjfgucxkjbfjc05knb.jpg",
+      "userId": 4,
+      "id": 7
+    },
+    {
+      "plantId": 9,
+      "entryDate": "8/16/20, 3:01:08 PM",
+      "imageTitle": "yeet",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597608076/CapstoneSumms/nxujc3v0sip96tzsfcdv.jpg",
+      "userId": 4,
+      "id": 8
     }
   ]
 }

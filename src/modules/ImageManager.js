@@ -21,5 +21,10 @@ export default {
             },
             body: JSON.stringify(newImage)
         }).then(data => data.json())
-    }
+    },
+
+    getWithSpecificImages(id) {
+        return fetch(`http://localhost:5005/images?plantId=${id}&_expand=plant`)
+            .then(result => result.json())
+    },
 }

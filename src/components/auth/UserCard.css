@@ -80,6 +80,7 @@ background-image: url(https://s-media-cache-ak0.pinimg.com/564x/16/61/74/166174e
   ;
 	border-radius: 2.5px;
 	text-shadow: .25px .25px #f8f6f6;
+
 }
 
 #bioz p {
@@ -88,6 +89,8 @@ background-image: url(https://s-media-cache-ak0.pinimg.com/564x/16/61/74/166174e
 	font-size: 15px;
 	color:#354F52;
 	text-align: justify;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #statz {
