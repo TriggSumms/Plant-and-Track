@@ -8,7 +8,7 @@ import UserManager from "../../modules/UserManager"
 
 
 const UserEditForm = props => {
-    const [user, setUser] = useState({ user: "", userId: 0, img: "", email: "", password: "" });
+    const [user, setUser] = useState({ user: "", userId: 0, img: "", email: "", password: "", bio: "" });
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = evt => {
@@ -23,16 +23,23 @@ const UserEditForm = props => {
         setIsLoading(true);
 
         // This is an edit, so we need the id
-        const editedUser = {
+        const editedUserz = {
             userId: user.userId,
             id: props.match.params.userId,
             user: user.user,
+            password: user.password,
             img: user.img,
-            email: user.email
+            email: user.email,
+            bio: user.bio
 
         };
-        UserManager.updateSpecificUser(editedUser)
+        UserManager.updateSpecificUser(editedUserz)
             .then(() => props.history.push("/home"))
+            .then(() => window.location.reload())
+
+
+            
+
     }
 
 
@@ -88,6 +95,15 @@ const UserEditForm = props => {
                             onChange={handleFieldChange}
                             id="password"
                             value={user.password}
+                        />
+                        <label htmlFor="bio">Update your Bio</label>
+                        <input
+                            type="text"
+                            required=""
+                            className="form-control"
+                            onChange={handleFieldChange}
+                            id="bio"
+                            value={user.bio}
                         />
                         {/*                 
                         <label htmlFor="profilePicture">Profile Picture</label>

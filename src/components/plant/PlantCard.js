@@ -11,6 +11,8 @@ import CloudFiles from '../../modules/CloudinaryWidget';
 
 
 
+
+
 const PlantCard = (props) => {
   const [journals, setJournals] = useState([]);
   const [plant, setPlant] = useState({ userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead });
@@ -129,6 +131,7 @@ const PlantCard = (props) => {
      {/* This is where the cloudinary Window "scroll" series will go */}
      <CloudFiles {...props} />
                    {props.plant.plantUrl} 
+                   
               </div>
             </div>
             <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button></div>

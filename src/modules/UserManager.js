@@ -9,7 +9,7 @@ export default {
 		return fetch(`${remoteURL}/users`).then(result => result.json())
 	},
 	updateSpecificUser(editedUser) {
-        return fetch(`${remoteURL}/users/${editedUser.id}/edits`, {
+        return fetch(`${remoteURL}/users/${editedUser.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

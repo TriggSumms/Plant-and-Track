@@ -7,7 +7,7 @@ import loginImg from "../../login.svg";
 
 
 export const Register = (props) => {
-  const [credentials, setCredentials] = useState({ email: "", password: "", user: "", img: "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png" });
+  const [credentials, setCredentials] = useState({ email: "", password: "", user: "", img: "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png", bio: "" });
 
   // Update state whenever an input field is edited
   const handleFieldChange = (evt) => {
@@ -20,7 +20,7 @@ export const Register = (props) => {
   const handleRegister = evt => {
     evt.preventDefault();
     if (credentials.email === "" || credentials.password === "" || credentials.userName === "") {
-      window.alert("Please input a username, password, and email");
+      window.alert("Please input a username, password, email, and bio!");
     } else {
 
 
@@ -61,7 +61,12 @@ export const Register = (props) => {
                 <label htmlFor="inputPassword">Password</label>
                 <input onChange={handleFieldChange} id="password" type="password" name="password" placeholder="password" required="" />
               </div>
-            </div>
+            
+            <div className="form-group">
+                <label htmlFor="inputBio">Bio</label>
+                <input onChange={handleFieldChange} id="bio" type="bio" name="bio" placeholder="Who are you?" required="" />
+              </div>
+          </div>
           </div>
           <button type="submit" className="btn">
             Register

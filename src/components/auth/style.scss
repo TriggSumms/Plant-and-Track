@@ -33,7 +33,7 @@
           align-items: flex-start;
           width: fit-content;
           label {
-            font-size: 20px;
+            font-size: 15px;
           }
           input {
             margin-top: 6px;
@@ -45,7 +45,7 @@
             background-color: #f3f3f3;
             border: 0;
             border-radius: 4px;
-            margin-bottom: 31px;
+            margin-bottom: 10px;
             transition: all 250ms ease-in-out;
             &:hover {
               //background-color: #ffffff;

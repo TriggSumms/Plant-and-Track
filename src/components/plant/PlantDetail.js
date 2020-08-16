@@ -40,7 +40,7 @@ const PlantDetail = props => {
   const expandedPlant = () => {
     PlantManager.getWithSingleDetails(props.plantId)
       .then(plant => {
-        console.log("yeettttt2", plant)
+        //console.log("yeettttt2", plant)
         setPlant(plant)
         setMood(plant.mood)
         setSunlightLevel(plant.sunlightLevel)
@@ -53,7 +53,7 @@ const PlantDetail = props => {
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(props.plantId)
       .then(APIres => {
-        console.log("plantjourn", APIres)
+        //console.log("plantjourn", APIres)
         setJournals(APIres)
       }
       )
@@ -166,6 +166,7 @@ const PlantDetail = props => {
               </div>
               <div className="plantCard-journal-button-Container">
                 <button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button>
+                <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic" /></button>
               </div>
             </div>
           </ReactCardFlip>

@@ -21,7 +21,6 @@ const UserList = (props) => {
   // got the users from the API on the component's first render
   useEffect(() => {
     getUser(id);
-
   }, []);
 
   return (

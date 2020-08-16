@@ -59,7 +59,7 @@ const UserCard = props => {
 					<img id="avatarz" src="https://i.imgflip.com/3emv5t.jpg"></img>
 				</div>
 				<div id="bioz">
-					<p>Hello, my name is Test. I love to collect plants....so much so that I use this app. </p>
+					<p>{props.user.bio}</p>
 				</div>
 				<div id="statz">
 					<div className="colz">

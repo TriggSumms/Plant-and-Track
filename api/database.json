@@ -5,6 +5,7 @@
       "email": "joe@joe.com",
       "password": "test",
       "img": "https://avatars1.githubusercontent.com/u/65562846?s=460&u=4ee0dafd8c420d9d30e0160faf91fb135a81e570&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 1
     },
     {
@@ -12,6 +13,7 @@
       "email": "test@test.com",
       "password": "test",
       "img": "https://avatars1.githubusercontent.com/u/65351448?s=460&u=e4fd4abf5f5a81d0d62c128cd907a4b14d6a4670&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 2
     },
     {
@@ -19,6 +21,7 @@
       "email": "testing@testing.com",
       "password": "test",
       "img": "https://avatars2.githubusercontent.com/u/59340165?s=460&u=46057543931e845b54dbf360a89f24b5755cf93d&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 3
     },
     {
@@ -26,6 +29,7 @@
       "password": "yee",
       "user": "Test",
       "img": "",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 4
     },
     {
@@ -33,6 +37,7 @@
       "password": "hello",
       "user": "YUS",
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 5
     },
     {
@@ -40,7 +45,24 @@
       "password": "ok",
       "user": "Testboi",
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 6
+    },
+    {
+      "id": 7,
+      "user": "Testboi56sss",
+      "password": "ddz",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "email": "yuh@gmail.com",
+      "bio": "YUH boi yuh"
+    },
+    {
+      "email": "allison.williams1@cushwake.com",
+      "password": "MintJ27*",
+      "user": "Adub127",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": ":)))))))))) I love plants!",
+      "id": 8
     }
   ],
   "plants": [
@@ -85,12 +107,12 @@
       "id": 20,
       "nickName": "Beany babi",
       "vernacularName": "Coffee plant",
-      "entryDate": "8/15/20, 2:24:52 AM",
+      "entryDate": "8/15/20, 3:46:17 PM",
       "age": "xxx",
       "moodId": 1,
       "sunlightLevelId": 1,
       "waterLevelId": 1,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
@@ -133,12 +155,12 @@
       "id": 32,
       "nickName": "ddd",
       "vernacularName": "ddd",
-      "entryDate": "8/14/20, 11:30:58 PM",
+      "entryDate": "8/15/20, 5:41:10 PM",
       "age": "2",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
@@ -150,6 +172,42 @@
       "moodId": 1,
       "sunlightLevelId": 1,
       "waterLevelId": 1,
+      "isDead": false
+    },
+    {
+      "userId": 7,
+      "id": 34,
+      "nickName": "d",
+      "vernacularName": "yeeha",
+      "entryDate": "8/15/20, 4:08:33 PM",
+      "age": "dd",
+      "moodId": 1,
+      "sunlightLevelId": 2,
+      "waterLevelId": 2,
+      "isDead": false
+    },
+    {
+      "userId": 8,
+      "id": 35,
+      "nickName": "Passion Flower",
+      "vernacularName": "Pasiflora",
+      "entryDate": "8/15/20, 9:57:25 PM",
+      "age": "2 months old",
+      "moodId": 2,
+      "sunlightLevelId": 3,
+      "waterLevelId": 3,
+      "isDead": false
+    },
+    {
+      "userId": 8,
+      "id": 36,
+      "nickName": "b",
+      "vernacularName": "gggyg",
+      "entryDate": "8/15/20, 10:02:20 PM",
+      "age": "gg",
+      "moodId": 2,
+      "sunlightLevelId": 2,
+      "waterLevelId": 3,
       "isDead": false
     }
   ],
@@ -275,6 +333,14 @@
       "journalTitle": "o",
       "userId": 4,
       "id": 30
+    },
+    {
+      "plantId": 35,
+      "entryDate": "8/15/20, 10:00:34 PM",
+      "journalEntry": "ggggg",
+      "journalTitle": "gggg",
+      "userId": 8,
+      "id": 31
     }
   ]
 }
