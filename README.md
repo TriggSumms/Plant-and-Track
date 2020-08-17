@@ -28,6 +28,23 @@ If you want to **start a plant & Track Account of your own**....
 
 The [Plant-and-Track](https://github.com/TriggSumms/Plant-and-Track) repository provides a **pre-configured project template** to quick-start your development. Visit the official [Sulu documentation](http://docs.sulu.io/en/latest/book/getting-started.html) to find out how to use the project template for starting your own Sulu project.
 
+## Upon Starting up Plant & Track, press the Login button on the Navigational Bar and then click "Register"...
+  ![Register](https://res.cloudinary.com/triggsumms/image/upload/v1597688546/CapstoneSumms/wisa4qrfl6qvqfse6mo5.png)
+
+## After Creating an account: 
+1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
+![HomePAGE](https://res.cloudinary.com/triggsumms/image/upload/v1597688570/CapstoneSumms/yzeeq6w9lg6dtiannnlw.png)
+1. The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
+ ![USERCARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688601/CapstoneSumms/fx4i1jtxqcpxnmcosqxa.png)
+1. At this point a USer will have 3 views of the cards avaialble. The collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.,Now enjoy you collections Longevity or placement in the Graveyard! 
+1.The User can also flip the card using a button toggle! This will allow them to enter in their journal entries for the plant and chronologically reference the most recent entries!
+  ![PLANT CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688685/CapstoneSumms/i9onkemvhzhrexppdqkj.png)
+  ![DETAILS CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688702/CapstoneSumms/azxzc3cniaeydnk2mvs8.png)
+  
+  
+  
+  
+  
 ## 📫&nbsp; Have a question? Want to chat? Ran into a problem?
 
 I would be happy to answer any questions you have and you can always **reach out to me directly** via the [Email](stsumms@gmail.com) or reach out with your question on [StackOverflow](https://github.com/TriggSumms) 
@@ -40,32 +57,6 @@ Feel free to **file a new issue** with a respective title and description on the
 ## 📘&nbsp; License
 The Plant & Track application is released under the under terms of the [MIT License](LICENSE).
 
-
-
-
-1.Upon Starting up Plant & Track, press the Login button on the Navigational Bar and then click "Register"...
-  ![Register](https://res.cloudinary.com/triggsumms/image/upload/v1597688546/CapstoneSumms/wisa4qrfl6qvqfse6mo5.png)
-1.Then a User will be directed to the Home page, containing the current plant Collection.
-  ![HomePAGE](https://res.cloudinary.com/triggsumms/image/upload/v1597688570/CapstoneSumms/yzeeq6w9lg6dtiannnlw.png)
-1.The user will have a profile card created and an option to edit their user information or create a new plant will be available
-  ![USERCARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688601/CapstoneSumms/fx4i1jtxqcpxnmcosqxa.png)
-1.At this point a USer will have 3 views of the cards avaialble. The collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.
-  ![PLANT CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688685/CapstoneSumms/i9onkemvhzhrexppdqkj.png)
-  ![DETAILS CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688702/CapstoneSumms/azxzc3cniaeydnk2mvs8.png)
-
-
-<picture>
-  
-## After Creating an account: 
-1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
-![HomePAGE](https://res.cloudinary.com/triggsumms/image/upload/v1597688570/CapstoneSumms/yzeeq6w9lg6dtiannnlw.png)
-1. The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
- ![USERCARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688601/CapstoneSumms/fx4i1jtxqcpxnmcosqxa.png)
-1. The User can also flip the card using a button toggle! This will allow them to enter in their journal entries for the plant and chronologically reference the most recent entries!
-  ![PLANT CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688685/CapstoneSumms/i9onkemvhzhrexppdqkj.png)
-  ![DETAILS CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688702/CapstoneSumms/azxzc3cniaeydnk2mvs8.png)
-1. Now enjoy you collections Longevity or placement in the Graveyard! 
-Lastly, A key of the buttons is located below...
 
 
 ## Concepts Covered
