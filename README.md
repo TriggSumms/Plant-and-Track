@@ -23,13 +23,15 @@ This repository contains the **core framework for Plant & Track**.
 
 If you want to **start a plant & Track Account of your own**.... 
 
-
+<br>
 ## 🚀&nbsp; Installation and Documentation
 
 The [Plant-and-Track](https://github.com/TriggSumms/Plant-and-Track) repository provides a **pre-configured project template** to quick-start your development. Visit the official [Sulu documentation](http://docs.sulu.io/en/latest/book/getting-started.html) to find out how to use the project template for starting your own Sulu project.
 
 ## Upon Starting up Plant & Track, press the Login button on the Navigational Bar and then click "Register"...
   ![Register](https://res.cloudinary.com/triggsumms/image/upload/v1597688546/CapstoneSumms/wisa4qrfl6qvqfse6mo5.png)
+<br>
+
 
 ## After Creating an account: 
 1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
@@ -41,23 +43,16 @@ The [Plant-and-Track](https://github.com/TriggSumms/Plant-and-Track) repository 
   ![PLANT CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688685/CapstoneSumms/i9onkemvhzhrexppdqkj.png)
   ![DETAILS CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688702/CapstoneSumms/azxzc3cniaeydnk2mvs8.png)
   
-  
-  
-  
-  
-## 📫&nbsp; Have a question? Want to chat? Ran into a problem?
-
-I would be happy to answer any questions you have and you can always **reach out to me directly** via the [Email](stsumms@gmail.com) or reach out with your question on [StackOverflow](https://github.com/TriggSumms) 
-
-## 🤝&nbsp; Found a bug? Missing a specific feature?
-
-Feel free to **file a new issue** with a respective title and description on the the [Plant-and-Track](https://github.com/TriggSumms/Plant-and-Track/issues) repository. If you already found a solution to the problem, **I would love to review your pull request**!
 
 
-## 📘&nbsp; License
-The Plant & Track application is released under the under terms of the [MIT License](LICENSE).
-
-
+## A Few Application Features:
+This app will login (User1) and contain a library of “plantCards” in which they have created over their history with the app.
+In this library a (User1) will be able to post new plantCards…..& (delete dead plantCards or Edit/Update the cards with old or current growth status(s). 
+Through the sorting of this (User1)’s library, a certain management will be revealed for (User1). 
+* The app will exhibit their plantCards in the order in which the cards were created (via timeStamp)
+* The User can select specific cards through a search input, allowing species with “similar” naming characteristics to be revealed. 
+* This same search feature will be implemented in a library for just the “dead plantCards” so a reference exists for the next season…. (Just in case a user wants to have a reference to prior mistakes made).
+* Key journal variables will exist inside the plantCard
 
 ## Concepts Covered
 Concepts covered in this project include: 
@@ -70,23 +65,29 @@ Concepts covered in this project include:
 * React.js.... the list will be updated throughout the project's span.
 
 
-
-## Brief User Attraction
-This app is geared towards the average “Plant Enthusiast”. The application will allow said user to build a library for journaling, referencing, and ultimately tracking their “overgrown” collections. The app is meant for the daily user, and the main function should mimic that of a daily journal!
-
-## A Few Application Features:
-This app will login (User1) and contain a library of “plantCards” in which they have created over their history with the app.\
-In this library a (User1) will be able to post new plantCards…..& (delete dead plantCards or Edit/Update the cards with old or current growth status(s). 
-Through the sorting of this (User1)’s library, a certain management will be revealed for (User1). 
-* The app will exhibit their plantCards in the order in which the cards were created (via timeStamp)
-* The User can select specific cards through a search input, allowing species with “similar” naming characteristics to be revealed. 
-* This same search feature will be implemented in a library for just the “dead plantCards” so a reference exists for the next season…. (Just in case a user wants to have a reference to prior mistakes made).
-* Key journal variables will exist inside the plantCard, such as the use of a color tag via the card. (INSTRUCTOR: see sketchboard PlantCARD)
-
 ## PLANNING LINKS:
 
 
 [ERD](https://dbdiagram.io/d/5f10aa9c74ca2227330d73d9) \
 [WIREFRAME](https://sketchboard.me/NCaP3yBDuIVO#/) \
 [Proposal Doc](https://docs.google.com/document/d/12pWGNbbZ4iovB2qUAddoCqLFQkvDiqJBfv6uNWdrMg0/edit#heading=h.jlakfp7agir2) 
+
+
+
+
+
+  
+# Other App Info:  
+  
+## 📫&nbsp; Have a question? Want to chat? Ran into a problem?
+
+I would be happy to answer any questions you have and you can always **reach out to me directly** via the [Email](stsumms@gmail.com) or reach out with your question on [StackOverflow](https://github.com/TriggSumms) 
+
+## 🤝&nbsp; Found a bug? Missing a specific feature?
+
+Feel free to **file a new issue** with a respective title and description on the the [Plant-and-Track](https://github.com/TriggSumms/Plant-and-Track/issues) repository. If you already found a solution to the problem, **I would love to review your pull request**!
+
+
+## 📘&nbsp; License
+The Plant & Track application is released under the under terms of the [MIT License](LICENSE).
 
