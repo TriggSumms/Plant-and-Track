@@ -21,12 +21,21 @@
 
 This repository contains the **core framework for Plant & Track**. 
 
-If you want to **start a plant & Track Account of your own**.... 
+If you want to **start a plant & Track Account of your own**...
 
 <br>
 ## 🚀&nbsp; Installation and Documentation
+## Getting started
 
-The [Plant-and-Track](https://github.com/TriggSumms/Plant-and-Track) repository provides a **pre-configured project template** to quick-start your development. Visit the official [Sulu documentation](http://docs.sulu.io/en/latest/book/getting-started.html) to find out how to use the project template for starting your own Sulu project.
+To get the project running locally:
+
+- Clone this repo
+- `npm install` to install all req'd dependencies
+- `npm start` to start the local server (this project uses create-react-app)
+
+Local web server will use port 5005 `json-server -p 5005 -w userSample.json`
+ 
+
 
 ## Upon Starting up Plant & Track, press the Login button on the Navigational Bar and then click "Register"...
   ![Register](https://res.cloudinary.com/triggsumms/image/upload/v1597688546/CapstoneSumms/wisa4qrfl6qvqfse6mo5.png)
