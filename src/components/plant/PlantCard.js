@@ -77,35 +77,22 @@ const PlantCard = (props) => {
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(props.plant.id)
       .then(APIres => {
-        console.log("plantCARdGETWITHs2", APIres)
+       // console.log("plantCARdGETWITHs2", APIres)
         setJournals(APIres)
 
       }
       )
   }
-  //END JOURNAL FUNCTION
-
 
   const expandedPlantandImage = () => {
     ImageManager.getWithSpecificImages(props.plant.id)
       .then(APIres => {
-        console.log("images", APIres)
+       // console.log("images", APIres)
         setImages(APIres)
       }
       )
   }
-
-
-
-
-
-
-
-
-
-
-
-
+  //END JOURNAL FUNCTION
 
 
 
@@ -135,9 +122,11 @@ const PlantCard = (props) => {
             <div className="plantcard-logo-variable__Container">
               <div className="plantcard-logo">
                 <div className="text-white" data-toggle="buttons">
-                  <label className="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img className="PlantCardFrontButton" src="https://img.icons8.com/plasticine/32/000000/headstone.png" alt="button-generic" /></label>
+                  <label className=""> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img className="PlantCardFrontButton" src="https://img.icons8.com/plasticine/32/000000/headstone.png" alt="button-generic" /></label>
                 </div>
+
                 <Link to={`/plants/${props.plant.id}`}><button className="PlantCardFrontButton"><img className="PlantCardFrontButton" src="https://img.icons8.com/plasticine/32/000000/view-details.png" alt="button-generic" /></button></Link>
+                <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png"/></button></div>
               </div>
               <div className="plantcard-variable-list__Container">
                 <h1 className="VariableEntryTitle"> Plant Specs. </h1>
@@ -149,9 +138,9 @@ const PlantCard = (props) => {
               </div>
             </div>
             <div className="plantcard-image__Container">
-              <div className="plantcard__image-window__Container">
+    <div className="plantcard__image-window__Container">
      {/* This is where the cloudinary Window "scroll" series will go */}
-     <div>
+     <div className="plantImgCardsContainer">
                   {images.map(image =>
                     <ImageCard
                       key={image.id}
@@ -159,13 +148,14 @@ const PlantCard = (props) => {
                       {...props}
                     />)}
                 </div>
+
 {/*                 <CloudFiles {...props} />
                 {props.plant.plantUrl} */}
 
               </div>
             </div>
-            <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button></div>
-            <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newimage`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic" /></button>
+            
+            {/* <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newimage`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic" /></button> */}
             {/* This is where the cloudinary Window "scroll" series will go */}
 
             {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
@@ -187,6 +177,7 @@ const PlantCard = (props) => {
                     <PlantJournalCard
                       key={journal.id}
                       journalEntry={journal}
+
                       {...props}
                     />)}
                 </div>
@@ -194,7 +185,7 @@ const PlantCard = (props) => {
               </div>
             </div>
             <div className="plantCard-journal-button-Container">
-              <button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button>
+              <button onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png"/></button>
               <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic" /></button>
             </div>
           </div>

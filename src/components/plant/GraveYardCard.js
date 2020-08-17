@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
 import PlantJournalCard from "./PlantJournalCard"
 import ReactCardFlip from 'react-card-flip';
-
+import ImageManager from "../../modules/ImageManager";
+import ImageCard from "./ImageCard"
 
 
   let timeStamp = new Intl.DateTimeFormat("en", {
@@ -15,6 +16,7 @@ const GraveYardCard = (props) => {
 
   const [journals, setJournals] = useState([]);
   const [plant, setPlant] = useState({ userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: timeStamp.format(Date.now()), age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead });
+  const [images, setImages] = useState([])
   //console.log("plantListplant", plant)
   const [isDead, setIsDead] = useState({ isDead: props.isDead })
   const [isLoading, setIsLoading] = useState(true);
@@ -55,7 +57,7 @@ const GraveYardCard = (props) => {
 
 
 
-  //This is the function responsible for bringing in the journal entries for the mapped PLANTJOURNALCARD
+//This is the function responsible for bringing in the journal entries for the mapped PLANTJOURNALCARD
 
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(props.plant.id)
@@ -65,13 +67,22 @@ const GraveYardCard = (props) => {
       }
       )
   }
+  
+  const expandedPlantandImage = () => {
+    ImageManager.getWithSpecificImages(props.plant.id)
+      .then(APIres => {
+       // console.log("images", APIres)
+        setImages(APIres)
+      }
+      )
+  }
   //END JOURNAL FUNCTION
 
 
 
 
   useEffect(() => {
-
+    expandedPlantandImage()
     expandedPlantandJournal()
     setIsLoading(false);
   }, [props.plantId]);
@@ -97,7 +108,10 @@ const GraveYardCard = (props) => {
               <div className="DEAD-plantcard-logo-variable__Container">
               <div className="plantcard-logo">
                   <div className="text" data-toggle="buttons">
-                    <label className="btn btn-sm active"> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/plasticine/40/000000/plant-under-sun.png" alt="button-generic"/></label>
+                      <h6>Give your Plant Life Again!</h6>
+
+                    <label className=""> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/plasticine/40/000000/plant-under-sun.png" alt="button-generic"/></label>
+                    <button onClick={handleClick}><img src="https://img.icons8.com/clouds/40/000000/swap.png"/></button>
                   </div>
               </div>
                 <div className="DEAD-plantcard-variable-list__Container">
@@ -111,13 +125,19 @@ const GraveYardCard = (props) => {
                 </div>
               </div>
               <div className="DEAD-plantcard-image__Container">
-                <div className="plantcard__image-window__Container"> CAROUSEL INSERT
-              
+              <div className="plantcard__image-window__Container">
      {/* This is where the cloudinary Window "scroll" series will go */}
-                
+     <div className="plantImgCardsContainer">
+                  {images.map(image =>
+                    <ImageCard
+                      key={image.id}
+                      imageEntry={image}
+                      {...props}
+                    />)}
+                </div>
               </div>
               </div> 
-              <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png"/></button></div>
+              
               {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
               {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
             </div>
@@ -143,9 +163,11 @@ const GraveYardCard = (props) => {
                         </div>
                       </div>
                       <div className="plantCard-journal-button-Container">
-                     <button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png"/></button>
+                     <button onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png"/></button>
+                      </div>
+                     
                      </div>
-                      </div>           
+                         
  </ReactCardFlip>
  </div>
 

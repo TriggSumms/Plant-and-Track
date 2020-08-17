@@ -1,8 +1,10 @@
 //import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
+import ImageManager from '../../modules/ImageManager'
 import ReactCardFlip from 'react-card-flip';
 import PlantJournalCard from "./PlantJournalCard"
+import ImageCard from "./ImageCard"
 //import "./PlantDetails.css"
 
 
@@ -19,6 +21,7 @@ let timeStamp = new Intl.DateTimeFormat("en", {
 const PlantDetail = props => {
   const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
   const [journals, setJournals] = useState([]);
+  const [images, setImages] = useState([])
   const [mood, setMood] = useState({ level: 0 });
   const [sunlightLevel, setSunlightLevel] = useState({ level: 0 });
   const [waterLevel, setWaterLevel] = useState({ level: 0 });
@@ -37,6 +40,7 @@ const PlantDetail = props => {
   //Important Lesson learned below: if your gonna set the state.....dont pinpoint the property inside the "expandedPlant"
   //...it turns out that React cant pinpoint cause your nesting too deep. Rather pass the object and then set directions in the return.
 
+  //START OF EXAPNSION FETCH CALLS
   const expandedPlant = () => {
     PlantManager.getWithSingleDetails(props.plantId)
       .then(plant => {
@@ -49,7 +53,6 @@ const PlantDetail = props => {
       )
   }
 
-
   const expandedPlantandJournal = () => {
     PlantManager.getWithSpecificJournals(props.plantId)
       .then(APIres => {
@@ -58,6 +61,17 @@ const PlantDetail = props => {
       }
       )
   }
+
+  const expandedPlantandImage = () => {
+    ImageManager.getWithSpecificImages(props.plantId)
+      .then(APIres => {
+        console.log("images", APIres)
+        setImages(APIres)
+      }
+      )
+  }
+  //END OF EXPANSION FETCH
+
 
 
 
@@ -91,6 +105,7 @@ const PlantDetail = props => {
   useEffect(() => {
     expandedPlant()
     expandedPlantandJournal()
+    expandedPlantandImage()
     setIsLoading(false);
 
   }, [props.plantId]);
@@ -123,13 +138,15 @@ const PlantDetail = props => {
                 <div className="plantcard-logo-variable__Container">
                   <div className="plantcard-logo">
                     <div className="text-white" data-toggle="buttons">
-                      <label className="btn btn-sm active"> <input type="checkbox" id={plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/plasticine/32/000000/headstone.png" alt="button-generic" /></label>
+                      <label className=""> <input type="checkbox" id={plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/plasticine/32/000000/headstone.png" alt="button-generic" /></label>
                     </div>
                     <button className="danger" type="button" onClick={() => props.history.push(`/plants/${plant.id}/edit`)}><img src="https://img.icons8.com/plasticine/32/000000/edit.png" alt="button-generic" /></button>
-                    <button type="submit"><img src="https://img.icons8.com/plasticine/32/000000/image-file.png" alt="button-generic" /></button><button className="" type="button" onClick={() => handleDelete(plant.id)}><img src="https://img.icons8.com/plasticine/32/000000/delete-forever.png" alt="button-generic" /></button>
+                    <button type="button" className="" onClick={() => { props.history.push(`/plants/${props.plantId}/newimage`) }}> <img src="https://img.icons8.com/plasticine/32/000000/image-file.png" alt="button-generic" /></button>
+                   <button className="" type="button" onClick={() => handleDelete(plant.id)}><img src="https://img.icons8.com/plasticine/32/000000/delete-forever.png" alt="button-generic" /></button>
+                   <button onClick={handleClick}><img src="https://img.icons8.com/clouds/30/000000/swap.png" /></button>
                   </div>
                   <div className="plantcard-variable-list__Container">
-                    <ol className="VariableEntry"> Plant Specs. </ol>
+                    <ol className="VariableEntryTitle"> Plant Specs. </ol>
                     <div className="TitleVariable">Age of your plant:<p className="VariableEntry1"> {plant.age}</p></div>
                     <div className="TitleVariable"> Created on: <p className="VariableEntry2"> {plant.entryDate} </p></div>
                     <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {sunlightLevel.level}</p> </div>
@@ -138,14 +155,29 @@ const PlantDetail = props => {
                   </div>
                 </div>
                 <div className="plantcard-image__Container">
-                  <div className="plantcard__image-window__Container"> CAROUSEL INSERT
-                 </div>
+                <div className="plantcard__image-window__Container">
+     {/* This is where the cloudinary Window "scroll" series will go */}
+     <div className="plantImgCardsContainer">
+                  {images.map(image =>
+                    <ImageCard
+                      key={image.id}
+                      imageEntry={image}
+                      {...props}
+                    />)}
                 </div>
-                <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button></div>
-                {/* This is where the cloudinary Window "scroll" series will go */}
+
+{/*                 <CloudFiles {...props} />
+                {props.plant.plantUrl} */}
 
               </div>
             </div>
+            
+                </div>
+
+                {/* This is where the cloudinary Window "scroll" series will go */}
+
+              </div>
+         
 
             {/* <PlantCardBack /> */}
             <div className="flip-card-back" key="back">
@@ -159,13 +191,14 @@ const PlantDetail = props => {
                     <PlantJournalCard
                       key={journal.id}
                       journalEntry={journal}
+                    
                       {...props}
                     />)}
                 </div>
 
               </div>
               <div className="plantCard-journal-button-Container">
-                <button onClick={handleClick}><img src="https://img.icons8.com/cotton/48/000000/file-2.png" /></button>
+              <button onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png" /></button>
                 <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic" /></button>
               </div>
             </div>

@@ -73,7 +73,7 @@
  */
 
 
- @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 
 * {
   font-family: Roboto, sans-serif;
@@ -82,10 +82,14 @@
 }
 
 
-
+.container{
+ 
+ 
+}
 
 .search {
-  margin: 20px;
+  margin: 1px;
+  float:right;
 }
 
 .search > h3 {
@@ -94,22 +98,24 @@
 
 .search > h1,
 .search > h3 {
-  color: white;
+  color: #2F3E46;
   margin-bottom: 15px;
-  text-shadow: 0 1px #0091c2;
+  text-shadow: 0 1px #f1f2f3;
 }
 
 .search > div {
   display: inline-block;
-  position: relative;
-  filter: drop-shadow(0 1px #0091c2);
+  
+  filter: drop-shadow(0 1px #f0f0f0);
+  background-color: #52796F;
+  border-radius: 65px;
 }
 
 .search > div:after {
   content: "";
-  background: white;
-  width: 4px;
-  height: 20px;
+  background: #2F3E46;
+  width: 5px;
+  height: 25px;
   position: absolute;
   top: 40px;
   right: 2px;
@@ -120,6 +126,7 @@
   color: white;
   font-size: 16px;
   background: transparent;
+
   width: 25px;
   height: 25px;
   padding: 10px;
@@ -131,6 +138,7 @@
 
 .search > div > input::placeholder {
   color: #efefef;
+
   opacity: 0;
   transition: opacity 150ms ease-out;
 }

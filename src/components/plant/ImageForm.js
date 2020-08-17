@@ -15,7 +15,14 @@ const ImageForm = props => {
     const [plants, setPlants] = useState([])
     const [isLoading, setIsLoading] = useState(false);
 
+    //Tracks entries into text boxes
+const handleFieldChange = evt => {
+        const stateToChange = { ...image };
+        stateToChange[evt.target.id] = evt.target.value;
+        setImage(stateToChange);
+    };
 
+   
 
 const importTheImage = async evt => {
 const files = evt.target.files
@@ -39,14 +46,12 @@ const formData = new FormData()
       }
 
 
-    //Tracks entries into text boxes
-const handleFieldChange = evt => {
-        const stateToChange = { ...image };
-        stateToChange[evt.target.id] = evt.target.value;
-        setImage(stateToChange);
-    };
 
-   
+
+
+
+
+
 
 
 
@@ -72,21 +77,26 @@ const constructNewImage = evt => {
                 .then(() => props.history.push("/home"));
         }
     };
-/* 
 
 
 
 
-const getTheImages = () => {
+
+/* const getTheImages = () => {
         return ImageManager.getAllImages("images").then(imagesFromAPI => {
+            imagesFromAPI.sort((x, y) => {
+                let a = new Date(x.entryDate),
+                  b = new Date(y.entryDate);
+                return a - b;
+           });     
             setImage(imagesFromAPI)
-        });
-    } */
+        }); 
+    }  */
 
 
 
     useEffect(() => {
-        //getTheImages()
+       // getTheImages()
     }, []);
 
 

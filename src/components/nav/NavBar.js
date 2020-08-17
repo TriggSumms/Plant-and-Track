@@ -8,13 +8,39 @@ import Jumbotron from "./Jumbotron";
 
 const Styles = styled.div`
   .navbar {
-    background-color: #59A96A  ;
+    background-color: #CAD2C5  ;
+    font-family: 'Crimson Text', serif;
+    font-size:20px;
+    padding-left: 25px;
   }
   a, .navbar-brand, .navbar-nav .nav-link {
-    color: black;
+    color: #2F3E46;
+    font-family: 'Crimson Text', serif;
+    padding-left: 20px;
     &:hover {
-      color: black;
+      color: #84A98C;
     }
+    .PLANTCOLLECTION {
+        color: inherit;
+        text-shadow: 0 0 1px  whitesmoke;
+          /* Control the  timing of frames */
+        animation: glow 7.0s ease infinite;
+        -moz-animation: glow 5.0s ease infinite;
+        -webkit-animation: glow 5.0s ease infinite;
+      }
+      @keyframes glow {
+        0%,
+        100% {
+        /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px  #e62300, 0 0 40px  #e62300, 0 0 50px  #e62300, 0 0 60px #e62300, 0 0 70px #e62300; */
+           text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5 vw .5 vw .1vw #806914;
+          color: #FED128; 
+        }
+        50% {
+        /* text-shadow: 0 0 20px #fff, 0 0 30px #37dbc0, 0 0 40px  #37dbc0, 0 0 50px  #37dbc0, 0 0 60px  #37dbc0, 0 0 70px  #37dbc0, 0 0 80px #37dbc0; */
+             text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5 vw .5 vw .1vw #40340A;
+          color: #806914; 
+        }
+      }
   }
 `;
 
@@ -30,7 +56,7 @@ const NavBar = props => {
             <Jumbotron />
             {/* lg needs adjustment */}
             <Navbar expand="lg">
-                <Navbar.Brand href="/">PLANTBaby Tracker</Navbar.Brand>
+                <Navbar.Brand href="/">PLANT AND TRACK</Navbar.Brand>
                 {/*LOGIN LOGOUT METHODS  */}
                 {props.hasUser ? <span className="h" onClick={handleLogout}> Logout </span> :
                     <Link className="h" to="/login">Login</Link>}
@@ -38,13 +64,13 @@ const NavBar = props => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                         <Nav.Item>
-                            <Nav.Link>
-                                {props.hasUser ? <Link to="/home">Plant Keepers HOME</Link> : null}
-                            </Nav.Link>
+                            <Nav.Link ><div className="PLANTCOLLECTION">
+                                {props.hasUser ? <Link to="/home">PLANT COLLECTION</Link> : null}
+                            </div></Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link>
-                                {props.hasUser ? <Link to="/DeadPlants">Plant Graveyard</Link> : null}
+                                {props.hasUser ? <Link to="/DeadPlants">OLE PLANT GRAVEYARD</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
                         {props.hasUser ? <NavDropdown title="Additional Resources" id="basic-nav-dropdown">

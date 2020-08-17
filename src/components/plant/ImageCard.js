@@ -36,8 +36,11 @@ const ImageCard = (props) => {
  */}
 {/* <Container>
   <Row>
+
 <Col xs={6} md={4}> */}
-      <Image src={props.imageEntry.url} style={imgStyle} rounded />
+
+      <Image src={props.imageEntry.url} style={imgStyle} className="plantImg" rounded />
+
 {/* </Col>
   </Row>
 </Container> */}

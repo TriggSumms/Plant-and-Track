@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PlantCard from './PlantCard';
 import PlantManager from '../../modules/PlantManager';
 import "./PlantCard.css"
+import "./SearchBar.css"
 
 
 
@@ -34,7 +35,6 @@ const PlantList = (props) => {
     withDetails();
   }, []);
 
-
   useEffect(() => {
     setFilteredPlants(
       plants.filter(plant =>
@@ -46,10 +46,11 @@ const PlantList = (props) => {
 
 
 
+
   return (
     <>
 
-      {/* <div className="ButtonandSearchList">
+{/*        <div className="ButtonandSearchList">
   <fieldset>
 <input
         type="text"
@@ -57,7 +58,14 @@ const PlantList = (props) => {
         onChange={evt => setSearch(evt.target.value)}
       />
      </fieldset> 
-      </div> */}
+      </div>  */}
+             <div class="container">
+            <div class="search">
+              <div>
+                <input type="text"  required placeholder="Search . . ." onChange={evt => setSearch(evt.target.value)}/>
+              </div>
+            </div>
+          </div> 
 
       <div className="plantCards-Center__Container">
         {filteredPlants.map(plant =>

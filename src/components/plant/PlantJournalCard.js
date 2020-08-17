@@ -2,7 +2,7 @@
 //import { Link } from "react-router-dom";
 import React from 'react';
 import { Toast } from 'react-bootstrap';
-//import "./PlantCard.css"
+import "./PlantCard.css"
 
 
 
@@ -40,11 +40,27 @@ const PlantJournalCard = (props) => {
         <button className="message__buttons" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}><img src="https://img.icons8.com/plasticine/30/000000/view-details.png"/></button>
         </div>
  */}
-
- <Toast>
-    <Toast.Header>
-      <strong className="mr-auto" closeButton="false" >{props.journalEntry.journalTitle}</strong>
-      <button className="buttonboi" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}>
+<div
+  aria-live="polite"
+  aria-atomic="true"
+  
+  style={{
+    position: 'relative',
+    minHeight: 'px',
+  }}
+>
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      
+    }}
+  >
+  <Toast>
+    <Toast.Header bg="dark" variant="dark">
+      <strong className="mr-auto" >{props.journalEntry.journalTitle}</strong>
+      <button className="" type="button" onClick={() => props.history.push(`/journals/${props.journalEntry.id}`)}>
         <img src="https://img.icons8.com/plasticine/15/000000/view-details.png" className=""/>
       </button>
       
@@ -53,8 +69,22 @@ const PlantJournalCard = (props) => {
     <Toast.Body>
       {props.journalEntry.journalEntry}
     </Toast.Body>
-  </Toast>
-
+  </Toast> 
+</div>
+</div>
+{/* <div className="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div className="toast-header">
+     <img src="..." className="rounded mr-2" alt="..." /> 
+    <strong className="mr-auto">{props.journalEntry.journalTitle}</strong>
+    <small className="text-muted">{props.journalEntry.entryDate}</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div className="toast-body">
+  {props.journalEntry.journalEntry}
+  </div>
+</div> */}
 
 
 

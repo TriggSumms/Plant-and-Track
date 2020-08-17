@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import "./Home.css";
-import "./SearchBar.css"
+//import "./SearchBar.css"
 import UserList from '../auth/UserList';
 import PlantList from "../plant/PlantList";
 //import PlantCard from "../plant/PlantCard"
@@ -9,14 +9,22 @@ import PlantList from "../plant/PlantList";
 
 
 const Home = props => {
-
+/* 
   const [search, setSearch] = useState();
   const [filteredPlants, setFilteredPlants] = useState([])
   const [plants, setPlants] = useState([]);
 
 
 
+  useEffect(() => {
+    setFilteredPlants(
+      plants.filter(plant =>
+        plant.nickName.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  }, [search, plants]);
 
+ */
 
   return (
     <>
@@ -34,14 +42,14 @@ const Home = props => {
               onChange={evt => setSearch(evt.target.value)}
             />
           </fieldset> */}
-          <div class="flexbox">
+
+{/*              <div class="flexbox">
             <div class="search">
               <div>
-                <input type="text" placeholder="Search . . ." required />
+                <input type="text"  required placeholder="Search . . ." onChange={evt => setSearch(evt.target.value)}/>
               </div>
             </div>
-          </div>
-
+          </div>  */}
 
 
           <div>

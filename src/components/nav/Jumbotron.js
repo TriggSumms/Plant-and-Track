@@ -9,7 +9,7 @@ const Styles = styled.div`
   .jumbo {
     background: url(${plantBanner}) no-repeat fixed bottom;
     background-size: cover;
-    color: #efefef;
+    color: #CAD2C5;
     height: 300px;
     position: relative;
     z-index: -2;

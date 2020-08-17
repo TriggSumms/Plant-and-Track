@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './components/nav/NavBar';
 import ApplicationViews from "./components/ApplicationViews"
-
+import "./PlantBaby.css"
 
 
 
@@ -26,10 +26,11 @@ const PlantBaby = () => {
 
   return (
     <>
-
+<div className="backgroundz">
       <NavBar hasUser={hasUser} clearUser={clearUser} />
-      <ApplicationViews hasUser={hasUser} setUser={setUser} />
-
+     
+      <ApplicationViews hasUser={hasUser} setUser={setUser} /> 
+</div>
     </>
   );
 }

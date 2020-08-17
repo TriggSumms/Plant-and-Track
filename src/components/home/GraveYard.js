@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Home.css";
-import "./SearchBar.css"
+//import "./SearchBar.css"
 import UserList from '../auth/UserList';
 import PlantGraveYardList from '../plant/PlantGraveYardList';
 //import PlantCard from "../plant/PlantCard"

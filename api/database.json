@@ -33,30 +33,6 @@
       "id": 4
     },
     {
-      "email": "stsumms@gmail.com",
-      "password": "hello",
-      "user": "YUS",
-      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
-      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
-      "id": 5
-    },
-    {
-      "email": "stsumms@gmail.com",
-      "password": "ok",
-      "user": "Testboi",
-      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
-      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "user": "Testboi56sss",
-      "password": "ddz",
-      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
-      "email": "yuh@gmail.com",
-      "bio": "YUH boi yuh"
-    },
-    {
       "email": "allison.williams1@cushwake.com",
       "password": "MintJ27*",
       "user": "Adub127",
@@ -71,7 +47,7 @@
       "id": 9,
       "nickName": "BIGWIZZI",
       "vernacularName": "Gray alder",
-      "entryDate": "8/16/20, 1:04:58 PM",
+      "entryDate": "8/16/20, 8:15:56 PM",
       "age": "5inchs tall",
       "moodId": 1,
       "sunlightLevelId": 2,
@@ -95,19 +71,19 @@
       "id": 19,
       "nickName": "little Tango",
       "vernacularName": "Butterfly flower",
-      "entryDate": "8/15/20, 3:03:39 AM",
+      "entryDate": "8/16/20, 8:16:57 PM",
       "age": "i",
       "moodId": 1,
       "sunlightLevelId": 3,
       "waterLevelId": 1,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 4,
       "id": 20,
       "nickName": "Beany babi",
       "vernacularName": "Coffee plant",
-      "entryDate": "8/15/20, 3:46:17 PM",
+      "entryDate": "8/16/20, 8:17:05 PM",
       "age": "xxx",
       "moodId": 1,
       "sunlightLevelId": 1,
@@ -131,7 +107,7 @@
       "id": 30,
       "nickName": "Lil sucker",
       "vernacularName": "Daisy",
-      "entryDate": "8/14/20, 8:09:53 PM",
+      "entryDate": "8/16/20, 8:16:23 PM",
       "age": "3years",
       "moodId": 1,
       "sunlightLevelId": 2,
@@ -149,42 +125,6 @@
       "sunlightLevelId": 1,
       "waterLevelId": 3,
       "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 32,
-      "nickName": "ddd",
-      "vernacularName": "ddd",
-      "entryDate": "8/15/20, 5:41:10 PM",
-      "age": "2",
-      "moodId": 1,
-      "sunlightLevelId": 2,
-      "waterLevelId": 2,
-      "isDead": false
-    },
-    {
-      "userId": 4,
-      "id": 33,
-      "nickName": "k",
-      "vernacularName": "yeeha",
-      "entryDate": "8/15/20, 3:26:13 AM",
-      "age": "k",
-      "moodId": 1,
-      "sunlightLevelId": 1,
-      "waterLevelId": 1,
-      "isDead": false
-    },
-    {
-      "userId": 7,
-      "id": 34,
-      "nickName": "d",
-      "vernacularName": "yeeha",
-      "entryDate": "8/15/20, 4:08:33 PM",
-      "age": "dd",
-      "moodId": 1,
-      "sunlightLevelId": 2,
-      "waterLevelId": 2,
-      "isDead": false
     },
     {
       "userId": 8,
@@ -263,12 +203,12 @@
       "userId": 4
     },
     {
-      "id": 5,
+      "userId": 4,
       "plantId": 20,
-      "entryDate": "8/3/20, 2:35:13 PM",
+      "id": 5,
+      "entryDate": "undefined(~Edited Since~)",
       "journalEntry": "this plant didnt come with instructions",
-      "journalTitle": "Time to dance",
-      "userId": 4
+      "journalTitle": "Time to dancessss"
     },
     {
       "id": 15,
@@ -337,42 +277,50 @@
   ],
   "images": [
     {
-      "plantId": 9,
-      "entryDate": "8/16/20, 12:51:32 PM",
-      "imageTitle": "ddd",
-      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597600328/CapstoneSumms/ixnu8n0uvpxphrwlheru.jpg",
+      "plantId": 19,
+      "entryDate": "8/16/20, 7:38:25 PM",
+      "imageTitle": "f",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597624716/CapstoneSumms/ya2gvzih58ei8dnlyozk.jpg",
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "plantId": 20,
+      "entryDate": "8/16/20, 7:59:16 PM",
+      "imageTitle": "eeee",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597625964/CapstoneSumms/abdqckbthvytqtgereli.jpg",
       "userId": 4,
       "id": 4
     },
     {
-      "plantId": 9,
-      "entryDate": "8/16/20, 12:51:32 PM",
-      "imageTitle": "ddd",
-      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597600328/CapstoneSumms/ixnu8n0uvpxphrwlheru.jpg",
+      "plantId": 19,
+      "entryDate": "8/16/20, 8:04:14 PM",
+      "imageTitle": "eee",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597626283/CapstoneSumms/tidpt0fyizipomjbdo3u.jpg",
       "userId": 4,
-      "id": 4
+      "id": 5
     },
     {
-      "plantId": 9,
-      "entryDate": "8/16/20, 2:29:35 PM",
-      "imageTitle": "yus boi3",
-      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597606194/CapstoneSumms/jxymgrk5gwztqya7pkpz.jpg",
+      "plantId": 19,
+      "entryDate": "8/16/20, 8:05:14 PM",
+      "imageTitle": "fff",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597626319/CapstoneSumms/yooitnbqoroia1khsiex.jpg",
       "userId": 4,
       "id": 6
     },
     {
-      "plantId": 32,
-      "entryDate": "8/16/20, 2:30:02 PM",
-      "imageTitle": "yus boi3",
-      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597606210/CapstoneSumms/emdjfgucxkjbfjc05knb.jpg",
+      "plantId": 19,
+      "entryDate": "8/16/20, 8:07:47 PM",
+      "imageTitle": "sss",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597626478/CapstoneSumms/xi98jkjwbsx5dscdr5hg.jpg",
       "userId": 4,
       "id": 7
     },
     {
-      "plantId": 9,
-      "entryDate": "8/16/20, 3:01:08 PM",
-      "imageTitle": "yeet",
-      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597608076/CapstoneSumms/nxujc3v0sip96tzsfcdv.jpg",
+      "plantId": 20,
+      "entryDate": "8/16/20, 10:53:53 PM",
+      "imageTitle": "yeeeboi",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597636447/CapstoneSumms/ddehtrym8gcmf9wckqqs.jpg",
       "userId": 4,
       "id": 8
     }
