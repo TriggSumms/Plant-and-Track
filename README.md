@@ -1,6 +1,17 @@
 # Plant & Track
 The app's purpose is to assist as a catalogging tool for the process of plant collecting. This desktop application utilizes user input to create and host the plant collection and ultimately helps a forgetful plant owner track their daily obsession! After long term use of the application, a user should be able to utilize their catalogging for the seasons to come!
 
+##General Installation:
+1.Upon Starting up Plant & Track, press the Login button and then click "Register"...
+![Register](https://res.cloudinary.com/triggsumms/image/upload/v1597674665/CapstoneSumms/qle6lffvynlcxurzmwqq.jpg)
+1.
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+1.
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+1.
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+1.
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ## Directions from Login
 <picture>
