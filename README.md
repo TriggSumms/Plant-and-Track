@@ -4,13 +4,13 @@ The app's purpose is to assist as a catalogging tool for the process of plant co
 ##General Installation:
 1.Upon Starting up Plant & Track, press the Login button and then click "Register"...
   ####![Register](https://res.cloudinary.com/triggsumms/image/upload/v1597688546/CapstoneSumms/wisa4qrfl6qvqfse6mo5.png)
-1.Then a User will be directed to the Home page, containing the current plant Collection..
-  ####![HomePAGE](https://res.cloudinary.com/triggsumms/image/upload/v1597688570/CapstoneSumms/yzeeq6w9lg6dtiannnlw.png)
-1.
-  ####![USERCARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688601/CapstoneSumms/fx4i1jtxqcpxnmcosqxa.png)
-1.
-  ####![PLANT CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688685/CapstoneSumms/i9onkemvhzhrexppdqkj.png)
-  ####![DETAILS CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688702/CapstoneSumms/azxzc3cniaeydnk2mvs8.png)
+1.####Then a User will be directed to the Home page, containing the current plant Collection.
+  ![HomePAGE](https://res.cloudinary.com/triggsumms/image/upload/v1597688570/CapstoneSumms/yzeeq6w9lg6dtiannnlw.png)
+1.#### The user will have a profile card created and an option to edit their user information or create a new plant will be available
+  ![USERCARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688601/CapstoneSumms/fx4i1jtxqcpxnmcosqxa.png)
+1.#### At this point a USer will have 3 views of the cards avaialble. The collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.
+  ![PLANT CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688685/CapstoneSumms/i9onkemvhzhrexppdqkj.png)
+  ![DETAILS CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688702/CapstoneSumms/azxzc3cniaeydnk2mvs8.png)
 
 ## Directions from Login
 <picture>
