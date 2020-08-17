@@ -1,6 +1,16 @@
 # Plant & Track
-The app's purpose is to assist as a catalogging tool for the process of plant collecting. This desktop application utilizes user input to create and host the plant collection and ultimately helps a "forgetful plant owner" track their daily obsession! After long term use of the application, a user should be able to utilize their catalogging for the seasons to come!
+The app's purpose is to assist as a catalogging tool for the process of plant collecting. This desktop application utilizes user input to create and host the plant collection and ultimately helps a forgetful plant owner track their daily obsession! After long term use of the application, a user should be able to utilize their catalogging for the seasons to come!
 
+
+## Directions from Login
+<picture>
+  
+## After Creating an account: 
+- The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
+-The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
+-The User can also flip the card using a button toggle! This will allow them to enter in their journal entries for the plant and chronologically reference the most recent entries!
+-Now enjoy you collections Longevity or placement in the Graveyard! 
+Lastly, A key of the buttons is located below...
 
 
 ## Concepts Covered
@@ -26,9 +36,6 @@ Through the sorting of this (User1)’s library, a certain management will be re
 * The User can select specific cards through a search input, allowing species with “similar” naming characteristics to be revealed. 
 * This same search feature will be implemented in a library for just the “dead plantCards” so a reference exists for the next season…. (Just in case a user wants to have a reference to prior mistakes made).
 * Key journal variables will exist inside the plantCard, such as the use of a color tag via the card. (INSTRUCTOR: see sketchboard PlantCARD)
-
-
-
 
 ## PLANNING LINKS:
 
