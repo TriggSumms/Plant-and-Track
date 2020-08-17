@@ -6,10 +6,10 @@ The app's purpose is to assist as a catalogging tool for the process of plant co
 <picture>
   
 ## After Creating an account: 
-- The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
--The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
--The User can also flip the card using a button toggle! This will allow them to enter in their journal entries for the plant and chronologically reference the most recent entries!
--Now enjoy you collections Longevity or placement in the Graveyard! 
+### The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
+###The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
+###The User can also flip the card using a button toggle! This will allow them to enter in their journal entries for the plant and chronologically reference the most recent entries!
+###Now enjoy you collections Longevity or placement in the Graveyard! 
 Lastly, A key of the buttons is located below...
 
 
