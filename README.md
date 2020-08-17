@@ -1,5 +1,6 @@
 # Plant & Track
-The app's purpose is to stand as a catalogging journal for plant collecting and will aid forgetfull plant owners all over the world! 
+The app's purpose is to assist as a catalogging tool for the process of plant collecting. This desktop application utilizes user input to create and host the plant collection and ultimately helps a "forgetful plant owner" track their obsession! 
+
 
 
 ## Concepts Covered
