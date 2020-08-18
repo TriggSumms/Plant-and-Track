@@ -9,7 +9,7 @@
 
 <br/>
 
-[PlantTracker](https://github.com/TriggSumms/Plant-and-Track)'s purpose is to assist as a catalogging tool for the process of plant collecting. This desktop application utilizes user input to create and host the plant collection and ultimately helps a forgetful plant owner track their daily obsession! After long term use of the application, a user should be able to utilize their catalogging for the seasons to come!
+[Plant & Track](https://github.com/TriggSumms/Plant-and-Track)'s purpose is to assist as a catalogging tool for the process of plant collecting. This desktop application utilizes user input to create and host the plant collection and ultimately helps a forgetful plant owner track their daily obsession! After long term use of the application, a user should be able to utilize their catalogging for the seasons to come!
 
 
 
