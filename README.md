@@ -13,11 +13,7 @@
 
 
 
-<br/>
-<p align="center">
-    <img width="80%" src="https://sulu.io/uploads/media/800x@2x/07/167-ezgif.gif?v=2" alt="Sulu Slideshow">
-</p>
-<br/>
+
 
 This repository contains the **core framework for Plant & Track**. 
 
