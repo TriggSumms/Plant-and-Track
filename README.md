@@ -17,7 +17,7 @@
 
 This repository contains the **core framework for Plant & Track**. 
 
-If you want to **start a plant & Track Account of your own**...
+If you want to **start a Plant & Track (Account) of your own**...
 
 <br>
 ## 🚀&nbsp; Installation and Documentation
