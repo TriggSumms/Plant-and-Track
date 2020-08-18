@@ -18,7 +18,7 @@ let timeStamp = new Intl.DateTimeFormat("en", {
 });
 
 const PlantForm = props => {
-    const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
+    const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), indoorOutdoor: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
     const [moods, setMoods] = useState([]);
     const [sunlightLevels, setSunlightLevels] = useState([]);
     const [waterLevels, setWaterLevels] = useState([]);
@@ -68,7 +68,7 @@ const PlantForm = props => {
 
     const constructNewPlant = evt => {
         evt.preventDefault();
-        if (plant.nickName === "" || plant.vernacularName === "" || plant.age === "" || plant.sunlightLevelId === 0 || plant.waterLevelId === 0 || plant.moodId === 0) {
+        if (plant.nickName === "" || plant.vernacularName === "" || plant.indoorOutdoor === "" || plant.sunlightLevelId === 0 || plant.waterLevelId === 0 || plant.moodId === 0) {
             window.alert("Please fill out all the entry requirements....otherwise your plant won't survive the season!");
         }
         else {
@@ -108,9 +108,9 @@ const PlantForm = props => {
                                 </div>
                                 <div className="row">
                                     <div className="input-field col s12">
-                                        What is the Age of your plant:
+                                        Does your plant like an indoor enviorment or outdoor enviorment...or both?:
           <div className="input-field inline">
-                                            <input placeholder="How many days...old?" id="age" type="text" required
+                                            <input placeholder="Inside/Outside?" id="indoorOutdoor" type="text" required
                                                 onChange={handleFieldChange} className="validate"></input>
                                             <label for="age"></label>
                                         </div>

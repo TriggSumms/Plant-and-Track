@@ -33,6 +33,8 @@ export const Login = (props) => {
             sessionStorage.setItem("activeUser", user.id)
             props.setUser(credentials);
             props.history.push("/home");
+            window.location.reload(false)
+
           }
 
 

@@ -19,7 +19,7 @@ let timeStamp = new Intl.DateTimeFormat("en", {
 
 //User clicks details button thus rendering the animals info
 const PlantDetail = props => {
-  const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
+  const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), indoorOutdoor: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
   const [journals, setJournals] = useState([]);
   const [images, setImages] = useState([])
   const [mood, setMood] = useState({ level: 0 });
@@ -89,7 +89,7 @@ const PlantDetail = props => {
       vernacularName: plant.vernacularName,
       entryDate: plant.entryDate,
       entryDate: timeStamp.format(Date.now()),
-      age: plant.age,
+      indoorOutdoor: plant.indoorOutdoor,
       moodId: plant.moodId,
       sunlightLevelId: plant.sunlightLevelId,
       waterLevelId: plant.waterLevelId,
@@ -147,8 +147,9 @@ const PlantDetail = props => {
                   </div>
                   <div className="plantcard-variable-list__Container">
                     <ol className="VariableEntryTitle"> Plant Specs. </ol>
-                    <div className="TitleVariable">Age of your plant:<p className="VariableEntry1"> {plant.age}</p></div>
+                    
                     <div className="TitleVariable"> Created on: <p className="VariableEntry2"> {plant.entryDate} </p></div>
+                    <div className="TitleVariable">Indoor/Outdoor:<p className="VariableEntry1"> {plant.indoorOutdoor}</p></div>
                     <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {sunlightLevel.level}</p> </div>
                     <div className="TitleVariable">Water Level Req. : <p className="VariableEntry1">{waterLevel.level} </p></div>
                     <div className="TitleVariable">Mood of your plant this Week?:<p className="VariableEntry3"> {mood.level}</p> </div>

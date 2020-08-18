@@ -32,26 +32,6 @@ const Home = props => {
       <header></header>
       <div id="main">
         <article>
-
-
-
-          {/*   <fieldset>
-            <input
-              type="text"
-              placeholder="Search via NickName"
-              onChange={evt => setSearch(evt.target.value)}
-            />
-          </fieldset> */}
-
-{/*              <div class="flexbox">
-            <div class="search">
-              <div>
-                <input type="text"  required placeholder="Search . . ." onChange={evt => setSearch(evt.target.value)}/>
-              </div>
-            </div>
-          </div>  */}
-
-
           <div>
             <PlantList
               {...props}

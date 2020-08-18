@@ -26,11 +26,11 @@ const PlantBaby = () => {
 
   return (
     <>
-<div className="backgroundz">
+
       <NavBar hasUser={hasUser} clearUser={clearUser} />
-     
+ 
       <ApplicationViews hasUser={hasUser} setUser={setUser} /> 
-</div>
+
     </>
   );
 }

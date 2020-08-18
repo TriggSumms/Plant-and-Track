@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
-import { CardDeck, Card } from 'react-bootstrap';
+import { CardDeck, Card, Col } from 'react-bootstrap';
 
 
 //Method for Creating Time Stamp in readeable form(mdn docs)...
@@ -51,28 +51,40 @@ const PlantDetail = props => {
   return (
 
     <>
-      <div className="descriptionContainer">
-        <CardDeck className="journalDescriptionCard">
-          <Card border="primary" style={{ width: '20%' }}>
-            {/* <Card.Img variant="top" src="plantboi.jpg" /> */}
-            <Card.Body>
-              <Card.Title>{journal.journalTitle} </Card.Title>
-              <h8>created preciscely... <small>{journal.entryDate}</small></h8>
+
+
+      <CardDeck style={{
+        float: "center", padding: 0, display: "inline", justifycontent: "center",
+        fontFamily: 'sans-serif', display: "center"
+      }}>
+        <Card border="primary" style={{
+          float: "center", width: "50%", margin: 100,
+          fontFamily: 'sans-serif', display: "flex"
+        }}>
+         
+          <Card.Body  >
+            <Card.Title style={{ width: '80%', color: "black" }}>
+           Journal Recorded on: <small>{journal.entryDate}</small> 
+           <br />
+           <br />
+            Entry Title: "{journal.journalTitle}"<br /></Card.Title>
+
+            <br />
+            <Card.Text>
               <br />
-              <Card.Text>
-                <br />
-                <p>{journal.journalEntry}</p>
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <small className="text-muted"> <p><button className="waves-effect waves-light btn" type="button" disabled={isLoading} onClick={handleDelete}>DELETE</button>
-                <button className="waves-effect waves-light btn" type="button" onClick={() => props.history.push(`/journals/${journal.id}/edit`)}>Edit</button></p>
-              </small>
-            </Card.Footer>
-          </Card>
-          <br />
-        </CardDeck>
-      </div>
+              <h4>Entry: </h4><p>{journal.journalEntry}</p>
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted"> <p><button className="waves-effect waves-light btn" type="button" disabled={isLoading} onClick={handleDelete}>DELETE</button>
+              <button className="waves-effect waves-light btn" type="button" onClick={() => props.history.push(`/journals/${journal.id}/edit`)}>Edit</button></p>
+            </small>
+          </Card.Footer>
+        </Card>
+        <br />
+      </CardDeck>
+
+
     </>
 
 

@@ -5,7 +5,7 @@ import { Form } from "react-bootstrap";
 
 
 const PlantEditForm = props => {
-    const [plant, setPlant] = useState({ userId: 0, nickName: "", vernacularName: "", entryDate: "", age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
+    const [plant, setPlant] = useState({ userId: 0, nickName: "", vernacularName: "", entryDate: "", indoorOutdoor: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
     const [isLoading, setIsLoading] = useState(false);
     const [moods, setMoods] = useState([]);
     const [sunlightLevels, setSunlightLevels] = useState([]);
@@ -55,7 +55,7 @@ const PlantEditForm = props => {
             nickName: plant.nickName,
             vernacularName: plant.vernacularName,
             entryDate: plant.entryDate,
-            age: plant.age,
+            indoorOutdoor: plant.indoorOutdoor,
             moodId: plant.moodId,
             sunlightLevelId: plant.sunlightLevelId,
             waterLevelId: plant.waterLevelId,
@@ -115,10 +115,10 @@ const PlantEditForm = props => {
                                     </div>
                                     <div className="row">
                                         <div className="input-field col s12">
-                                            What is the Age of your plant:
+                                        Does your plant like an indoor enviorment or outdoor enviorment...or both?:
           <div className="input-field inline">
-                                                <input placeholder="How many days...old?" id="age" type="text" required
-                                                    onChange={handleFieldChange} className="validate" value={plant.age}></input>
+                                                <input placeholder="Indoor/Outdoor?" id="indoorOutdoor" type="text" required
+                                                    onChange={handleFieldChange} className="validate" value={plant.indoorOutdoor}></input>
                                                 <label for="age"></label>
                                             </div>
                                         </div>

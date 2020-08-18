@@ -18,6 +18,20 @@ background-image: url(https://s-media-cache-ak0.pinimg.com/564x/16/61/74/166174e
 	padding-bottom: 1px;
 	box-shadow: rgba(132, 169, 140, 1.0);
 }
+.LOGOposition2{
+	padding-bottom: 100px;
+	padding-left: 1250px;
+}
+.LOGOposition1{
+	float:right;
+	
+
+	
+}
+.LOGOpositionIMG{
+	float:right;
+	 margin-left: 200px; 
+}
 
 .h1z {
 	color: white;

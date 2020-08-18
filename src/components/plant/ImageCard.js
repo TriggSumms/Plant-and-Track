@@ -8,38 +8,23 @@ import Image from 'react-bootstrap/Image'
 
 const ImageCard = (props) => {
 
-    const imgStyle = {
-        maxHeight: 125,
-        maxWidth: 90,
-     
-      }
+
 
   return (
 
   <>
 
-{/*  <Toast>
-    <Toast.Header>
-      <strong className="mr-auto" closeButton="false" >{props.imageEntry.imageTitle}</strong>
-      <button className="buttonboi" type="button" onClick={() => props.history.push(`/images/${props.imageEntry.id}`)}>
-        
-      </button>
-      
-  <small>{props.journalEntry.entryDate}</small>  
-    </Toast.Header>
-    <Toast.Body>
+{/* <div >
     <picture> 
-     <img src={props.imageEntry.url} alt="plant picture" />
+     <img src={props.imageEntry.url} className="plantImg" alt="plant picture" />
     </picture>
-    </Toast.Body>
-  </Toast>
- */}
+</div> */}
 {/* <Container>
   <Row>
 
 <Col xs={6} md={4}> */}
 
-      <Image src={props.imageEntry.url} style={imgStyle} className="plantImg" rounded />
+       <Image src={props.imageEntry.url} className="plantImg" rounded /> 
 
 {/* </Col>
   </Row>

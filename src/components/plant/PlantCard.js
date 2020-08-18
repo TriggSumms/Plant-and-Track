@@ -18,7 +18,7 @@ import PlantList from "./PlantList";
 const PlantCard = (props) => {
   const [journals, setJournals] = useState([]);
   const [images, setImages] = useState([])
-  const [plant, setPlant] = useState({ userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.age, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead });
+  const [plant, setPlant] = useState({ userId: props.plant.userId, id: props.plant.id, nickName: props.plant.nickName, vernacularName: props.plant.vernacularName, entryDate: props.plant.entryDate, age: props.plant.indoorOutdoor, moodId: props.plant.MoodId, sunlightLevelId: props.plant.sunlightLevelId, waterLevelId: props.plant.waterLevelId, isDead: props.plant.isDead });
   //console.log("plantListplant", plant)
   const [isDead, setIsDead] = useState({ isDead: props.isDead })
   const [isLoading, setIsLoading] = useState(true);
@@ -55,7 +55,7 @@ const PlantCard = (props) => {
       vernacularName: props.plant.vernacularName,
       entryDate: props.plant.entryDate,
       entryDate: timeStamp.format(Date.now()),
-      age: props.plant.age,
+      indoorOutdoor: props.plant.indoorOutdoor,
       moodId: props.plant.moodId,
       sunlightLevelId: props.plant.sunlightLevelId,
       waterLevelId: props.plant.waterLevelId,
@@ -130,8 +130,8 @@ const PlantCard = (props) => {
               </div>
               <div className="plantcard-variable-list__Container">
                 <h1 className="VariableEntryTitle"> Plant Specs. </h1>
-                <div className="TitleVariable">Age of your plant:<p className="VariableEntry1"> {props.plant.age}</p></div>
                 <div className="TitleVariable"> Created on: <p className="VariableEntry2"> {props.plant.entryDate} </p></div>
+                <div className="TitleVariable">Indoor/Outdoor:<p className="VariableEntry1"> {props.plant.indoorOutdoor}</p></div>
                 <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {props.plant.sunlightLevel.level}</p> </div>
                 <div className="TitleVariable">Water Level Req. : <p className="VariableEntry1">{props.plant.waterLevel.level} </p></div>
                 <div className="TitleVariable">Mood of your plant this Week?:<p className="VariableEntry3"> {props.plant.mood.level}</p> </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import PlantManager from "../../modules/PlantManager"
 import './css-java-extension/materialize.css';
 import './css-java-extension/materialize.min.css';
-import "./PlantForm.css"
+
 
 
 let timeStamp = new Intl.DateTimeFormat("en", {
@@ -29,12 +29,12 @@ const PlantJournalEditForm = props => {
         setIsLoading(true);
 
         //Created an easy tag to post to the return edit card.... for showing chats when they are edited     
-        const MessageChanged = "(~Edited Since~)"
+       // const MessageChanged = "(~Edited Since~)"
         const editedJournal = {
             userId: journal.userId,
             plantId: journal.plantId,
             id: props.match.params.journalId,
-            entryDate: journal.EntryDate + MessageChanged,
+            entryDate: journal.EntryDate,
             journalEntry: journal.journalEntry,
             journalTitle: journal.journalTitle
         };

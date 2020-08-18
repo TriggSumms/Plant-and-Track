@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import UserManager from "../../modules/UserManager"
+import './css-java-extension/materialize.css';
+import './css-java-extension/materialize.min.css';
 
 
 
