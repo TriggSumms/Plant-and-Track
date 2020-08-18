@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import PlantManager from "../../modules/PlantManager"
 import { Form } from "react-bootstrap";
-//import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const PlantEditForm = props => {
-    const [plant, setPlant] = useState({ userId: 0, nickName: "", vernacularName: "", entryDate: "", age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
+    const [plant, setPlant] = useState({ userId: 0, nickName: "", vernacularName: "", entryDate: "", indoorOutdoor: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
     const [isLoading, setIsLoading] = useState(false);
     const [moods, setMoods] = useState([]);
     const [sunlightLevels, setSunlightLevels] = useState([]);
@@ -19,7 +19,6 @@ const PlantEditForm = props => {
         stateToChange[evt.target.id] = evt.target.value;
         setPlant(stateToChange);
     };
-
     const getMoods = () => {
         return PlantManager.getAll("moods").then(moodsfromAPI => {
             setMoods(moodsfromAPI)
@@ -41,7 +40,6 @@ const PlantEditForm = props => {
 
 
     const updateExistingPlant = evt => {
-        //Stops the pg from loading on every click...
         evt.preventDefault()
         setIsLoading(true);
 
@@ -57,7 +55,7 @@ const PlantEditForm = props => {
             nickName: plant.nickName,
             vernacularName: plant.vernacularName,
             entryDate: plant.entryDate,
-            age: plant.age,
+            indoorOutdoor: plant.indoorOutdoor,
             moodId: plant.moodId,
             sunlightLevelId: plant.sunlightLevelId,
             waterLevelId: plant.waterLevelId,
@@ -65,19 +63,19 @@ const PlantEditForm = props => {
 
         };
         PlantManager.updatePlant(editedPlant)
-            .then(() => props.history.push("/home"))
+        .then(() => props.history.go(-1))
+        .then(()=> props.history.go(false))
+           //.then(() => window.location.reload(false))
     }
 
     useEffect(() => {
         PlantManager.getPlant(props.match.params.plantId)
             .then(plant => {
-
                 setPlant(plant);
                 getMoods();
                 getSunlightLevels();
                 getWaterLevels();
                 setIsLoading(false);
-
             });
     }, [props.match.params.plantId]);
     //Filling the dependency array allows the change made to rerender the Animal
@@ -86,6 +84,7 @@ const PlantEditForm = props => {
     return (
 
         <>
+{/* FORMS SECTION CREATED USING MATERILIZE */}
             <div className="row">
                 <div className="col s12 m5">
                     <div className="card-panel transparent">
@@ -116,17 +115,16 @@ const PlantEditForm = props => {
                                     </div>
                                     <div className="row">
                                         <div className="input-field col s12">
-                                            What is the Age of your plant:
+                                        Does your plant like an indoor enviorment or outdoor enviorment...or both?:
           <div className="input-field inline">
-                                                <input placeholder="How many days...old?" id="age" type="text" required
-                                                    onChange={handleFieldChange} className="validate" value={plant.age}></input>
+                                                <input placeholder="Indoor/Outdoor?" id="indoorOutdoor" type="text" required
+                                                    onChange={handleFieldChange} className="validate" value={plant.indoorOutdoor}></input>
                                                 <label for="age"></label>
                                             </div>
                                         </div>
                                     </div>
-
-
-
+{/* MATERILIZE FORM END */}
+{/* DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
                                     <div className="kk">
                                         <Form.Group controlId="moodId">
                                             <Form.Label>Plant Mood:</Form.Label>
@@ -171,12 +169,14 @@ const PlantEditForm = props => {
                                         onClick={updateExistingPlant}
                                     >Submit</button>
                                 </div>
+                                
                             </form>
 
                         </div>
                     </div>
                 </div>
             </div>
+{/* END DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
         </>
     );
 }

@@ -58,12 +58,6 @@ export default {
         return fetch(`http://localhost:5005/plants/${id}/?_expand=mood&_expand=waterLevel&_expand=sunlightLevel`)
             .then(result => result.json())
     },
-
-    /*      getWithJournalDetails() {
-             return fetch(`http://localhost:5005/journals/${id}`)
-                .then(result => result.json())
-         }, */
-
     getWithAllDetails(id) {
         return fetch(`http://localhost:5005/plants/${id}/?_expand=mood&_expand=waterLevel&_expand=sunlightLevel&_expand=journal`)
             .then(result => result.json())
@@ -123,11 +117,7 @@ export default {
  
 
 
-
-
-
-
-    
+  
     //Graveyard CAlls
     
 /*     GraveYardRoute(editedPlant){
@@ -141,5 +131,6 @@ export default {
             })
         }) .then(resp => resp.json());
     }*/
+    
 } 
 

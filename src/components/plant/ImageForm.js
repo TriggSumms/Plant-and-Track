@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PlantManager from '../../modules/PlantManager';
+import ImageManager from '../../modules/ImageManager';
 
 
 
@@ -9,50 +9,96 @@ let timeStamp = new Intl.DateTimeFormat("en", {
     dateStyle: "short"
 });
 
-const PlantJournalForm = props => {
-    const [journal, setJournal] = useState({ plantId: props.plantId, entryDate: timeStamp.format(Date.now()), journalEntry: "", journalTitle: "" });
+const ImageForm = props => {
+    const [image, setImage] = useState({ plantId: props.plantId, entryDate: timeStamp.format(Date.now()), imageTitle: "", url: ""});
+    const [importImage, setImportImage] = useState("")
     const [plants, setPlants] = useState([])
     const [isLoading, setIsLoading] = useState(false);
 
     //Tracks entries into text boxes
 const handleFieldChange = evt => {
-        const stateToChange = { ...journal };
+        const stateToChange = { ...image };
         stateToChange[evt.target.id] = evt.target.value;
-        setJournal(stateToChange);
+        setImage(stateToChange);
     };
 
    
 
+const importTheImage = async evt => {
+const files = evt.target.files
+const formData = new FormData()
+        formData.append('file', files[0])
+        formData.append('upload_preset', "CapstoneSumms")
+        setIsLoading(true)
+        const res = await fetch(
+            'https://api.cloudinary.com/v1_1/triggsumms/image/upload', 
+            {
+              method: 'POST',
+              body: formData
+            }
+          )
+        const file = await res.json()
+        // this will save your photo
+        setImportImage(file.secure_url)
+        setImage({...image, url: file.secure_url})
+        ImageManager.getAllImages('images')
+        setIsLoading(false)
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const currentUserId = sessionStorage.getItem("activeUser")
-    journal.userId = parseInt(currentUserId)
+    image.userId = parseInt(currentUserId)
 
 
 
 
-const constructNewJournalEntry = evt => {
+const constructNewImage = evt => {
         evt.preventDefault();
-        if (journal.journalEntry === "" || journal.journalTitle === "") {
+        if (image.imageTitle === "" ) {
             window.alert("Please fill out all the entry requirements....");
         } else {
             setIsLoading(true);
-            journal.plantId = parseInt(journal.plantId)
-            PlantManager.postJournal(journal)
+            image.plantId = parseInt(image.plantId)
+            ImageManager.post(image)
                 //.then(() => PlantManager.getAll(plants))
                 .then(() => props.history.push("/home"));
         }
     };
 
 
-const getPlants = () => {
-        return PlantManager.getAll("plants").then(plantsFromAPI => {
-            setPlants(plantsFromAPI)
-        });
-    }
+
+
+
+/* const getTheImages = () => {
+        return ImageManager.getAllImages("images").then(imagesFromAPI => {
+            imagesFromAPI.sort((x, y) => {
+                let a = new Date(x.entryDate),
+                  b = new Date(y.entryDate);
+                return a - b;
+           });     
+            setImage(imagesFromAPI)
+        }); 
+    }  */
+
+
 
     useEffect(() => {
-        getPlants()
+       // getTheImages()
     }, []);
+
 
 
 
@@ -76,25 +122,23 @@ const getPlants = () => {
                                 />
 
                                 <div className="input-field col s5">
-                                    Title of the Entry:
-                <input placeholder="Give your Journal entry a memorable title..." id="journalTitle" type="text" data-length="10" required
+                                    Title of the Image:
+                <input placeholder="Give your image a memorable title..." id="imageTitle" type="text" data-length="10" required
                                         onChange={handleFieldChange} className="validate"></input>
-                                    <label for="journalTitleform"></label>
+                                    <label for="imageTitleform"></label>
                                 </div>
-                                <div className="input-field col s8">
-                                    Plant Journal Entry:
-                <input placeholder="Talk about the status of your plant, your plans for next season, repotting methods, etc:" id="journalEntry" className="materialize-textarea" required
-                                        onChange={handleFieldChange} className="validate"></input>
-                                    <label for="journalEntryform"></label>
+
+                                <input type="file" name="file" id="file" onChange={importTheImage} placeholder="upload" />
+
                                     <div >
                                         <button
                                             className="waves-effect waves-light btn"
                                             type="button"
                                             disabled={isLoading}
-                                            onClick={constructNewJournalEntry}
+                                            onClick={constructNewImage}
                                         >Submit</button>
                                     </div>
-                                </div>
+                             
                             </form>
                         </div>
                     </div>
@@ -104,4 +148,4 @@ const getPlants = () => {
     );
 };
 
-export default PlantJournalForm;
+export default ImageForm;

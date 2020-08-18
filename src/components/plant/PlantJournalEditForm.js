@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import PlantManager from "../../modules/PlantManager"
-//import { Form } from 'react-bootstrap';
 import './css-java-extension/materialize.css';
 import './css-java-extension/materialize.min.css';
 
@@ -18,8 +17,6 @@ const PlantJournalEditForm = props => {
 
 
 
-
-
     const handleFieldChange = evt => {
         const stateToChange = { ...journal };
         stateToChange[evt.target.id] = evt.target.value;
@@ -28,19 +25,16 @@ const PlantJournalEditForm = props => {
 
 
     const updateExistingJournal = evt => {
-        //Stops the pg from loading on every click...
         evt.preventDefault()
         setIsLoading(true);
 
         //Created an easy tag to post to the return edit card.... for showing chats when they are edited     
-        const MessageChanged = "(~Edited Since~)"
-
-        // This is an edit, so we need the id
+       // const MessageChanged = "(~Edited Since~)"
         const editedJournal = {
             userId: journal.userId,
             plantId: journal.plantId,
             id: props.match.params.journalId,
-            entryDate: journal.EntryDate + MessageChanged,
+            entryDate: journal.EntryDate,
             journalEntry: journal.journalEntry,
             journalTitle: journal.journalTitle
         };
@@ -52,19 +46,16 @@ const PlantJournalEditForm = props => {
     useEffect(() => {
         PlantManager.getJournal(props.match.params.journalId)
             .then(journal => {
-
                 setJournal(journal);
-
                 setIsLoading(false);
-
             });
     }, [props.match.params.journalId]);
-    //Filling the dependency array allows the change made to rerender the Animal
+    //Filling the dependency array allows the change made to rerender the Journal
 
 
     return (
-
         <>
+        
             <div className="extraPaddingJournalEdit">
                 <form className="col s12">
                     <div className="formgrid">
@@ -76,8 +67,6 @@ const PlantJournalEditForm = props => {
                             id="userId"
                             value={journal.userId}
                         />
-
-
                         <div className="input-field col s5">
                             Title of the Entry:
                         <input placeholder="Give your Journal entry a memorable title..." id="journalTitle" type="text" data-length="10" required
@@ -99,14 +88,7 @@ const PlantJournalEditForm = props => {
                             >Submit Changes</button>
                         </div></div>
                 </form>
-
             </div>
-
-
-
-
-
-
 
         </>
     );

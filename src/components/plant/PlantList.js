@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PlantCard from './PlantCard';
-//import PlantJournalCard from "./PlantJournalCard"
 import PlantManager from '../../modules/PlantManager';
 import "./PlantCard.css"
-
-
-
+import "./SearchBar.css"
 
 
 
 const PlantList = (props) => {
-  // The initial state is an empty array
   const [plants, setPlants] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredPlants, setFilteredPlants] = useState([])
@@ -18,14 +14,19 @@ const PlantList = (props) => {
 
   const withDetails = () => {
     PlantManager.getWithDetails("plants").then(plantsfromAPI => {
+      plantsfromAPI.sort((x, y) => {
+        let a = new Date(x.entryDate),
+          b = new Date(y.entryDate);
+        return b - a;
+      });
       setPlants(plantsfromAPI)
     });
   }
 
+
   const deletePlant = (id) => {
     PlantManager.delete(id)
       .then(() => PlantManager.getAll("plants").then(setPlants))
-
   };
 
 
@@ -33,9 +34,6 @@ const PlantList = (props) => {
   useEffect(() => {
     withDetails();
   }, []);
-
-
-
 
   useEffect(() => {
     setFilteredPlants(
@@ -45,11 +43,14 @@ const PlantList = (props) => {
     );
   }, [search, plants]);
 
-  // Mapping through 
+
+
+
+
   return (
     <>
 
-<div className="ButtonandSearchList">
+{/*        <div className="ButtonandSearchList">
   <fieldset>
 <input
         type="text"
@@ -57,9 +58,16 @@ const PlantList = (props) => {
         onChange={evt => setSearch(evt.target.value)}
       />
      </fieldset> 
-      </div>
+      </div>  */}
+             <div class="container">
+            <div class="search">
+              <div>
+                <input type="text"  required placeholder="Search . . ." onChange={evt => setSearch(evt.target.value)}/>
+              </div>
+            </div>
+          </div> 
 
-      <div className="plantCardSeperation">
+      <div className="plantCards-Center__Container">
         {filteredPlants.map(plant =>
           plant.isDead ? null : //TOGGLE FOR PLANT STATUS TO SHOW ONLY FALSE
             //!plant.isDead ? null:  //ToGGLE FOR PLANT STATUS TO SHOW ONLY TRUE
@@ -67,16 +75,16 @@ const PlantList = (props) => {
               key={plant.id}
               plant={plant}
               deletePlant={deletePlant}
+              search={search}
+              plants={plants}
+              setFilteredPlants={setFilteredPlants}
               //updateForGarbagePlant={updateForGarbagePlant}
               //isChecked={isChecked}
               {...props}
             />)}
       </div>
 
-
-
     </>
-
   );
 };
 export default PlantList;

@@ -5,6 +5,7 @@
       "email": "joe@joe.com",
       "password": "test",
       "img": "https://avatars1.githubusercontent.com/u/65562846?s=460&u=4ee0dafd8c420d9d30e0160faf91fb135a81e570&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 1
     },
     {
@@ -12,6 +13,7 @@
       "email": "test@test.com",
       "password": "test",
       "img": "https://avatars1.githubusercontent.com/u/65351448?s=460&u=e4fd4abf5f5a81d0d62c128cd907a4b14d6a4670&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 2
     },
     {
@@ -19,6 +21,7 @@
       "email": "testing@testing.com",
       "password": "test",
       "img": "https://avatars2.githubusercontent.com/u/59340165?s=460&u=46057543931e845b54dbf360a89f24b5755cf93d&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 3
     },
     {
@@ -26,14 +29,16 @@
       "password": "yee",
       "user": "Test",
       "img": "",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 4
     },
     {
-      "email": "stsumms@gmail.com",
-      "password": "hello",
-      "user": "YUS",
+      "email": "allison.williams1@cushwake.com",
+      "password": "MintJ27*",
+      "user": "Adub127",
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
-      "id": 5
+      "bio": ":)))))))))) I love plants!",
+      "id": 8
     }
   ],
   "plants": [
@@ -42,8 +47,8 @@
       "id": 9,
       "nickName": "BIGWIZZI",
       "vernacularName": "Gray alder",
-      "entryDate": "7/30/20, 8:45:08 PM",
-      "age": "5inchs tall, 4m",
+      "entryDate": "8/16/20, 8:15:56 PM",
+      "age": "5inchs tall",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
@@ -54,22 +59,10 @@
       "id": 14,
       "nickName": "Lil Babi genius",
       "vernacularName": "Bolean birch",
-      "entryDate": "8/6/20, 10:33:18 AM",
+      "entryDate": "8/14/20, 8:09:42 PM",
       "age": "4",
       "moodId": 1,
       "sunlightLevelId": 2,
-      "waterLevelId": 1,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 17,
-      "nickName": "w",
-      "vernacularName": "iboi",
-      "entryDate": "8/6/20, 11:31:52 AM",
-      "age": "wb",
-      "moodId": 1,
-      "sunlightLevelId": 1,
       "waterLevelId": 1,
       "isDead": false
     },
@@ -78,7 +71,7 @@
       "id": 19,
       "nickName": "little Tango",
       "vernacularName": "Butterfly flower",
-      "entryDate": "8/7/20, 9:54:25 AM",
+      "entryDate": "8/16/20, 8:16:57 PM",
       "age": "i",
       "moodId": 1,
       "sunlightLevelId": 3,
@@ -90,83 +83,71 @@
       "id": 20,
       "nickName": "Beany babi",
       "vernacularName": "Coffee plant",
-      "entryDate": "8/6/20, 5:59:50 PM",
+      "entryDate": "8/16/20, 8:17:05 PM",
       "age": "xxx",
       "moodId": 1,
       "sunlightLevelId": 1,
       "waterLevelId": 1,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 22,
-      "nickName": "Richards III",
-      "vernacularName": "Orange coneflower",
-      "entryDate": "8/6/20, 3:34:56 PM",
-      "age": "3",
-      "moodId": 1,
-      "sunlightLevelId": 3,
-      "waterLevelId": 2,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 23,
-      "nickName": "",
-      "vernacularName": "cccc",
-      "entryDate": "8/7/20, 8:46:21 AM",
-      "age": "alright Now",
-      "moodId": 2,
-      "sunlightLevelId": 3,
-      "waterLevelId": 2,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
       "id": 24,
       "nickName": "teddys bowl",
-      "vernacularName": "Creeping yellowcress",
-      "entryDate": "8/7/20, 9:54:27 AM",
-      "age": "ccc",
+      "vernacularName": "Creeping yellowcrs",
+      "entryDate": "8/15/20, 2:24:45 AM",
+      "age": "cccf",
       "moodId": 2,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
-      "isDead": true
+      "isDead": false
     },
     {
       "userId": 4,
-      "id": 26,
-      "nickName": "j",
-      "vernacularName": "k",
-      "entryDate": "8/7/20, 8:46:25 AM",
-      "age": "i",
+      "id": 30,
+      "nickName": "Lil sucker",
+      "vernacularName": "Daisy",
+      "entryDate": "8/16/20, 8:16:23 PM",
+      "age": "3years",
       "moodId": 1,
       "sunlightLevelId": 2,
       "waterLevelId": 2,
       "isDead": true
     },
     {
-      "userId": 2,
-      "id": 28,
-      "nickName": "d",
-      "vernacularName": "d",
-      "entryDate": "8/6/20, 7:56:34 PM",
-      "age": "cowpoke",
-      "moodId": 1,
-      "sunlightLevelId": 2,
-      "waterLevelId": 2,
-      "isDead": true
-    },
-    {
-      "userId": 4,
-      "id": 29,
-      "nickName": "dd",
-      "vernacularName": "BIG BOI",
-      "entryDate": "8/7/20, 8:42:55 AM",
-      "age": "dd",
+      "userId": 3,
+      "id": 31,
+      "nickName": "k",
+      "vernacularName": "m",
+      "entryDate": "8/13/20, 10:11:07 PM",
+      "age": "k",
       "moodId": 1,
       "sunlightLevelId": 1,
-      "waterLevelId": 1,
+      "waterLevelId": 3,
+      "isDead": true
+    },
+    {
+      "userId": 8,
+      "id": 35,
+      "nickName": "Passion Flower",
+      "vernacularName": "Pasiflora",
+      "entryDate": "8/15/20, 9:57:25 PM",
+      "age": "2 months old",
+      "moodId": 2,
+      "sunlightLevelId": 3,
+      "waterLevelId": 3,
+      "isDead": false
+    },
+    {
+      "userId": 8,
+      "id": 36,
+      "nickName": "b",
+      "vernacularName": "gggyg",
+      "entryDate": "8/15/20, 10:02:20 PM",
+      "age": "gg",
+      "moodId": 2,
+      "sunlightLevelId": 2,
+      "waterLevelId": 3,
       "isDead": false
     }
   ],
@@ -223,35 +204,11 @@
     },
     {
       "userId": 4,
-      "plantId": 19,
-      "id": 2,
-      "entryDate": "undefined(~Edited Since~)",
-      "journalEntry": "There is no light in earth or heaven But the cold light of stars; And the first watch of night is given To the red planet Mars.yus",
-      "journalTitle": "Dreamy Journal Poem"
-    },
-    {
-      "id": 3,
-      "plantId": 17,
-      "entryDate": "7/30/20, 2:29:52 PM",
-      "journalEntry": "Stevie Wonder didn’t just write a song about plants, he recorded an entire album. 1979’s Stevie Wonder’s Journey Through “The Secret Life of Plants” was recorded  for a documentary of the same name that featured time-lapse footage of plants growing. As the first full studio release since Wonder’s highly successful album, Songs in the Key of Life, the collection of plant-themed tracks perplexed many music critics at the time of its release. In retrospective, Wonder should be commended for his beautiful and brave musical exploration of our green friends.",
-      "journalTitle": "The Secret Life of Plants – Stevie Wonder",
-      "userId": 4
-    },
-    {
-      "id": 4,
-      "plantId": 17,
-      "entryDate": "8/3/20, 2:17:42 PM",
-      "journalEntry": "This plant hates me...",
-      "journalTitle": "alright little bad boi",
-      "userId": 4
-    },
-    {
-      "id": 5,
       "plantId": 20,
-      "entryDate": "8/3/20, 2:35:13 PM",
+      "id": 5,
+      "entryDate": "undefined(~Edited Since~)",
       "journalEntry": "this plant didnt come with instructions",
-      "journalTitle": "Time to dance",
-      "userId": 4
+      "journalTitle": "Time to dancessss"
     },
     {
       "id": 15,
@@ -260,14 +217,6 @@
       "journalEntry": "Trying to come up with an interesting journal entry but im comin in blank",
       "journalTitle": "bingleboi3000",
       "userId": 4
-    },
-    {
-      "userId": 4,
-      "plantId": 23,
-      "id": 20,
-      "entryDate": "undefined(~Edited Since~)",
-      "journalEntry": "love these little guys",
-      "journalTitle": "time to Disco with my plantsi"
     },
     {
       "userId": 4,
@@ -310,12 +259,110 @@
       "id": 26
     },
     {
-      "plantId": 17,
-      "entryDate": "8/7/20, 10:29:29 AM",
-      "journalEntry": "f",
-      "journalTitle": "f",
+      "plantId": 9,
+      "entryDate": "8/14/20, 4:03:02 PM",
+      "journalEntry": "o",
+      "journalTitle": "o",
       "userId": 4,
-      "id": 27
+      "id": 30
+    },
+    {
+      "plantId": 35,
+      "entryDate": "8/15/20, 10:00:34 PM",
+      "journalEntry": "ggggg",
+      "journalTitle": "gggg",
+      "userId": 8,
+      "id": 31
+    }
+  ],
+  "images": [
+    {
+      "plantId": 19,
+      "entryDate": "8/16/20, 7:38:25 PM",
+      "imageTitle": "f",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597624716/CapstoneSumms/ya2gvzih58ei8dnlyozk.jpg",
+      "userId": 4,
+      "id": 3
+    },
+    {
+      "plantId": 20,
+      "entryDate": "8/16/20, 7:59:16 PM",
+      "imageTitle": "eeee",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597625964/CapstoneSumms/abdqckbthvytqtgereli.jpg",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "plantId": 19,
+      "entryDate": "8/16/20, 8:04:14 PM",
+      "imageTitle": "eee",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597626283/CapstoneSumms/tidpt0fyizipomjbdo3u.jpg",
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "plantId": 19,
+      "entryDate": "8/16/20, 8:05:14 PM",
+      "imageTitle": "fff",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597626319/CapstoneSumms/yooitnbqoroia1khsiex.jpg",
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "plantId": 19,
+      "entryDate": "8/16/20, 8:07:47 PM",
+      "imageTitle": "sss",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597626478/CapstoneSumms/xi98jkjwbsx5dscdr5hg.jpg",
+      "userId": 4,
+      "id": 7
+    },
+    {
+      "plantId": 20,
+      "entryDate": "8/16/20, 10:53:53 PM",
+      "imageTitle": "yeeeboi",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597636447/CapstoneSumms/ddehtrym8gcmf9wckqqs.jpg",
+      "userId": 4,
+      "id": 8
+    },
+    {
+      "plantId": 20,
+      "entryDate": "8/17/20, 9:30:57 AM",
+      "imageTitle": "yus boi",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597674665/CapstoneSumms/qle6lffvynlcxurzmwqq.jpg",
+      "userId": 4,
+      "id": 9
+    },
+    {
+      "plantId": 20,
+      "entryDate": "8/17/20, 9:31:16 AM",
+      "imageTitle": "ss",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597674686/CapstoneSumms/g8flcwitfl8ze3x6s1ia.jpg",
+      "userId": 4,
+      "id": 10
+    },
+    {
+      "plantId": 20,
+      "entryDate": "8/17/20, 9:31:46 AM",
+      "imageTitle": "kk",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597674712/CapstoneSumms/upfh8xaid9yc3itpp4bi.jpg",
+      "userId": 4,
+      "id": 11
+    },
+    {
+      "plantId": 20,
+      "entryDate": "8/17/20, 9:58:31 AM",
+      "imageTitle": "hhh",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597676322/CapstoneSumms/xistobqik8umhgt0b0ex.jpg",
+      "userId": 4,
+      "id": 12
+    },
+    {
+      "plantId": 20,
+      "entryDate": "8/17/20, 10:28:49 AM",
+      "imageTitle": "k",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597678136/CapstoneSumms/cjr1kqopnacuanlvlj4w.jpg",
+      "userId": 4,
+      "id": 13
     }
   ]
 }

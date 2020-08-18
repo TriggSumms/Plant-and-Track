@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PlantManager from '../../modules/PlantManager';
-//import './PlantForm.css'
 import { Form } from 'react-bootstrap';
 import './css-java-extension/materialize.css';
 import './css-java-extension/materialize.min.css';
@@ -19,7 +18,7 @@ let timeStamp = new Intl.DateTimeFormat("en", {
 });
 
 const PlantForm = props => {
-    const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), age: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
+    const [plant, setPlant] = useState({ userId: 0, id: 0, nickName: "", vernacularName: "", entryDate: timeStamp.format(Date.now()), indoorOutdoor: "", moodId: 0, sunlightLevelId: 0, waterLevelId: 0, isDead: false });
     const [moods, setMoods] = useState([]);
     const [sunlightLevels, setSunlightLevels] = useState([]);
     const [waterLevels, setWaterLevels] = useState([]);
@@ -35,15 +34,11 @@ const PlantForm = props => {
 
 
     //DROPDOWN API CALLS
-
-
-
     const getMoods = () => {
         return PlantManager.getAll("moods").then(moodsfromAPI => {
             setMoods(moodsfromAPI)
         })
     };
-
     const getSunlightLevels = () => {
         return PlantManager.getAll("sunlightLevels").then(sunlightLevelsfromAPI => {
             setSunlightLevels(sunlightLevelsfromAPI)
@@ -54,8 +49,6 @@ const PlantForm = props => {
             setWaterLevels(waterLevelsfromAPI)
         })
     };
-
-
     //END DROPDOWN CALLS
 
 
@@ -63,12 +56,11 @@ const PlantForm = props => {
         getMoods();
         getSunlightLevels();
         getWaterLevels();
-
     }, []);
 
 
 
-
+    //TARGETING ACTIVE USER
     const currentUserId = sessionStorage.getItem("activeUser")
     plant.userId = parseInt(currentUserId)
 
@@ -76,13 +68,11 @@ const PlantForm = props => {
 
     const constructNewPlant = evt => {
         evt.preventDefault();
-        if (plant.nickName === "" || plant.vernacularName === "" || plant.age === "" || plant.sunlightLevelId === 0 || plant.waterLevelId === 0 || plant.moodId === 0)
-    /*  */ {
+        if (plant.nickName === "" || plant.vernacularName === "" || plant.indoorOutdoor === "" || plant.sunlightLevelId === 0 || plant.waterLevelId === 0 || plant.moodId === 0) {
             window.alert("Please fill out all the entry requirements....otherwise your plant won't survive the season!");
-        } else {
-            setIsLoading(true);
-            // Create the article and redirect user to article list
-
+        }
+        else {
+            setIsLoading(true)
             plant.moodId = parseInt(plant.moodId)
             plant.sunlightLevelId = parseInt(plant.sunlightLevelId)
             plant.waterLevelId = parseInt(plant.waterLevelId)
@@ -96,6 +86,7 @@ const PlantForm = props => {
 
     return (
         <>
+{/* FORM USING MATERILIZE */}
             <div className="row">
                 <div className="col s12 m5">
                     <div className="card-panel transparent">
@@ -117,17 +108,17 @@ const PlantForm = props => {
                                 </div>
                                 <div className="row">
                                     <div className="input-field col s12">
-                                        What is the Age of your plant:
+                                        Does your plant like an indoor enviorment or outdoor enviorment...or both?:
           <div className="input-field inline">
-                                            <input placeholder="How many days...old?" id="age" type="text" required
+                                            <input placeholder="Inside/Outside?" id="indoorOutdoor" type="text" required
                                                 onChange={handleFieldChange} className="validate"></input>
                                             <label for="age"></label>
                                         </div>
                                     </div>
                                 </div>
+{/* END MATERILIZE FORM*/}
 
-
-
+{/* DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
                                 <div className="">
                                     <Form.Group className="" >
                                         <Form.Label>Plant Mood:</Form.Label>
@@ -183,6 +174,7 @@ const PlantForm = props => {
                     </div>
                 </div>
             </div>
+{/* END DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
         </>
     );
 };

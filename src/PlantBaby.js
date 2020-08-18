@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
-import './PlantBaby.css';
-
-//import { Container } from 'react-bootstrap';
-import NavBar from './nav/NavBar';
-//import PlantCard from "./plant/PlantCard"
-import ApplicationViews from "./ApplicationViews"
-//import Jumbotron from "./nav/Jumbotron";
+import NavBar from './components/nav/NavBar';
+import ApplicationViews from "./components/ApplicationViews"
+import "./PlantBaby.css"
 
 
 
 const PlantBaby = () => {
   const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
-
-
 
   //hasUser makes sure the crendentials has a value
   const [hasUser, setHasUser] = useState(isAuthenticated());
@@ -27,18 +21,21 @@ const PlantBaby = () => {
     sessionStorage.clear();
     setHasUser(isAuthenticated());
   }
+
+
+
   return (
     <>
 
-
       <NavBar hasUser={hasUser} clearUser={clearUser} />
-
-      <ApplicationViews hasUser={hasUser} setUser={setUser} />
-
+ 
+      <ApplicationViews hasUser={hasUser} setUser={setUser} /> 
 
     </>
   );
 }
+
+
 export default PlantBaby;
 
 

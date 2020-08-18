@@ -1,12 +1,15 @@
+
 import React, { useState, useEffect } from 'react';
-import UserCard from './UserCard';
+import JumboUserCard from './JumboUserCard';
 import UserManager from '../../modules/UserManager';
 
 
 
 
 
-const UserList = (props) => {
+
+const JumboUserList = (props) => {
+  // The initial state is an empty array
   const [user, setUser] = useState([]);
   const id = sessionStorage.getItem("activeUser")
   const getUser = (id) => {
@@ -15,17 +18,15 @@ const UserList = (props) => {
     });
   };
 
-
-
-
   // got the users from the API on the component's first render
   useEffect(() => {
     getUser(id);
   }, []);
 
+
   return (
     <div>
-      <UserCard
+      <JumboUserCard
         key={user.id}
         user={user}
         name={user.name}
@@ -36,4 +37,4 @@ const UserList = (props) => {
 
   );
 };
-export default UserList;
+export default JumboUserList;

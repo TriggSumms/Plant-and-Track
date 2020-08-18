@@ -2,8 +2,12 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
 import GraveYard from "./home/GraveYard"
-import Login from "./auth/Login";
-import Register from "./auth/Register"
+//import Login from "./auth/Login.jsx";
+//import { Register } from "./auth/Register"
+
+import { CustomLogin } from "./auth/CustomLogin.jsx"
+import UserList from "./auth/UserList"
+import UserEditForm from "./auth/UserEditForm"
 import PlantList from "./plant/PlantList";
 import PlantForm from "./plant/PlantForm";
 import PlantDetail from "./plant/PlantDetail";
@@ -12,19 +16,19 @@ import PlantJournalForm from "./plant/PlantJournalForm"
 import PlantJournalDetail from "./plant/PlantJournalDetail"
 import PlantGraveYardList from "./plant/PlantGraveYardList"
 import PlantJournalEditForm from "./plant/PlantJournalEditForm"
+import ImageForm from "./plant/ImageForm"
 //import UserList from "./auth/UserList"
 //import UserEditForm from "./auth/UserEditForm"
 
 
-// Check if credentials are in session storage returns true/false
-//Redirects to login if nothing in session storage.
-//const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
   const setUser = props.setUser;
   return (
-    <React.Fragment>
+
+
+<React.Fragment>
       <Route
         exact
         path="/home"
@@ -32,37 +36,38 @@ const ApplicationViews = (props) => {
           return <Home {...props} />;
         }} />
 
-      {/* LOGIN ROUTE */}
+  {/*LOGIN Routes START  ************************************************************************************************************************/}
       {/* //pass the `setUser` function to Login component. */}
       <Route path="/login" render={props => {
-        return <Login setUser={setUser} {...props} />
-      }} />
-      <Route path="/register" render={props => {
-        return <Register setUser={setUser} {...props} />
+        return <CustomLogin setUser={setUser} {...props} />
       }} />
 
-      {/*USER INFO   */}
-      {/* <Route path="/home"render={props => {return <UserList {...props} />}} /> */}
-      {/* <Route path="/users/:userId(\d+)/edit"render={props => {if (hasUser) {return <UserEditForm {...props} />} else {return <Redirect to="/home" />} }} /> */}
-      {/*END USER INFO  */}
 
 
-      {/*Plant LIST Routes START  */}
+
+{/* USER Routes START  ************************************************************************************************************************/}
       <Route
-        exact
-        path="/plantListz"
+        path="/userListz"
+        render={props => {
+          return <UserList {...props} />
+        }} />
+
+      <Route
+        path="/users/:userId(\d+)/edit"
         render={props => {
           if (hasUser) {
-            return <PlantList {...props} />;//Home here is a placeholder value. 
-
+            return <UserEditForm {...props} />
           } else {
-            return <Redirect to="/login" />
+            return <Redirect to="/home" />
           }
         }} />
 
+      {/*END USER INFO  */}
 
 
-      {/*Plant LIST Routes END */}
+
+
+      {/*DEADPlant Routes START  ************************************************************************************************************************/}
       <Route
         exact
         path="/DeadPlants"
@@ -71,7 +76,7 @@ const ApplicationViews = (props) => {
         }} />
 
       <Route
-        
+
         path="/DeadPlantListz"
         render={props => {
           if (hasUser) {
@@ -85,8 +90,28 @@ const ApplicationViews = (props) => {
       />
 
 
-      {/*Plant Routes START  */}
 
+
+
+
+
+<Route path="/plants/:plantId(\d+)/newimage"
+
+render={(props) => {
+  return <ImageForm
+    plantId={parseInt(props.match.params.plantId)}
+    {...props} />
+}} />
+
+
+
+
+
+
+
+
+
+      {/*Plant Routes START  ************************************************************************************************************************/}
       <Route
         path="/plants/new"
         render={(props) => {
@@ -117,14 +142,25 @@ const ApplicationViews = (props) => {
             return <Redirect to="/home" />
           }
         }} />
+
+      <Route
+        exact
+        path="/plantListz"
+        render={props => {
+          if (hasUser) {
+            return <PlantList {...props} />;//Home here is a placeholder value. 
+
+          } else {
+            return <Redirect to="/login" />
+          }
+        }} />
+
+
       {/*Plant Routes End  */}
 
 
 
-      {/*Journal Routes START  */}
-
-
-
+      {/*Journal Routes START  *********************************************************************************************************************/}
       <Route path="/plants/:plantId(\d+)/newjournal"
 
         render={(props) => {
@@ -157,14 +193,7 @@ const ApplicationViews = (props) => {
             return <Redirect to="/home" />
           }
         }} />
-
-
-
-
-
-
-
-    </React.Fragment>
+</React.Fragment>
   );
 }
 export default ApplicationViews;

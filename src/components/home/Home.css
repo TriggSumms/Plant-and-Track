@@ -2,21 +2,36 @@
   * {
     box-sizing: border-box; 
    }
+ 
    body {
      margin: 0;
    }
    #main {
      display: flex;
      min-height: calc(80vh - 10vh);
+     background: rgb(132, 169, 140, 0.50);
+     background: rgb(82, 121, 111, 0.50) 75% 75% no-repeat;
+     min-width: 300px;
+     min-height: 300px;
+     box-shadow: inset 0 0 100px #CAD2C5, inset 0 0 100px #CAD2C5, inset 0 0 100px #CAD2C5;
+     opacity: 100%;
+     background-image: url();
+     background-position: stretch;
+
+  
    }
+   
    #main > article {
      flex: 1;
    }
    #main > nava, 
    #main > aside {
      flex: 0 0 10vw;
-     background:  rgb(200, 213, 185);
-     opacity: 25%;
+     background: transparent;
+     opacity: 100%;
+     background-image: url();
+     
+     opacity: 90%;
    }
    #main > nava {
      order: -1;
@@ -26,84 +41,11 @@
    }
    header, footer {
      background: yellowgreen;
-     background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fst3.depositphotos.com%2F4162521%2F18146%2Fi%2F1600%2Fdepositphotos_181466142-stock-photo-watercolor-seamless-pattern-green-leaves.jpg&f=1&nofb=1);
+     background-image: url(https://i.pinimg.com/564x/4a/a7/a4/4aa7a45145ea0d029c4025b0e5753d38.jpg);
      background: cover;
-     opacity: 75%;
+     opacity: 90%;
      height: 15vh;
    }
 
 
-
-/* .theAppUnderBanner{
-        background-color: transparent;
-        border: 20px solid #0e0a0a;
-        width: 1900px;
-        height: 800px;
-        perspective: 1000px;
-        
-         
-}
-
-.undertheBannerMiddle{
-    border: 1px solid #B22222;
-    border-radius: 1px;
-    display: flex;
-    
-    flex-direction: row;
-    justify-content: space-around;
-    flex-flow: space-around;
-    flex-wrap: nowrap;
-    padding: 5px 5px;
-
-  }
-  .undertheBannerMiddle-Left__Container{
-    border: 1px solid #2254b2;
-    border-radius: 1px;
-    order: -1;
-    flex:20%;
-    border-radius: 1px;
-    padding: 1px 1px;
-
-  
-  }
-  .undertheBannerMiddle-Center__Container{
-    border: 1px solid #2254b2;
-    border-radius: 1px;
-    order:1;
-    
-    border-radius: 1px;
-    padding: 1px 1px;
-  
-    
-  
-  }
-  .undertheBannerMiddle-Right__Container{
-    border: 1px solid #2254b2;
-    border-radius: 1px;
-    order:3;
-    flex:20%;
-    border-radius: 1px;
-    padding: 1px 1px;
-    
-  } */
- /*  */
-   .plantCards-Center__Container{
-    border: 1px solid #2eb222;
-    border-radius: 1px;
-    display: flex;
-    
-    height: 550px;
-    width: 1300px;
-    padding: 50px 50px;
-    margin: 25px 25px;
-    overflow-x: auto; /* Hide horizontal scrollbar */
-    overflow-y: none; 
-    text-align:center;
-  }
-
-  .plantCardSeperation{
-   margin-top: 300px;
-     justify-content: space-around;
-     flex-direction: row;
-  }
   

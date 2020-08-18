@@ -1,58 +1,117 @@
 
 
+/*SCROLL BAR START TARGETTING*/
 
-
-
-
-
-
-
-
-
-
-.flip-card {
-  background-color: transparent;
-  width: 315px;
-  height: 350px;
-  perspective: 1000px;
+/* SCROLL width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 10.0s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(138, 138, 138);
+  border-radius: 5px;
 }
 
- .flip-card:Hover .flip-card-inner {
-  transform: rotateY(180deg);
-} 
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #CAD2C5;
+  border-radius: 5px;
 }
+
+/*SCROLL BAR END TARGETTING*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*This is the main CSS for the CARDS*/
+
+
+.cardz{
+  width: 32%;
+  position: relative;  
+  padding-top: 45px;
+  padding-bottom: 25px;
+}
+
 
 .flip-card-front {
   /* background-color: #bbb; */
+  width: 325px;
+  height: 375px;
+  perspective: 1000px;
   color: black;
-  
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.notonthehighstreet.com%2Ffs%2F84%2F82%2Fc128-352b-4463-a6a7-7c3b1a5b0880%2Foriginal_tropical-hothouse-botanical-print-fabric.jpg&f=1&nofb=1);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+border-radius: 5px 5px 5px 5px;
 }
 
 .flip-card-back {
   /* background-color: #2980b9; */
+  width: 325px;
+  height: 375px;
   color: black;
-  transform: rotateY(180deg);
-  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fx%2Fgreen-fern-leaves-seamless-pattern-background-vector-line-art-hand-drawn-textured-plants-30853215.jpg&f=1&nofb=1);
-
+  perspective: 1000px;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.notonthehighstreet.com%2Ffs%2F84%2F82%2Fc128-352b-4463-a6a7-7c3b1a5b0880%2Foriginal_tropical-hothouse-botanical-print-fabric.jpg&f=1&nofb=1);
+  padding-top: 10px;
 }
+
+   .plantCards-Center__Container{
+  background:(0,0,0,0.6);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 550px;
+  width: 1350px;
+  overflow-y: auto;
+  }
+
+.centeringdetailsCARD{
+padding-left:750px;
+padding-top:150px;
+  align-content: center;
+  justify-content: space-evenly; 
+  align-items: center;
+  text-align: center; 
+  transition: transform 2.0s;  /*Animation */ 
+}
+.centeringdetailsCARD:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+/*END OF MAIN TARGETS*/
+
+
+
+
+
+
+
+
 
 
 
@@ -83,19 +142,19 @@ font-size: 15px;
   text-shadow: 0 0 1px  rgb(113, 207, 24);
   
 }
-.VariableEntry{
+.VariableEntryTitle{
   font-family: 'IM Fell English SC', serif;
-  font-size: 15px;
+  
     text-align: center;
-    list-style: none;
+    align-content: center;
+    font-size: 17px;
     margin: 0;
     padding: 0;
     padding-left: 5px;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    float: center;
-    display: inline;
+    
     text-shadow: 0 0 1px  rgb(113, 207, 24);
 }
 .VariableEntry1{
@@ -109,7 +168,7 @@ font-size: 15px;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    float: center;
+    align-content: center;
     display: inline;
     text-shadow: 0 0 1px  rgba(238, 238, 238, 0.493);
 }
@@ -155,7 +214,7 @@ font-family: 'Josefin Sans', sans-serif;
 /*Laying out all the container for the front of the plant card  */
 .plantcard-names__Container{
     /* border: 1px solid #B22222; */
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fx%2Fgreen-fern-leaves-seamless-pattern-background-vector-line-art-hand-drawn-textured-plants-30853215.jpg&f=1&nofb=1);
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.notonthehighstreet.com%2Ffs%2F84%2F82%2Fc128-352b-4463-a6a7-7c3b1a5b0880%2Foriginal_tropical-hothouse-botanical-print-fabric.jpg&f=1&nofb=1);
     border-radius: 1px;
     display: flex;
     flex-direction: row;
@@ -205,7 +264,7 @@ font-family: 'Josefin Sans', sans-serif;
 }
 .plantcard-logo-variable__Container{
     /* border: 1px solid #B22222; */
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fx%2Fgreen-fern-leaves-seamless-pattern-background-vector-line-art-hand-drawn-textured-plants-30853215.jpg&f=1&nofb=1);
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.notonthehighstreet.com%2Ffs%2F84%2F82%2Fc128-352b-4463-a6a7-7c3b1a5b0880%2Foriginal_tropical-hothouse-botanical-print-fabric.jpg&f=1&nofb=1);
     border-radius: 1px;
     overflow: none;
     display: flex;
@@ -215,6 +274,7 @@ font-family: 'Josefin Sans', sans-serif;
     flex-wrap:nowrap;
     padding: 5px 5px;
 }
+
 .plantcard-logo{
     /* border: 1px solid #2254b2; */
     background: rgba(218, 215, 205, 0.95);
@@ -226,12 +286,26 @@ font-family: 'Josefin Sans', sans-serif;
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12)
   ;
-    border-radius: 10px;
+   display:flex;
+   flex-direction: column;
+    border-radius: 5px;
     background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa000000%2Fa002900%2Fa002902%2Felnino.0378.png&f=1&nofb=1);
-    flex: 20%;
-    padding: 6px 6px;
+    flex: 15%;
+    
+    align-content: center;
+    justify-content: space-evenly; 
+    align-items: center;
+    text-align: center;
+    padding-bottom: 15px;
 
 }
+.PlantCardFrontButton{
+  align-content: center;
+  justify-content: space-evenly; 
+  align-items: center;
+  text-align: center;
+}
+
 .plantcard-variable-list__Container{
     /* border: 1px solid #2254b2; */
     background: rgba(218, 215, 205, 0.95);
@@ -253,13 +327,9 @@ font-family: 'Josefin Sans', sans-serif;
 }
 .plantcard-image__Container{
     /* border: 1px solid #B22222; */
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fx%2Fgreen-fern-leaves-seamless-pattern-background-vector-line-art-hand-drawn-textured-plants-30853215.jpg&f=1&nofb=1);
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.notonthehighstreet.com%2Ffs%2F84%2F82%2Fc128-352b-4463-a6a7-7c3b1a5b0880%2Foriginal_tropical-hothouse-botanical-print-fabric.jpg&f=1&nofb=1);
     border-radius: 1px;
-    display: flex;
-    flex-direction: row;
-    flex-flow: space-around;
-    flex-wrap:nowrap;
-    padding: 5px 5px;
+
     
     
 }
@@ -277,11 +347,52 @@ font-family: 'Josefin Sans', sans-serif;
     border-radius: 10px;
     background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa000000%2Fa002900%2Fa002902%2Felnino.0378.png&f=1&nofb=1);
     width: 100%;
-    height: 125px;
+    height: 115px;
     flex-wrap:nowrap;
     padding: 6px 6px;
-    
+     display: flex;
+flex-direction: row-reverse;
+   flex-wrap:nowrap;
+   justify-content: space-evenly;   
+  overflow-y: scroll;
+  
 }
+
+
+.plantImg{
+
+  width: 150px;
+  height: 100px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+.plantLogo{
+
+  width: 200px;
+  height: 200px;
+/*   padding-right: 30px;
+  padding-left: 5px;
+  margin-bottom: 10px; */
+  border-radius: 200px;
+  
+  
+}
+
+
+
+
+
+
+
+
+
 
 
 /* BACK OF PLANT CARD TARGETTING */
@@ -296,36 +407,44 @@ font-family: 'Josefin Sans', sans-serif;
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12)
   ;
-    border-radius: 10px;
+    border-radius: 15px;
     background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa000000%2Fa002900%2Fa002902%2Felnino.0378.png&f=1&nofb=1);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 5px 5px;
+    
     font-family: 'IM Fell English SC', serif;
-    font-size: 30px;
+    font-size: 25px;
+    margin-bottom:20px;
+    
  
 }
 
 .plantCardBackName{
   font-family: 'Nothing You Could Do', cursive;
-  font-size: 30px;
+  font-size: 25px;
+  
 }
 
 
 .plantcard-journal-entries__Container{
     /* border: 1px solid #B22222; */
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fx%2Fgreen-fern-leaves-seamless-pattern-background-vector-line-art-hand-drawn-textured-plants-30853215.jpg&f=1&nofb=1);
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.notonthehighstreet.com%2Ffs%2F84%2F82%2Fc128-352b-4463-a6a7-7c3b1a5b0880%2Foriginal_tropical-hothouse-botanical-print-fabric.jpg&f=1&nofb=1);
+    /* background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fx%2Fgreen-fern-leaves-seamless-pattern-background-vector-line-art-hand-drawn-textured-plants-30853215.jpg&f=1&nofb=1); */
     border-radius: 1px;
     width: 100%;
     height: 175px;
     flex-wrap:nowrap;
     padding: 5px 5px;
+    margin-top: 10px;
     
 }
+
+
+
 .plantcard-journal-entry__Container{
     /* border: 1px solid #2254b2; */
-    background-color: rgb(88, 129, 87);
+    background: rgba(218, 215, 205, 0.95);
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -335,14 +454,36 @@ font-family: 'Josefin Sans', sans-serif;
     0 100px 80px rgba(0, 0, 0, 0.12)
   ;
     border-radius: 10px;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa000000%2Fa002900%2Fa002902%2Felnino.0378.png&f=1&nofb=1);
+    
     
     width: 100%;
-    height: 150px;
+    height: 200px;
     flex-wrap:nowrap;
     padding: 1px 1px;
     overflow:auto;
+    margin-top: 15px ;
 
 
+}
+
+.plantCard-journal-button-Container{
+  width: 100%;
+  height: 30px;
+  flex-wrap:nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 60px ;
+}
+.plantCard-frontflip-button-Container{
+  width: 100%;
+  height: 15px;
+  flex-wrap:nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 0px ;
 }
 
 
@@ -356,22 +497,16 @@ font-family: 'Josefin Sans', sans-serif;
 
 
 
+/* START Journal CARD MESSAGE */
 
-
-
-
-
-
-/* Journal CARD MESSAGE */
-/* Style the container with a rounded border, grey background and some padding and margin */
 .container-s {
   border: 2px solid rgb(186, 207, 185);
   background-color:rgb(218, 215, 205);
   border-radius: 5px;
-  padding: 16px;
-  margin: 16px 0;
+  padding: 5px;
+  margin: 1px 3px;
   width: 90%;
-  max-height: 15%;
+  margin-bottom: 30px;
   box-shadow: 0 3px 9px 0 rgb(131, 194, 22);
   
 }
@@ -379,74 +514,58 @@ font-family: 'Josefin Sans', sans-serif;
 
 
 .messageTitle{
-display: inline; 
+display: flex; 
 font-family: 'Josefin Sans', sans-serif;
-  font-size: 10px;
-  margin: 10;
+  font-size: 15px;
+  margin-left: 0;
   padding: 1px;
-  padding-left: 1px;
- float: right;
+ float: left;
 text-shadow: 0 0 .5px  rgba(239, 255, 9, 0.274);
 
 }
 
 .messageDate{
-  display: inline; 
+  display: flex; 
   font-family: 'Josefin Sans', sans-serif;
-    font-size: 15px;
+  font-size: 6px;
   margin: 0;  
-  float: left;
+  float: right;
   text-shadow: 0 0 5px  rgba(238, 238, 238, 0.493);
 }
 .truncate {
-  font-size: 18px;
+  font-size: 10px;
   color: rgb(31, 78, 51);
-  text-align: right;
-  padding-right: 1em; 
-  float: center;
+  float:right;
+
   }
 
-
-
-/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
-.container img {
-  float: left;
-  margin-right: 20px;
-  border-radius: 50%;
-}
-
-/* Increase the font-size of a span element */
-.container-s span {
-  font-size: 20px;
-  margin-right: 2px;
-}
-
-/* Add media queries for responsiveness. This will center both the text and the image inside the container */
-@media (max-width: 500px) {
-  .container-s {
-    text-align: center;
+  .messageEntry{
+padding-top:20px;
   }
 
-  .container-s img {
-    margin: auto;
-    float: none;
-    display: block;
-  }
+.JournalDetailButton{
+  text-align: center;
+  margin:0;
+  padding: 0;
 }
+
+
 
 .message__buttons {
 background-color: rgb(100, 128, 93);
 border: none;
 color: cornsilk;
 /* box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2); */
-text-align: right;
+
 text-decoration: none;
 display: inline-flex;
 font-size: 15px;
 margin: 1em;
-float:center;
+float:left;
 border-radius: 200px; 
 text-shadow: 0 0 1px  rgba(166, 253, 66, 0.493);
+box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+border-radius: 200px;
 }
 
 
@@ -458,31 +577,7 @@ text-shadow: 0 0 1px  rgba(166, 253, 66, 0.493);
 }
 
 
-/*  */
-.plantCardSeperation{
-  margin-top: 200px;
-  margin-right: 150px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: start;
-  float:center;
-  position:center;
-  align-self: center;
- }
-
- .ButtonandSearchList{
-  display: flex;
-  width: 300%;
-  justify-content: space-evenly;
-  margin-right: 2px;
-  padding-left: 10px;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-  
- }
-
-/*  */
+/*JOURNAL END OF MESSAGE TARGETTING  */
 
 
 
@@ -518,6 +613,240 @@ margin-right: 1em;
 padding: 10px, 10px;
 
 }
+
+
+/* END OF JOURNAL CARD */
+
+
+
+
+
+
+
+
+/*HERE LIES ALL THE GRAVEYARD CSS */
+
+
+
+.DEAD-flip-card-front {
+  /* background-color: #bbb; */
+  width: 325px;
+  height: 375px;
+  perspective: 1000px;
+  color: black;
+  background-image: url(https://i.pinimg.com/originals/f7/77/76/f77776f8c226662cf591fe91c8117c8a.jpg);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+border-radius: 5px 5px 5px 5px;
+ 
+}
+
+.DEAD-flip-card-back {
+  /* background-color: #2980b9; */
+  width: 325px;
+  height: 375px;
+  color: black;
+  perspective: 1000px;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+
+  background-image: url(https://i.pinimg.com/originals/f7/77/76/f77776f8c226662cf591fe91c8117c8a.jpg);
+  padding-top: 10px;
+}
+
+
+.DEAD-plantcard-names__Container{
+  /* border: 1px solid #B22222; */
+  background-image: url(https://i.pinimg.com/originals/f7/77/76/f77776f8c226662cf591fe91c8117c8a.jpg);
+  border-radius: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: space-around;
+  flex-wrap:nowrap;
+  padding: 5px 5px;
+
+}
+.DEAD-plantcard-vernacular-name__Container{
+  /* border: 1px solid #2254b2; */
+  background: rgba(218, 215, 205, 0.95);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  border-radius: 10px;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa000000%2Fa002900%2Fa002902%2Felnino.0378.png&f=1&nofb=1);
+  
+  order:2;
+  padding: 6px 6px;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 15px;
+
+}
+.DEAD-plantcard-nick-name__Container{
+  /* border: 1px solid #2254b2; */
+  background: rgba(218, 215, 205, 0.95);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  border-radius: 10px;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa000000%2Fa002900%2Fa002902%2Felnino.0378.png&f=1&nofb=1);
+  order:1;
+  padding: 6px 6px;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 20px;
+}
+.DEAD-plantcard-logo-variable__Container{
+  /* border: 1px solid #B22222; */
+  background-image: url(https://i.pinimg.com/originals/f7/77/76/f77776f8c226662cf591fe91c8117c8a.jpg);
+  border-radius: 1px;
+  overflow: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: space-around;
+  flex-wrap:nowrap;
+  padding: 5px 5px;
+}
+
+.DEAD-plantcard-logo{
+  /* border: 1px solid #2254b2; */
+  background: rgba(218, 215, 205, 0.95);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+ display:flex;
+ flex-direction: column;
+  border-radius: 10px;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa000000%2Fa002900%2Fa002902%2Felnino.0378.png&f=1&nofb=1);
+  flex: 20%;
+  padding: 6px 6px;
+  align-content: center;
+  justify-content: space-evenly; 
+  align-items: center;
+  text-align: center;
+
+}
+.DEAD-plantcard-variable-list__Container{
+  /* border: 1px solid #2254b2; */
+  background: rgba(218, 215, 205, 0.95);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  border-radius: 10px;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa000000%2Fa002900%2Fa002902%2Felnino.0378.png&f=1&nofb=1);
+  font-size: 12px;
+  flex: 60%;
+  padding: 6px 6px;
+  overflow:none;
+  
+}
+.DEAD-plantcard-image__Container{
+  /* border: 1px solid #B22222; */
+  background-image: url(https://i.pinimg.com/originals/f7/77/76/f77776f8c226662cf591fe91c8117c8a.jpg);
+  border-radius: 1px;
+
+  
+  
+}
+.DEAD-plantcard__image-window__Container{
+  /* border: 1px solid #2254b2; */
+  background: rgba(218, 215, 205, 0.95);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  border-radius: 10px;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsvs.gsfc.nasa.gov%2Fvis%2Fa000000%2Fa002900%2Fa002902%2Felnino.0378.png&f=1&nofb=1);
+  width: 100%;
+  height: 115px;
+  flex-wrap:nowrap;
+  padding: 6px 6px;
+   display: flex;
+flex-direction: row-reverse;
+ flex-wrap:nowrap;
+ justify-content: space-evenly;   
+overflow-y: scroll;
+
+}
+.DEAD-journal-title__Container{
+  /* border: 1px solid #B22222; */
+  background: rgba(218, 215, 205, 0.95);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  border-radius: 15px;
+  background-image: url();
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  font-family: 'IM Fell English SC', serif;
+  font-size: 25px;
+  margin-bottom:20px;
+  
+
+}
+.DEAD-plantcard-journal-entries__Container{
+  /* border: 1px solid #B22222; */
+  background-image: url(https://i.pinimg.com/originals/f7/77/76/f77776f8c226662cf591fe91c8117c8a.jpg);
+  /* background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fx%2Fgreen-fern-leaves-seamless-pattern-background-vector-line-art-hand-drawn-textured-plants-30853215.jpg&f=1&nofb=1); */
+  border-radius: 1px;
+  width: 100%;
+  height: 175px;
+  flex-wrap:nowrap;
+  padding: 5px 5px;
+  margin-top: 10px;
+  
+}
+
+
+
+/*HERE LIES THE END OF GRAVEYARD CSS */
+
+
+
+
 
 
 
