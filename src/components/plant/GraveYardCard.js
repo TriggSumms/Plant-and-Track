@@ -107,7 +107,7 @@ const GraveYardCard = (props) => {
             <div className="DEAD-plantcard-logo-variable__Container">
               <div className="plantcard-logo">
                 <div className="text" data-toggle="buttons">
-                  <h6>Give your Plant Life Again!</h6>
+                  <h6>NOT DEAD?</h6>
 
                   <label className=""> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/plasticine/40/000000/plant-under-sun.png" alt="button-generic" /></label>
                   <button onClick={handleClick}><img src="https://img.icons8.com/clouds/40/000000/swap.png" /></button>

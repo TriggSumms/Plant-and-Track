@@ -20,7 +20,7 @@ const JumboUserCard = props => {
           
             <div className= "LOGOposition1">
                  <h1> Welcome, {props.user.user} </h1>
-                <h2>...To your personal Plant Track'n assistant</h2> 
+                <h2>...To Your Personal Plant & Track Assistant</h2> 
              </div>
              </>
         );

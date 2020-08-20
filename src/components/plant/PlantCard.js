@@ -125,8 +125,8 @@ const PlantCard = (props) => {
                   <label className=""> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img className="PlantCardFrontButton" src="https://img.icons8.com/plasticine/32/000000/headstone.png" alt="button-generic" /></label>
                 </div>
 
-                <Link to={`/plants/${props.plant.id}`}><button className="PlantCardFrontButton"><img className="PlantCardFrontButton" src="https://img.icons8.com/plasticine/32/000000/view-details.png" alt="button-generic" /></button></Link>
-                <div className="plantCard-frontflip-button-Container"><button onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png"/></button></div>
+                <Link to={`/plants/${props.plant.id}`}><button className="PlantCardFrontButton" ><img className="PlantCardFrontButton" src="https://img.icons8.com/plasticine/32/000000/view-details.png" alt="button-generic" /></button></Link>
+                <div className="plantCard-frontflip-button-Container"><button   onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png"/></button></div>
               </div>
               <div className="plantcard-variable-list__Container">
                 <h1 className="VariableEntryTitle"> Plant Specs. </h1>
@@ -167,7 +167,7 @@ const PlantCard = (props) => {
             <div className="plantcard-journal-title__Container">
               Journal Entries: <p className="plantCardBackName"> {props.plant.nickName}</p>
             </div>
-            <div className="plantcard-journal-entries__Container">
+            
               {/* <button type="button" className="waves-effect waves-light btn" onClick={() => { props.history.push("/journals/new/") }}> New Journal Entry ?</button> */}
               {/* <Link to={`/journals/${props.plant.id}/new/`}><button>NEW PLANT BABY</button></Link> */}
               <div className="plantcard-journal-entry__Container">
@@ -183,9 +183,9 @@ const PlantCard = (props) => {
                 </div>
 
               </div>
-            </div>
+            
             <div className="plantCard-journal-button-Container">
-              <button onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png"/></button>
+              <button  type="button" className="waves-effect waves-light btn-small" onClick={handleClick}><img src="https://img.icons8.com/clouds/30/000000/swap.png" alt="button-generic"/></button>
               <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic" /></button>
             </div>
           </div>

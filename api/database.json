@@ -26,7 +26,7 @@
     },
     {
       "id": 9,
-      "user": "TestGuy",
+      "user": "Testboi",
       "password": "yee",
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
       "email": "guyboi@gmail.com",
@@ -91,12 +91,12 @@
       "id": 39,
       "nickName": "hh",
       "vernacularName": "Pothos",
-      "entryDate": "8/17/20, 6:11:41 PM",
+      "entryDate": "8/18/20, 11:32:28 AM",
       "indoorOutdoor": "Outdoor",
       "moodId": 2,
       "sunlightLevelId": 2,
       "waterLevelId": 4,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 10,
@@ -196,51 +196,51 @@
     },
     {
       "userId": 11,
-      "id": 48,
-      "nickName": "TooHottBaTot",
-      "vernacularName": "Monstera",
-      "entryDate": "8/17/20, 8:51:33 PM",
-      "indoorOutdoor": "Indoor",
-      "moodId": 1,
-      "sunlightLevelId": 2,
-      "waterLevelId": 4,
-      "isDead": false
-    },
-    {
-      "userId": 11,
       "id": 49,
       "nickName": "All'that Kim",
       "vernacularName": "Kimberly Fern",
-      "entryDate": "8/17/20, 8:54:35 PM",
+      "entryDate": "8/20/20, 3:58:45 PM",
       "indoorOutdoor": "Outdoor",
       "moodId": 3,
       "sunlightLevelId": 3,
       "waterLevelId": 5,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 11,
       "id": 50,
       "nickName": "ChildBabiBoo",
       "vernacularName": "Cone Flower",
-      "entryDate": "8/17/20, 8:57:11 PM",
+      "entryDate": "8/18/20, 11:36:28 AM",
       "indoorOutdoor": "Outdoor",
       "moodId": 1,
       "sunlightLevelId": 3,
       "waterLevelId": 4,
-      "isDead": false
+      "isDead": true
     },
     {
       "userId": 11,
       "id": 51,
       "nickName": "Hellboi",
       "vernacularName": "Cactus",
-      "entryDate": "8/17/20, 9:09:52 PM",
+      "entryDate": "8/20/20, 3:58:49 PM",
       "indoorOutdoor": "Outdoor",
       "moodId": 3,
       "sunlightLevelId": 3,
       "waterLevelId": 4,
       "isDead": true
+    },
+    {
+      "userId": 9,
+      "id": 52,
+      "nickName": "Hawaii Slim Rick",
+      "vernacularName": "Ti Tree",
+      "entryDate": "8/18/20, 11:32:48 AM",
+      "indoorOutdoor": "Inside",
+      "moodId": 2,
+      "sunlightLevelId": 2,
+      "waterLevelId": 4,
+      "isDead": false
     }
   ],
   "sunlightLevels": [
@@ -339,14 +339,6 @@
       "id": 9
     },
     {
-      "plantId": 50,
-      "entryDate": "8/17/20, 9:22:19 PM",
-      "journalEntry": "Time to make a bouquet, like the one I saw at Fall Fun Fest",
-      "journalTitle": "Time to pick em",
-      "userId": 11,
-      "id": 10
-    },
-    {
       "plantId": 42,
       "entryDate": "8/17/20, 9:23:29 PM",
       "journalEntry": "...",
@@ -363,20 +355,11 @@
       "id": 12
     },
     {
+      "userId": 11,
       "plantId": 47,
-      "entryDate": "8/17/20, 9:27:08 PM",
+      "id": 13,
       "journalEntry": "This puppy asks for more water than its worth",
-      "journalTitle": "aLright time to dose up the WATER",
-      "userId": 11,
-      "id": 13
-    },
-    {
-      "plantId": 49,
-      "entryDate": "8/17/20, 9:27:59 PM",
-      "journalEntry": "This Puppy doesnt look like it should",
-      "journalTitle": "Weird lil Fern",
-      "userId": 11,
-      "id": 14
+      "journalTitle": "Alright time to dose up the WATER"
     },
     {
       "plantId": 44,
@@ -401,6 +384,30 @@
       "journalTitle": "Oh wow",
       "userId": 9,
       "id": 17
+    },
+    {
+      "plantId": 52,
+      "entryDate": "8/18/20, 12:21:50 PM",
+      "journalEntry": "kkk",
+      "journalTitle": "hhh",
+      "userId": 9,
+      "id": 18
+    },
+    {
+      "plantId": 52,
+      "entryDate": "8/18/20, 12:33:40 PM",
+      "journalEntry": "kkk",
+      "journalTitle": "hhh",
+      "userId": 9,
+      "id": 19
+    },
+    {
+      "plantId": 47,
+      "entryDate": "8/20/20, 4:29:35 PM",
+      "journalEntry": "https://www.gardenhealth.com/advice/plants-flowers/how-to-care-for-cacti-and-succulents#",
+      "journalTitle": "Cactus? Quick link for Care*",
+      "userId": 11,
+      "id": 20
     }
   ],
   "images": [
@@ -557,14 +564,6 @@
       "id": 26
     },
     {
-      "plantId": 48,
-      "entryDate": "8/17/20, 8:53:10 PM",
-      "imageTitle": "d",
-      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715600/CapstoneSumms/um5aifrpmhboadojnat2.jpg",
-      "userId": 11,
-      "id": 27
-    },
-    {
       "plantId": 50,
       "entryDate": "8/17/20, 8:58:01 PM",
       "imageTitle": "ll;;;;",
@@ -619,6 +618,14 @@
       "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597718595/CapstoneSumms/lfrsh2uznfa0nkiyg0mi.jpg",
       "userId": 9,
       "id": 41
+    },
+    {
+      "plantId": 46,
+      "entryDate": "8/18/20, 11:34:58 AM",
+      "imageTitle": "okra",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597768520/CapstoneSumms/kncuw7ubzic18cribtfv.jpg",
+      "userId": 11,
+      "id": 42
     }
   ]
 }

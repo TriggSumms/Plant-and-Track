@@ -185,6 +185,7 @@ const PlantDetail = props => {
               <div className="plantcard-journal-title__Container">
                 Journal Entries: <p className="plantCardBackName"> {plant.nickName}</p>
               </div>
+              
               <div className="plantcard-journal-entry__Container">
 
                 <div>
@@ -198,8 +199,9 @@ const PlantDetail = props => {
                 </div>
 
               </div>
+              
               <div className="plantCard-journal-button-Container">
-              <button onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png" /></button>
+              <button type="button" className="waves-effect waves-light btn-small"  onClick={handleClick}><img src="https://img.icons8.com/clouds/30/000000/swap.png" /></button>
                 <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic" /></button>
               </div>
             </div>

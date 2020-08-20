@@ -111,6 +111,16 @@ const constructNewImage = evt => {
                 <div className="col s12 m5">
                     <div className="card-panel transparent">
                         <div className="row">
+                                    <div >
+                                        <button
+                                            className="waves-effect waves-light btn"
+                                            type="button"
+                                            disabled={isLoading}
+                                            onClick={constructNewImage}
+                                        >Submit</button>
+                                    </div>
+                                <input type="file" lassName="waves-effect waves-light btn" name="file" id="file" onChange={importTheImage} placeholder="upload" />
+
                             <form className="col s12">
                                 <input
                                     type="hidden"
@@ -128,18 +138,9 @@ const constructNewImage = evt => {
                                     <label for="imageTitleform"></label>
                                 </div>
 
-                                <input type="file" name="file" id="file" onChange={importTheImage} placeholder="upload" />
-
-                                    <div >
-                                        <button
-                                            className="waves-effect waves-light btn"
-                                            type="button"
-                                            disabled={isLoading}
-                                            onClick={constructNewImage}
-                                        >Submit</button>
-                                    </div>
                              
                             </form>
+                            
                         </div>
                     </div>
                 </div>
