@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <Router>
     <div className="backgroundzforIndex">
-    <PlantBaby />
+      <PlantBaby />
     </div>
   </Router>,
   document.getElementById('root')

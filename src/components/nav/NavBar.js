@@ -56,8 +56,8 @@ const NavBar = props => {
             <Jumbotron />
             {/* lg needs adjustment */}
             <Navbar expand="lg">
-                <Navbar.Brand href="">   
-             PLANT & TRACK
+                <Navbar.Brand href="">
+                    PLANT & TRACK
                 </Navbar.Brand>
                 {/*LOGIN LOGOUT METHODS  */}
                 {props.hasUser ? <span className="h" onClick={handleLogout}> Logout </span> :
@@ -75,7 +75,7 @@ const NavBar = props => {
                                 {props.hasUser ? <Link to="/DeadPlants">OLE PLANT GRAVEYARD</Link> : null}
                             </Nav.Link>
                         </Nav.Item>
-{/*                         {props.hasUser ? <NavDropdown title="Additional Resources" id="basic-nav-dropdown">
+                        {/*                         {props.hasUser ? <NavDropdown title="Additional Resources" id="basic-nav-dropdown">
                             <NavDropdown.Item></NavDropdown.Item>
                             <NavDropdown.Item><Link to = 'https://plants.sc.egov.usda.gov/java/'><button>USDA PLANT DATABASE</button></Link></NavDropdown.Item>
                             <NavDropdown.Item><Link to = 'https://www.bing.com/visualsearch/Microsoft/FlowerIdentification'><button>SEARCH BY PICTURE UPLOAD</button></Link></NavDropdown.Item>

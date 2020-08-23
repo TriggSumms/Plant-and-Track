@@ -10,40 +10,40 @@ let timeStamp = new Intl.DateTimeFormat("en", {
 });
 
 const ImageForm = props => {
-    const [image, setImage] = useState({ plantId: props.plantId, entryDate: timeStamp.format(Date.now()), imageTitle: "", url: ""});
+    const [image, setImage] = useState({ plantId: props.plantId, entryDate: timeStamp.format(Date.now()), imageTitle: "", url: "" });
     const [importImage, setImportImage] = useState("")
     const [plants, setPlants] = useState([])
     const [isLoading, setIsLoading] = useState(false);
 
     //Tracks entries into text boxes
-const handleFieldChange = evt => {
+    const handleFieldChange = evt => {
         const stateToChange = { ...image };
         stateToChange[evt.target.id] = evt.target.value;
         setImage(stateToChange);
     };
 
-   
 
-const importTheImage = async evt => {
-const files = evt.target.files
-const formData = new FormData()
+
+    const importTheImage = async evt => {
+        const files = evt.target.files
+        const formData = new FormData()
         formData.append('file', files[0])
         formData.append('upload_preset', "CapstoneSumms")
         setIsLoading(true)
         const res = await fetch(
-            'https://api.cloudinary.com/v1_1/triggsumms/image/upload', 
+            'https://api.cloudinary.com/v1_1/triggsumms/image/upload',
             {
-              method: 'POST',
-              body: formData
+                method: 'POST',
+                body: formData
             }
-          )
+        )
         const file = await res.json()
         // this will save your photo
         setImportImage(file.secure_url)
-        setImage({...image, url: file.secure_url})
+        setImage({ ...image, url: file.secure_url })
         ImageManager.getAllImages('images')
         setIsLoading(false)
-      }
+    }
 
 
 
@@ -59,15 +59,15 @@ const formData = new FormData()
 
 
 
-const currentUserId = sessionStorage.getItem("activeUser")
+    const currentUserId = sessionStorage.getItem("activeUser")
     image.userId = parseInt(currentUserId)
 
 
 
 
-const constructNewImage = evt => {
+    const constructNewImage = evt => {
         evt.preventDefault();
-        if (image.imageTitle === "" ) {
+        if (image.imageTitle === "") {
             window.alert("Please fill out all the entry requirements....");
         } else {
             setIsLoading(true);
@@ -82,21 +82,21 @@ const constructNewImage = evt => {
 
 
 
-/* const getTheImages = () => {
-        return ImageManager.getAllImages("images").then(imagesFromAPI => {
-            imagesFromAPI.sort((x, y) => {
-                let a = new Date(x.entryDate),
-                  b = new Date(y.entryDate);
-                return a - b;
-           });     
-            setImage(imagesFromAPI)
-        }); 
-    }  */
+    /* const getTheImages = () => {
+            return ImageManager.getAllImages("images").then(imagesFromAPI => {
+                imagesFromAPI.sort((x, y) => {
+                    let a = new Date(x.entryDate),
+                      b = new Date(y.entryDate);
+                    return a - b;
+               });     
+                setImage(imagesFromAPI)
+            }); 
+        }  */
 
 
 
     useEffect(() => {
-       // getTheImages()
+        // getTheImages()
     }, []);
 
 
@@ -111,15 +111,15 @@ const constructNewImage = evt => {
                 <div className="col s12 m5">
                     <div className="card-panel transparent">
                         <div className="row">
-                                    <div >
-                                        <button
-                                            className="waves-effect waves-light btn"
-                                            type="button"
-                                            disabled={isLoading}
-                                            onClick={constructNewImage}
-                                        >Submit</button>
-                                    </div>
-                                <input type="file" lassName="waves-effect waves-light btn" name="file" id="file" onChange={importTheImage} placeholder="upload" />
+                            <div >
+                                <button
+                                    className="waves-effect waves-light btn"
+                                    type="button"
+                                    disabled={isLoading}
+                                    onClick={constructNewImage}
+                                >Submit</button>
+                            </div>
+                            <input type="file" lassName="waves-effect waves-light btn" name="file" id="file" onChange={importTheImage} placeholder="upload" />
 
                             <form className="col s12">
                                 <input
@@ -138,9 +138,9 @@ const constructNewImage = evt => {
                                     <label for="imageTitleform"></label>
                                 </div>
 
-                             
+
                             </form>
-                            
+
                         </div>
                     </div>
                 </div>
