@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Plant-and-Track/static/css/main.183f1bbb.chunk.css",
+    "main.js": "/Plant-and-Track/static/js/main.d2a4cf14.chunk.js",
+    "main.js.map": "/Plant-and-Track/static/js/main.d2a4cf14.chunk.js.map",
+    "runtime-main.js": "/Plant-and-Track/static/js/runtime-main.37f39871.js",
+    "runtime-main.js.map": "/Plant-and-Track/static/js/runtime-main.37f39871.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/Plant-and-Track/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.6f93f332.chunk.js": "/Plant-and-Track/static/js/2.6f93f332.chunk.js",
+    "static/js/2.6f93f332.chunk.js.map": "/Plant-and-Track/static/js/2.6f93f332.chunk.js.map",
+    "index.html": "/Plant-and-Track/index.html",
+    "precache-manifest.a06be7684d24e6b75f1b846ad80952eb.js": "/Plant-and-Track/precache-manifest.a06be7684d24e6b75f1b846ad80952eb.js",
+    "service-worker.js": "/Plant-and-Track/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/Plant-and-Track/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.183f1bbb.chunk.css.map": "/Plant-and-Track/static/css/main.183f1bbb.chunk.css.map",
+    "static/js/2.6f93f332.chunk.js.LICENSE.txt": "/Plant-and-Track/static/js/2.6f93f332.chunk.js.LICENSE.txt",
+    "static/media/login.svg": "/Plant-and-Track/static/media/login.8cc1a2a2.svg",
+    "static/media/plantBanner.jpg": "/Plant-and-Track/static/media/plantBanner.d7ed901f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37f39871.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.6f93f332.chunk.js",
+    "static/css/main.183f1bbb.chunk.css",
+    "static/js/main.d2a4cf14.chunk.js"
+  ]
+}
