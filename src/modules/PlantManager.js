@@ -72,7 +72,7 @@ export default {
             .then(result => result.json())
     },
 
-    
+
     getWithSpecificJournals(id) {
         return fetch(`http://localhost:5005/journals?plantId=${id}&_expand=plant`)
             .then(result => result.json())
@@ -114,23 +114,23 @@ export default {
         }).then(data => data.json());
     },
     //End Journal Fetch Calls
- 
 
 
-  
+
+
     //Graveyard CAlls
-    
-/*     GraveYardRoute(editedPlant){
-        return fetch (`${remoteURL}/journals/${editedPlant.id}`, {
-            method:"PATCH",
-             headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                isDead: true 
-            })
-        }) .then(resp => resp.json());
-    }*/
-    
-} 
+
+    /*     GraveYardRoute(editedPlant){
+            return fetch (`${remoteURL}/journals/${editedPlant.id}`, {
+                method:"PATCH",
+                 headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    isDead: true 
+                })
+            }) .then(resp => resp.json());
+        }*/
+
+}
 

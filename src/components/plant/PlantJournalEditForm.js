@@ -29,7 +29,7 @@ const PlantJournalEditForm = props => {
         setIsLoading(true);
 
         //Created an easy tag to post to the return edit card.... for showing chats when they are edited     
-       // const MessageChanged = "(~Edited Since~)"
+        // const MessageChanged = "(~Edited Since~)"
         const editedJournal = {
             userId: journal.userId,
             plantId: journal.plantId,
@@ -55,7 +55,7 @@ const PlantJournalEditForm = props => {
 
     return (
         <>
-        
+
             <div className="extraPaddingJournalEdit">
                 <form className="col s12">
                     <div className="formgrid">

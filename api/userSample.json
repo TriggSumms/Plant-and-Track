@@ -13,7 +13,7 @@
       {
         "userId": 4,
         "id": 9,
-        "nickName": "BIGWIZZI",
+        "nickName": "Elder BIGWIZZI ",
         "vernacularName": "Gray alder",
         "entryDate": "8/16/20, 8:15:56 PM",
         "age": "5inchs tall",
@@ -92,6 +92,14 @@
         "entryDate": "7/30/20, 2:27:53 PM",
         "journalEntry": "Ah, Moon—and Star!You are very far—But were no oneFarther than you Do you think I’d sto For a Firmament— Or a Cubit—or so? ",
         "journalTitle": "Plants and Stars?",
+        "userId": 4
+      },
+      {
+        "id": 2,
+        "plantId": 9,
+        "entryDate": "7/30/20, 2:27:57 PM",
+        "journalEntry": "https://www.gardeningknowhow.com/ornamental/trees/alder/care-of-speckled-alder-trees.htm",
+        "journalTitle": "Care Instructions?",
         "userId": 4
       }
     ],

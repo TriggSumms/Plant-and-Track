@@ -142,12 +142,12 @@ const PlantDetail = props => {
                     </div>
                     <button className="danger" type="button" onClick={() => props.history.push(`/plants/${plant.id}/edit`)}><img src="https://img.icons8.com/plasticine/32/000000/edit.png" alt="button-generic" /></button>
                     <button type="button" className="" onClick={() => { props.history.push(`/plants/${props.plantId}/newimage`) }}> <img src="https://img.icons8.com/plasticine/32/000000/image-file.png" alt="button-generic" /></button>
-                   <button className="" type="button" onClick={() => handleDelete(plant.id)}><img src="https://img.icons8.com/plasticine/32/000000/delete-forever.png" alt="button-generic" /></button>
-                   <button onClick={handleClick}><img src="https://img.icons8.com/clouds/30/000000/swap.png" /></button>
+                    <button className="" type="button" onClick={() => handleDelete(plant.id)}><img src="https://img.icons8.com/plasticine/32/000000/delete-forever.png" alt="button-generic" /></button>
+                    <button onClick={handleClick}><img src="https://img.icons8.com/clouds/30/000000/swap.png" /></button>
                   </div>
                   <div className="plantcard-variable-list__Container">
                     <ol className="VariableEntryTitle"> Plant Specs. </ol>
-                    
+
                     <div className="TitleVariable"> Created on: <p className="VariableEntry2"> {plant.entryDate} </p></div>
                     <div className="TitleVariable">Indoor/Outdoor:<p className="VariableEntry1"> {plant.indoorOutdoor}</p></div>
                     <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {sunlightLevel.level}</p> </div>
@@ -156,35 +156,36 @@ const PlantDetail = props => {
                   </div>
                 </div>
                 <div className="plantcard-image__Container">
-                <div className="plantcard__image-window__Container">
-     {/* This is where the cloudinary Window "scroll" series will go */}
-     <div className="plantImgCardsContainer">
-                  {images.map(image =>
-                    <ImageCard
-                      key={image.id}
-                      imageEntry={image}
-                      {...props}
-                    />)}
-                </div>
+                  <div className="plantcard__image-window__Container">
+                    {/* This is where the cloudinary Window "scroll" series will go */}
+                    <div className="plantImgCardsContainer">
+                      {images.map(image =>
+                        <ImageCard
+                          key={image.id}
+                          imageEntry={image}
+                          {...props}
+                        />)}
+                    </div>
 
-{/*                 <CloudFiles {...props} />
+                    {/*                 <CloudFiles {...props} />
                 {props.plant.plantUrl} */}
 
-              </div>
-            </div>
-            
+                  </div>
                 </div>
 
-                {/* This is where the cloudinary Window "scroll" series will go */}
-
               </div>
-         
+
+              {/* This is where the cloudinary Window "scroll" series will go */}
+
+            </div>
+
 
             {/* <PlantCardBack /> */}
             <div className="flip-card-back" key="back">
               <div className="plantcard-journal-title__Container">
                 Journal Entries: <p className="plantCardBackName"> {plant.nickName}</p>
               </div>
+
               <div className="plantcard-journal-entry__Container">
 
                 <div>
@@ -192,14 +193,15 @@ const PlantDetail = props => {
                     <PlantJournalCard
                       key={journal.id}
                       journalEntry={journal}
-                    
+
                       {...props}
                     />)}
                 </div>
 
               </div>
+
               <div className="plantCard-journal-button-Container">
-              <button onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png" /></button>
+                <button type="button" className="waves-effect waves-light btn-small" onClick={handleClick}><img src="https://img.icons8.com/clouds/30/000000/swap.png" /></button>
                 <button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${plant.id}/newjournal`) }}> <img src="https://img.icons8.com/plasticine/35/000000/create-new.png" alt="button-generic" /></button>
               </div>
             </div>

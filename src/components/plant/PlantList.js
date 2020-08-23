@@ -50,22 +50,13 @@ const PlantList = (props) => {
   return (
     <>
 
-{/*        <div className="ButtonandSearchList">
-  <fieldset>
-<input
-        type="text"
-        placeholder="Search via NickName"
-        onChange={evt => setSearch(evt.target.value)}
-      />
-     </fieldset> 
-      </div>  */}
-             <div class="container">
-            <div class="search">
-              <div>
-                <input type="text"  required placeholder="Search . . ." onChange={evt => setSearch(evt.target.value)}/>
-              </div>
-            </div>
-          </div> 
+      <div class="container">
+        <div class="search">
+          <div>
+            <input type="text" required placeholder="Search . . ." onChange={evt => setSearch(evt.target.value)} />
+          </div>
+        </div>
+      </div>
 
       <div className="plantCards-Center__Container">
         {filteredPlants.map(plant =>
@@ -78,8 +69,6 @@ const PlantList = (props) => {
               search={search}
               plants={plants}
               setFilteredPlants={setFilteredPlants}
-              //updateForGarbagePlant={updateForGarbagePlant}
-              //isChecked={isChecked}
               {...props}
             />)}
       </div>

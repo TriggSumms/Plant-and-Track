@@ -61,12 +61,12 @@ export const Register = (props) => {
                 <label htmlFor="inputPassword">Password</label>
                 <input onChange={handleFieldChange} id="password" type="password" name="password" placeholder="password" required="" />
               </div>
-            
-            <div className="form-group">
+
+              <div className="form-group">
                 <label htmlFor="inputBio">Bio</label>
                 <input onChange={handleFieldChange} id="bio" type="bio" name="bio" placeholder="Who are you?" required="" />
               </div>
-          </div>
+            </div>
           </div>
           <button type="submit" className="btn">
             Register

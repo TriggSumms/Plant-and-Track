@@ -63,9 +63,9 @@ const PlantEditForm = props => {
 
         };
         PlantManager.updatePlant(editedPlant)
-        .then(() => props.history.go(-1))
-        .then(()=> props.history.go(false))
-           //.then(() => window.location.reload(false))
+            .then(() => props.history.go(-1))
+            .then(() => props.history.go(false))
+        //.then(() => window.location.reload(false))
     }
 
     useEffect(() => {
@@ -84,7 +84,7 @@ const PlantEditForm = props => {
     return (
 
         <>
-{/* FORMS SECTION CREATED USING MATERILIZE */}
+            {/* FORMS SECTION CREATED USING MATERILIZE */}
             <div className="row">
                 <div className="col s12 m5">
                     <div className="card-panel transparent">
@@ -115,7 +115,7 @@ const PlantEditForm = props => {
                                     </div>
                                     <div className="row">
                                         <div className="input-field col s12">
-                                        Does your plant like an indoor enviorment or outdoor enviorment...or both?:
+                                            Does your plant like an indoor enviorment or outdoor enviorment...or both?:
           <div className="input-field inline">
                                                 <input placeholder="Indoor/Outdoor?" id="indoorOutdoor" type="text" required
                                                     onChange={handleFieldChange} className="validate" value={plant.indoorOutdoor}></input>
@@ -123,8 +123,8 @@ const PlantEditForm = props => {
                                             </div>
                                         </div>
                                     </div>
-{/* MATERILIZE FORM END */}
-{/* DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
+                                    {/* MATERILIZE FORM END */}
+                                    {/* DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
                                     <div className="kk">
                                         <Form.Group controlId="moodId">
                                             <Form.Label>Plant Mood:</Form.Label>
@@ -169,14 +169,14 @@ const PlantEditForm = props => {
                                         onClick={updateExistingPlant}
                                     >Submit</button>
                                 </div>
-                                
+
                             </form>
 
                         </div>
                     </div>
                 </div>
             </div>
-{/* END DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
+            {/* END DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
         </>
     );
 }

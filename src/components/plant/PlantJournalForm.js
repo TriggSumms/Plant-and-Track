@@ -15,22 +15,22 @@ const PlantJournalForm = props => {
     const [isLoading, setIsLoading] = useState(false);
 
     //Tracks entries into text boxes
-const handleFieldChange = evt => {
+    const handleFieldChange = evt => {
         const stateToChange = { ...journal };
         stateToChange[evt.target.id] = evt.target.value;
         setJournal(stateToChange);
     };
 
-   
 
 
-const currentUserId = sessionStorage.getItem("activeUser")
+
+    const currentUserId = sessionStorage.getItem("activeUser")
     journal.userId = parseInt(currentUserId)
 
 
 
 
-const constructNewJournalEntry = evt => {
+    const constructNewJournalEntry = evt => {
         evt.preventDefault();
         if (journal.journalEntry === "" || journal.journalTitle === "") {
             window.alert("Please fill out all the entry requirements....");
@@ -44,7 +44,7 @@ const constructNewJournalEntry = evt => {
     };
 
 
-const getPlants = () => {
+    const getPlants = () => {
         return PlantManager.getAll("plants").then(plantsFromAPI => {
             setPlants(plantsFromAPI)
         });

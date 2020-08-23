@@ -107,7 +107,7 @@ const GraveYardCard = (props) => {
             <div className="DEAD-plantcard-logo-variable__Container">
               <div className="plantcard-logo">
                 <div className="text" data-toggle="buttons">
-                  <h6>Give your Plant Life Again!</h6>
+                  <h6>NOT DEAD?</h6>
 
                   <label className=""> <input type="checkbox" id={props.plant.id} checked={isDead.isDead} onChange={updatePlanttoGraveyard} /><img src="https://img.icons8.com/plasticine/40/000000/plant-under-sun.png" alt="button-generic" /></label>
                   <button onClick={handleClick}><img src="https://img.icons8.com/clouds/40/000000/swap.png" /></button>
@@ -115,7 +115,7 @@ const GraveYardCard = (props) => {
               </div>
               <div className="DEAD-plantcard-variable-list__Container">
                 <h1 className="VariableEntryTitle"> Plant Specs. </h1>
-                
+
                 <div className="TitleVariable"> Date of passing: <p className="VariableEntry2"> {props.plant.entryDate} </p></div>
                 <div className="TitleVariable">Indoor/Outdoor: <p className="VariableEntry1"> {props.plant.indoorOutdoor}</p></div>
                 <div className="TitleVariable">Sunlight Level Req. :<p className="VariableEntry1"> {props.plant.sunlightLevel.level}</p> </div>
@@ -137,9 +137,6 @@ const GraveYardCard = (props) => {
                 </div>
               </div>
             </div>
-
-            {/* <button type="submit">Add Image</button><button className="" type="button" onClick={() => props.deletePlant(props.plant.id)}>Delete</button> */}
-            {/* <button className="message__buttons" type="button" onClick={() => props.history.push(`/messages/${props.message.id}/edit`)}>Edit</button> */}
           </div>
 
           <div className="DEAD-flip-card-back" key="back">
@@ -147,8 +144,7 @@ const GraveYardCard = (props) => {
               Journal Entries: <p className="plantCardBackName"> {props.plant.nickName}</p>
             </div>
             <div className="DEAD-plantcard-journal-entries__Container">
-              {/* <Link to={`/journals/${props.plant.id}/new/`}><button>NEW PLANT BABY</button></Link> */}
-              {/* YEAH SON...<button type="button" className="waves-effect waves-light btn-small" onClick={() => { props.history.push(`/plants/${props.plant.id}/newjournal`) }}> New Journal Entry ?</button> */}
+             
               <div className="plantcard-journal-entry__Container">
 
                 <div>

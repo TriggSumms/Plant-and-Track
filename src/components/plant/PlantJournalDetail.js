@@ -61,12 +61,12 @@ const PlantDetail = props => {
           float: "center", width: "50%", margin: 100,
           fontFamily: 'sans-serif', display: "flex"
         }}>
-         
+
           <Card.Body  >
             <Card.Title style={{ width: '80%', color: "black" }}>
-           Journal Recorded on: <small>{journal.entryDate}</small> 
-           <br />
-           <br />
+              Journal Recorded on: <small>{journal.entryDate}</small>
+              <br />
+              <br />
             Entry Title: "{journal.journalTitle}"<br /></Card.Title>
 
             <br />

@@ -2,9 +2,6 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
 import GraveYard from "./home/GraveYard"
-//import Login from "./auth/Login.jsx";
-//import { Register } from "./auth/Register"
-
 import { CustomLogin } from "./auth/CustomLogin.jsx"
 import UserList from "./auth/UserList"
 import UserEditForm from "./auth/UserEditForm"
@@ -17,8 +14,7 @@ import PlantJournalDetail from "./plant/PlantJournalDetail"
 import PlantGraveYardList from "./plant/PlantGraveYardList"
 import PlantJournalEditForm from "./plant/PlantJournalEditForm"
 import ImageForm from "./plant/ImageForm"
-//import UserList from "./auth/UserList"
-//import UserEditForm from "./auth/UserEditForm"
+
 
 
 
@@ -28,7 +24,7 @@ const ApplicationViews = (props) => {
   return (
 
 
-<React.Fragment>
+    <React.Fragment>
       <Route
         exact
         path="/home"
@@ -36,7 +32,7 @@ const ApplicationViews = (props) => {
           return <Home {...props} />;
         }} />
 
-  {/*LOGIN Routes START  ************************************************************************************************************************/}
+      {/*LOGIN Routes START  ************************************************************************************************************************/}
       {/* //pass the `setUser` function to Login component. */}
       <Route path="/login" render={props => {
         return <CustomLogin setUser={setUser} {...props} />
@@ -45,7 +41,7 @@ const ApplicationViews = (props) => {
 
 
 
-{/* USER Routes START  ************************************************************************************************************************/}
+      {/* USER Routes START  ************************************************************************************************************************/}
       <Route
         path="/userListz"
         render={props => {
@@ -95,13 +91,13 @@ const ApplicationViews = (props) => {
 
 
 
-<Route path="/plants/:plantId(\d+)/newimage"
+      <Route path="/plants/:plantId(\d+)/newimage"
 
-render={(props) => {
-  return <ImageForm
-    plantId={parseInt(props.match.params.plantId)}
-    {...props} />
-}} />
+        render={(props) => {
+          return <ImageForm
+            plantId={parseInt(props.match.params.plantId)}
+            {...props} />
+        }} />
 
 
 
@@ -193,7 +189,7 @@ render={(props) => {
             return <Redirect to="/home" />
           }
         }} />
-</React.Fragment>
+    </React.Fragment>
   );
 }
 export default ApplicationViews;

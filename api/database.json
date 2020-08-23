@@ -1,0 +1,631 @@
+{
+  "users": [
+    {
+      "user": "test",
+      "email": "test@test.com",
+      "password": "test",
+      "img": "https://avatars1.githubusercontent.com/u/65351448?s=460&u=e4fd4abf5f5a81d0d62c128cd907a4b14d6a4670&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
+      "id": 2
+    },
+    {
+      "user": "Trigger",
+      "email": "testing@testing.com",
+      "password": "test",
+      "img": "https://avatars2.githubusercontent.com/u/59340165?s=460&u=46057543931e845b54dbf360a89f24b5755cf93d&v=4",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
+      "id": 3
+    },
+    {
+      "email": "allison.williams1@cushwake.com",
+      "password": "MintJ27*",
+      "user": "Adub127",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": ":)))))))))) I love plants!",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "user": "Testboi",
+      "password": "yee",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "email": "guyboi@gmail.com",
+      "bio": "Im a plant boi and always have been...."
+    },
+    {
+      "email": "yeet@email.com",
+      "password": "yeet",
+      "user": "yeet",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": "YeetBoi",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "user": "Allison",
+      "password": "yee",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "email": "allison.willi@gmail.com",
+      "bio": "I have spent my last few years collecting every plant I can get my hands on! "
+    }
+  ],
+  "plants": [
+    {
+      "userId": 3,
+      "id": 31,
+      "nickName": "k",
+      "vernacularName": "m",
+      "entryDate": "8/13/20, 10:11:07 PM",
+      "indoorOutdoor": "k",
+      "moodId": 1,
+      "sunlightLevelId": 1,
+      "waterLevelId": 3,
+      "isDead": true
+    },
+    {
+      "userId": 8,
+      "id": 35,
+      "nickName": "Passion Flower",
+      "vernacularName": "Pasiflora",
+      "entryDate": "8/15/20, 9:57:25 PM",
+      "indoorOutdoor": "2 months old",
+      "moodId": 2,
+      "sunlightLevelId": 3,
+      "waterLevelId": 3,
+      "isDead": false
+    },
+    {
+      "userId": 8,
+      "id": 36,
+      "nickName": "b",
+      "vernacularName": "gggyg",
+      "entryDate": "8/15/20, 10:02:20 PM",
+      "indoorOutdoor": "gg",
+      "moodId": 2,
+      "sunlightLevelId": 2,
+      "waterLevelId": 3,
+      "isDead": false
+    },
+    {
+      "userId": 9,
+      "id": 39,
+      "nickName": "hh",
+      "vernacularName": "Pothos",
+      "entryDate": "8/18/20, 11:32:28 AM",
+      "indoorOutdoor": "Outdoor",
+      "moodId": 2,
+      "sunlightLevelId": 2,
+      "waterLevelId": 4,
+      "isDead": true
+    },
+    {
+      "userId": 10,
+      "id": 40,
+      "nickName": "Toothy boi",
+      "vernacularName": "Venus Fly Trap",
+      "entryDate": "8/17/20, 7:43:13 PM",
+      "indoorOutdoor": "777",
+      "moodId": 1,
+      "sunlightLevelId": 2,
+      "waterLevelId": 4,
+      "isDead": false
+    },
+    {
+      "userId": 10,
+      "id": 41,
+      "nickName": "egggggg",
+      "vernacularName": "Plant",
+      "entryDate": "8/17/20, 7:13:08 PM",
+      "indoorOutdoor": "yeyey",
+      "moodId": 1,
+      "sunlightLevelId": 2,
+      "waterLevelId": 4,
+      "isDead": false
+    },
+    {
+      "userId": 11,
+      "id": 42,
+      "nickName": "Lil Grow Big Grow",
+      "vernacularName": "Inch Plant",
+      "entryDate": "8/17/20, 8:02:45 PM",
+      "indoorOutdoor": "Inside, but Both",
+      "moodId": 2,
+      "sunlightLevelId": 3,
+      "waterLevelId": 1,
+      "isDead": false
+    },
+    {
+      "userId": 11,
+      "id": 43,
+      "nickName": "SpikyBoi5",
+      "vernacularName": "Prickly Pear Cactus",
+      "entryDate": "8/17/20, 8:16:42 PM",
+      "indoorOutdoor": "Outdoors..Ind. Winter",
+      "moodId": 1,
+      "sunlightLevelId": 3,
+      "waterLevelId": 8,
+      "isDead": false
+    },
+    {
+      "userId": 11,
+      "id": 44,
+      "nickName": "Dumbo Tripletz",
+      "vernacularName": "Elephant Ears",
+      "entryDate": "8/17/20, 8:35:28 PM",
+      "indoorOutdoor": "Outdoor",
+      "moodId": 2,
+      "sunlightLevelId": 3,
+      "waterLevelId": 3,
+      "isDead": false
+    },
+    {
+      "userId": 11,
+      "id": 45,
+      "nickName": "Lovely Tango Dog",
+      "vernacularName": "Passion Flower",
+      "entryDate": "8/17/20, 8:37:39 PM",
+      "indoorOutdoor": "Outdoor",
+      "moodId": 2,
+      "sunlightLevelId": 3,
+      "waterLevelId": 6,
+      "isDead": false
+    },
+    {
+      "userId": 11,
+      "id": 46,
+      "nickName": "YUM",
+      "vernacularName": "Okra",
+      "entryDate": "8/17/20, 8:44:13 PM",
+      "indoorOutdoor": "Outside",
+      "moodId": 3,
+      "sunlightLevelId": 3,
+      "waterLevelId": 7,
+      "isDead": false
+    },
+    {
+      "userId": 11,
+      "id": 47,
+      "nickName": "Emotionally Spikey Boi",
+      "vernacularName": "Pencil Cactus",
+      "entryDate": "8/17/20, 8:48:46 PM",
+      "indoorOutdoor": "Indoor",
+      "moodId": 3,
+      "sunlightLevelId": 2,
+      "waterLevelId": 4,
+      "isDead": false
+    },
+    {
+      "userId": 11,
+      "id": 49,
+      "nickName": "All'that Kim",
+      "vernacularName": "Kimberly Fern",
+      "entryDate": "8/20/20, 3:58:45 PM",
+      "indoorOutdoor": "Outdoor",
+      "moodId": 3,
+      "sunlightLevelId": 3,
+      "waterLevelId": 5,
+      "isDead": true
+    },
+    {
+      "userId": 11,
+      "id": 50,
+      "nickName": "ChildBabiBoo",
+      "vernacularName": "Cone Flower",
+      "entryDate": "8/18/20, 11:36:28 AM",
+      "indoorOutdoor": "Outdoor",
+      "moodId": 1,
+      "sunlightLevelId": 3,
+      "waterLevelId": 4,
+      "isDead": true
+    },
+    {
+      "userId": 11,
+      "id": 51,
+      "nickName": "Hellboi",
+      "vernacularName": "Cactus",
+      "entryDate": "8/20/20, 3:58:49 PM",
+      "indoorOutdoor": "Outdoor",
+      "moodId": 3,
+      "sunlightLevelId": 3,
+      "waterLevelId": 4,
+      "isDead": true
+    },
+    {
+      "userId": 9,
+      "id": 52,
+      "nickName": "Hawaii Slim Rick",
+      "vernacularName": "Ti Tree",
+      "entryDate": "8/18/20, 11:32:48 AM",
+      "indoorOutdoor": "Inside",
+      "moodId": 2,
+      "sunlightLevelId": 2,
+      "waterLevelId": 4,
+      "isDead": false
+    }
+  ],
+  "sunlightLevels": [
+    {
+      "id": 1,
+      "level": "⛅-Low Light"
+    },
+    {
+      "id": 2,
+      "level": "🌤️-Indirect Light"
+    },
+    {
+      "id": 3,
+      "level": "☀️-Full Sun"
+    }
+  ],
+  "waterLevels": [
+    {
+      "id": 1,
+      "level": "💧-(x1 Daily)"
+    },
+    {
+      "id": 2,
+      "level": "💧-(x1 a week)"
+    },
+    {
+      "id": 3,
+      "level": "💧-(x2-3 a Week)"
+    },
+    {
+      "id": 4,
+      "level": "💧-(x1 Bi-weekly)"
+    },
+    {
+      "id": 5,
+      "level": "🌊-(x1 Daily)"
+    },
+    {
+      "id": 6,
+      "level": "🌊-(x1 a week)"
+    },
+    {
+      "id": 7,
+      "level": "🌊-(x2-3 a Week)"
+    },
+    {
+      "id": 8,
+      "level": "🌊-(x1 Bi-weekly)"
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "level": "#Perfect babi 4 life-🌹"
+    },
+    {
+      "id": 2,
+      "level": "#Doin' Alright-🌻"
+    },
+    {
+      "id": 3,
+      "level": "#Hard Day-🥀"
+    }
+  ],
+  "journals": [
+    {
+      "plantId": 40,
+      "entryDate": "8/17/20, 6:45:35 PM",
+      "journalEntry": "yeeha",
+      "journalTitle": "bingle",
+      "userId": 10,
+      "id": 6
+    },
+    {
+      "plantId": 51,
+      "entryDate": "8/17/20, 9:06:43 PM",
+      "journalEntry": "Right off the shelf Ive had trouble with this guy",
+      "journalTitle": "Not Looking too hot",
+      "userId": 11,
+      "id": 7
+    },
+    {
+      "plantId": 51,
+      "entryDate": "8/17/20, 9:07:12 PM",
+      "journalEntry": "I have a bad feeling this is it for my boy. Might have gotten the water measurements incorrect",
+      "journalTitle": "Goin to the Grave",
+      "userId": 11,
+      "id": 8
+    },
+    {
+      "plantId": 50,
+      "entryDate": "8/17/20, 9:21:34 PM",
+      "journalEntry": "I took a look at pg 44 of Sean Brocks Cookbook...",
+      "journalTitle": "This puppy is really coming in",
+      "userId": 11,
+      "id": 9
+    },
+    {
+      "plantId": 42,
+      "entryDate": "8/17/20, 9:23:29 PM",
+      "journalEntry": "...",
+      "journalTitle": "ITS SPRING",
+      "userId": 11,
+      "id": 11
+    },
+    {
+      "plantId": 43,
+      "entryDate": "8/17/20, 9:26:32 PM",
+      "journalEntry": "This plant exceeds the reviews on plants.cactus.com",
+      "journalTitle": "CACTUS BOI SHOWING UP",
+      "userId": 11,
+      "id": 12
+    },
+    {
+      "userId": 11,
+      "plantId": 47,
+      "id": 13,
+      "journalEntry": "This puppy asks for more water than its worth",
+      "journalTitle": "Alright time to dose up the WATER"
+    },
+    {
+      "plantId": 44,
+      "entryDate": "8/17/20, 9:28:39 PM",
+      "journalEntry": "Wowo so nice, gonna show it off at dinner sometime",
+      "journalTitle": "Cant Believe Triggs Mom gave me this!",
+      "userId": 11,
+      "id": 15
+    },
+    {
+      "plantId": 46,
+      "entryDate": "8/17/20, 9:29:16 PM",
+      "journalEntry": "*WOWOW",
+      "journalTitle": "Not even gonna move this one to the graveyard",
+      "userId": 11,
+      "id": 16
+    },
+    {
+      "plantId": 39,
+      "entryDate": "8/17/20, 9:43:36 PM",
+      "journalEntry": "I dont have to do anything accept water this puppy",
+      "journalTitle": "Oh wow",
+      "userId": 9,
+      "id": 17
+    },
+    {
+      "plantId": 52,
+      "entryDate": "8/18/20, 12:21:50 PM",
+      "journalEntry": "kkk",
+      "journalTitle": "hhh",
+      "userId": 9,
+      "id": 18
+    },
+    {
+      "plantId": 52,
+      "entryDate": "8/18/20, 12:33:40 PM",
+      "journalEntry": "kkk",
+      "journalTitle": "hhh",
+      "userId": 9,
+      "id": 19
+    },
+    {
+      "plantId": 47,
+      "entryDate": "8/20/20, 4:29:35 PM",
+      "journalEntry": "https://www.gardenhealth.com/advice/plants-flowers/how-to-care-for-cacti-and-succulents#",
+      "journalTitle": "Cactus? Quick link for Care*",
+      "userId": 11,
+      "id": 20
+    }
+  ],
+  "images": [
+    {
+      "plantId": 40,
+      "entryDate": "8/17/20, 6:44:00 PM",
+      "imageTitle": "SALTY",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597707851/CapstoneSumms/d0mdrwnxlyoap6zkd3rl.jpg",
+      "userId": 10,
+      "id": 7
+    },
+    {
+      "plantId": 42,
+      "entryDate": "8/17/20, 8:12:07 PM",
+      "imageTitle": "j",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597713137/CapstoneSumms/geost3mic3jlxc4yb4pq.jpg",
+      "userId": 11,
+      "id": 8
+    },
+    {
+      "plantId": 42,
+      "entryDate": "8/17/20, 8:12:22 PM",
+      "imageTitle": "2",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597713149/CapstoneSumms/kzm6f9h30vrnw1llkhxi.jpg",
+      "userId": 11,
+      "id": 9
+    },
+    {
+      "plantId": 42,
+      "entryDate": "8/17/20, 8:12:37 PM",
+      "imageTitle": "4",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597713166/CapstoneSumms/lqjlvo4fzwzdlhzvu8vk.jpg",
+      "userId": 11,
+      "id": 10
+    },
+    {
+      "plantId": 42,
+      "entryDate": "8/17/20, 8:12:52 PM",
+      "imageTitle": "kk",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597713180/CapstoneSumms/ilzglj1bktknu5z6yct1.jpg",
+      "userId": 11,
+      "id": 11
+    },
+    {
+      "plantId": 42,
+      "entryDate": "8/17/20, 8:13:09 PM",
+      "imageTitle": "7",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597713194/CapstoneSumms/xoltzbeu7hmzkxtwbvxl.jpg",
+      "userId": 11,
+      "id": 12
+    },
+    {
+      "plantId": 42,
+      "entryDate": "8/17/20, 8:14:45 PM",
+      "imageTitle": "7",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597713308/CapstoneSumms/dvyedwazdemul45byzlj.jpg",
+      "userId": 11,
+      "id": 13
+    },
+    {
+      "plantId": 43,
+      "entryDate": "8/17/20, 8:18:06 PM",
+      "imageTitle": "1",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597713543/CapstoneSumms/jfkpwgr8ed7mqzf2gcun.jpg",
+      "userId": 11,
+      "id": 14
+    },
+    {
+      "plantId": 43,
+      "entryDate": "8/17/20, 8:29:50 PM",
+      "imageTitle": "6",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597714200/CapstoneSumms/xuebijxymcmk7huxsknq.jpg",
+      "userId": 11,
+      "id": 16
+    },
+    {
+      "plantId": 44,
+      "entryDate": "8/17/20, 8:36:30 PM",
+      "imageTitle": "5",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597714599/CapstoneSumms/csje0jkbqvaz97ihekn8.jpg",
+      "userId": 11,
+      "id": 17
+    },
+    {
+      "plantId": 44,
+      "entryDate": "8/17/20, 8:36:44 PM",
+      "imageTitle": "ss",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597714614/CapstoneSumms/qn6mrvzpuau9qovoegzj.jpg",
+      "userId": 11,
+      "id": 18
+    },
+    {
+      "plantId": 44,
+      "entryDate": "8/17/20, 8:36:59 PM",
+      "imageTitle": "7",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597714628/CapstoneSumms/wwcqkinqyv9mamauujgj.jpg",
+      "userId": 11,
+      "id": 19
+    },
+    {
+      "plantId": 45,
+      "entryDate": "8/17/20, 8:41:48 PM",
+      "imageTitle": "ll",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597714917/CapstoneSumms/iy1hnuhdziaw6myu85wm.jpg",
+      "userId": 11,
+      "id": 20
+    },
+    {
+      "plantId": 45,
+      "entryDate": "8/17/20, 8:43:37 PM",
+      "imageTitle": "ll",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715025/CapstoneSumms/r3nn2dqmizgg3xndpww6.jpg",
+      "userId": 11,
+      "id": 21
+    },
+    {
+      "plantId": 46,
+      "entryDate": "8/17/20, 8:44:54 PM",
+      "imageTitle": "kk",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715105/CapstoneSumms/sygmftoxx9ds40pf2f5i.jpg",
+      "userId": 11,
+      "id": 22
+    },
+    {
+      "plantId": 46,
+      "entryDate": "8/17/20, 8:48:13 PM",
+      "imageTitle": "hh",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715303/CapstoneSumms/llm0xhaco5l19vpydyfq.jpg",
+      "userId": 11,
+      "id": 23
+    },
+    {
+      "plantId": 46,
+      "entryDate": "8/17/20, 8:48:29 PM",
+      "imageTitle": "ff",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715319/CapstoneSumms/m9eobn77mixwx3ceganj.jpg",
+      "userId": 11,
+      "id": 24
+    },
+    {
+      "plantId": 47,
+      "entryDate": "8/17/20, 8:50:06 PM",
+      "imageTitle": "d",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715443/CapstoneSumms/vgq3rmbmbqxoorpfka1d.jpg",
+      "userId": 11,
+      "id": 25
+    },
+    {
+      "plantId": 47,
+      "entryDate": "8/17/20, 8:51:16 PM",
+      "imageTitle": "kk",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715485/CapstoneSumms/dogfondsbcjh71wnkw4t.jpg",
+      "userId": 11,
+      "id": 26
+    },
+    {
+      "plantId": 50,
+      "entryDate": "8/17/20, 8:58:01 PM",
+      "imageTitle": "ll;;;;",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715893/CapstoneSumms/smifhw6bs3rmwccgjg36.jpg",
+      "userId": 11,
+      "id": 32
+    },
+    {
+      "plantId": 50,
+      "entryDate": "8/17/20, 9:02:49 PM",
+      "imageTitle": "ff",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597716188/CapstoneSumms/qrfogqmgapallpu0zxkv.jpg",
+      "userId": 11,
+      "id": 36
+    },
+    {
+      "plantId": 49,
+      "entryDate": "8/17/20, 9:04:49 PM",
+      "imageTitle": "lll",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597716322/CapstoneSumms/w8qiwbel7c8trwbjszjn.jpg",
+      "userId": 11,
+      "id": 37
+    },
+    {
+      "plantId": 51,
+      "entryDate": "8/17/20, 9:06:13 PM",
+      "imageTitle": "ll",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597716384/CapstoneSumms/frlpbtldvnimfri7onsp.jpg",
+      "userId": 11,
+      "id": 38
+    },
+    {
+      "plantId": 51,
+      "entryDate": "8/17/20, 9:09:23 PM",
+      "imageTitle": "lll",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597716586/CapstoneSumms/ssiqnq1hluf1ewgocuuf.jpg",
+      "userId": 11,
+      "id": 39
+    },
+    {
+      "plantId": 39,
+      "entryDate": "8/17/20, 9:41:44 PM",
+      "imageTitle": "g",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597718576/CapstoneSumms/r11ooil462c1qeq7fpeo.webp",
+      "userId": 9,
+      "id": 40
+    },
+    {
+      "plantId": 39,
+      "entryDate": "8/17/20, 9:43:01 PM",
+      "imageTitle": "kk",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597718595/CapstoneSumms/lfrsh2uznfa0nkiyg0mi.jpg",
+      "userId": 9,
+      "id": 41
+    },
+    {
+      "plantId": 46,
+      "entryDate": "8/18/20, 11:34:58 AM",
+      "imageTitle": "okra",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597768520/CapstoneSumms/kncuw7ubzic18cribtfv.jpg",
+      "userId": 11,
+      "id": 42
+    }
+  ]
+}

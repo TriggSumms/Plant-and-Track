@@ -86,7 +86,7 @@ const PlantForm = props => {
 
     return (
         <>
-{/* FORM USING MATERILIZE */}
+            {/* FORM USING MATERILIZE */}
             <div className="row">
                 <div className="col s12 m5">
                     <div className="card-panel transparent">
@@ -116,9 +116,9 @@ const PlantForm = props => {
                                         </div>
                                     </div>
                                 </div>
-{/* END MATERILIZE FORM*/}
+                                {/* END MATERILIZE FORM*/}
 
-{/* DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
+                                {/* DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
                                 <div className="">
                                     <Form.Group className="" >
                                         <Form.Label>Plant Mood:</Form.Label>
@@ -174,7 +174,7 @@ const PlantForm = props => {
                     </div>
                 </div>
             </div>
-{/* END DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
+            {/* END DROPDOWN MENU FORM USING REACTSTRAP/BOOTSTRAP */}
         </>
     );
 };

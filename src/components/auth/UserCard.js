@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./UserCard.css"
 import UserManager from '../../modules/UserManager';
-//import Image from 'react-bootstrap/Image'
+
 
 
 
@@ -55,13 +55,13 @@ const UserCard = props => {
 
 			<div id="cardz">
 				<h1 className="h1z">
-				
-				{props.user.user}</h1>
+
+					{props.user.user}</h1>
 				<div className="imagez-crop">
-					<img id="avatarz" src="https://i.imgflip.com/3emv5t.jpg"></img>
+					<img id="avatarz" src="https://images.unsplash.com/photo-1482849297070-f4fae2173efe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"></img>
 				</div>
 				<div id="bioz">
-				
+
 					<p>{props.user.bio}</p>
 				</div>
 				<div id="statz">
