@@ -22,7 +22,7 @@ If you want to **start a Plant & Track (Account) of your own**...
 <br>
 ## 🚀&nbsp; Installation and Documentation
 ## Getting started
-
+## Available Scripts
 To get the project running locally:
 
 - Clone this repo
@@ -30,7 +30,14 @@ To get the project running locally:
 - `npm start` to start the local server (this project uses create-react-app)
 
 Local web server will use port 5005 `json-server -p 5005 -w userSample.json`
- 
+
+
+### `npm start`
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
 
 ## Upon Starting up Plant & Track, press the Login button on the Navigational Bar and then click "Register"...
