@@ -2,24 +2,24 @@
     "users": [
       {
         "email": "test@gmail.com",
-        "password": "Test",
+        "password": "test",
         "user": "Test",
         "img": "",
         "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
-        "id": 4
+        "id": 1
       }
     ],
     "plants": [
       {
-        "userId": 4,
-        "id": 9,
-        "nickName": "Elder BIGWIZZI ",
-        "vernacularName": "Gray alder",
-        "entryDate": "8/16/20, 8:15:56 PM",
-        "age": "5inchs tall",
-        "moodId": 1,
+        "userId": 1,
+        "id": 1,
+        "nickName": "Emotionally Spikey Boi",
+        "vernacularName": "Pencil Cactus",
+        "entryDate": "8/17/20, 8:48:46 PM",
+        "indoorOutdoor": "Indoor",
+        "moodId": 3,
         "sunlightLevelId": 2,
-        "waterLevelId": 2,
+        "waterLevelId": 4,
         "isDead": false
       }
     ],
@@ -88,53 +88,37 @@
     "journals": [
       {
         "id": 1,
-        "plantId": 9,
+        "plantId": 1,
         "entryDate": "7/30/20, 2:27:53 PM",
         "journalEntry": "Ah, Moon—and Star!You are very far—But were no oneFarther than you Do you think I’d sto For a Firmament— Or a Cubit—or so? ",
         "journalTitle": "Plants and Stars?",
-        "userId": 4
+        "userId": 1
       },
       {
         "id": 2,
-        "plantId": 9,
+        "plantId": 1,
         "entryDate": "7/30/20, 2:27:57 PM",
         "journalEntry": "https://www.gardeningknowhow.com/ornamental/trees/alder/care-of-speckled-alder-trees.htm",
         "journalTitle": "Care Instructions?",
-        "userId": 4
+        "userId": 1
       }
     ],
     "images": [
       {
-        "plantId": 9,
-        "entryDate": "8/16/20, 7:38:25 PM",
-        "imageTitle": "f",
-        "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597624716/CapstoneSumms/ya2gvzih58ei8dnlyozk.jpg",
-        "userId": 4,
+        "plantId": 1,
+        "entryDate": "8/17/20, 8:50:06 PM",
+        "imageTitle": "d",
+        "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715443/CapstoneSumms/vgq3rmbmbqxoorpfka1d.jpg",
+        "userId": 1,
+        "id": 2
+      },
+      {
+        "plantId": 1,
+        "entryDate": "8/17/20, 8:51:16 PM",
+        "imageTitle": "kk",
+        "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715485/CapstoneSumms/dogfondsbcjh71wnkw4t.jpg",
+        "userId": 1,
         "id": 3
-      },
-      {
-        "plantId": 9,
-        "entryDate": "8/16/20, 8:04:14 PM",
-        "imageTitle": "eee",
-        "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597626283/CapstoneSumms/tidpt0fyizipomjbdo3u.jpg",
-        "userId": 4,
-        "id": 5
-      },
-      {
-        "plantId": 9,
-        "entryDate": "8/16/20, 8:05:14 PM",
-        "imageTitle": "fff",
-        "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597626319/CapstoneSumms/yooitnbqoroia1khsiex.jpg",
-        "userId": 4,
-        "id": 6
-      },
-      {
-        "plantId": 9,
-        "entryDate": "8/16/20, 8:07:47 PM",
-        "imageTitle": "sss",
-        "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597626478/CapstoneSumms/xi98jkjwbsx5dscdr5hg.jpg",
-        "userId": 4,
-        "id": 7
       }
     ]
   }
