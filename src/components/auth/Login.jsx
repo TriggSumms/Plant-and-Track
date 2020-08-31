@@ -9,7 +9,7 @@ import loginImg from "../../login.svg";
 
 export const Login = (props) => {
 
-  const [credentials, setCredentials] = useState({ password: "", user: "" });
+  const [credentials, setCredentials] = useState({ email: "", user: "" });
 
 
   // Update state whenever an input field is edited
@@ -27,7 +27,7 @@ export const Login = (props) => {
     UserManager.getAllUsers()
       .then(users => {
         users.find(user => {
-          if (user.user === credentials.user && user.password === credentials.password) {
+          if (user.user === credentials.user && user.email === credentials.email) {
             loginAccepted = true
             sessionStorage.setItem("credentials", JSON.stringify(credentials))
             sessionStorage.setItem("activeUser", user.id)
@@ -71,8 +71,8 @@ export const Login = (props) => {
                 <input onChange={handleFieldChange} id="user" type="text" name="username" placeholder="username" required="" />
               </div>
               <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input onChange={handleFieldChange} id="password" type="password" name="password" placeholder="password" required="" />
+                <label htmlFor="email">Full Email Address</label>
+                <input onChange={handleFieldChange} id="email" type="email" name="email" placeholder="email" required="" />
               </div>
             </div>
           </div>
