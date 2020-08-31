@@ -1,124 +1,132 @@
 {
-    "users": [
-      {
-        "email": "test@gmail.com",
-        "password": "test",
-        "user": "Test",
-        "img": "",
-        "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
-        "id": 1
-      }
-    ],
-    "plants": [
-      {
-        "userId": 1,
-        "id": 1,
-        "nickName": "Emotionally Spikey Boi",
-        "vernacularName": "Pencil Cactus",
-        "entryDate": "8/17/20, 8:48:46 PM",
-        "indoorOutdoor": "Indoor",
-        "moodId": 3,
-        "sunlightLevelId": 2,
-        "waterLevelId": 4,
-        "isDead": false
-      }
-    ],
-    "sunlightLevels": [
-      {
-        "id": 1,
-        "level": "⛅-Low Light"
-      },
-      {
-        "id": 2,
-        "level": "🌤️-Indirect Light"
-      },
-      {
-        "id": 3,
-        "level": "☀️-Full Sun"
-      }
-    ],
-    "waterLevels": [
-      {
-        "id": 1,
-        "level": "💧-(x1 Daily)"
-      },
-      {
-        "id": 2,
-        "level": "💧-(x1 a week)"
-      },
-      {
-        "id": 3,
-        "level": "💧-(x2-3 a Week)"
-      },
-      {
-        "id": 4,
-        "level": "💧-(x1 Bi-weekly)"
-      },
-      {
-        "id": 5,
-        "level": "🌊-(x1 Daily)"
-      },
-      {
-        "id": 6,
-        "level": "🌊-(x1 a week)"
-      },
-      {
-        "id": 7,
-        "level": "🌊-(x2-3 a Week)"
-      },
-      {
-        "id": 8,
-        "level": "🌊-(x1 Bi-weekly)"
-      }
-    ],
-    "moods": [
-      {
-        "id": 1,
-        "level": "#Perfect babi 4 life-🌹"
-      },
-      {
-        "id": 2,
-        "level": "#Doin' Alright-🌻"
-      },
-      {
-        "id": 3,
-        "level": "#Hard Day-🥀"
-      }
-    ],
-    "journals": [
-      {
-        "id": 1,
-        "plantId": 1,
-        "entryDate": "7/30/20, 2:27:53 PM",
-        "journalEntry": "Ah, Moon—and Star!You are very far—But were no oneFarther than you Do you think I’d sto For a Firmament— Or a Cubit—or so? ",
-        "journalTitle": "Plants and Stars?",
-        "userId": 1
-      },
-      {
-        "id": 2,
-        "plantId": 1,
-        "entryDate": "7/30/20, 2:27:57 PM",
-        "journalEntry": "https://www.gardeningknowhow.com/ornamental/trees/alder/care-of-speckled-alder-trees.htm",
-        "journalTitle": "Care Instructions?",
-        "userId": 1
-      }
-    ],
-    "images": [
-      {
-        "plantId": 1,
-        "entryDate": "8/17/20, 8:50:06 PM",
-        "imageTitle": "d",
-        "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715443/CapstoneSumms/vgq3rmbmbqxoorpfka1d.jpg",
-        "userId": 1,
-        "id": 2
-      },
-      {
-        "plantId": 1,
-        "entryDate": "8/17/20, 8:51:16 PM",
-        "imageTitle": "kk",
-        "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715485/CapstoneSumms/dogfondsbcjh71wnkw4t.jpg",
-        "userId": 1,
-        "id": 3
-      }
-    ]
-  }
+  "users": [
+    {
+      "email": "test@gmail.com",
+      "password": "test",
+      "user": "Test",
+      "img": "",
+      "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
+      "id": 1
+    },
+    {
+      "email": "dd@gmail.com",
+      "password": "ye",
+      "user": "Allison",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": "d",
+      "id": 2
+    }
+  ],
+  "plants": [
+    {
+      "userId": 1,
+      "id": 1,
+      "nickName": "Emotionally Spikey Boi",
+      "vernacularName": "Pencil Cactus",
+      "entryDate": "8/17/20, 8:48:46 PM",
+      "indoorOutdoor": "Indoor",
+      "moodId": 3,
+      "sunlightLevelId": 2,
+      "waterLevelId": 4,
+      "isDead": false
+    }
+  ],
+  "sunlightLevels": [
+    {
+      "id": 1,
+      "level": "⛅-Low Light"
+    },
+    {
+      "id": 2,
+      "level": "🌤️-Indirect Light"
+    },
+    {
+      "id": 3,
+      "level": "☀️-Full Sun"
+    }
+  ],
+  "waterLevels": [
+    {
+      "id": 1,
+      "level": "💧-(x1 Daily)"
+    },
+    {
+      "id": 2,
+      "level": "💧-(x1 a week)"
+    },
+    {
+      "id": 3,
+      "level": "💧-(x2-3 a Week)"
+    },
+    {
+      "id": 4,
+      "level": "💧-(x1 Bi-weekly)"
+    },
+    {
+      "id": 5,
+      "level": "🌊-(x1 Daily)"
+    },
+    {
+      "id": 6,
+      "level": "🌊-(x1 a week)"
+    },
+    {
+      "id": 7,
+      "level": "🌊-(x2-3 a Week)"
+    },
+    {
+      "id": 8,
+      "level": "🌊-(x1 Bi-weekly)"
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "level": "#Perfect babi 4 life-🌹"
+    },
+    {
+      "id": 2,
+      "level": "#Doin' Alright-🌻"
+    },
+    {
+      "id": 3,
+      "level": "#Hard Day-🥀"
+    }
+  ],
+  "journals": [
+    {
+      "id": 1,
+      "plantId": 1,
+      "entryDate": "7/30/20, 2:27:53 PM",
+      "journalEntry": "Ah, Moon—and Star!You are very far—But were no oneFarther than you Do you think I’d sto For a Firmament— Or a Cubit—or so? ",
+      "journalTitle": "Plants and Stars?",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "plantId": 1,
+      "entryDate": "7/30/20, 2:27:57 PM",
+      "journalEntry": "https://www.gardeningknowhow.com/ornamental/trees/alder/care-of-speckled-alder-trees.htm",
+      "journalTitle": "Care Instructions?",
+      "userId": 1
+    }
+  ],
+  "images": [
+    {
+      "plantId": 1,
+      "entryDate": "8/17/20, 8:50:06 PM",
+      "imageTitle": "d",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715443/CapstoneSumms/vgq3rmbmbqxoorpfka1d.jpg",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "plantId": 1,
+      "entryDate": "8/17/20, 8:51:16 PM",
+      "imageTitle": "kk",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715485/CapstoneSumms/dogfondsbcjh71wnkw4t.jpg",
+      "userId": 1,
+      "id": 3
+    }
+  ]
+}
