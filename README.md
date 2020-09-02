@@ -28,7 +28,7 @@ Local web server will use port 5005 `json-server -p 5005 -w userSample.json`
 
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-# nbsp;
+# ;
 <br>
 
 
