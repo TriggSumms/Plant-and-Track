@@ -8,7 +8,7 @@
 <br/>
 
 
-<iframe width="750" height="422" src="https://www.loom.com/embed/c4c5fc9e99644611ab8fe8f2f3cc6f5c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c4c5fc9e99644611ab8fe8f2f3cc6f5c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 <br/>
 
