@@ -79,7 +79,7 @@ Concepts covered in this project include:
 
 ## PLANNING LINKS:
 <figure class="video_container">
-  <iframe src="https://res.cloudinary.com/triggsumms/image/upload/v1598967013/CapstoneSumms/wegyz65kskbmwd8teko7.png" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe src="https://www.loom.com/share/c4c5fc9e99644611ab8fe8f2f3cc6f5c" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
 
 [ERD](https://dbdiagram.io/d/5f10aa9c74ca2227330d73d9) \
