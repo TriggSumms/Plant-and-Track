@@ -46,7 +46,7 @@ You will also see any lint errors in the console.
 ## Registering an Account/Creating your First Plant Card: 
 <p align="center">
    
-![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)
+![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif){:height="700px" width="400px"}
    
 </p>
 1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
