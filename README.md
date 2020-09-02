@@ -46,16 +46,15 @@ You will also see any lint errors in the console.
 <br>
 
 
-## After Creating an account: 
-<a href="https://www.loom.com/share/c4c5fc9e99644611ab8fe8f2f3cc6f5c"> <p>Plant Baby - Watch Video</p> <img style="max-width:500px;" src="https://cdn.loom.com/sessions/thumbnails/c4c5fc9e99644611ab8fe8f2f3cc6f5c-with-play.gif"> </a>
+## Registering an Account/Creating your First Plant Card: 
+<a href="https://www.loom.com/share/c4c5fc9e99644611ab8fe8f2f3cc6f5c"> <p></p> <img style="max-width:900px ;max-height:400px;" src="https://cdn.loom.com/sessions/thumbnails/c4c5fc9e99644611ab8fe8f2f3cc6f5c-with-play.gif"> </a>
 1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
-![HomePAGE](https://res.cloudinary.com/triggsumms/image/upload/v1597688570/CapstoneSumms/yzeeq6w9lg6dtiannnlw.png)
+
 1. The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
- ![USERCARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688601/CapstoneSumms/fx4i1jtxqcpxnmcosqxa.png)
+ 
 1. At this point a USer will have 3 views of the cards avaialble. The collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.,Now enjoy you collections Longevity or placement in the Graveyard! 
 1.The User can also flip the card using a button toggle! This will allow them to enter in their journal entries for the plant and chronologically reference the most recent entries!
-  ![PLANT CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688685/CapstoneSumms/i9onkemvhzhrexppdqkj.png)
-  ![DETAILS CARD](https://res.cloudinary.com/triggsumms/image/upload/v1597688702/CapstoneSumms/azxzc3cniaeydnk2mvs8.png)
+
   
 
 
