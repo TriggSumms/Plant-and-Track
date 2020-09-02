@@ -7,6 +7,8 @@
 
 <br/>
 
+<a href="https://www.loom.com/share/909c784d337f4c4597d488eb4c47fedf"> <p>Loom | Free Screen & Video Recording Software - Watch Video</p> <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/909c784d337f4c4597d488eb4c47fedf-with-play.gif"> </a>
+
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c4c5fc9e99644611ab8fe8f2f3cc6f5c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
