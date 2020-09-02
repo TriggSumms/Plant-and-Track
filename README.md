@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
     <a >
-        <img width="50%" src="https://res.cloudinary.com/triggsumms/video/upload/v1599010387/CapstoneSumms/evcl0y2pqth6fvnkqxin.mp4" alt="TRACKER logo">
+        <img width="50%" src="https://res.cloudinary.com/triggsumms/image/upload/v1598966800/CapstoneSumms/co9sepncrui6in92hwmd.png" alt="TRACKER logo">
     </a>
 </p>
 
@@ -78,7 +78,9 @@ Concepts covered in this project include:
 
 
 ## PLANNING LINKS:
-
+<figure class="video_container">
+  <iframe src="https://res.cloudinary.com/triggsumms/image/upload/v1598967013/CapstoneSumms/wegyz65kskbmwd8teko7.png" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
 [ERD](https://dbdiagram.io/d/5f10aa9c74ca2227330d73d9) \
 [WIREFRAME](https://sketchboard.me/NCaP3yBDuIVO#/) \
