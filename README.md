@@ -41,6 +41,16 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 
+> #### The quarterly results look great!
+>
+> - Revenue was off the chart.
+> - Profits were higher than ever.
+>
+>  *Everything* is going according to **plan**.
+
+
+
+
 ## WalkThrough Directions: Press the Login button on the Navigational Bar and then click "Register"...
 <p align="center">
    
@@ -55,10 +65,8 @@ You will also see any lint errors in the console.
 > - After creating  the Plant Card, you can add Images/Edit the information via the details button!
 > - ...Dont forget the FLIP CARD button! This will allow you to enter in your journal entries for the plant and chronologically reference the most recent entries!
 </p>
-<p align="center">
-    
- ![Alt Text](https://media.giphy.com/media/SYua2t9sq6mdUp5tBM/giphy.gif)
-    
+<p align="center"> 
+ ![Alt Text](https://media.giphy.com/media/SYua2t9sq6mdUp5tBM/giphy.gif) 
 </p>
 <p>
 > #### At this point you will have 3 views of the cards avaialble...the collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.
@@ -66,13 +74,10 @@ You will also see any lint errors in the console.
 > Now enjoy your collections Longevity or placement in the Graveyard!
 >
 > This Graveyard should help you out in Seasons come...and by some miracle...you can always bring your plant back to life!
->
 > - Here is an example of a filled out profile!...
 </p>
-<p align="center">
-    
-![Alt Text](https://media.giphy.com/media/JTmu5PUUS7P6QYrBG3/giphy.gif)
-    
+<p align="center">    
+![Alt Text](https://media.giphy.com/media/JTmu5PUUS7P6QYrBG3/giphy.gif)  
 </p>
 
   
