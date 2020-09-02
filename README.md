@@ -47,8 +47,7 @@ You will also see any lint errors in the console.
 
 
 ## Registering an Account/Creating your First Plant Card: 
-<a href="https://www.loom.com/share/c4c5fc9e99644611ab8fe8f2f3cc6f5c"> <p></p> <img style="max-width:900px ;max-height:400px;" src="https://cdn.loom.com/sessions/thumbnails/c4c5fc9e99644611ab8fe8f2f3cc6f5c-with-play.gif"> </a>
-<iframe width="750" height="422" src="https://www.loom.com/embed/c4c5fc9e99644611ab8fe8f2f3cc6f5c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+![](https://giphy.com/gifs/h4CE0unVmIKGBrAlF7)
 1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
 
 1. The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
