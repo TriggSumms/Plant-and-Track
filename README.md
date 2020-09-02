@@ -41,24 +41,25 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 
-## Upon Starting up Plant & Track, press the Login button on the Navigational Bar and then click "Register"...
+## Directions WalkThrough: Press the Login button on the Navigational Bar and then click "Register"...
 <br>
-## Registering an Account/Creating your First Plant Card: 
+## Registering an Account and Login!: 
 <p align="center">
    
-![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif){:height="700px" width="400px"}
+![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)
    
 </p>
-1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
+1. Upon registering and logging in, you will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
 
-1. The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating | Plant Card, a user can add Images/Edit the information via the details button!
+1. You can begin building your collection, Go ahead and click the "New Plant" button,  (located on the User Profile CARD) and fill out all the nescessary forms. After creating  the Plant Card, you can add Images/Edit the information via the details button! Dont forget the FLIP CARD button! This will allow you to enter in your journal entries for the plant and chronologically reference the most recent entries!
 <p align="center">
     
  ![Alt Text](https://media.giphy.com/media/SYua2t9sq6mdUp5tBM/giphy.gif)
     
 </p>
-1. At this point a USer will have 3 views of the cards avaialble. The collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.,Now enjoy you collections Longevity or placement in the Graveyard! Dont forget the FLIP CARD button! This will allow them to enter in their journal entries for the plant and chronologically reference the most recent entries! Heres an example of filled out profile!...
-<br/>
+1. At this point you will have 3 views of the cards avaialble...the collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.Now enjoy your collections Longevity or placement in the Graveyard! This Graveyard should help you out in Seasons come...and by some miracle...you can always bring your plant back to life!
+| Heres an example of a filled out profile!...
+<br>
 <p align="center">
     
 ![Alt Text](https://media.giphy.com/media/JTmu5PUUS7P6QYrBG3/giphy.gif)
