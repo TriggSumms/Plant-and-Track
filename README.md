@@ -60,6 +60,7 @@ You will also see any lint errors in the console.
  ![Alt Text](https://media.giphy.com/media/SYua2t9sq6mdUp5tBM/giphy.gif)
     
 </p>
+<p>
 > #### At this point you will have 3 views of the cards avaialble...the collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.
 >
 > Now enjoy your collections Longevity or placement in the Graveyard!
@@ -67,7 +68,7 @@ You will also see any lint errors in the console.
 > This Graveyard should help you out in Seasons come...and by some miracle...you can always bring your plant back to life!
 >
 > - Here is an example of a filled out profile!...
-<br>
+</p>
 <p align="center">
     
 ![Alt Text](https://media.giphy.com/media/JTmu5PUUS7P6QYrBG3/giphy.gif)
