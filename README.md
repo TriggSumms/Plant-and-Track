@@ -42,12 +42,9 @@ You will also see any lint errors in the console.
 
 
 ## Upon Starting up Plant & Track, press the Login button on the Navigational Bar and then click "Register"...
-  ![Register](https://res.cloudinary.com/triggsumms/image/upload/v1597688546/CapstoneSumms/wisa4qrfl6qvqfse6mo5.png)
 <br>
-
-
 ## Registering an Account/Creating your First Plant Card: 
-![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)</p>
+![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif| 250x250)</p>
 1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
 
 1. The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
