@@ -14,9 +14,7 @@
 
 
 
-
-
-This repository contains the **core framework for Plant & Track**. 
+ 
 
 If you want to **start a Plant & Track (Account) of your own**...
 
@@ -25,20 +23,13 @@ If you want to **start a Plant & Track (Account) of your own**...
 ## Getting started
 ## Available Scripts
 To get the project running locally:
-
 - Clone this repo
 - `npm install` to install all req'd dependencies
 - `npm start` to start the local server (this project uses create-react-app)
-
 Local web server will use port 5005 `json-server -p 5005 -w userSample.json`
-
-
 ### `npm start`
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 
 
@@ -70,17 +61,6 @@ You will also see any lint errors in the console.
 ![Alt Text](https://media.giphy.com/media/JTmu5PUUS7P6QYrBG3/giphy.gif)  
 
 
-  
-
-
-## A Few Application Features:
-This app will login (User1) and contain a library of “plantCards” in which they have created over their history with the app.
-In this library a (User1) will be able to post new plantCards…..& (delete dead plantCards or Edit/Update the cards with old or current growth status(s). 
-Through the sorting of this (User1)’s library, a certain management will be revealed for (User1). 
-* The app will exhibit their plantCards in the order in which the cards were created (via timeStamp)
-* The User can select specific cards through a search input, allowing species with “similar” naming characteristics to be revealed. 
-* This same search feature will be implemented in a library for just the “dead plantCards” so a reference exists for the next season…. (Just in case a user wants to have a reference to prior mistakes made).
-* Key journal variables will exist inside the plantCard
 
 ## Concepts Covered
 Concepts covered in this project include: 
@@ -98,7 +78,7 @@ Concepts covered in this project include:
 
 [ERD](https://dbdiagram.io/d/5f10aa9c74ca2227330d73d9) \
 [WIREFRAME](https://sketchboard.me/NCaP3yBDuIVO#/) \
-[Proposal Doc](https://docs.google.com/document/d/12pWGNbbZ4iovB2qUAddoCqLFQkvDiqJBfv6uNWdrMg0/edit#heading=h.jlakfp7agir2) 
+
 
 
 
