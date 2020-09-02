@@ -34,7 +34,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 
-## WalkThrough Directions: Press the Login button on the Navigational Bar and then click "Register"...
+## WalkThrough Directions: <br> Press the Login button on the Navigational Bar and then click "Register"...
 
    
 ![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)
