@@ -9,9 +9,9 @@
 
 
 <br/>
-
+<p align="center">
 [Plant & Track](https://github.com/TriggSumms/Plant-and-Track)'s purpose is to assist as a catalogging tool for the process of plant collecting. This desktop application utilizes user input to create and host the plant collection and ultimately helps a forgetful plant owner track their daily obsession! After long term use of the application, a user should be able to utilize their catalogging for the seasons to come!
-
+</p>
 
 
 
@@ -41,24 +41,29 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 
-## Directions WalkThrough: Press the Login button on the Navigational Bar and then click "Register"...
-<br>
-## Registering an Account and Login!: 
+## WalkThrough Directions: Press the Login button on the Navigational Bar and then click "Register"...
 <p align="center">
    
 ![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)
    
 </p>
-1. Upon registering and logging in, you will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
-
-1. You can begin building your collection, Go ahead and click the "New Plant" button,  (located on the User Profile CARD) and fill out all the nescessary forms. After creating  the Plant Card, you can add Images/Edit the information via the details button! Dont forget the FLIP CARD button! This will allow you to enter in your journal entries for the plant and chronologically reference the most recent entries!
+<br><p> Upon registering and logging in, you will have an example card pre-loaded to your library, this is an example card that can be deleted or sent to the Graveyard. </p> 
+<br> <p> You can begin building your collection, Go ahead and click the "New Plant" button,  (located on the User Profile CARD) and fill out all the nescessary forms.</p> 
+<br> After creating  the Plant Card, you can add Images/Edit the information via the details button!
+<br>...Dont forget the FLIP CARD button! This will allow you to enter in your journal entries for the plant and chronologically reference the most recent entries!
 <p align="center">
     
  ![Alt Text](https://media.giphy.com/media/SYua2t9sq6mdUp5tBM/giphy.gif)
     
 </p>
-1. At this point you will have 3 views of the cards avaialble...the collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.Now enjoy your collections Longevity or placement in the Graveyard! This Graveyard should help you out in Seasons come...and by some miracle...you can always bring your plant back to life!
-| Heres an example of a filled out profile!...
+At this point you will have 3 views of the cards avaialble...the collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.
+<br>
+<br>
+Now enjoy your collections Longevity or placement in the Graveyard!
+<br>
+This Graveyard should help you out in Seasons come...and by some miracle...you can always bring your plant back to life!
+<br>
+| Here is an example of a filled out profile!...
 <br>
 <p align="center">
     
