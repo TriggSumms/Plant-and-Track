@@ -8,10 +8,10 @@
 <br/>
 
 
-<br/>
-<p align="center">
+
+
 [Plant & Track](https://github.com/TriggSumms/Plant-and-Track)'s purpose is to assist as a catalogging tool for the process of plant collecting. This desktop application utilizes user input to create and host the plant collection and ultimately helps a forgetful plant owner track their daily obsession! After long term use of the application, a user should be able to utilize their catalogging for the seasons to come!
-</p>
+
 
 
 
@@ -110,7 +110,7 @@ Concepts covered in this project include:
   
 ## 📫&nbsp; Have a question? Want to chat? Ran into a problem?
 
-I would be happy to answer any questions you have and you can always **reach out to me directly** via the [Email](stsumms@gmail.com) or reach out with your question on [StackOverflow](https://github.com/TriggSumms) 
+I would be happy to answer any questions you have and you can always **reach out to me directly** via the [Email](stsumms@gmail.com) or reach out with your question on [Github]/github.com/TriggSumms) 
 
 ## 🤝&nbsp; Found a bug? Missing a specific feature?
 
