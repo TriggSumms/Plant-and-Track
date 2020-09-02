@@ -56,7 +56,7 @@ You will also see any lint errors in the console.
    
 ![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)
    
-</p>   
+
 > #### Upon registering and logging in, you will have an example card pre-loaded to your library, feel free to play around with this card to learn about the button locations! 
 >
 > - When finished move the card to the Graveyard or delete it permatatly! 
@@ -64,18 +64,18 @@ You will also see any lint errors in the console.
 > You can now begin building your collection, Go ahead and click the "New Plant" button,  (located on the User Profile CARD) and fill out all the nescessary forms.
 > - After creating  the Plant Card, you can add Images/Edit the information via the details button!
 > - ...Dont forget the FLIP CARD button! This will allow you to enter in your journal entries for the plant and chronologically reference the most recent entries!
-</p>
+
 <p align="center"> 
  ![Alt Text](https://media.giphy.com/media/SYua2t9sq6mdUp5tBM/giphy.gif) 
 </p>
-<p>
+
 > #### At this point you will have 3 views of the cards avaialble...the collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.
 >
 > Now enjoy your collections Longevity or placement in the Graveyard!
 >
 > This Graveyard should help you out in Seasons come...and by some miracle...you can always bring your plant back to life!
 > - Here is an example of a filled out profile!...
-</p>
+
 <p align="center">    
 ![Alt Text](https://media.giphy.com/media/JTmu5PUUS7P6QYrBG3/giphy.gif)  
 </p>
