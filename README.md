@@ -7,6 +7,9 @@
 
 <br/>
 
+
+<iframe width="750" height="422" src="https://www.loom.com/embed/c4c5fc9e99644611ab8fe8f2f3cc6f5c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 <br/>
 
 [Plant & Track](https://github.com/TriggSumms/Plant-and-Track)'s purpose is to assist as a catalogging tool for the process of plant collecting. This desktop application utilizes user input to create and host the plant collection and ultimately helps a forgetful plant owner track their daily obsession! After long term use of the application, a user should be able to utilize their catalogging for the seasons to come!
@@ -78,9 +81,7 @@ Concepts covered in this project include:
 
 
 ## PLANNING LINKS:
-<figure class="video_container">
-  <iframe src="https://www.loom.com/share/c4c5fc9e99644611ab8fe8f2f3cc6f5c" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+
 
 [ERD](https://dbdiagram.io/d/5f10aa9c74ca2227330d73d9) \
 [WIREFRAME](https://sketchboard.me/NCaP3yBDuIVO#/) \
