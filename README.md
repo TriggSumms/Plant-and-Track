@@ -64,20 +64,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Concepts Covered
 Concepts covered in this project include: 
-* Session storage
-* Creating a JSON database
+* Session storage & Creating a JSON database
 * CRUD functionality with API fetch calls to JSON server
-* Associating that data with a userID
+* Authentication through Login/Register (Set/Has)
 * HTML, CSS
-* JavaScript 
-* React.js.... the list will be updated throughout the project's span.
-
+* React.js 
 
 ## PLANNING LINKS:
 
 
 [ERD](https://dbdiagram.io/d/5f10aa9c74ca2227330d73d9) \
-[WIREFRAME](https://sketchboard.me/NCaP3yBDuIVO#/) \
+[WIREFRAME](https://sketchboard.me/NCaP3yBDuIVO#/) 
 
 
 
