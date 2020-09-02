@@ -45,24 +45,24 @@ You will also see any lint errors in the console.
 <br>
 ## Registering an Account/Creating your First Plant Card: 
 <p align="center">
-    <a >
+   
 ![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)
-    </a>
+   
 </p>
 1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
 
 1. The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating | Plant Card, a user can add Images/Edit the information via the details button!
 <p align="center">
-    <a >
+    
  ![Alt Text](https://media.giphy.com/media/SYua2t9sq6mdUp5tBM/giphy.gif)
-    </a>
+    
 </p>
 1. At this point a USer will have 3 views of the cards avaialble. The collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.,Now enjoy you collections Longevity or placement in the Graveyard! Dont forget the FLIP CARD button! This will allow them to enter in their journal entries for the plant and chronologically reference the most recent entries! Heres an example of filled out profile!...
 <br/>
 <p align="center">
-    <a >
+    
 ![Alt Text](https://media.giphy.com/media/JTmu5PUUS7P6QYrBG3/giphy.gif)
-    </a>
+    
 </p>
 
   
