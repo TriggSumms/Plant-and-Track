@@ -21,7 +21,7 @@ If you want to **start a Plant & Track (Account) of your own**...
 
 ## 🚀&nbsp; Installation and Documentation
 ### To get the project running locally:
-- Clone this repo
+- Clone this repo `git@github.com:TriggSumms/Plant-and-Track.git`
 - `npm install` to install all req'd dependencies
 - `npm start` to start the local server (this project uses create-react-app)
 Local web server will use port 5005 `json-server -p 5005 -w userSample.json`
