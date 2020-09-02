@@ -47,11 +47,11 @@ You will also see any lint errors in the console.
 ![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)
    
 </p>
->###Upon registering and logging in, you will have an example card pre-loaded to your library, feel free to play around with this card to learn about the button locations! 
->-When finished move the card to the Graveyard or delete it permatatly! 
->You can now begin building your collection, Go ahead and click the "New Plant" button,  (located on the User Profile CARD) and fill out all the nescessary forms.
->--After creating  the Plant Card, you can add Images/Edit the information via the details button!
->--...Dont forget the FLIP CARD button! This will allow you to enter in your journal entries for the plant and chronologically reference the most recent entries!
+> ### Upon registering and logging in, you will have an example card pre-loaded to your library, feel free to play around with this card to learn about the button locations! 
+> - When finished move the card to the Graveyard or delete it permatatly! 
+> You can now begin building your collection, Go ahead and click the "New Plant" button,  (located on the User Profile CARD) and fill out all the nescessary forms.
+> -- After creating  the Plant Card, you can add Images/Edit the information via the details button!
+> -- ...Dont forget the FLIP CARD button! This will allow you to enter in your journal entries for the plant and chronologically reference the most recent entries!
 <p align="center">
     
  ![Alt Text](https://media.giphy.com/media/SYua2t9sq6mdUp5tBM/giphy.gif)
