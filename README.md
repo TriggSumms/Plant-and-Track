@@ -47,14 +47,6 @@ You will also see any lint errors in the console.
 ![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)
    
 </p>   
-> #### The quarterly results look great!
->
-> - Revenue was off the chart.
-> - Profits were higher than ever.
->
->  *Everything* is going according to **plan**.
-<p>
-
 > #### Upon registering and logging in, you will have an example card pre-loaded to your library, feel free to play around with this card to learn about the button locations! 
 >
 > - When finished move the card to the Graveyard or delete it permatatly! 
@@ -68,14 +60,13 @@ You will also see any lint errors in the console.
  ![Alt Text](https://media.giphy.com/media/SYua2t9sq6mdUp5tBM/giphy.gif)
     
 </p>
-At this point you will have 3 views of the cards avaialble...the collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.
-<br>
-<br>
-Now enjoy your collections Longevity or placement in the Graveyard!
-<br>
-This Graveyard should help you out in Seasons come...and by some miracle...you can always bring your plant back to life!
-<br>
-| Here is an example of a filled out profile!...
+> #### At this point you will have 3 views of the cards avaialble...the collection view, details(editing) view, and upon flipping the card......a view of Journal Entries.
+>
+> Now enjoy your collections Longevity or placement in the Graveyard!
+>
+> This Graveyard should help you out in Seasons come...and by some miracle...you can always bring your plant back to life!
+>
+> - Here is an example of a filled out profile!...
 <br>
 <p align="center">
     
