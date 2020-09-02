@@ -47,7 +47,7 @@ You will also see any lint errors in the console.
 ![Alt Text](https://media.giphy.com/media/h4CE0unVmIKGBrAlF7/giphy.gif)
    
 </p>
->Upon registering and logging in, you will have an example card pre-loaded to your library, feel free to play around with this card to learn about the button locations! 
+>###Upon registering and logging in, you will have an example card pre-loaded to your library, feel free to play around with this card to learn about the button locations! 
 >-When finished move the card to the Graveyard or delete it permatatly! 
 >You can now begin building your collection, Go ahead and click the "New Plant" button,  (located on the User Profile CARD) and fill out all the nescessary forms.
 >--After creating  the Plant Card, you can add Images/Edit the information via the details button!
