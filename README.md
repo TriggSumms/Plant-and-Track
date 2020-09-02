@@ -7,10 +7,6 @@
 
 <br/>
 
-<a href="https://www.loom.com/share/909c784d337f4c4597d488eb4c47fedf"> <p>Loom | Free Screen & Video Recording Software - Watch Video</p> <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/909c784d337f4c4597d488eb4c47fedf-with-play.gif"> </a>
-
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c4c5fc9e99644611ab8fe8f2f3cc6f5c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 <br/>
 
@@ -51,6 +47,7 @@ You will also see any lint errors in the console.
 
 
 ## After Creating an account: 
+<a href="https://www.loom.com/share/c4c5fc9e99644611ab8fe8f2f3cc6f5c"> <p>Plant Baby - Watch Video</p> <img style="max-width:500px;" src="https://cdn.loom.com/sessions/thumbnails/c4c5fc9e99644611ab8fe8f2f3cc6f5c-with-play.gif"> </a>
 1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
 ![HomePAGE](https://res.cloudinary.com/triggsumms/image/upload/v1597688570/CapstoneSumms/yzeeq6w9lg6dtiannnlw.png)
 1. The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
