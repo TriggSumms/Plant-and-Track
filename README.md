@@ -47,7 +47,7 @@ You will also see any lint errors in the console.
 
 
 ## Registering an Account/Creating your First Plant Card: 
-![](<iframe src="https://giphy.com/embed/h4CE0unVmIKGBrAlF7" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/h4CE0unVmIKGBrAlF7">via GIPHY</a></p>
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)</p>
 1. The user will have an example card pre-loaded to their library, to exhibit a what a fully rendered card is capable of.
 
 1. The User can begin building their collection, In which they will click the "New Plant" button located on the User Profile and fill out all the nescessary forms. After creating a Plant Card, a user can add Images/Edit the information via the details button!
