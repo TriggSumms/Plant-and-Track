@@ -18,7 +18,7 @@
     },
     {
       "email": "allison.williams1@cushwake.com",
-      "password": "MintJ27*",
+      "password": "ok*",
       "user": "Adub127",
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
       "bio": ":)))))))))) I love plants!",
@@ -55,6 +55,29 @@
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
       "bio": "test",
       "id": 12
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "test",
+      "user": "test",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": "test",
+      "id": 13
+    },
+    {
+      "email": "yus@email.com",
+      "password": "yus",
+      "user": "Hello",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": "sksks",
+      "id": 14
+    },
+    {
+      "email": "dd@gmail.com",
+      "user": "TestGuy.",
+      "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
+      "bio": "Im a pretty cool plant collector!",
+      "id": 15
     }
   ],
   "plants": [
@@ -171,7 +194,7 @@
       "id": 45,
       "nickName": "Lovely Tango Dog",
       "vernacularName": "Passion Flower",
-      "entryDate": "8/17/20, 8:37:39 PM",
+      "entryDate": "9/1/20, 9:48:32 PM",
       "indoorOutdoor": "Outdoor",
       "moodId": 2,
       "sunlightLevelId": 3,
@@ -183,7 +206,7 @@
       "id": 46,
       "nickName": "YUM",
       "vernacularName": "Okra",
-      "entryDate": "8/17/20, 8:44:13 PM",
+      "entryDate": "9/9/20, 9:30:09 PM",
       "indoorOutdoor": "Outside",
       "moodId": 3,
       "sunlightLevelId": 3,
@@ -248,6 +271,18 @@
       "moodId": 2,
       "sunlightLevelId": 2,
       "waterLevelId": 4,
+      "isDead": false
+    },
+    {
+      "userId": 14,
+      "id": 53,
+      "nickName": "Hawaii Slim Rick",
+      "vernacularName": "Tea Tree",
+      "entryDate": "9/1/20, 7:27:24 PM",
+      "indoorOutdoor": "Okay",
+      "moodId": 1,
+      "sunlightLevelId": 3,
+      "waterLevelId": 7,
       "isDead": false
     }
   ],
@@ -634,6 +669,14 @@
       "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597768520/CapstoneSumms/kncuw7ubzic18cribtfv.jpg",
       "userId": 11,
       "id": 42
+    },
+    {
+      "plantId": 53,
+      "entryDate": "9/1/20, 7:25:14 PM",
+      "imageTitle": "okay",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1599006324/CapstoneSumms/r2gpwhpe2dj7kakrysnx.heic",
+      "userId": 14,
+      "id": 43
     }
   ]
 }

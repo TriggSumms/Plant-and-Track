@@ -2,18 +2,16 @@
   "users": [
     {
       "email": "test@gmail.com",
-      "password": "test",
       "user": "Test",
       "img": "",
       "bio": "Hello, my name is Test. I love to collect plants....so much so that I use this app.",
       "id": 1
     },
     {
-      "email": "dd@gmail.com",
-      "password": "ye",
+      "email": "Allison@gmail.com",
       "user": "Allison",
       "img": "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
-      "bio": "d",
+      "bio": "I love plants, and Im not really sure how to keep up with all of them!",
       "id": 2
     }
   ],
@@ -23,9 +21,21 @@
       "id": 1,
       "nickName": "Emotionally Spikey Boi",
       "vernacularName": "Pencil Cactus",
-      "entryDate": "8/17/20, 8:48:46 PM",
+      "entryDate": "9/1/20, 9:14:55 PM",
       "indoorOutdoor": "Indoor",
       "moodId": 3,
+      "sunlightLevelId": 2,
+      "waterLevelId": 4,
+      "isDead": false
+    },
+    {
+      "userId": 2,
+      "id": 2,
+      "nickName": "Hawaii Slim Ricky",
+      "vernacularName": "Ti Tree",
+      "entryDate": "9/1/20, 9:42:36 PM",
+      "indoorOutdoor": "Inside",
+      "moodId": 2,
       "sunlightLevelId": 2,
       "waterLevelId": 4,
       "isDead": false
@@ -109,6 +119,14 @@
       "journalEntry": "https://www.gardeningknowhow.com/ornamental/trees/alder/care-of-speckled-alder-trees.htm",
       "journalTitle": "Care Instructions?",
       "userId": 1
+    },
+    {
+      "plantId": 2,
+      "entryDate": "9/1/20, 9:42:54 PM",
+      "journalEntry": "https://www.gardenhealth.com/advice/plants-flowers/how-to-care-for-cacti-and-succulents#",
+      "journalTitle": "YUS ",
+      "userId": 2,
+      "id": 3
     }
   ],
   "images": [
@@ -127,6 +145,14 @@
       "url": "https://res.cloudinary.com/triggsumms/image/upload/v1597715485/CapstoneSumms/dogfondsbcjh71wnkw4t.jpg",
       "userId": 1,
       "id": 3
+    },
+    {
+      "plantId": 2,
+      "entryDate": "9/1/20, 9:43:11 PM",
+      "imageTitle": "wow",
+      "url": "https://res.cloudinary.com/triggsumms/image/upload/v1599014597/CapstoneSumms/pgqi0n3ugwycmrudhz7a.jpg",
+      "userId": 2,
+      "id": 4
     }
   ]
 }

@@ -143,9 +143,9 @@ const GraveYardCard = (props) => {
             <div className="plantcard-journal-title__Container">
               Journal Entries: <p className="plantCardBackName"> {props.plant.nickName}</p>
             </div>
-            <div className="DEAD-plantcard-journal-entries__Container">
+            
              
-              <div className="plantcard-journal-entry__Container">
+              <div className="DEAD-plantcard-journal-entry__Container">
 
                 <div>
                   {journals.map(journal =>
@@ -156,14 +156,13 @@ const GraveYardCard = (props) => {
                     />)}
                 </div>
 
-              </div>
+            
             </div>
             <div className="plantCard-journal-button-Container">
               <button onClick={handleClick}><img src="https://img.icons8.com/clouds/50/000000/swap.png" /></button>
             </div>
 
           </div>
-
         </ReactCardFlip>
       </div>
 

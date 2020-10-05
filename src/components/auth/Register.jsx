@@ -7,7 +7,7 @@ import loginImg from "../../login.svg";
 
 
 export const Register = (props) => {
-  const [credentials, setCredentials] = useState({ email: "", password: "", user: "", img: "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png", bio: "" });
+  const [credentials, setCredentials] = useState({ email: "", user: "", img: "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png", bio: "" });
 
   // Update state whenever an input field is edited
   const handleFieldChange = (evt) => {
@@ -19,8 +19,8 @@ export const Register = (props) => {
 
   const handleRegister = evt => {
     evt.preventDefault();
-    if (credentials.email === "" || credentials.password === "" || credentials.userName === "") {
-      window.alert("Please input a username, password, email, and bio!");
+    if (credentials.email === "" ||  credentials.user === "") {
+      window.alert("Please input a username, email, and bio!");
     } else {
 
 
@@ -51,16 +51,16 @@ export const Register = (props) => {
             <div className="form">
               <div className="form-group">
                 <label htmlFor="inputUserName"> Create your Username </label>
-                <input onChange={handleFieldChange} id="user" type="userName" name="username" placeholder="username" required="" />
+                <input onChange={handleFieldChange} id="user" type="user" name="user" placeholder="username..." required="" />
               </div>
               <div className="form-group">
                 <label htmlFor="inputUserName">Email</label>
                 <input onChange={handleFieldChange} id="email" type="email" name="email" placeholder="email@....com" required="" />
               </div>
-              <div className="form-group">
+{/*               <div className="form-group">
                 <label htmlFor="inputPassword">Password</label>
                 <input onChange={handleFieldChange} id="password" type="password" name="password" placeholder="password" required="" />
-              </div>
+              </div> */}
 
               <div className="form-group">
                 <label htmlFor="inputBio">Bio</label>

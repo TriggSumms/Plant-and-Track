@@ -30,7 +30,7 @@ const JumboUserCard = props => {
             <div className="LOGOposition2">
                 <h2>
                     <picture>
-                        <Image src="https://res.cloudinary.com/triggsumms/image/upload/v1597683570/CapstoneSumms/xody0zneudiatcdngtcc.png" className="plantLogo" />
+                        <Image src="https://res.cloudinary.com/triggsumms/image/upload/v1598880417/CapstoneSumms/xabzheqaokcwy4aqvvr0.png" className="plantLogo" />
                     </picture>
                 </h2>
             </div>
